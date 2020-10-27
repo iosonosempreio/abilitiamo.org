@@ -10,6 +10,21 @@
     "menues": ["main", "footer"]
   },
   {
+    "label": "Cascina Cristina",
+    "url": "/cascina-cristina",
+    "menues": ["main", "footer"]
+  },
+  {
+    "label": "Notizie",
+    "url": "/notizie",
+    "menues": ["main", "footer"]
+  },
+  {
+    "label": "Galleria",
+    "url": "/galleria",
+    "menues": ["main", "footer"]
+  },
+  {
     "label": "Contatti",
     "url": "/contacts",
     "menues": ["main", "footer"]
