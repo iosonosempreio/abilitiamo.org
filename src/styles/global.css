@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --red: #FF7232;
+  --azure: #7ABED9;
+  --blue: #304B70;
+  --beige: #FAF8F6;
+}
+
+/* utilities */
+.position-sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+.text-center {
+  text-align: center;
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.sticky-message {
+  top:64px;
+  height:36px;
+  width: 100vw;
+  background-color: var(--azure);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout-main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  margin: auto;
+}
+footer {
+  padding-top: 36px;
+}
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / span 12;
+}
+.footer-contacts {
+  grid-column: 1 / span 12;
+  display: flex;
+  flex-direction: column;
+}
+.footer-contributors{
+  grid-column: 1 / span 12;
+  display: flex;
+  flex-direction: row;
+}
+
+.copyright {
+  grid-column: 1 / span 12;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 576px) {
+  .layout-main {
+    width: 540px;
+  }
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / span 6;
+  }
+  .footer-contacts {
+    grid-column: 7 / span 6;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-contributors{
+    grid-column: 1 / span 12;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 768px) {
+  .layout-main {
+    width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .layout-main {
+    width: 960px;
+  }
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / span 4;
+  }
+  .footer-contacts {
+    grid-column: 5 / span 4;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-contributors{
+    grid-column: 9 / span 4;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .layout-main {
+    width: 1140px;
+  }
+}

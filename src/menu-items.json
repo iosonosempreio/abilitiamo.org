@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Home",
+    "url": "/",
+    "menues": ["main", "footer"]
+  },
+  {
+    "label": "Chi siamo",
+    "url": "/chi-siamo",
+    "menues": ["main", "footer"]
+  },
+  {
+    "label": "Contatti",
+    "url": "/contacts",
+    "menues": ["main", "footer"]
+  },
+  {
+    "label": "Sostieni",
+    "url": "/sostieni",
+    "menues": ["main", "footer"]
+  },
+  {
+    "label": "Privacy",
+    "url": "/privacy",
+    "menues": ["footer"]
+  }
+]
