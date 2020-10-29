@@ -1,11 +1,11 @@
 [
   {
-    "label": "Home",
+    "label": "home",
     "url": "/",
-    "menues": ["main", "footer"]
+    "menues": ["main"]
   },
   {
-    "label": "Chi siamo",
+    "label": "chi siamo",
     "url": "/chi-siamo",
     "menues": ["main", "footer"]
   },
@@ -15,27 +15,27 @@
     "menues": ["main", "footer"]
   },
   {
-    "label": "Notizie",
+    "label": "notizie",
     "url": "/notizie",
     "menues": ["main", "footer"]
   },
   {
-    "label": "Galleria",
+    "label": "galleria",
     "url": "/galleria",
     "menues": ["main", "footer"]
   },
   {
-    "label": "Contatti",
+    "label": "contatti",
     "url": "/contacts",
     "menues": ["main", "footer"]
   },
   {
-    "label": "Sostieni",
+    "label": "sostienici",
     "url": "/sostieni",
     "menues": ["main", "footer"]
   },
   {
-    "label": "Privacy",
+    "label": "privacy",
     "url": "/privacy",
     "menues": ["footer"]
   }
