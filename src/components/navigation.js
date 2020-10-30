@@ -16,10 +16,10 @@ export default function Navigation({background}) {
           {items.filter(i=>(i.menues.indexOf("main")>-1)).map(item=>{
             return <Link key={item.label} to={item.url}>{item.label}</Link>
           })}
-          <div class={styles.socials}>
-            <a href="./"><FaFacebookSquare /></a>
-            <a href="./"><FaInstagram /></a>
-            <a href="./"><FaYoutube /></a>
+          <div className={styles.socials}>
+            <a href="./" aria-label="Facebook"><FaFacebookSquare /></a>
+            <a href="./" aria-label="Instagram"><FaInstagram /></a>
+            <a href="./" aria-label="Youtube"><FaYoutube /></a>
           </div>
         </div>
         <button className={["pointer", styles.toggle].join(" ")} onClick={()=>setMenu(!menu)} onKeyDown={()=>setMenu(!menu)}>
