@@ -6,6 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 0.875rem;
+  z-index: 1000;
 }
 .navigation > div {
   display: flex;
@@ -16,21 +18,23 @@
   padding: 0 20px;
 }
 
+.items {
+}
+
 .navigation a {
   margin: 0 10px;
   color: inherit;
-  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.1px;
   text-decoration: none;
 }
 
 .navigation a:hover {
-  color: var(--azure)
+  color: var(--azure);
 }
 
-.navigation a[aria-current="page"]{
-  color: var(--azure)
+.navigation a[aria-current="page"] {
+  color: var(--azure);
 }
 
 .navigation a:first-child {
@@ -40,4 +44,65 @@
 .navigation a:last-child {
   margin-right: 0;
   color: var(--red);
+}
+
+.socials {
+  display: none;
+}
+
+.navigation .socials>a {
+  margin: 0 15px;
+}
+
+.toggle {
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .items {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 40px);
+    height: calc(100vh - 100px);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: var(--beige);
+    overflow: hidden;
+    padding: 20px;
+    transition: height 0.5s ease, padding 0.5s ease;
+  }
+  .items.closed {
+    height: 0px;
+    padding: 0 20px;
+  }
+  .navigation a {
+    margin: 1rem 0px;
+  }
+  .socials {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 20px;
+    font-size: 1.5rem;
+    align-content: center;
+    justify-content: center;
+    width: calc(100% - 40px);
+    opacity: 1;
+    transition: opacity 0.35s ease;
+    transition-delay: 0.15s;
+  }
+  .items.closed .socials {
+    opacity: 0;
+    transition-delay: 0s;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .items {
+    display: flex;
+  }
+  .toggle {
+    display: none;
+  }
 }

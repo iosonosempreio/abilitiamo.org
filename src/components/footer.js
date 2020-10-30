@@ -2,7 +2,6 @@ import React from "react"
 import Logo from "./logo"
 import items from "../menu-items.json"
 import { Link } from "gatsby"
-import info from "./assets/info.json"
 import logoCariplo from "./assets/cariplo.svg"
 import logoLombardia from "./assets/lombardia.svg"
 
@@ -13,7 +12,7 @@ export default function Footer(props) {
     <footer style={{ backgroundColor: "var(--beige)" }}>
       <div className="layout-main">
         <div className="footer-nav">
-          <Logo style={{fontSize: '1.3125rem'}} />
+          <Logo style={{fontSize: '1.3125rem'}} showOnlus={true} />
           {items
             .filter(i => i.menues.indexOf("footer") > -1)
             .map(item => {
@@ -25,17 +24,16 @@ export default function Footer(props) {
             })}
         </div>
         <div className="footer-contacts">
-          <Link to="https://www.facebook.com/abilitiamo/" target="_blank">
+          <a href="https://www.facebook.com/abilitiamo/" target="_blank" rel="noreferrer">
             <FaFacebookSquare style={{top: 2}} /> <span>Facebook</span>
-          </Link>
+          </a>
           <Link to="/">
             <FaInstagram style={{top: 2}} /> <span>Instagram</span>
           </Link>
-          <Link to="https://www.youtube.com/channel/UCzlesA7SjzJXyVJxeLhL-Iw" target="_blank">
+          <a href="https://www.youtube.com/channel/UCzlesA7SjzJXyVJxeLhL-Iw" target="_blank" rel="noreferrer">
             <FaYoutube style={{top: 2}} /> <span>Youtube</span>
-          </Link>
-          <br/>
-          <span className="pointer" onClick={()=>window.location.href = `mailto:${info.mail}`}>
+          </a>
+          <span className="pointer">
             <FaRegEnvelope style={{top: 2}} /> info@abilitiamo.org
           </span>
           <span>
@@ -50,9 +48,9 @@ export default function Footer(props) {
         </div>
         <div className="footer-contributors">
             <span style={{fontWeight: 600}}>Con il contributo di</span>
-            <img style={{margin:'1rem 0',width:160}} src={logoCariplo} />
-            <img style={{margin:'1rem 0',width:160}} src={logoLombardia} />
-            <img style={{margin:'1.5rem 0',width:210}} src="https://www.fondazione-comasca.it/wp-content/uploads/2012/05/logo.jpg" />
+            <img style={{margin:'1rem 0',width:160}} src={logoCariplo} alt="logo Fondazione Cariplo" />
+            <img style={{margin:'1rem 0',width:160}} src={logoLombardia} alt="logo Regione Lombardia" />
+            <img style={{margin:'2rem 0',width:210}} src="https://www.fondazione-comasca.it/wp-content/uploads/2012/05/logo.jpg" alt="logo Fondazione Provinciale Comasca" />
         </div>
         <span className="text-center copyright">
           @ 2020 Associazione Abilitiamo Autismo ONLUS
