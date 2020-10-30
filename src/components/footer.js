@@ -4,6 +4,7 @@ import items from "../menu-items.json"
 import { Link } from "gatsby"
 import logoCariplo from "./assets/cariplo.svg"
 import logoLombardia from "./assets/lombardia.svg"
+import logoFpcc from "./assets/fpcc.png"
 
 import { FaFacebookSquare, FaInstagram, FaYoutube, FaRegEnvelope, FaEnvelope, FaPiggyBank } from "react-icons/fa"
 
@@ -50,7 +51,7 @@ export default function Footer(props) {
             <span style={{fontWeight: 600}}>Con il contributo di</span>
             <img style={{margin:'1rem 0',width:160}} src={logoCariplo} alt="logo Fondazione Cariplo" />
             <img style={{margin:'1rem 0',width:160}} src={logoLombardia} alt="logo Regione Lombardia" />
-            <img style={{margin:'2rem 0',width:210}} src="https://www.fondazione-comasca.it/wp-content/uploads/2012/05/logo.jpg" alt="logo Fondazione Provinciale Comasca" />
+            <img style={{margin:'2rem 0',width:210}} src={logoFpcc} alt="logo Fondazione Provinciale Comasca" />
         </div>
         <span className="text-center copyright">
           @ 2020 Associazione Abilitiamo Autismo ONLUS
