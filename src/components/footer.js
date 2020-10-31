@@ -2,17 +2,21 @@ import React from "react"
 import Logo from "./logo"
 import items from "../menu-items.json"
 import { Link } from "gatsby"
+import { FaFacebookSquare, FaInstagram, FaYoutube, FaRegEnvelope, FaEnvelope, FaPiggyBank } from "react-icons/fa"
+import styles from "../styles/footer.module.css"
 import logoCariplo from "./assets/cariplo.svg"
 import logoLombardia from "./assets/lombardia.svg"
 import logoFpcc from "./assets/fpcc.png"
 
-import { FaFacebookSquare, FaInstagram, FaYoutube, FaRegEnvelope, FaEnvelope, FaPiggyBank } from "react-icons/fa"
+
+console.log(styles.footerNav);
+
 
 export default function Footer(props) {
   return (
     <footer style={{ backgroundColor: "var(--beige)" }}>
       <div className="layout-main">
-        <div className="footer-nav">
+        <div className={styles.footerNav}>
           <Logo style={{fontSize: '1.3125rem'}} showOnlus={true} />
           {items
             .filter(i => i.menues.indexOf("footer") > -1)
@@ -24,7 +28,7 @@ export default function Footer(props) {
               )
             })}
         </div>
-        <div className="footer-contacts">
+        <div className={styles.footerContacts}>
           <a href="https://www.facebook.com/abilitiamo/" target="_blank" rel="noreferrer">
             <FaFacebookSquare style={{top: 2}} /> <span>Facebook</span>
           </a>
@@ -34,7 +38,7 @@ export default function Footer(props) {
           <a href="https://www.youtube.com/channel/UCzlesA7SjzJXyVJxeLhL-Iw" target="_blank" rel="noreferrer">
             <FaYoutube style={{top: 2}} /> <span>Youtube</span>
           </a>
-          <span className="pointer">
+          <span>
             <FaRegEnvelope style={{top: 2}} /> info@abilitiamo.org
           </span>
           <span>
@@ -47,13 +51,13 @@ export default function Footer(props) {
             <FaPiggyBank style={{top: 2}} /> IT52P0843051100000000114383
           </span>
         </div>
-        <div className="footer-contributors">
+        <div className={styles.footerContributors}>
             <span style={{fontWeight: 600}}>Con il contributo di</span>
             <img style={{margin:'1rem 0',width:160}} src={logoCariplo} alt="logo Fondazione Cariplo" />
             <img style={{margin:'1rem 0',width:160}} src={logoLombardia} alt="logo Regione Lombardia" />
             <img style={{margin:'2rem 0',width:210}} src={logoFpcc} alt="logo Fondazione Provinciale Comasca" />
         </div>
-        <span className="text-center copyright">
+        <span className={["text-center", styles["copyright"]].join(" ")}>
           @ 2020 Associazione Abilitiamo Autismo ONLUS
         </span>
       </div>
