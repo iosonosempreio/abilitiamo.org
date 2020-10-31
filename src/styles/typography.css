@@ -1,0 +1,36 @@
+:root {
+  font-size: 12px;
+}
+
+h1 {
+
+}
+
+p {
+
+}
+.paragraph {
+  grid-column: 2 / span 7;
+  margin-top: 0;
+}
+.paragraphBig {
+  color: var(--blue);
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+@media screen and (min-width: 576px) {
+  :root {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 992px) {
+  :root {
+    font-size: 16px;
+  }
+}

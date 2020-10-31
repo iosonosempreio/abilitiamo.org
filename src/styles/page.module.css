@@ -1,0 +1,41 @@
+.page-header {
+  grid-column: span 12;
+  min-height: 8rem;
+  display: flex;
+}
+.page-header :global .layout-main {
+  padding: 0;
+}
+
+.side-bar {
+  grid-column: 9 / span 4;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 15%;
+}
+
+.side-bar a {
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: 2rem auto;
+  align-items: center;
+  color: var(--azure);
+  text-decoration: none;
+  justify-content: start;
+}
+
+.side-bar a:hover {
+  color: var(--red);
+}
+
+@media screen and (min-width: 576px) {
+}
+@media screen and (min-width: 768px) {
+  .page-header {
+    min-height: 15rem;
+  }
+}
+@media screen and (min-width: 992px) {
+}
+@media screen and (min-width: 1200px) {
+}

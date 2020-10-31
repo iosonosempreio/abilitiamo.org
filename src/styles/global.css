@@ -5,6 +5,7 @@
   --azure: #7ABED9;
   --blue: #304B70;
   --beige: #FAF8F6;
+  --gap: 15px;
 }
 
 /* utilities */
@@ -18,6 +19,9 @@
 }
 .text-center {
   text-align: center;
+}
+.round-borders {
+  border-radius: 4px;
 }
 html {
   margin: 0;
@@ -44,14 +48,36 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
+}
+
+.sticky-message .long-msg {
+  display: none;
 }
 
 .layout-main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gap);
+  row-gap: var(--gap);
   width: calc(100% - 40px);
   margin: auto;
+  padding: var(--gap) 0 calc(3rem + var(--gap));
 }
+
+.layout-main .a-row {
+  display: inherit;
+  grid-template-columns: inherit;
+  column-gap: inherit;
+  row-gap: inherit;
+  grid-column: 1/-1;
+  width: 100%;
+  padding: 3rem 0 0;
+}
+
+/* .layout-main .a-row:first-child{
+  padding-top: calc(1rem + var(--gap))
+} */
 
 @media screen and (min-width: 576px) {
   .layout-main {
@@ -61,6 +87,9 @@ a:hover {
 @media screen and (min-width: 768px) {
   .layout-main {
     width: 720px;
+  }
+  .sticky-message .long-msg {
+    display: inline;
   }
 }
 @media screen and (min-width: 992px) {

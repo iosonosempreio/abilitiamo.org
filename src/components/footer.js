@@ -8,10 +8,6 @@ import logoCariplo from "./assets/cariplo.svg"
 import logoLombardia from "./assets/lombardia.svg"
 import logoFpcc from "./assets/fpcc.png"
 
-
-console.log(styles.footerNav);
-
-
 export default function Footer(props) {
   return (
     <footer style={{ backgroundColor: "var(--beige)" }}>

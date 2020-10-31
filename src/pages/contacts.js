@@ -3,9 +3,8 @@ import Layout from "../components/layout"
 
 export default function Contact() {
   return (
-    <Layout>
+    <Layout title="Teniamoci in contatto">
       <div style={{ gridColumn: "span 12" }}>
-        <h1>Contacts</h1>
         <p>Send us a message!</p>
       </div>
     </Layout>
