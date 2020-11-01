@@ -1,0 +1,41 @@
+.sections-navigation {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-evenly;
+  position: sticky;
+  top: 64px;
+  background-color: white;
+}
+.section-nav-item {
+  flex-basis: 0;
+  flex-grow: 1;
+  text-decoration: none;
+  border-top: 2px solid transparent;
+  margin: 0 10px;
+}
+.section-nav-item.active {
+  border-color: var(--azure);
+}
+.section-nav-item:hover {
+  text-decoration: none;
+}
+.section-nav-item p:first-child {
+  font-size: 0.625rem;
+  color: var(--azure);
+}
+.section-nav-item p:last-child {
+  font-weight: 600;
+}
+
+.section {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: inherit;
+  grid-template-rows: inherit;
+  align-items: center;
+}
+.img-placeholder {
+  background-color: lavender;
+  height: 45vh;
+  margin: 2rem 0;
+}
