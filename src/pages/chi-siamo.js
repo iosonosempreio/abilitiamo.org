@@ -5,10 +5,10 @@ import Layout from "../components/layout"
 import SideBarLink from "../components/sideBarLink"
 import styles from "../styles/page.module.css"
 const sidebar1 = [
-  { label: "Storia di Abilítiamo", url: "/storia" },
-  { label: "Organizzazione", url: "/organizzazione" },
-  { label: "Bilanci", url: "/bilanci" },
-  { label: "Diventa socio", url: "/tesseramento" },
+  { label: "Storia di Abilítiamo", url: "/" },
+  { label: "Organizzazione", url: "/" },
+  { label: "Bilanci", url: "/" },
+  { label: "Diventa socio", url: "/" },
 ]
 const sidebar2 = [{ label: 'Progetto "Cascina Cristina"', url: "/cascina-cristina"  }]
 export default function ChiSiamo() {
