@@ -1,4 +1,6 @@
-import React from "react"
+import React, { useRef } from "react"
+import "intersection-observer" // optional polyfill
+import Observer from "@researchgate/react-intersection-observer"
 import Navigation from "../components/navigation"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { useStaticQuery, graphql } from "gatsby"
@@ -11,7 +13,7 @@ let images
 
 export default function CascinaCristina() {
   images = useStaticQuery(query)
-
+  const sectionNav = useRef();
   const spirito = (
     <>
       <div className={stylesCascinaCristina.sectionTitle}>
@@ -143,7 +145,23 @@ export default function CascinaCristina() {
       anchor: "#emblematicita",
     },
   ]
+  const observerOptions = {
+    onChange: event => {
+      // console.log(event.target.id)
+      // console.log(event.isIntersecting)
+      
+      // const navLink = sectionNav.current.querySelector('.name-'+event.target.id)
+      // console.log(navLink)
 
+      // console.log(sectionNav.current)
+      if (event.isIntersecting) {
+        sectionNav.current.querySelectorAll('a').forEach(a=>a.classList.remove(stylesCascinaCristina.active))
+        sectionNav.current.querySelector('.name-'+event.target.id).classList.add(stylesCascinaCristina.active)
+      }
+    },
+    // root: "#scrolling-container", // root: HTMLElement|string | default window object
+    rootMargin: "0% 0% -67%",
+  }
   return (
     <span className={styles.cascinaCristina}>
       <Navigation background="var(--beige)" />
@@ -157,37 +175,39 @@ export default function CascinaCristina() {
         </span>
       </div>
       <div
+        id="scrolling-container"
         className="layout-main"
-        style={{padding:0,backgroundColor: "white" }}
+        style={{ padding: 0, backgroundColor: "white" }}
       >
-        <div className={[stylesCascinaCristina.sectionsNavigation].join(" ")}>
+        <div ref={sectionNav} className={[stylesCascinaCristina.sectionsNavigation].join(" ")}>
+          {sections.map((d, i) => {
+            return (
+              <AnchorLink
+                key={i}
+                to={"/cascina-cristina" + d.anchor}
+                className={[
+                  stylesCascinaCristina.sectionNavItem,
+                  'name-'+d.anchor.slice(1)
+                ].join(" ")}
+              >
+                <div className={stylesCascinaCristina.sectionStatus}></div>
+                <p>{("00" + (i + 1)).slice(-2)}</p>
+                <p>{d.title}</p>
+              </AnchorLink>
+            )
+          })}
+        </div>
         {sections.map((d, i) => {
           return (
-            <AnchorLink
-              key={i}
-              to={"/cascina-cristina" + d.anchor}
-              className={[
-                stylesCascinaCristina.sectionNavItem,
-                i === 1 ? stylesCascinaCristina.active : "",
-              ].join(" ")}
-            >
-              <div className={stylesCascinaCristina.sectionStatus}></div>
-              <p>{("00" + (i + 1)).slice(-2)}</p>
-              <p>{d.title}</p>
-            </AnchorLink>
-          )
-        })}
-      </div>
-        {sections.map((d, i) => {
-          return (
-            <div
-              key={i}
-              id={d.anchor.slice(1)}
-              className={[stylesCascinaCristina.section].join(" ")}
-              // data-sal="fade"
-            >
-              {d.content || d.title}
-            </div>
+            <Observer key={i} {...observerOptions}>
+              <div
+                id={d.anchor.slice(1)}
+                className={[stylesCascinaCristina.section].join(" ")}
+                // data-sal="fade"
+              >
+                {d.content || d.title}
+              </div>
+            </Observer>
           )
         })}
       </div>
