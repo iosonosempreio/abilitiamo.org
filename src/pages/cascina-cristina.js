@@ -1,9 +1,9 @@
-import React, { useRef } from "react"
+import React, { useRef, useEffect } from "react"
 import "intersection-observer" // optional polyfill
 import Observer from "@researchgate/react-intersection-observer"
 import Navigation from "../components/navigation"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
-import { useStaticQuery, graphql } from "gatsby"
+// import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Footer from "../components/footer"
 import styles from "../styles/page.module.css"
@@ -147,21 +147,20 @@ export default function CascinaCristina() {
   ]
   const observerOptions = {
     onChange: event => {
-      // console.log(event.target.id)
-      // console.log(event.isIntersecting)
-      
-      // const navLink = sectionNav.current.querySelector('.name-'+event.target.id)
-      // console.log(navLink)
-
-      // console.log(sectionNav.current)
       if (event.isIntersecting) {
         sectionNav.current.querySelectorAll('a').forEach(a=>a.classList.remove(stylesCascinaCristina.active))
         sectionNav.current.querySelector('.name-'+event.target.id).classList.add(stylesCascinaCristina.active)
       }
     },
-    // root: "#scrolling-container", // root: HTMLElement|string | default window object
     rootMargin: "0% 0% -67%",
   }
+  useEffect(() => {
+    document.documentElement.style.setProperty('scroll-behavior', 'smooth');
+    // returned function will be called on component unmount 
+    return () => {
+      document.documentElement.style.setProperty('scroll-behavior', 'auto');
+    }
+  }, [])
   return (
     <span className={styles.cascinaCristina}>
       <Navigation background="var(--beige)" />
@@ -182,7 +181,7 @@ export default function CascinaCristina() {
         <div ref={sectionNav} className={[stylesCascinaCristina.sectionsNavigation].join(" ")}>
           {sections.map((d, i) => {
             return (
-              <AnchorLink
+              <Link
                 key={i}
                 to={"/cascina-cristina" + d.anchor}
                 className={[
@@ -193,7 +192,7 @@ export default function CascinaCristina() {
                 <div className={stylesCascinaCristina.sectionStatus}></div>
                 <p>{("00" + (i + 1)).slice(-2)}</p>
                 <p>{d.title}</p>
-              </AnchorLink>
+              </Link>
             )
           })}
         </div>
