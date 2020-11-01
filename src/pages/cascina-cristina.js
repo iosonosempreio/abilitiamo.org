@@ -220,7 +220,7 @@ export default function CascinaCristina() {
                 className={[stylesCascinaCristina.section].join(" ")}
                 // data-sal="fade"
               >
-                {d.content || d.title}
+                {d.content || <h1 style={{gridColumn:"1 / -1"}}>{d.title}</h1>}
               </div>
             </Observer>
           )
