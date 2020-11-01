@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import { FaFacebookSquare, FaInstagram, FaYoutube } from "react-icons/fa"
 import { HiOutlineMenuAlt4 } from "react-icons/hi"
@@ -8,6 +8,14 @@ import items  from "../menu-items.json"
 
 export default function Navigation({background}) {
   const [menu, setMenu] = useState(false);
+  useEffect(()=>{
+    const body = document.getElementsByTagName("BODY")[0];
+    if (menu) {
+      body.classList.add("menu-is-open");
+    } else {
+      body.classList.remove("menu-is-open");
+    }
+  },[menu]);
   return (
     <div className={["position-sticky",styles.navigation].join(" ")} style={{backgroundColor: background}}>
       <div>
@@ -27,7 +35,6 @@ export default function Navigation({background}) {
         </button>
       </div>
     </div>
-
   )
 }
 

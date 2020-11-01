@@ -1,6 +1,6 @@
 .page-header {
   grid-column: 1 / -1;
-  min-height: 8rem;
+  min-height: 10rem;
   display: flex;
 }
 .contacts .page-header {
@@ -32,7 +32,7 @@
 .page-block {
   grid-column: 1 / -1;
   background-color: white;
-  box-shadow: 0 0 8px #ddd;
+  box-shadow: 0 0 10px #eee;
   padding: 2rem;
 }
 .page-block:first-child {
@@ -42,7 +42,6 @@
   margin-bottom: 1rem;
   display: block;
 }
-
 .socials {
   min-width:75%;
   display: inline-flex;

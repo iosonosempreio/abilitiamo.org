@@ -33,6 +33,10 @@ body {
   padding: 0;
   font-family: 'Inter', sans-serif;
 }
+body.menu-is-open{
+  height: 100%;
+  overflow: hidden;
+}
 a {
   color: var(--blue);
   text-decoration: none;
@@ -49,7 +53,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 999;
 }
 .sticky-message .long-msg {
   display: none;
