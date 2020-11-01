@@ -35,6 +35,7 @@ export default function Footer(props) {
           <a href={info.associazione.youtube} target="_blank" rel="noreferrer">
             <FaYoutube style={{top: 2}} /> <span>Youtube</span>
           </a>
+          <br/>
           <span>
             <FaRegEnvelope style={{top: 2}} /> {info.associazione.mail}
           </span>
