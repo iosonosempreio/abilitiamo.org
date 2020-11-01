@@ -69,9 +69,15 @@
   column-gap: inherit;
   row-gap: inherit;
   align-items: center;
+  padding-top: 175px;
+  position: relative;
+  top: -175px;
 }
 .section-title {
   grid-column: 1 / -1;
+}
+.section-title br {
+  display: none;
 }
 .img-section-cover {
   border: 1px solid lavander;
@@ -80,8 +86,13 @@
 .columns {
   grid-column: 1 / -1;
 }
+.mostra-altro {
+  display: block;
+}
 .further {
   display: none;
+  opacity:0;
+  transition: all 1s ease;
 }
 
 @media screen and (min-width: 576px) {
@@ -96,19 +107,25 @@
   .section-title {
     grid-column: 1 / span 4;
   }
+  .section-title br {
+    display: inline;
+  }
   .img-section-cover {
     grid-column: 5 / -1;
   }
   .columns {
     column-count: 3;
   }
-  .further {
-    display: inline;
+  .mostra-altro {
+    display: none;
   }
 }
 @media screen and (min-width: 992px) {
   .section-nav-item p:last-of-type {
     font-size: 0.875rem;
+  }
+  .further {
+    display: inline;
   }
 }
 @media screen and (min-width: 1200px) {

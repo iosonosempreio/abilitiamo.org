@@ -24,6 +24,13 @@
 .round-borders {
   border-radius: 4px;
 }
+.force-display-inline {
+  display: inline !important;
+  opacity: 1 !important;
+}
+:target {
+  border: 2px solid var(--red);
+}
 html {
   margin: 0;
   padding: 0;
@@ -65,7 +72,6 @@ a:hover {
 .sticky-message a:hover {
   color: var(--blue);
 }
-
 .layout-main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -75,7 +81,6 @@ a:hover {
   margin: auto;
   padding: var(--gap) 0;
 }
-
 .layout-main .a-row {
   display: inherit;
   grid-template-columns: inherit;
@@ -85,7 +90,6 @@ a:hover {
   width: 100%;
   padding: 3rem 0 0;
 }
-
 /* .layout-main .a-row:first-child{
   padding-top: calc(1rem + var(--gap))
 } */

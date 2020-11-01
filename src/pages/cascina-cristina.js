@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect, useState } from "react"
 import "intersection-observer" // optional polyfill
 import Observer from "@researchgate/react-intersection-observer"
 import Navigation from "../components/navigation"
@@ -13,7 +13,7 @@ let images
 
 export default function CascinaCristina() {
   images = useStaticQuery(query)
-  const sectionNav = useRef();
+  const [spiritoMostraAltro, setSpiritoMostraAltro] = useState(window.innerWidth>767)
   const spirito = (
     <>
       <div className={stylesCascinaCristina.sectionTitle}>
@@ -22,9 +22,8 @@ export default function CascinaCristina() {
         </h1>
         <p className="paragraph">
           Il progetto Cascina Cristina nasce innanzi tutto dal diritto delle
-          persone autistiche ad avere una casa e un luogo di abilitazione.
-          <br />
-          Lo spirito che lo anima è però molto più ampio.
+          persone autistiche ad avere una casa e un luogo di abilitazione. Lo
+          spirito che lo anima è però molto più ampio.
         </p>
       </div>
       <Img
@@ -34,26 +33,35 @@ export default function CascinaCristina() {
         ].join(" ")}
         fluid={images.image1.childImageSharp.fluid}
       />
-      <div className={stylesCascinaCristina.columns}>
-        One morning, when Gregor Samsa woke from troubled dreams, he found
-        himself transformed in his bed into a horrible vermin. He lay on his
-        armour-like back, and if he lifted his head a little he could see his
-        brown belly, slightly domed and divided by arches into stiff sections.{" "}
-        <span className={stylesCascinaCristina.further}>
-          slightly domed and divided by arches into stiff sections. The bedding
-          was hardly able to cover it and seemed ready to slide off any moment.
-          His many legs, pitifully thin compared with the size of the rest of
-          him, waved about helplessly as he looked. "What's happened to me?" he
-          thought. It wasn't a dream. His room, a proper human room although a
-          little too small, lay peacefully between its four familiar walls. A
-          collection of textile samples lay spread out on the table - Samsa was
-          a travelling salesman - and above it there hung a picture that he had
-          recently cut out of an illustrated magazine and housed in a nice,
-          gilded frame. It showed a lady fitted out with a fur hat and fur boa
-          who sat upright, raising a heavy fur muff that covered the whole of
-          her lower arm towards the viewer. Gregor then turned to look out the
-          window at the dull weather. Drops slightly domed and divided by arches
-          into stiff sections.{" "}
+      <div className={[stylesCascinaCristina.columns].join(" ")}>
+        <button
+          className={stylesCascinaCristina.mostraAltro}
+          onClick={() => setSpiritoMostraAltro(!spiritoMostraAltro)}
+        >
+          {spiritoMostraAltro ? "Nascondi" : "Mostra altro"}
+        </button>
+        <span
+          className={[
+            stylesCascinaCristina.further,
+            spiritoMostraAltro ? "force-display-inline" : "",
+          ].join(" ")}
+        >
+          One morning, when Gregor Samsa woke from troubled dreams, he found
+          himself transformed in his bed into a horrible vermin. He lay on his
+          armour-like back, and if he lifted his head a little he could see his
+          brown belly, slightly domed and divided by arches into stiff sections.
+          The bedding was hardly able to cover it and seemed ready to slide off
+          any moment. His many legs, pitifully thin compared with the size of
+          the rest of him, waved about helplessly as he looked. "What's happened
+          to me?" he thought. It wasn't a dream. His room, a proper human room
+          although a little too small, lay peacefully between its four familiar
+          walls. A collection of textile samples lay spread out on the table -
+          Samsa was a travelling salesman - and above it there hung a picture
+          that he had recently cut out of an illustrated magazine and housed in
+          a nice, gilded frame. It showed a lady fitted out with a fur hat and
+          fur boa who sat upright, raising a heavy fur muff that covered the
+          whole of her lower arm towards the viewer. Gregor then turned to look
+          out the window at the dull weather. Drops
         </span>
       </div>
     </>
@@ -145,20 +153,25 @@ export default function CascinaCristina() {
       anchor: "#emblematicita",
     },
   ]
+  const sectionNav = useRef()
   const observerOptions = {
     onChange: event => {
       if (event.isIntersecting) {
-        sectionNav.current.querySelectorAll('a').forEach(a=>a.classList.remove(stylesCascinaCristina.active))
-        sectionNav.current.querySelector('.name-'+event.target.id).classList.add(stylesCascinaCristina.active)
+        sectionNav.current
+          .querySelectorAll("a")
+          .forEach(a => a.classList.remove(stylesCascinaCristina.active))
+        sectionNav.current
+          .querySelector(".name-" + event.target.id)
+          .classList.add(stylesCascinaCristina.active)
       }
     },
     rootMargin: "0% 0% -67%",
   }
   useEffect(() => {
-    document.documentElement.style.setProperty('scroll-behavior', 'smooth');
-    // returned function will be called on component unmount 
+    document.documentElement.style.setProperty("scroll-behavior", "smooth")
+    // returned function will be called on component unmount
     return () => {
-      document.documentElement.style.setProperty('scroll-behavior', 'auto');
+      document.documentElement.style.setProperty("scroll-behavior", "auto")
     }
   }, [])
   return (
@@ -178,7 +191,10 @@ export default function CascinaCristina() {
         className="layout-main"
         style={{ padding: 0, backgroundColor: "white" }}
       >
-        <div ref={sectionNav} className={[stylesCascinaCristina.sectionsNavigation].join(" ")}>
+        <div
+          ref={sectionNav}
+          className={[stylesCascinaCristina.sectionsNavigation].join(" ")}
+        >
           {sections.map((d, i) => {
             return (
               <Link
@@ -186,7 +202,7 @@ export default function CascinaCristina() {
                 to={"/cascina-cristina" + d.anchor}
                 className={[
                   stylesCascinaCristina.sectionNavItem,
-                  'name-'+d.anchor.slice(1)
+                  "name-" + d.anchor.slice(1),
                 ].join(" ")}
               >
                 <div className={stylesCascinaCristina.sectionStatus}></div>
