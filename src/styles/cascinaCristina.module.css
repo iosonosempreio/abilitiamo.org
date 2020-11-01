@@ -5,25 +5,59 @@
   position: sticky;
   top: 64px;
   background-color: white;
+  padding: 0;
+  z-index: 999;
+  /* hide on small screens */
+  display: none;
+}
+.sections-navigation::after {
+  content: " ";
+  width: calc(100% + 20px);
+  height: 10px;
+  background-color: #ffffff;
+  display: block;
+  box-shadow: 0px 5px 5px white;
+  position: absolute;
+  bottom: 0;
 }
 .section-nav-item {
   flex-basis: 0;
   flex-grow: 1;
   text-decoration: none;
-  border-top: 2px solid transparent;
-  margin: 0 10px;
-}
-.section-nav-item.active {
-  border-color: var(--azure);
+  margin: 0 5px;
+  white-space: nowrap;
 }
 .section-nav-item:hover {
   text-decoration: none;
 }
-.section-nav-item p:first-child {
+.section-status {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 2px;
+  /* background-color: lavender; */
+}
+.section-nav-item:hover .section-status {
+  justify-content: flex-start;
+}
+.section-status::before {
+  content: " ";
+  height: 100%;
+  width: 0;
+  background-color: var(--azure);
+  display: block;
+  transition: width 0.35s ease;
+}
+.section-nav-item:hover .section-status::before {
+  width: 100%;
+}
+
+.section-nav-item p:first-of-type {
   font-size: 0.625rem;
   color: var(--azure);
 }
-.section-nav-item p:last-child {
+.section-nav-item p:last-of-type {
+  font-size: 0.875rem;
   font-weight: 600;
 }
 
@@ -32,10 +66,50 @@
   display: grid;
   grid-template-columns: inherit;
   grid-template-rows: inherit;
+  column-gap: inherit;
+  row-gap: inherit;
   align-items: center;
 }
-.img-placeholder {
-  background-color: lavender;
-  height: 45vh;
-  margin: 2rem 0;
+.section-title {
+  grid-column: 1 / -1;
+}
+.img-section-cover {
+  border: 1px solid lavander;
+  grid-column: 1 / -1;
+}
+.columns {
+  grid-column: 1 / -1;
+}
+.further {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+}
+@media screen and (min-width: 768px) {
+  .sections-navigation {
+    display: flex;
+  }
+  .section-nav-item p:last-of-type {
+    font-size: 0.8rem;
+  }
+  .section-title {
+    grid-column: 1 / span 4;
+  }
+  .img-section-cover {
+    grid-column: 5 / -1;
+  }
+  .columns {
+    column-count: 3;
+  }
+  .further {
+    display: inline;
+  }
+}
+@media screen and (min-width: 992px) {
+  .section-nav-item p:last-of-type {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (min-width: 1200px) {
 }
