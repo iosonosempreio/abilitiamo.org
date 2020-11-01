@@ -13,7 +13,10 @@ let images
 
 export default function CascinaCristina() {
   images = useStaticQuery(query)
-  const [spiritoMostraAltro, setSpiritoMostraAltro] = useState(window.innerWidth>767)
+  const [spiritoMostraAltro, setSpiritoMostraAltro] = useState(null)
+  useEffect(()=>{
+    setSpiritoMostraAltro(window.innerWidth>767);
+  },[]);
   const spirito = (
     <>
       <div className={stylesCascinaCristina.sectionTitle}>
