@@ -73,7 +73,7 @@ a:hover {
   row-gap: var(--gap);
   width: calc(100% - 40px);
   margin: auto;
-  padding: var(--gap) 0 calc(3rem + var(--gap));
+  padding: var(--gap) 0;
 }
 
 .layout-main .a-row {
