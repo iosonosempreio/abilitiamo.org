@@ -56,45 +56,9 @@ export default function CascinaCristina() {
       </div>
     </>
   )
-  const mappa = (
-    <>
-      <h1 style={{ gridColumn: "1 / span 4" }}>
-        Mappatura
-        <br />
-        del bisogno
-      </h1>
-      <div
-        style={{ gridColumn: "5 / -2" }}
-        className={stylesCascinaCristina.imgPlaceholder}
-      />
-    </>
-  )
-  const cambiamento = (
-    <>
-      <h1 style={{ gridColumn: "1 / span 4" }}>
-        Mappatura
-        <br />
-        del bisogno
-      </h1>
-      <div
-        style={{ gridColumn: "5 / -2" }}
-        className={stylesCascinaCristina.imgPlaceholder}
-      />
-    </>
-  )
-  const comunita = (
-    <>
-      <h1 style={{ gridColumn: "1 / span 4" }}>
-        Comunità
-        <br />
-        abitativa
-      </h1>
-      <div
-        style={{ gridColumn: "5 / -2" }}
-        className={stylesCascinaCristina.imgPlaceholder}
-      />
-    </>
-  )
+  const mappa = spirito
+  const cambiamento = spirito
+  const comunita = spirito
   const sections = [
     {
       title: (
@@ -116,7 +80,7 @@ export default function CascinaCristina() {
         </>
       ),
       anchor: "#mappa",
-      content: spirito,
+      content: mappa,
     },
     {
       title: (
@@ -127,7 +91,7 @@ export default function CascinaCristina() {
         </>
       ),
       anchor: "#cambiamento",
-      content: spirito,
+      content: cambiamento,
     },
     {
       title: (
@@ -138,7 +102,7 @@ export default function CascinaCristina() {
         </>
       ),
       anchor: "#comunita",
-      content: spirito,
+      content: comunita,
     },
     {
       title: (
@@ -220,6 +184,7 @@ export default function CascinaCristina() {
               key={i}
               id={d.anchor.slice(1)}
               className={[stylesCascinaCristina.section].join(" ")}
+              // data-sal="fade"
             >
               {d.content || d.title}
             </div>
