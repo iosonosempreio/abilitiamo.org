@@ -1,19 +1,22 @@
 .page-header {
-  grid-column: span 12;
+  grid-column: 1 / -1;
   min-height: 8rem;
   display: flex;
+}
+.contacts .page-header {
+  padding-bottom: 3rem;
 }
 .page-header :global .layout-main {
   padding: 0;
 }
-
+.paragraph {
+  grid-column: 1 / -1;
+}
 .side-bar {
-  grid-column: 9 / span 4;
+  grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
-  padding: 0 0 0 15%;
 }
-
 .side-bar a {
   font-weight: 500;
   display: grid;
@@ -23,19 +26,54 @@
   text-decoration: none;
   justify-content: start;
 }
-
 .side-bar a:hover {
   color: var(--red);
 }
+.page-block {
+  grid-column: 1 / -1;
+  background-color: white;
+  box-shadow: 0 0 8px #ddd;
+  padding: 2rem;
+}
+.page-block:first-child {
+  margin-top: -4rem;
+}
+.contacts .info {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.socials {
+  min-width:75%;
+  display: inline-flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
 
 @media screen and (min-width: 576px) {
+  .socials {
+    min-width:75%;
+  }
 }
 @media screen and (min-width: 768px) {
   .page-header {
     min-height: 15rem;
   }
+  .paragraph {
+    grid-column: 2 / span 7;
+  }
+  .side-bar {
+    grid-column: 9 / span 4;
+    padding: 0 0 0 15%;
+  }
+  .socials {
+    min-width: 30%;
+  }
 }
 @media screen and (min-width: 992px) {
+  .socials {
+    min-width: 20%;
+  }
 }
 @media screen and (min-width: 1200px) {
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import Logo from "./logo"
 import items from "../menu-items.json"
+import info from "./assets/info.json"
 import { Link } from "gatsby"
 import { FaFacebookSquare, FaInstagram, FaYoutube, FaRegEnvelope, FaEnvelope, FaPiggyBank } from "react-icons/fa"
 import styles from "../styles/footer.module.css"
@@ -25,26 +26,26 @@ export default function Footer(props) {
             })}
         </div>
         <div className={styles.footerContacts}>
-          <a href="https://www.facebook.com/abilitiamo/" target="_blank" rel="noreferrer">
+          <a href={info.associazione.facebook} target="_blank" rel="noreferrer">
             <FaFacebookSquare style={{top: 2}} /> <span>Facebook</span>
           </a>
           <Link to="/">
             <FaInstagram style={{top: 2}} /> <span>Instagram</span>
           </Link>
-          <a href="https://www.youtube.com/channel/UCzlesA7SjzJXyVJxeLhL-Iw" target="_blank" rel="noreferrer">
+          <a href={info.associazione.youtube} target="_blank" rel="noreferrer">
             <FaYoutube style={{top: 2}} /> <span>Youtube</span>
           </a>
           <span>
-            <FaRegEnvelope style={{top: 2}} /> info@abilitiamo.org
+            <FaRegEnvelope style={{top: 2}} /> {info.associazione.mail}
           </span>
           <span>
-            <FaEnvelope style={{top: 2}} /> certificata@pec.abilitiamo.org
+            <FaEnvelope style={{top: 2}} /> {info.associazione.pec}
           </span>
           <span>
-            <span style={{fontSize: '0.75rem',fontWeight:700}}>C.F.</span> 900411400139
+            <span style={{fontSize: '0.75rem',fontWeight:700}}>C.F.</span> {info.associazione.codiceFiscale}
           </span>
           <span>
-            <FaPiggyBank style={{top: 2}} /> IT52P0843051100000000114383
+            <FaPiggyBank style={{top: 2}} /> {info.associazione.iban}
           </span>
         </div>
         <div className={styles.footerContributors}>

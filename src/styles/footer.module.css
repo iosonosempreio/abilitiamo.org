@@ -2,6 +2,9 @@ footer {
   padding-top: 2rem;
   line-height: 2rem;
 }
+footer :global .layout-main{
+  padding-bottom: var(--gap);
+}
 .footer-nav {
   display: flex;
   flex-direction: column;

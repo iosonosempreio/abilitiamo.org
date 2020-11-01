@@ -1,42 +1,37 @@
 [
   {
-    "label": "home",
-    "url": "/",
-    "menues": []
-  },
-  {
     "label": "chi siamo",
     "url": "/chi-siamo",
     "menues": ["main", "footer"]
   },
   {
     "label": "Cascina Cristina",
-    "url": "/cascina-cristina",
+    "url": "/",
     "menues": ["main", "footer"]
   },
   {
-    "label": "notizie",
-    "url": "/notizie",
+    "label": "Notizie",
+    "url": "/",
     "menues": ["main", "footer"]
   },
   {
-    "label": "galleria",
-    "url": "/galleria",
+    "label": "Galleria",
+    "url": "/",
     "menues": ["main", "footer"]
   },
   {
-    "label": "contatti",
+    "label": "Contatti",
     "url": "/contacts",
     "menues": ["main", "footer"]
   },
   {
-    "label": "sostienici",
-    "url": "/sostieni",
+    "label": "Sostieni",
+    "url": "/",
     "menues": ["main", "footer"]
   },
   {
-    "label": "privacy",
-    "url": "/privacy",
+    "label": "Privacy",
+    "url": "/",
     "menues": ["footer"]
   }
 ]

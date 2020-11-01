@@ -7,8 +7,10 @@ export default function Layout(props) {
   return (
     <>
       <Navigation navBackground={props.navBackground} />
-      <StickyMessage />
-      <PageHeader color={props.color} bgColor={props.bgColor}>{props.title}</PageHeader>
+      { !props.hideStickyMessage && <StickyMessage /> }
+      <PageHeader color={props.color} bgColor={props.bgColor}>
+        {props.title}
+      </PageHeader>
       <div className="layout-main">{props.children}</div>
       <Footer />
     </>

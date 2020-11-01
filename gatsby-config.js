@@ -6,7 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  pathPrefix: "/abilitiamo-website",
+  pathPrefix: `/abilitiamo-website`,
   plugins: [
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

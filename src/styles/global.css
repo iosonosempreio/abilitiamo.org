@@ -5,7 +5,8 @@
   --azure: #7ABED9;
   --blue: #304B70;
   --beige: #FAF8F6;
-  --gap: 15px;
+  --gray: #4A4A4A;
+  --gap: 16px;
 }
 
 /* utilities */
@@ -39,7 +40,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
+/* sticky message */
 .sticky-message {
   top:64px;
   height:36px;
@@ -50,9 +51,15 @@ a:hover {
   justify-content: center;
   z-index: 1000;
 }
-
 .sticky-message .long-msg {
   display: none;
+}
+.sticky-message a {
+  color: white;
+  text-decoration: none;
+}
+.sticky-message a:hover {
+  color: var(--blue);
 }
 
 .layout-main {

@@ -1,4 +1,18 @@
 {
-  "mail":"info@abilitiamo.org",
-  "pec":"certificata@pec.abilitiamo.org"
+  "associazione": {
+    "ragioneSociale": "Associazione Abilítiamo Autismo ONLUS",
+    "indirizzo": "Via per Gattedo 19/7, Carugo 22060 CO",
+    "mail": "info@abilitiamo.org",
+    "pec": "certificata@pec.abilitiamo.org",
+    "codiceFiscale": "900411400139",
+    "iban": "IT52P0843051100000000114383",
+    "facebook": "https://www.facebook.com/abilitiamo/",
+    "instagram": "",
+    "youtube": "https://www.youtube.com/channel/UCzlesA7SjzJXyVJxeLhL-Iw"
+  },
+  "comunita": {
+    "nome": "Cascina Cristina",
+    "indirizzo": "Via per Alzate 76, 22063 Cantù CO",
+    "mail": "cascinacristina@abilitiamo.org"
+  }
 }

@@ -14,9 +14,9 @@ const sidebar2 = [{ label: 'Progetto "Cascina Cristina"', url: "/cascina-cristin
 export default function ChiSiamo() {
   const data = useStaticQuery(query)
   return (
-    <Layout title={<>Associazione Abi<span>lí</span>tiamo Autismo ONLUS</>} bgColor='var(--red)' color='white'>
+    <Layout title={<>Associazione Abi<span>lí</span>tiamo Autismo ONLUS</>}>
       <div className="a-row">
-        <p className={["paragraph", "paragraphBig"].join(" ")}>
+        <p className={["paragraph", "paragraphBig", styles.paragraph].join(" ")}>
           Un nome, due significati, un unico obiettivo. Abitare abilitando è lo
           scopo per il quale la nostra associazione è nata: creare una casa per
           i nostri ragazzi autistici dove potranno esprimere al meglio le loro
@@ -53,7 +53,7 @@ export default function ChiSiamo() {
         />
       </div>
       <div className="a-row">
-        <p className={["paragraph", "paragraphBig"].join(" ")}>
+        <p className={["paragraph", "paragraphBig", styles.paragraph].join(" ")}>
           Il nostro obiettivo è creare sul nostro territorio un contesto capace
           di migliorare la qualità di vita di giovani adulti autistici
           attraverso interventi permanenti di carattere socio assistenziale,
@@ -69,7 +69,7 @@ export default function ChiSiamo() {
         />
       </div>
       <div className="a-row">
-        <p className={["paragraph", "paragraphBig"].join(" ")}>
+        <p className={["paragraph", "paragraphBig", styles.paragraph].join(" ")}>
           Grazie al supporto del territorio, dei suoi soci e dei suoi
           collaboratori, Abilitiamo è risultata vincitrice del bando per i
           Progetti Emblematici Maggiori della Provincia di Como (anno 2019).

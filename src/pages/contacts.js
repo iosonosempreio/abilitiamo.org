@@ -1,12 +1,103 @@
 import React from "react"
 import Layout from "../components/layout"
-
+import styles from "../styles/page.module.css"
+import info from "../components/assets/info.json"
+import { FaFacebookSquare, FaInstagram, FaYoutube } from "react-icons/fa"
 export default function Contact() {
   return (
-    <Layout title="Teniamoci in contatto">
-      <div style={{ gridColumn: "span 12" }}>
-        <p>Send us a message!</p>
-      </div>
-    </Layout>
+    <span className={styles.contacts}>
+      <Layout title="Teniamoci in contatto">
+        <div
+          className={[styles.pageBlock, styles.contacts, "round-borders"].join(
+            " "
+          )}
+        >
+          <span className={styles.info}>
+            <h4>Ragione sociale</h4>
+            <h2>{info.associazione.ragioneSociale}</h2>
+          </span>
+          <span className={styles.info}>
+            <h4>Indirizzo</h4>
+            <h3>{info.associazione.indirizzo}</h3>
+          </span>
+          <span className={styles.info}>
+            <h4>Contattare l'associazione</h4>
+            <h3>{info.associazione.mail}</h3>
+          </span>
+          <span className={styles.info}>
+            <h4>PEC</h4>
+            <h3>{info.associazione.pec}</h3>
+          </span>
+          <span className={styles.info}>
+            <h4>
+              Codice fiscale
+              <span style={{ color: "var(--azure)" }}>(5x1000)</span>
+            </h4>
+            <h3>{info.associazione.codiceFiscale}</h3>
+          </span>
+          <span className={styles.info}>
+            <h4>
+              IBAN
+              <span style={{ color: "var(--azure)" }}>
+                (donazioni liberali)
+              </span>
+            </h4>
+            <h3>{info.associazione.iban}</h3>
+          </span>
+          <h4>Canali social</h4>
+          <h1 className={styles.socials}>
+            <a
+              href={info.associazione.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookSquare />
+            </a>{" "}
+            <a
+              href={info.associazione.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a>{" "}
+            <a
+              href={info.associazione.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaYoutube />
+            </a>
+          </h1>
+        </div>
+        <div
+          className={[styles.pageBlock, styles.contacts, "round-borders"].join(
+            " "
+          )}
+        >
+          <span className={styles.info}>
+            <h4>Comunità per persone adulte autistiche</h4>
+            <h2>{info.comunita.nome}</h2>
+          </span>
+          <span className={styles.info}>
+            <h4>Indirizzo</h4>
+            <h3>{info.comunita.indirizzo}</h3>
+          </span>
+          <span className={styles.info}>
+            <h4>Contattare la comunità</h4>
+            <h3>{info.comunita.mail}</h3>
+          </span>
+        </div>
+        <div
+            className={[
+              styles.pageBlock,
+              styles.contacts,
+              "round-borders",
+            ].join(" ")}
+          >
+            <h4>Iscriviti alla nostra newsletter</h4> [ QUi ci sarà il campo per
+            registrarsi alla NEWSLETTER ]
+          </div>
+      </Layout>
+    </span>
   )
 }
