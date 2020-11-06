@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import styles from "../styles/page.module.css"
+import styles from "../styles/page.module.scss"
 import info from "../components/assets/info.json"
 import { FaFacebookSquare, FaInstagram, FaYoutube } from "react-icons/fa"
 export default function Contact() {

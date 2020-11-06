@@ -61,16 +61,17 @@ a:hover {
   align-items: center;
   justify-content: center;
   z-index: 999;
-}
-.sticky-message .long-msg {
-  display: none;
-}
-.sticky-message a {
-  color: white;
-  text-decoration: none;
-}
-.sticky-message a:hover {
-  color: var(--blue);
+  
+  .long-msg {
+    display: none;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--blue);
+  }
 }
 .layout-main {
   display: grid;

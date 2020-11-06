@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
-import styles from "../styles/page.module.css"
+import styles from "../styles/page.module.scss"
 
 export default function NotFound() {
   return (

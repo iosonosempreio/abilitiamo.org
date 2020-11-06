@@ -4,20 +4,6 @@
   display: flex;
   align-items: center;
 }
-.contacts .page-header {
-  padding-bottom: 3rem;
-}
-.cascina-cristina {
-}
-.cascina-cristina .page-header {
-  padding: 0px 3rem;
-  background-image: url(../components/assets/cascina-cristina-header-bg.svg);
-  background-position: center top;
-  background-size: cover;
-}
-.page-header :global .layout-main {
-  padding: 0;
-}
 .paragraph {
   grid-column: 1 / -1;
 }
@@ -25,37 +11,58 @@
   grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
-}
-.side-bar a {
-  font-weight: 500;
-  display: grid;
-  grid-template-columns: 2rem auto;
-  align-items: center;
-  color: var(--azure);
-  text-decoration: none;
-  justify-content: start;
-}
-.side-bar a:hover {
-  color: var(--red);
+  a {
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: 2rem auto;
+    align-items: center;
+    color: var(--azure);
+    text-decoration: none;
+    justify-content: start;
+  }
+  a:hover {
+    color: var(--red);
+  }
 }
 .page-block {
   grid-column: 1 / -1;
   background-color: white;
   box-shadow: 0 0 10px #eee;
   padding: 2rem;
-}
-.page-block:first-child {
-  margin-top: -4rem;
-}
-.contacts .info {
-  margin-bottom: 1rem;
-  display: block;
+
+  &:first-child {
+    margin-top: -4rem;
+  }
 }
 .socials {
   min-width: 75%;
   display: inline-flex;
   justify-content: space-between;
   margin-top: 0.5rem;
+}
+.contacts {
+  .page-header {
+    padding-bottom: 3rem;
+  }
+  .info {
+    margin-bottom: 1rem;
+    display: block;
+  }
+}
+.cascina-cristina {
+  :global .layout-main {
+    padding: 0;
+  }
+  .page-header {
+    padding: 0px 3rem;
+    background-image: url(../components/assets/cascina-cristina-header-bg.svg);
+    background-position: center top;
+    background-size: cover;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -67,8 +74,11 @@
   .page-header {
     min-height: 15rem;
   }
-  .cascina-cristina .page-header {
-    padding: 0px 7rem;
+  .cascina-cristina {
+    .page-header {
+      padding: 0px 7rem;
+      justify-content: center;
+    }
   }
   .paragraph {
     grid-column: 2 / span 7;
@@ -85,8 +95,10 @@
   .socials {
     min-width: 20%;
   }
-  .cascina-cristina .page-header {
-    padding: 0px 18rem;
+  .cascina-cristina {
+    .page-header {
+      padding: 0px 18rem;
+    }
   }
 }
 @media screen and (min-width: 1200px) {

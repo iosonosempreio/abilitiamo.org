@@ -1,22 +1,27 @@
-import React, { useRef, useEffect, useState } from "react"
-import "intersection-observer" // optional polyfill
-import Observer from "@researchgate/react-intersection-observer"
-import Navigation from "../components/navigation"
+import React, { useRef, useEffect, useState } from "react";
+import "intersection-observer"; // optional polyfill
+import Observer from "@researchgate/react-intersection-observer";
+import Navigation from "../components/navigation";
 // import { AnchorLink } from "gatsby-plugin-anchor-links"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import Footer from "../components/footer"
-import styles from "../styles/page.module.css"
-import stylesCascinaCristina from "../styles/cascinaCristina.module.css"
+import { Link, useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
+import Footer from "../components/footer";
+import styles from "../styles/page.module.scss";
+import stylesCascinaCristina from "../styles/cascinaCristina.module.scss";
 
-let images
+let images;
 
 export default function CascinaCristina() {
-  images = useStaticQuery(query)
-  const [spiritoMostraAltro, setSpiritoMostraAltro] = useState(null)
-  useEffect(()=>{
-    setSpiritoMostraAltro(window.innerWidth>767);
-  },[]);
+  images = useStaticQuery(query);
+  const [spiritoMostraAltro, setSpiritoMostraAltro] = useState(null);
+  useEffect(() => {
+    setSpiritoMostraAltro(window.innerWidth > 767);
+    document.documentElement.style.setProperty("scroll-behavior", "smooth");
+    // returned function will be called on component unmount
+    return () => {
+      document.documentElement.style.setProperty("scroll-behavior", "auto");
+    };
+  }, []);
   const spirito = (
     <>
       <div className={stylesCascinaCristina.sectionTitle}>
@@ -49,29 +54,70 @@ export default function CascinaCristina() {
             spiritoMostraAltro ? "force-display-inline" : "",
           ].join(" ")}
         >
-          One morning, when Gregor Samsa woke from troubled dreams, he found
-          himself transformed in his bed into a horrible vermin. He lay on his
-          armour-like back, and if he lifted his head a little he could see his
-          brown belly, slightly domed and divided by arches into stiff sections.
-          The bedding was hardly able to cover it and seemed ready to slide off
-          any moment. His many legs, pitifully thin compared with the size of
-          the rest of him, waved about helplessly as he looked. "What's happened
-          to me?" he thought. It wasn't a dream. His room, a proper human room
-          although a little too small, lay peacefully between its four familiar
-          walls. A collection of textile samples lay spread out on the table -
-          Samsa was a travelling salesman - and above it there hung a picture
-          that he had recently cut out of an illustrated magazine and housed in
-          a nice, gilded frame. It showed a lady fitted out with a fur hat and
-          fur boa who sat upright, raising a heavy fur muff that covered the
-          whole of her lower arm towards the viewer. Gregor then turned to look
-          out the window at the dull weather. Drops
+          Facendo leva sull&#39;esperienza maturata vivendo la condizione dei
+          loro figli, i genitori dell&#39;associazione hanno deciso di mettersi
+          al servizio del territorio per rendere meno difficile il percorso
+          delle famiglie che si verranno a trovare in una situazione analoga a
+          quella da loro vissuta. Da qui la sfida di creare un polo
+          multifunzionale per l&#39;autismo. Un centro in grado di accogliere in
+          forma residenziale adulti autistici a basso funzionamento, di offrire
+          la possibilità di abilitazione a giovani autistici per i quali è
+          sufficiente una gestione diurna, di dare sollievo temporaneo a quelle
+          famiglie che attraversano un periodo complicato con il loro figlio
+          autistico. Il polo Cascina Cristina si occuperà anche di formazione
+          degli operatori del settore e cercherà di agevolare il percorso di
+          diagnosi della potenziale persona autistica. Una volta accreditata, la
+          struttura, lavorando in rete con le istituzioni sanitarie, organizzerà
+          una presa in carico coordinata della persona autistica.
         </span>
       </div>
     </>
-  )
-  const mappa = spirito
-  const cambiamento = spirito
-  const comunita = spirito
+  );
+  const mappa = (
+    <>
+      <div className={stylesCascinaCristina.sectionTitle}>
+        <h1>
+          Mappatura <br /> del bisogno
+        </h1>
+        <p className="paragraph">
+          ATS Insubria, per quanto riguarda la transizione all&#39;età adulta,
+          ha eseguito una mappatura dei soggetti con diagnosi di disturbi dello
+          spettro autistico.
+        </p>
+      </div>
+      <Img
+        className={[
+          "round-borders",
+          stylesCascinaCristina.imgSectionCover,
+        ].join(" ")}
+        fluid={images.image2.childImageSharp.fluid}
+      />
+      <div className={[stylesCascinaCristina.columns].join(" ")}>
+        <button
+          className={stylesCascinaCristina.mostraAltro}
+          onClick={() => setSpiritoMostraAltro(!spiritoMostraAltro)}
+        >
+          {spiritoMostraAltro ? "Nascondi" : "Mostra altro"}
+        </button>
+        <span
+          className={[
+            stylesCascinaCristina.further,
+            spiritoMostraAltro ? "force-display-inline" : "",
+          ].join(" ")}
+        >
+          I risultati dello studio dicono che che nella fascia “giovane adulto”,
+          cioè dai 18 anni ai 30, si collocheranno nei prossimi tre anni 57
+          utenti ovvero l’81% del campione esaminato. Data la gravità di questi
+          soggetti, è presumibile ipotizzare la necessità di forme di
+          residenzialità che permettano da una parte la riabilitazione delle
+          funzionalità residuali e dall’altra di rispondere alle esigenze dei
+          soggetti e dei familiari.
+        </span>
+      </div>
+    </>
+  );
+  const cambiamento = spirito;
+  const comunita = spirito;
   const sections = [
     {
       title: (
@@ -155,28 +201,21 @@ export default function CascinaCristina() {
       ),
       anchor: "#emblematicita",
     },
-  ]
-  const sectionNav = useRef()
+  ];
+  const sectionNav = useRef();
   const observerOptions = {
-    onChange: event => {
+    onChange: (event) => {
       if (event.isIntersecting) {
         sectionNav.current
           .querySelectorAll("a")
-          .forEach(a => a.classList.remove(stylesCascinaCristina.active))
+          .forEach((a) => a.classList.remove(stylesCascinaCristina.active));
         sectionNav.current
           .querySelector(".name-" + event.target.id)
-          .classList.add(stylesCascinaCristina.active)
+          .classList.add(stylesCascinaCristina.active);
       }
     },
     rootMargin: "0% 0% -67%",
-  }
-  useEffect(() => {
-    document.documentElement.style.setProperty("scroll-behavior", "smooth")
-    // returned function will be called on component unmount
-    return () => {
-      document.documentElement.style.setProperty("scroll-behavior", "auto")
-    }
-  }, [])
+  };
   return (
     <span className={styles.cascinaCristina}>
       <Navigation background="var(--beige)" />
@@ -212,7 +251,7 @@ export default function CascinaCristina() {
                 <p>{("00" + (i + 1)).slice(-2)}</p>
                 <p>{d.title}</p>
               </Link>
-            )
+            );
           })}
         </div>
         {sections.map((d, i) => {
@@ -223,15 +262,17 @@ export default function CascinaCristina() {
                 className={[stylesCascinaCristina.section].join(" ")}
                 // data-sal="fade"
               >
-                {d.content || <h1 style={{gridColumn:"1 / -1"}}>{d.title}</h1>}
+                {d.content || (
+                  <h1 style={{ gridColumn: "1 / -1" }}>{d.title}</h1>
+                )}
               </div>
             </Observer>
-          )
+          );
         })}
       </div>
       <Footer />
     </span>
-  )
+  );
 }
 
 export const query = graphql`
@@ -243,5 +284,12 @@ export const query = graphql`
         }
       }
     }
+    image2: file(relativePath: { eq: "linea ats.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
-`
+`;

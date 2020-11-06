@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { FaFacebookSquare, FaInstagram, FaYoutube } from "react-icons/fa"
 // import { HiOutlineMenuAlt4 } from "react-icons/hi"
 import Logo from "./logo"
-import styles from "../styles/navigation.module.css"
+import styles from "../styles/navigation.module.scss"
 import items from "../menu-items.json"
 
 export default function Navigation({ background }) {

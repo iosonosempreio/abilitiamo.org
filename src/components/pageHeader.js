@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "../styles/page.module.css"
+import styles from "../styles/page.module.scss"
 export default function PageHeader(props) {
   return (
     <div className={styles.pageHeader} style={{ backgroundColor: props.bgColor, color: props.color }}>

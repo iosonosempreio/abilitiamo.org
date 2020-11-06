@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SideBarLink from "../components/sideBarLink"
-import styles from "../styles/page.module.css"
+import styles from "../styles/page.module.scss"
 const sidebar1 = [
   { label: "Storia di Abilítiamo", url: "/" },
   { label: "Organizzazione", url: "/" },
