@@ -26,22 +26,21 @@ export default function CascinaCristina() {
     <>
       <div className={stylesCascinaCristina.sectionTitle}>
         <h1>
-          Spirito <br /> del progetto
+          Spirito <br/> del progetto
         </h1>
-        <p className="paragraph">
+        <p className="paragraph paragraphBig">
           Il progetto Cascina Cristina nasce innanzi tutto dal diritto delle
           persone autistiche ad avere una casa e un luogo di abilitazione. Lo
           spirito che lo anima è però molto più ampio.
         </p>
       </div>
-      <Img
-        className={[
+      <Img className={[
           "round-borders",
           stylesCascinaCristina.imgSectionCover,
         ].join(" ")}
         fluid={images.image1.childImageSharp.fluid}
       />
-      <div className={[stylesCascinaCristina.columns].join(" ")}>
+      <p className={["paragraph", stylesCascinaCristina.paragraph].join(" ")}>
         <button
           className={stylesCascinaCristina.mostraAltro}
           onClick={() => setSpiritoMostraAltro(!spiritoMostraAltro)}
@@ -70,7 +69,7 @@ export default function CascinaCristina() {
           struttura, lavorando in rete con le istituzioni sanitarie, organizzerà
           una presa in carico coordinata della persona autistica.
         </span>
-      </div>
+      </p>
     </>
   );
   const mappa = (
