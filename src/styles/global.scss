@@ -44,6 +44,7 @@ body.menu-is-open{
 a {
   color: var(--blue);
   text-decoration: none;
+  cursor: pointer;
 }
 a:hover {
   text-decoration: underline;

@@ -13,31 +13,24 @@ let images;
 
 export default function CascinaCristina() {
   images = useStaticQuery(query);
-  const [spiritoMostraAltro, setSpiritoMostraAltro] = useState(
-    window.innerWidth > 767
-  );
-  const [mappaMostraAltro, setMappaMostraAltro] = useState(
-    window.innerWidth > 767
-  );
-  const [cambiamentoMostraAltro, setCambiamentoMostraAltro] = useState(
-    window.innerWidth > 767
-  );
-  const [comunitàMostraAltro, setComunitàMostraAltro] = useState(
-    window.innerWidth > 767
-  );
-  const [diurnoMostraAltro, setDiurnoMostraAltro] = useState(
-    window.innerWidth > 767
-  );
-  const [sollievoMostraAltro, setSollievoMostraAltro] = useState(
-    window.innerWidth > 767
-  );
-  const [presaMostraAltro, setPresaMostraAltro] = useState(
-    window.innerWidth > 767
-  );
-  const [emblematicitàMostraAltro, setEmblematicitàMostraAltro] = useState(
-    window.innerWidth > 767
-  );
+  const [spiritoMostraAltro, setSpiritoMostraAltro] = useState(null);
+  const [mappaMostraAltro, setMappaMostraAltro] = useState(null);
+  const [cambiamentoMostraAltro, setCambiamentoMostraAltro] = useState(null);
+  const [comunitàMostraAltro, setComunitàMostraAltro] = useState(null);
+  const [diurnoMostraAltro, setDiurnoMostraAltro] = useState(null);
+  const [sollievoMostraAltro, setSollievoMostraAltro] = useState(null);
+  const [presaMostraAltro, setPresaMostraAltro] = useState(null);
+  const [emblematicitàMostraAltro, setEmblematicitàMostraAltro] = useState(null);
   useEffect(() => {
+    const b = window.innerWidth > 767;
+    setSpiritoMostraAltro(b);
+    setMappaMostraAltro(b);
+    setCambiamentoMostraAltro(b);
+    setComunitàMostraAltro(b);
+    setDiurnoMostraAltro(b);
+    setSollievoMostraAltro(b);
+    setPresaMostraAltro(b);
+    setEmblematicitàMostraAltro(b);
     document.documentElement.style.setProperty("scroll-behavior", "smooth");
     // returned function will be called on component unmount
     return () => {
@@ -582,18 +575,27 @@ export default function CascinaCristina() {
         >
           {sections.map((d, i) => {
             return (
-              <Link
+              <a
                 key={i}
-                to={"/cascina-cristina" + d.anchor}
+                // to={"/cascina-cristina" + d.anchor}
                 className={[
                   stylesCascinaCristina.sectionNavItem,
                   "name-" + d.anchor.slice(1),
                 ].join(" ")}
+                onClick={()=>{
+                  const el = document.querySelector(d.anchor)
+                  const bbox = el.getBoundingClientRect()
+                  window.scrollBy({
+                    top: bbox.y - 162, 
+                    left: 0, 
+                    behavior: 'smooth'
+                  });
+                }}
               >
                 <div className={stylesCascinaCristina.sectionStatus}></div>
                 <p>{("00" + (i + 1)).slice(-2)}</p>
                 <p>{d.title}</p>
-              </Link>
+              </a>
             );
           })}
         </div>
