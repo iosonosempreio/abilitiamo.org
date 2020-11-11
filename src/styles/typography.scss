@@ -5,6 +5,7 @@
 h1 {
   color: var(--gray);
   margin: 0;
+  font-size: 2.625rem;
 }
 h2 {
   color: var(--blue);
@@ -28,10 +29,12 @@ p {
 }
 .paragraph {
   margin-top: 0;
+  line-height: 1.5rem;
 }
 .paragraphBig {
   color: var(--blue);
-  font-size: 1.3125rem;
+  font-size: 1.375rem;
+  line-height: 1.8rem;
   margin: 0;
 }
 

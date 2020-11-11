@@ -6,7 +6,7 @@
   --blue: #304B70;
   --beige: #FAF8F6;
   --gray: #4A4A4A;
-  --gap: 16px;
+  --gap: 2rem;
 }
 
 /* utilities */
@@ -27,9 +27,6 @@
 .force-display-inline {
   display: inline !important;
   opacity: 1 !important;
-}
-:target {
-  border: 2px solid var(--red);
 }
 html {
   margin: 0;

@@ -13,9 +13,31 @@ let images;
 
 export default function CascinaCristina() {
   images = useStaticQuery(query);
-  const [spiritoMostraAltro, setSpiritoMostraAltro] = useState(null);
+  const [spiritoMostraAltro, setSpiritoMostraAltro] = useState(
+    window.innerWidth > 767
+  );
+  const [mappaMostraAltro, setMappaMostraAltro] = useState(
+    window.innerWidth > 767
+  );
+  const [cambiamentoMostraAltro, setCambiamentoMostraAltro] = useState(
+    window.innerWidth > 767
+  );
+  const [comunitàMostraAltro, setComunitàMostraAltro] = useState(
+    window.innerWidth > 767
+  );
+  const [diurnoMostraAltro, setDiurnoMostraAltro] = useState(
+    window.innerWidth > 767
+  );
+  const [sollievoMostraAltro, setSollievoMostraAltro] = useState(
+    window.innerWidth > 767
+  );
+  const [presaMostraAltro, setPresaMostraAltro] = useState(
+    window.innerWidth > 767
+  );
+  const [emblematicitàMostraAltro, setEmblematicitàMostraAltro] = useState(
+    window.innerWidth > 767
+  );
   useEffect(() => {
-    setSpiritoMostraAltro(window.innerWidth > 767);
     document.documentElement.style.setProperty("scroll-behavior", "smooth");
     // returned function will be called on component unmount
     return () => {
@@ -26,21 +48,28 @@ export default function CascinaCristina() {
     <>
       <div className={stylesCascinaCristina.sectionTitle}>
         <h1>
-          Spirito <br/> del progetto
+          Spirito <br /> del progetto
         </h1>
         <p className="paragraph paragraphBig">
-          Il progetto Cascina Cristina nasce innanzi tutto dal diritto delle
-          persone autistiche ad avere una casa e un luogo di abilitazione. Lo
-          spirito che lo anima è però molto più ampio.
+          Il progetto Cascina Cristina nasce dal diritto delle persone
+          autistiche ad avere una casa, ma lo spirito che lo anima è però molto
+          più ampio.
         </p>
       </div>
-      <Img className={[
+      <Img
+        className={[
           "round-borders",
           stylesCascinaCristina.imgSectionCover,
         ].join(" ")}
         fluid={images.image1.childImageSharp.fluid}
       />
-      <p className={["paragraph", stylesCascinaCristina.paragraph].join(" ")}>
+      <p
+        className={[
+          "paragraph",
+          stylesCascinaCristina.paragraph,
+          stylesCascinaCristina.columns,
+        ].join(" ")}
+      >
         <button
           className={stylesCascinaCristina.mostraAltro}
           onClick={() => setSpiritoMostraAltro(!spiritoMostraAltro)}
@@ -94,14 +123,14 @@ export default function CascinaCristina() {
       <div className={[stylesCascinaCristina.columns].join(" ")}>
         <button
           className={stylesCascinaCristina.mostraAltro}
-          onClick={() => setSpiritoMostraAltro(!spiritoMostraAltro)}
+          onClick={() => setMappaMostraAltro(!mappaMostraAltro)}
         >
-          {spiritoMostraAltro ? "Nascondi" : "Mostra altro"}
+          {mappaMostraAltro ? "Nascondi" : "Mostra altro"}
         </button>
         <span
           className={[
             stylesCascinaCristina.further,
-            spiritoMostraAltro ? "force-display-inline" : "",
+            mappaMostraAltro ? "force-display-inline" : "",
           ].join(" ")}
         >
           I risultati dello studio dicono che che nella fascia “giovane adulto”,
@@ -115,8 +144,319 @@ export default function CascinaCristina() {
       </div>
     </>
   );
-  const cambiamento = spirito;
-  const comunita = spirito;
+  const cambiamento = (
+    <>
+      <div className={stylesCascinaCristina.sectionTitle}>
+        <h1>
+          Cambiamento <br /> perseguito
+        </h1>
+        <p className="paragraph">
+          One morning, when Gregor Samsa woke from troubled dreams, he found
+          himself transformed in his bed into a horrible vermin
+        </p>
+      </div>
+      <Img
+        className={[
+          "round-borders",
+          stylesCascinaCristina.imgSectionCover,
+        ].join(" ")}
+        fluid={images.image1.childImageSharp.fluid}
+      />
+      <div className={[stylesCascinaCristina.columns].join(" ")}>
+        <button
+          className={stylesCascinaCristina.mostraAltro}
+          onClick={() => setCambiamentoMostraAltro(!cambiamentoMostraAltro)}
+        >
+          {cambiamentoMostraAltro ? "Nascondi" : "Mostra altro"}
+        </button>
+        <span
+          className={[
+            stylesCascinaCristina.further,
+            cambiamentoMostraAltro ? "force-display-inline" : "",
+          ].join(" ")}
+        >
+          One morning, when Gregor Samsa woke from troubled dreams, he found
+          himself transformed in his bed into a horrible vermin. He lay on his
+          armour-like back, and if he lifted his head a little he could see his
+          brown belly, slightly domed and divided by arches into stiff sections.
+          The bedding was hardly able to cover it and seemed ready to slide off
+          any moment. His many legs, pitifully thin compared with the size of
+          the rest of him, waved about helplessly as he looked. "What's happened
+          to me?" he thought. It wasn't a dream. His room, a proper human
+        </span>
+      </div>
+    </>
+  );
+  const comunita = (
+    <>
+      <div className={stylesCascinaCristina.sectionTitle}>
+        <h1>
+          Comunità
+          <br />
+          abitativa
+        </h1>
+        <p className="paragraph paragraphBig">
+          La comunità abitativa accoglierà stabilmente dodici persone adulte con
+          autismo.
+        </p>
+      </div>
+      <Img
+        className={[
+          "round-borders",
+          stylesCascinaCristina.imgSectionCover,
+        ].join(" ")}
+        fluid={images.image4.childImageSharp.fluid}
+      />
+      <p
+        className={[
+          "paragraph",
+          stylesCascinaCristina.paragraph,
+          stylesCascinaCristina.columns,
+        ].join(" ")}
+      >
+        <button
+          className={stylesCascinaCristina.mostraAltro}
+          onClick={() => setComunitàMostraAltro(!comunitàMostraAltro)}
+        >
+          {comunitàMostraAltro ? "Nascondi" : "Mostra altro"}
+        </button>
+        <span
+          className={[
+            stylesCascinaCristina.further,
+            comunitàMostraAltro ? "force-display-inline" : "",
+          ].join(" ")}
+        >
+          Il modello sarà quello della &quot;community farm&quot;, secondo
+          analoghe esperienze estere e italiane. Cascina Cristina è collocata in
+          un contesto rurale e ciò favorirà l&#39;abilitazione fondata sul
+          modello della fattoria. Esperienze già fatte da altre realtà hanno
+          dimostrato che si tratta di un approccio semplice ma al tempo stesso
+          ricco di situazioni e di stimoli che si adattano bene alle
+          caratteristiche della persona autistica. Cascina Cristina, pur se
+          collocata in un contesto rurale, è allo stesso tempo integrata con il
+          territorio urbano di Fecchio (località di Cantù), trovandosi di fronte
+          alla Parrocchia di San Carlo e all’annesso oratorio. Ciò eviterà
+          l’isolamento e favorirà la relazione delle persone autistiche con gli
+          abitanti del luogo. La residenza sarà costituita da 6 camere da letto,
+          ciascuna in grado di ospitare 2 letti, e da tanti servizi visibili
+          nelle piantine dell’edificio raffigurate nell’immagine.
+        </span>
+      </p>
+    </>
+  );
+  const diurno = (
+    <>
+      <div className={stylesCascinaCristina.sectionTitle}>
+        <h1>
+          Centro
+          <br />
+          diurno
+        </h1>
+        <p className="paragraph paragraphBig">
+          Far far away, behind the word mountains, far from the countries
+          Vokalia and Consonantia, there live the blind texts
+        </p>
+      </div>
+      <Img
+        className={[
+          "round-borders",
+          stylesCascinaCristina.imgSectionCover,
+        ].join(" ")}
+        fluid={images.image1.childImageSharp.fluid}
+      />
+      <p
+        className={[
+          "paragraph",
+          stylesCascinaCristina.paragraph,
+          stylesCascinaCristina.columns,
+        ].join(" ")}
+      >
+        <button
+          className={stylesCascinaCristina.mostraAltro}
+          onClick={() => setDiurnoMostraAltro(!diurnoMostraAltro)}
+        >
+          {diurnoMostraAltro ? "Nascondi" : "Mostra altro"}
+        </button>
+        <span
+          className={[
+            stylesCascinaCristina.further,
+            diurnoMostraAltro ? "force-display-inline" : "",
+          ].join(" ")}
+        >
+          Far far away, behind the word mountains, far from the countries
+          Vokalia and Consonantia, there live the blind texts. Separated they
+          live in Bookmarksgrove right at the coast of the Semantics, a large
+          language ocean. A small river named Duden flows by their place and
+          supplies it with the necessary regelialia. It is a paradisematic
+          country, in which roasted parts of sentences fly into your mouth. Even
+          the all-powerful Pointing has no control about the blind texts it is
+          an almost unorthographic life One day however a small line of blind
+          text by the name of Lorem Ipsum decided to leave for the far World of
+          Grammar.
+        </span>
+      </p>
+    </>
+  );
+  const sollievo = (
+    <>
+      <div className={stylesCascinaCristina.sectionTitle}>
+        <h1>
+          Sollievo
+          <br />
+          e altri servizi
+        </h1>
+        <p className="paragraph paragraphBig">
+          Far far away, behind the word mountains, far from the countries
+          Vokalia and Consonantia, there live the blind texts
+        </p>
+      </div>
+      <Img
+        className={[
+          "round-borders",
+          stylesCascinaCristina.imgSectionCover,
+        ].join(" ")}
+        fluid={images.image1.childImageSharp.fluid}
+      />
+      <p
+        className={[
+          "paragraph",
+          stylesCascinaCristina.paragraph,
+          stylesCascinaCristina.columns,
+        ].join(" ")}
+      >
+        <button
+          className={stylesCascinaCristina.mostraAltro}
+          onClick={() => setSollievoMostraAltro(!sollievoMostraAltro)}
+        >
+          {sollievoMostraAltro ? "Nascondi" : "Mostra altro"}
+        </button>
+        <span
+          className={[
+            stylesCascinaCristina.further,
+            sollievoMostraAltro ? "force-display-inline" : "",
+          ].join(" ")}
+        >
+          Far far away, behind the word mountains, far from the countries
+          Vokalia and Consonantia, there live the blind texts. Separated they
+          live in Bookmarksgrove right at the coast of the Semantics, a large
+          language ocean. A small river named Duden flows by their place and
+          supplies it with the necessary regelialia. It is a paradisematic
+          country, in which roasted parts of sentences fly into your mouth. Even
+          the all-powerful Pointing has no control about the blind texts it is
+          an almost unorthographic life One day however a small line of blind
+          text by the name of Lorem Ipsum decided to leave for the far World of
+          Grammar.
+        </span>
+      </p>
+    </>
+  );
+  const presa = (
+    <>
+      <div className={stylesCascinaCristina.sectionTitle}>
+        <h1>
+          Presa in carico
+          <br />
+          a rete
+        </h1>
+        <p className="paragraph paragraphBig">
+          Far far away, behind the word mountains, far from the countries
+          Vokalia and Consonantia, there live the blind texts
+        </p>
+      </div>
+      <Img
+        className={[
+          "round-borders",
+          stylesCascinaCristina.imgSectionCover,
+        ].join(" ")}
+        fluid={images.image1.childImageSharp.fluid}
+      />
+      <p
+        className={[
+          "paragraph",
+          stylesCascinaCristina.paragraph,
+          stylesCascinaCristina.columns,
+        ].join(" ")}
+      >
+        <button
+          className={stylesCascinaCristina.mostraAltro}
+          onClick={() => setPresaMostraAltro(!presaMostraAltro)}
+        >
+          {presaMostraAltro ? "Nascondi" : "Mostra altro"}
+        </button>
+        <span
+          className={[
+            stylesCascinaCristina.further,
+            presaMostraAltro ? "force-display-inline" : "",
+          ].join(" ")}
+        >
+          Far far away, behind the word mountains, far from the countries
+          Vokalia and Consonantia, there live the blind texts. Separated they
+          live in Bookmarksgrove right at the coast of the Semantics, a large
+          language ocean. A small river named Duden flows by their place and
+          supplies it with the necessary regelialia. It is a paradisematic
+          country, in which roasted parts of sentences fly into your mouth. Even
+          the all-powerful Pointing has no control about the blind texts it is
+          an almost unorthographic life One day however a small line of blind
+          text by the name of Lorem Ipsum decided to leave for the far World of
+          Grammar.
+        </span>
+      </p>
+    </>
+  );
+  const emblematicità = (
+    <>
+      <div className={stylesCascinaCristina.sectionTitle}>
+        <h1>
+          Emblematicità
+          <br />
+          per il territorio
+        </h1>
+        <p className="paragraph paragraphBig">
+          Far far away, behind the word mountains, far from the countries
+          Vokalia and Consonantia, there live the blind texts
+        </p>
+      </div>
+      <Img
+        className={[
+          "round-borders",
+          stylesCascinaCristina.imgSectionCover,
+        ].join(" ")}
+        fluid={images.image1.childImageSharp.fluid}
+      />
+      <p
+        className={[
+          "paragraph",
+          stylesCascinaCristina.paragraph,
+          stylesCascinaCristina.columns,
+        ].join(" ")}
+      >
+        <button
+          className={stylesCascinaCristina.mostraAltro}
+          onClick={() => setEmblematicitàMostraAltro(!emblematicitàMostraAltro)}
+        >
+          {emblematicitàMostraAltro ? "Nascondi" : "Mostra altro"}
+        </button>
+        <span
+          className={[
+            stylesCascinaCristina.further,
+            emblematicitàMostraAltro ? "force-display-inline" : "",
+          ].join(" ")}
+        >
+          Far far away, behind the word mountains, far from the countries
+          Vokalia and Consonantia, there live the blind texts. Separated they
+          live in Bookmarksgrove right at the coast of the Semantics, a large
+          language ocean. A small river named Duden flows by their place and
+          supplies it with the necessary regelialia. It is a paradisematic
+          country, in which roasted parts of sentences fly into your mouth. Even
+          the all-powerful Pointing has no control about the blind texts it is
+          an almost unorthographic life One day however a small line of blind
+          text by the name of Lorem Ipsum decided to leave for the far World of
+          Grammar.
+        </span>
+      </p>
+    </>
+  );
+
   const sections = [
     {
       title: (
@@ -171,6 +511,7 @@ export default function CascinaCristina() {
         </>
       ),
       anchor: "#diurno",
+      content: diurno
     },
     {
       title: (
@@ -180,6 +521,7 @@ export default function CascinaCristina() {
         </>
       ),
       anchor: "#servizi",
+      content: sollievo
     },
     {
       title: (
@@ -189,6 +531,7 @@ export default function CascinaCristina() {
         </>
       ),
       anchor: "#presa-in-carico",
+      content: presa
     },
     {
       title: (
@@ -199,6 +542,7 @@ export default function CascinaCristina() {
         </>
       ),
       anchor: "#emblematicita",
+      content: emblematicità
     },
   ];
   const sectionNav = useRef();
@@ -284,6 +628,13 @@ export const query = graphql`
       }
     }
     image2: file(relativePath: { eq: "linea ats.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    image4: file(relativePath: { eq: "Residenza piantina.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

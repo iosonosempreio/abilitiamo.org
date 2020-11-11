@@ -17,7 +17,7 @@ export default function ChiSiamo() {
     <Layout title={<>Associazione Abi<span>lí</span>tiamo Autismo ONLUS</>}>
       <div className="a-row">
         <p className={["paragraph", "paragraphBig", styles.paragraph].join(" ")}>
-          Un nome, due significati, un unico obiettivo. Abitare abilitando è lo
+          Un nome, due significati, un unico obiettivo.<br/>Abitare abilitando è lo
           scopo per il quale la nostra associazione è nata: creare una casa per
           i nostri ragazzi autistici dove potranno esprimere al meglio le loro
           abilità.
@@ -30,7 +30,7 @@ export default function ChiSiamo() {
           </div>
         </div>
       </div>
-      <div className="a-row">
+      <div className="a-row" style={{columGap:"1rem", rowGap:"1rem"}}>
         <Img
           className="round-borders"
           style={{ gridColumn: "1 / span 3" }}
