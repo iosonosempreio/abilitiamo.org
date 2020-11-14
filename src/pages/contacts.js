@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import styles from "../styles/page.module.scss"
 import info from "../components/assets/info.json"
-import { FaFacebookSquare, FaInstagram, FaYoutube } from "react-icons/fa"
+import { FaFacebookSquare, FaInstagram, FaYoutube, FaMapMarkedAlt } from "react-icons/fa"
 export default function Contact() {
   return (
     <span className={styles.contacts}>
@@ -17,7 +17,7 @@ export default function Contact() {
             <h2>{info.associazione.ragioneSociale}</h2>
           </span>
           <span className={styles.info}>
-            <h4>Indirizzo</h4>
+            <h4>Indirizzo <a href="https://goo.gl/maps/KaUmS3ARG5eCWivM8" target="_blank" rel="noopener noreferrer">(vedi mappa <FaMapMarkedAlt style={{color:"var(--red)"}} />)</a></h4>
             <h3>{info.associazione.indirizzo}</h3>
           </span>
           <span className={styles.info}>
@@ -79,11 +79,11 @@ export default function Contact() {
             <h2>{info.comunita.nome}</h2>
           </span>
           <span className={styles.info}>
-            <h4>Indirizzo</h4>
+            <h4>Indirizzo <a href="https://goo.gl/maps/SWwTMLrwt25je2EB7" target="_blank" rel="noopener noreferrer">(vedi mappa <FaMapMarkedAlt style={{color:"var(--red)"}} />)</a></h4>
             <h3>{info.comunita.indirizzo}</h3>
           </span>
           <span className={styles.info}>
-            <h4>Contattare la comunità</h4>
+            <h4>Contattare la comunità o il centro diurno</h4>
             <h3>{info.comunita.mail}</h3>
           </span>
         </div>

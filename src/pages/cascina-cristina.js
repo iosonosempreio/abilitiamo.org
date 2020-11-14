@@ -2,8 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import "intersection-observer"; // optional polyfill
 import Observer from "@researchgate/react-intersection-observer";
 import Navigation from "../components/navigation";
-// import { AnchorLink } from "gatsby-plugin-anchor-links"
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import Footer from "../components/footer";
 import styles from "../styles/page.module.scss";
@@ -543,7 +542,7 @@ export default function CascinaCristina() {
     onChange: (event) => {
       if (event.isIntersecting) {
         sectionNav.current
-          .querySelectorAll("a")
+          .querySelectorAll("."+stylesCascinaCristina.sectionNavItem)
           .forEach((a) => a.classList.remove(stylesCascinaCristina.active));
         sectionNav.current
           .querySelector(".name-" + event.target.id)
@@ -552,6 +551,15 @@ export default function CascinaCristina() {
     },
     rootMargin: "0% 0% -67%",
   };
+  const scrollToEl = (d)=>{
+    const el = document.querySelector(d.anchor)
+    const bbox = el.getBoundingClientRect()
+    window.scrollBy({
+      top: bbox.y - 162, 
+      left: 0, 
+      behavior: 'smooth'
+    });
+  }
   return (
     <span className={styles.cascinaCristina}>
       <Navigation background="var(--beige)" />
@@ -575,27 +583,22 @@ export default function CascinaCristina() {
         >
           {sections.map((d, i) => {
             return (
-              <a
+              <span
                 key={i}
-                // to={"/cascina-cristina" + d.anchor}
                 className={[
                   stylesCascinaCristina.sectionNavItem,
+                  "pointer",
                   "name-" + d.anchor.slice(1),
                 ].join(" ")}
-                onClick={()=>{
-                  const el = document.querySelector(d.anchor)
-                  const bbox = el.getBoundingClientRect()
-                  window.scrollBy({
-                    top: bbox.y - 162, 
-                    left: 0, 
-                    behavior: 'smooth'
-                  });
-                }}
+                onClick={()=>scrollToEl(d)}
+                onKeyDown={()=>scrollToEl(d)}
+                role="button"
+                tabIndex={0}
               >
                 <div className={stylesCascinaCristina.sectionStatus}></div>
                 <p>{("00" + (i + 1)).slice(-2)}</p>
                 <p>{d.title}</p>
-              </a>
+              </span>
             );
           })}
         </div>

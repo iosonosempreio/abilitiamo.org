@@ -26,6 +26,9 @@
   text-decoration: none;
   margin: 0 5px;
   white-space: nowrap;
+  color: var(--blue);
+  text-decoration: none;
+  outline: none;
 }
 .section-nav-item:hover {
   text-decoration: none;
@@ -73,6 +76,22 @@
   align-items: center;
   position: relative;
   padding-top: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  &:not(:last-of-type):after {
+    width: 20%;
+    content: " ";
+    height: 14px;
+    /* background-color: var(--azure); */
+    background-image: url(../components/assets/decoration.svg);
+    background-position: center;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 .section-title {
   grid-column: 1 / -1;
