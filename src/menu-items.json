@@ -25,8 +25,8 @@
     "menues": ["main", "footer"]
   },
   {
-    "label": "Sostieni",
-    "url": "/",
+    "label": "Donazioni",
+    "url": "/donazioni",
     "menues": ["main", "footer"]
   },
   {

@@ -8,7 +8,7 @@ export default function StickyMessage(props) {
         <span className="long-msg">
           Abilitiamo vive grazie al supporto delle persone che credono nel suo
           progetto. 
-        </span> <Link to="/sostieni">Devolvi il tuo 5x1000</Link>
+        </span> <Link to="/donazioni">Devolvi il tuo 5x1000</Link>
       </span>
     </div>
   )

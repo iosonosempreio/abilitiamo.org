@@ -3,9 +3,14 @@ import { Link } from "gatsby"
 import { BsArrowRightShort } from "react-icons/bs"
 export default function SideBarLink({data}) {
   return (
-    <Link to={data.url}>
-      <BsArrowRightShort style={{width:'1.5rem', height:'1.5rem', color: 'var(--red)'}} /> {data.label}
-    </Link>
+    <>
+      {data.external && <a href={data.url} className="sidebar-link">
+        <BsArrowRightShort style={{width:'1.5rem', height:'1.5rem', color: 'var(--red)'}} /> {data.label}
+      </a>}
+      {!data.external && <Link to={data.url} className="sidebar-link">
+        <BsArrowRightShort style={{width:'1.5rem', height:'1.5rem', color: 'var(--red)'}} /> {data.label}
+      </Link>}
+    </>
   )
 }
 

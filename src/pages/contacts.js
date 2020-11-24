@@ -7,17 +7,18 @@ export default function Contact() {
   return (
     <span className={styles.contacts}>
       <Layout title="Teniamoci in contatto">
-        <div
-          className={[styles.pageBlock, styles.contacts, "round-borders"].join(
-            " "
-          )}
-        >
+        <div className={[styles.pageBlock, styles.contacts, "round-borders"].join(" ")}>
           <span className={styles.info}>
             <h4>Ragione sociale</h4>
             <h2>{info.associazione.ragioneSociale}</h2>
           </span>
           <span className={styles.info}>
-            <h4>Indirizzo <a href="https://goo.gl/maps/KaUmS3ARG5eCWivM8" target="_blank" rel="noopener noreferrer">(vedi mappa <FaMapMarkedAlt style={{color:"var(--red)"}} />)</a></h4>
+            <h4>
+              Indirizzo{" "}
+              <a href="https://goo.gl/maps/KaUmS3ARG5eCWivM8" target="_blank" rel="noopener noreferrer">
+                (vedi mappa <FaMapMarkedAlt style={{ color: "var(--red)" }} />)
+              </a>
+            </h4>
             <h3>{info.associazione.indirizzo}</h3>
           </span>
           <span className={styles.info}>
@@ -38,48 +39,35 @@ export default function Contact() {
           <span className={styles.info}>
             <h4>
               IBAN
-              <span style={{ color: "var(--azure)" }}>
-                (donazioni liberali)
-              </span>
+              <span style={{ color: "var(--azure)" }}>(donazioni liberali)</span>
             </h4>
             <h3>{info.associazione.iban}</h3>
           </span>
           <h4>Canali social</h4>
           <h1 className={styles.socials}>
-            <a
-              href={info.associazione.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={info.associazione.facebook} target="_blank" rel="noopener noreferrer">
               <FaFacebookSquare />
             </a>{" "}
-            <a
-              href={info.associazione.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={info.associazione.instagram} target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>{" "}
-            <a
-              href={info.associazione.youtube}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={info.associazione.youtube} target="_blank" rel="noopener noreferrer">
               <FaYoutube />
             </a>
           </h1>
         </div>
-        <div
-          className={[styles.pageBlock, styles.contacts, "round-borders"].join(
-            " "
-          )}
-        >
+        <div className={[styles.pageBlock, styles.contacts, "round-borders"].join(" ")}>
           <span className={styles.info}>
             <h4>Comunità per persone adulte autistiche</h4>
             <h2>{info.comunita.nome}</h2>
           </span>
           <span className={styles.info}>
-            <h4>Indirizzo <a href="https://goo.gl/maps/SWwTMLrwt25je2EB7" target="_blank" rel="noopener noreferrer">(vedi mappa <FaMapMarkedAlt style={{color:"var(--red)"}} />)</a></h4>
+            <h4>
+              Indirizzo{" "}
+              <a href="https://goo.gl/maps/SWwTMLrwt25je2EB7" target="_blank" rel="noopener noreferrer">
+                (vedi mappa <FaMapMarkedAlt style={{ color: "var(--red)" }} />)
+              </a>
+            </h4>
             <h3>{info.comunita.indirizzo}</h3>
           </span>
           <span className={styles.info}>
@@ -87,16 +75,9 @@ export default function Contact() {
             <h3>{info.comunita.mail}</h3>
           </span>
         </div>
-        <div
-            className={[
-              styles.pageBlock,
-              styles.contacts,
-              "round-borders",
-            ].join(" ")}
-          >
-            <h4>Iscriviti alla nostra newsletter</h4> [ QUi ci sarà il campo per
-            registrarsi alla NEWSLETTER ]
-          </div>
+        <div className={[styles.pageBlock, styles.contacts, "round-borders"].join(" ")}>
+          <h4>Iscriviti alla nostra newsletter</h4> [ QUi ci sarà il campo per registrarsi alla NEWSLETTER ]
+        </div>
       </Layout>
     </span>
   )
