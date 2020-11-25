@@ -1,7 +1,8 @@
 import React from "react"
+import { Link } from "gatsby"
 import classNames from "classNames"
 import Layout from "../components/layout"
-import SideBarLink from "../components/sideBarLink"
+import ArrowLink from "../components/arrowLink"
 import styles from "../styles/page.module.scss"
 import info from "../components/assets/info.json"
 
@@ -9,17 +10,18 @@ export default function Donazioni() {
 	return (
 		<Layout title="Donazioni">
 			<div className="a-row">
-				<p className={classNames("paragraph", "paragraphBig", styles.paragraph)}>
-					Abilitiamo è un’associazione senza scopo di lucro.
-					<br />
-					Sono previsti benefici fiscali per chi sceglie di donare!
-				</p>
+				<div className="content">
+					<p className={classNames("paragraph", "paragraphBig")}>
+						Abilitiamo è un’associazione senza scopo di lucro. Sono previsti benefici fiscali per chi sceglie di donare!
+					</p>
+				</div>
 				<div className={[styles.sideBar].join(" ")}>
 					<div className="position-sticky" style={{ top: 104 }}>
-						<SideBarLink data={{ label: "Benefici fiscali", url: "/" }} />
+						<ArrowLink data={{ label: "Benefici fiscali", url: "/benefici-fiscali" }} />
 					</div>
 				</div>
 			</div>
+
 			<div className={classNames(styles.pageBlock, styles.small, "round-borders")}>
 				<h2>Erogazioni liberali</h2>
 				<p>
@@ -32,8 +34,8 @@ export default function Donazioni() {
 				<h2>Donazione liberale materiale</h2>
 				<p>
 					La realizzazione di Cascina Cristina è molto onerosa. Siamo alla ricerca di arredamento, attrezzature, di una cucina, di un pulmino e di materiale per il
-					giardinaggio o agricoltura. Hai intenzione di liberarti di cose simili? Le tratti per lavoro e vuoi aiutarci con una donazione? Non esitare ad entrare in
-					contatto con noi!
+					giardinaggio o agricoltura. Vuoi liberarti di cose simili? Le tratti per lavoro e vuoi aiutarci con una donazione? Anche per questi casi sono previste {" "}
+					<Link to="/benefici-fiscali">agevolazioni fiscali</Link>.
 				</p>
 			</div>
 			<div className={classNames(styles.pageBlock, styles.small, "round-borders")}>
@@ -52,19 +54,14 @@ export default function Donazioni() {
 					dedicare a questi utilizzi.
 				</p>
 			</div>
-			<div className="a-row">
-				<p className={classNames("paragraph", "paragraphBig", styles.paragraph)}>
-					Qui sotto troverai le informazioni necessarie per fare una donazione. Vai a questa pagina per conoscere in dettaglio i benefici fiscali di cui potrai
-					godere. Se dovesse servire altro non esitare a contattarci!
-				</p>
-				<div className={[styles.sideBar].join(" ")}>
-					<div className="position-sticky" style={{ top: 104 }}>
-						<SideBarLink data={{ label: "Benefici fiscali", url: "/" }} />
-					</div>
-				</div>
-			</div>
+
 			<div className="a-row">
 				<div className="content">
+					<p className={classNames("paragraph", "paragraphBig")}>
+						Qui sotto troverai le informazioni necessarie per fare una donazione. Vai a questa pagina per conoscere in dettaglio i benefici fiscali di cui potrai
+						godere. Se dovesse servire altro non esitare a contattarci!
+					</p>
+					<br/>
 					<h2>Dona con bonifico bancario</h2>
 					<p>Puoi donare tramite bonifico bancario sul nostro c/c, controlla se la tua banca offre la possibilità di non pagare i costi di commissione.</p>
 					<p>Ecco come intestare il bonifico:</p>
@@ -88,20 +85,25 @@ export default function Donazioni() {
 					<h2 id="satispay">Dona con satispay</h2>
 					<p>Sblocca il tuo smartphone e dona con Satispay!</p>
 					<p>Satispay è un’applicazione per iPhone, Android e Windows Phone che permette di fare pagamenti veloci e gratuiti. Per donare clicca qui sotto.</p>
-					<SideBarLink data={{ label: "Dona con Satispay", url: "/" }} />
+					<ArrowLink data={{ label: "Dona con Satispay", url: "/" }} />
 					<div className="section-separator" />
 					<h2 id="carta-di-credito">Dona con carta di credito</h2>
 					<p>Puoi donare tramite carta di credito attraverso Facebook e Paypal.</p>
 					<span className={classNames(styles.info)}>
 						<h4>Facebook</h4>
 						<p>Visita la nostra pagina facebook e clicca sul pulsante “Fai una donazione”.</p>
-						<SideBarLink data={{ label: "facebook.com/abilitiamo", url: info.associazione.facebook, external: true }} />
+						<ArrowLink data={{ label: "facebook.com/abilitiamo", url: info.associazione.facebook, external: true }} />
 					</span>
 					<span className={classNames(styles.info)}>
 						<h4>Payapal</h4>
 						<p>Paypal è un sistema per pagamenti elettronici tramite carta di credito.</p>
-						<SideBarLink data={{ label: "payapal/abilitiamo", url: info.associazione.paypal, external: true }} />
+						<ArrowLink data={{ label: "payapal/abilitiamo", url: info.associazione.paypal, external: true }} />
 					</span>
+				</div>
+				<div className={[styles.sideBar].join(" ")}>
+					<div className="position-sticky" style={{ top: 104 }}>
+						<ArrowLink data={{ label: "Benefici fiscali", url: "/benefici-fiscali" }} />
+					</div>
 				</div>
 			</div>
 		</Layout>

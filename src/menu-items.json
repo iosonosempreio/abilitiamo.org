@@ -30,6 +30,11 @@
     "menues": ["main", "footer"]
   },
   {
+    "label": "Benefici fiscali",
+    "url": "/benefici-fiscali",
+    "menues": ["footer"]
+  },
+  {
     "label": "Privacy",
     "url": "/",
     "menues": ["footer"]
