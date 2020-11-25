@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { BsArrowRightShort } from "react-icons/bs"
-export default function SideBarLink({data}) {
+export default function ArrowLink({data}) {
   return (
     <>
       {data.external && <a href={data.url} className="sidebar-link">
@@ -13,5 +13,3 @@ export default function SideBarLink({data}) {
     </>
   )
 }
-
-SideBarLink.defaultProps = {}
