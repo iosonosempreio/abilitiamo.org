@@ -2,7 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
-import SideBarLink from "../components/sideBarLink"
+import ArrowLink from "../components/arrowLink"
 import styles from "../styles/page.module.scss"
 const sidebar1 = [
   { label: "Storia di Abilítiamo", url: "/" },
@@ -16,16 +16,18 @@ export default function ChiSiamo() {
   return (
     <Layout title={<>Associazione Abi<span>lí</span>tiamo Autismo ONLUS</>}>
       <div className="a-row">
-        <p className={["paragraph", "paragraphBig", styles.paragraph].join(" ")}>
-          Un nome, due significati, un unico obiettivo.<br/>Abitare abilitando è lo
-          scopo per il quale la nostra associazione è nata: creare una casa per
-          i nostri ragazzi autistici dove potranno esprimere al meglio le loro
-          abilità.
-        </p>
+        <div className="content">
+          <p className={["paragraph", "paragraphBig"].join(" ")}>
+            Un nome, due significati, un unico obiettivo.<br/>Abitare abilitando è lo
+            scopo per il quale la nostra associazione è nata: creare una casa per
+            i nostri ragazzi autistici dove potranno esprimere al meglio le loro
+            abilità.
+          </p>
+        </div>
         <div className={[styles.sideBar].join(" ")}>
           <div className="position-sticky"  style={{top: 104}}>
             {sidebar1.map((d, i) => (
-              <SideBarLink key={i} data={d} />
+              <ArrowLink key={i} data={d} />
             ))}
           </div>
         </div>
@@ -53,13 +55,15 @@ export default function ChiSiamo() {
         />
       </div>
       <div className="a-row">
-        <p className={["paragraph", "paragraphBig", styles.paragraph].join(" ")}>
-          Il nostro obiettivo è creare sul nostro territorio un contesto capace
-          di migliorare la qualità di vita di giovani adulti autistici
-          attraverso interventi permanenti di carattere socio assistenziale,
-          psicoeducativi e abilitativi. Un luogo che i nostri ragazzi possano
-          chiamare casa.
-        </p>
+        <div className="content">
+          <p className={["paragraph", "paragraphBig"].join(" ")}>
+            Il nostro obiettivo è creare sul nostro territorio un contesto capace
+            di migliorare la qualità di vita di giovani adulti autistici
+            attraverso interventi permanenti di carattere socio assistenziale,
+            psicoeducativi e abilitativi. Un luogo che i nostri ragazzi possano
+            chiamare casa.
+          </p>
+        </div>
       </div>
       <div className="a-row">
         <Img
@@ -69,20 +73,22 @@ export default function ChiSiamo() {
         />
       </div>
       <div className="a-row">
-        <p className={["paragraph", "paragraphBig", styles.paragraph].join(" ")}>
-          Grazie al supporto del territorio, dei suoi soci e dei suoi
-          collaboratori, Abilitiamo è risultata vincitrice del bando per i
-          Progetti Emblematici Maggiori della Provincia di Como (anno 2019).
-          <br />
-          Con questo contributo, Abilitiamo ha dato inizio alla
-          realizzazione di un polo multifunzionale per la presa in carico di
-          giovani adulti affetti da disturbi dello spettro autistico: Cascina
-          Cristina.
-        </p>
+        <div className="content">
+          <p className={["paragraph", "paragraphBig"].join(" ")}>
+            Grazie al supporto del territorio, dei suoi soci e dei suoi
+            collaboratori, Abilitiamo è risultata vincitrice del bando per i
+            Progetti Emblematici Maggiori della Provincia di Como (anno 2019).
+            <br />
+            Con questo contributo, Abilitiamo ha dato inizio alla
+            realizzazione di un polo multifunzionale per la presa in carico di
+            giovani adulti affetti da disturbi dello spettro autistico: Cascina
+            Cristina.
+          </p>
+        </div>
         <div className={styles.sideBar}>
           <div className="position-sticky"  style={{top: 104}}>
             {sidebar2.map((d, i) => (
-              <SideBarLink key={i} data={d} />
+              <ArrowLink key={i} data={d} />
             ))}
           </div>
         </div>

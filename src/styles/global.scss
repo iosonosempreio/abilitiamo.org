@@ -6,7 +6,7 @@
 	--blue: #304b70;
 	--beige: #faf8f6;
 	--gray: #4a4a4a;
-	--gap: 2rem;
+	--gap: 1rem;
 }
 
 /* utilities */
@@ -86,7 +86,7 @@ a:hover {
 		row-gap: inherit;
 		grid-column: 1/-1;
 		width: 100%;
-		padding: 3rem 0 0;
+		padding: 2rem 0 0;
 		.content {
 			grid-column: 1/-1;
 		}
@@ -99,21 +99,21 @@ a:hover {
 	background-position: center;
 	display: block;
 	background-size: contain;
-  background-repeat: no-repeat;
-  padding: 3rem 0;
+	background-repeat: no-repeat;
+	margin: 3rem 0;
 }
 .sidebar-link {
-  font-weight: 500;
-  display: grid;
-  grid-template-columns: 2rem auto;
-  align-items: center;
-  color: var(--azure);
-  text-decoration: none;
-  justify-content: start;
-  &:hover {
-    color: var(--red);
-    text-decoration: none;
-  }
+	font-weight: 500;
+	display: grid;
+	grid-template-columns: 2rem auto;
+	align-items: center;
+	color: var(--azure);
+	text-decoration: none;
+	justify-content: start;
+	&:hover {
+		color: var(--red);
+		text-decoration: none;
+	}
 }
 
 @media screen and (min-width: 576px) {
@@ -122,6 +122,9 @@ a:hover {
 	}
 }
 @media screen and (min-width: 768px) {
+	:root {
+		--gap: 2rem;
+	}
 	.layout-main {
 		width: 720px;
 		.a-row {
@@ -137,6 +140,11 @@ a:hover {
 @media screen and (min-width: 992px) {
 	.layout-main {
 		width: 960px;
+		.a-row {
+			.content {
+				grid-column: 2 / span 7;
+			}
+		}
 	}
 }
 @media screen and (min-width: 1200px) {
