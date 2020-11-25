@@ -1,6 +1,6 @@
 [
   {
-    "label": "chi siamo",
+    "label": "Chi siamo",
     "url": "/chi-siamo",
     "menues": ["main", "footer"]
   },
@@ -12,12 +12,12 @@
   {
     "label": "Notizie",
     "url": "/",
-    "menues": ["main", "footer"]
+    "menues": []
   },
   {
     "label": "Galleria",
     "url": "/",
-    "menues": ["main", "footer"]
+    "menues": []
   },
   {
     "label": "Contatti",
