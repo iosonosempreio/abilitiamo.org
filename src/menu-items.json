@@ -1,5 +1,10 @@
 [
   {
+    "label": "Home",
+    "url": "/",
+    "menues": ["main", "footer"]
+  },
+  {
     "label": "Chi siamo",
     "url": "/chi-siamo",
     "menues": ["main", "footer"]
