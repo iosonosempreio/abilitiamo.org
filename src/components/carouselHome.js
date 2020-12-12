@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 
 export default function CarouselHome(props) {
 	const data = useStaticQuery(query)
-	if (false )console.log(Carousel)
+	// if (false )console.log(Carousel)
 	return (
 		<div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 			<ol className="carousel-indicators">
