@@ -19,18 +19,18 @@ export default function Home() {
 			<div className="container-fluid" style={{ backgroundColor: "var(--beige)" }}>
 				<div className="container">
 					<div className="row">
-						<div className="col-12 col-md-4 offset-0 offset-md-1 d-flex flex-column justify-content-center">
+						<div className="col-10 col-md-4 offset-1 offset-md-1 d-flex flex-column justify-content-center">
 							<h1>
 								Miglioriamo
 								<br />
-								la qualità di vita delle persone con autismo
+								la qualità di vita delle persone
+								<br />
+								con autismo
 							</h1>
 							<p className="paragraphBig">
-								Abilitare è possibile
-								<br />a qualsiasi età.
-								<br />
-								Per noi l'età adulta è<br />
-								solo un punto di partenza
+								Abilitare è possibile <br className="d-none" />a qualsiasi età, <br className="d-none" />
+								per noi l'età adulta è <br className="d-none" />
+								solo un punto di partenza.
 							</p>
 							<ArrowLink data={{ label: "Chi siamo", url: "/chi-siamo" }} />
 							<ArrowLink data={{ label: "Cascina Cristina", url: "/cascina-cristina" }} />
@@ -42,7 +42,7 @@ export default function Home() {
 					</div>
 					<div className="row py-5">
 						<div className={classNames("col-12 col-md-7 offset-0 offset-md-1 order-last order-md-first", styles.facebookHomeVideo)}>
-							<ReactPlayer url="https://www.facebook.com/1400253103427642/videos/1496214477164837" width={'100%'} height={'100%'} controls />
+							<ReactPlayer url="https://www.facebook.com/1400253103427642/videos/1496214477164837" width={"100%"} height={"100%"} controls />
 						</div>
 						<div className="col-12 col-md-3 d-flex flex-column justify-content-center order-first order-md-last">
 							<p>Il nostro obiettivo è creare un polo di servizi per la persona adulta con autismo.</p>
@@ -58,14 +58,14 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className="container">
+			{/* <div className="container">
 				<div className="row">
 					<div className="col">
 						<h1>Scopri di più...</h1>
 						<p>Sezione da completare quando avremo più contenuti</p>
 					</div>
 				</div>
-			</div>
+			</div> */}
 			<Footer />
 		</>
 	)

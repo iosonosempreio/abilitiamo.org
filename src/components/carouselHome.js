@@ -1,12 +1,10 @@
 import React from "react"
-import { Carousel } from "bootstrap"
 import { useStaticQuery, graphql } from "gatsby"
 import classNames from "classNames"
 import Img from "gatsby-image"
 
 export default function CarouselHome(props) {
 	const data = useStaticQuery(query)
-	// if (false )console.log(Carousel)
 	return (
 		<div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 			<ol className="carousel-indicators">
@@ -57,14 +55,23 @@ export const query16_9 = graphql`
 
 export const query = graphql`
 	query {
-		image1: file(relativePath: { eq: "Matteo2copia.jpeg" }) {
-			...query16_9
+		image1: file(relativePath: { eq: "carousel-home/1.png" }) {
+			...query4_3
 		}
-		image2: file(relativePath: { eq: "Roberta.jpg" }) {
-			...query16_9
+		image2: file(relativePath: { eq: "carousel-home/2.png" }) {
+			...query4_3
 		}
-		image3: file(relativePath: { eq: "orto2.jpg" }) {
-			...query16_9
+		image3: file(relativePath: { eq: "carousel-home/3.png" }) {
+			...query4_3
+		}
+		image4: file(relativePath: { eq: "carousel-home/4.jpg" }) {
+			...query4_3
+		}
+		image5: file(relativePath: { eq: "carousel-home/5.JPG" }) {
+			...query4_3
+		}
+		image6: file(relativePath: { eq: "carousel-home/6.jpg" }) {
+			...query4_3
 		}
 	}
 `
