@@ -6,7 +6,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby clean && gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
     "dev-m": "gatsby develop -H 0.0.0.0 -p 8000 -o",
     "dev-m-clean": "gatsby clean && gatsby develop -H 0.0.0.0 -p 8000 -o",
