@@ -6,7 +6,7 @@ import Footer from "../components/footer"
 import styles from "../styles/page.module.scss"
 import stylesCascinaCristina from "../styles/cascinaCristina.module.scss"
 
-import sections from "./cascina-crtistina-sections/cascina-cristina-sections"
+import sections from "../components/cascina-crtistina-sections/cascina-cristina-sections"
 
 export default function CascinaCristina() {
 	useEffect(() => {
