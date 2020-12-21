@@ -38,25 +38,25 @@ export default function CascinaCristina() {
 	}
 	return (
 		<span className={styles.cascinaCristina}>
-			<Navigation />
+			<Navigation background="var(--beige)" />
 			<div className={[styles.pageHeader, "text-center"].join(" ")}>
 				<span>
 					<h1>Cascina Cristina</h1>
 					<p className="paragraph-big">Un polo territoriale per la presa in carico della persona adulta con disturbi dello spettro autistico</p>
 				</span>
 			</div>
-
-			<div className="container">
-				<div className="row">
-					<div className="col-12 col-md-7 offset-md-1 my-5">
-						<p className={["paragraph"].join(" ")}>
-							Il progetto Cascina Cristina nasce per rispondere al bisogno di strutture adatte ad ospitare giovani adulti con autismo sul territorio dell'insubria e
-							della brianza. Con il suo approccio sperimentale, potrebbe diventare un modello pilota e uno stimolo per altri enti per la realizzazione realtà simili.
+			<div className="layout-main">
+				<div className="a-row">
+					<div className="content">
+						<p className={["paragraph", "paragraphBig"].join(" ")}>
+							Un nome, due significati, un unico obiettivo.<br/>Abitare abilitando è lo
+							scopo per il quale la nostra associazione è nata: creare una casa per
+							i nostri ragazzi autistici dove potranno esprimere al meglio le loro
+							abilità.
 						</p>
 					</div>
-
-					<div className={["col-12 col-md-3 offset-md-1", styles.sideBar].join(" ")}>
-						<div className="position-sticky" style={{ top: 104 }}>
+					<div className={[styles.sideBar].join(" ")}>
+						<div className="position-sticky"  style={{top: 104}}>
 							{/* {sidebar1.map((d, i) => (
 								<ArrowLink key={i} data={d} />
 							))} */}
@@ -64,7 +64,6 @@ export default function CascinaCristina() {
 					</div>
 				</div>
 			</div>
-
 			<div id="scrolling-container" className="layout-main" style={{ padding: 0, backgroundColor: "white" }}>
 				<div ref={sectionNav} className={[stylesCascinaCristina.sectionsNavigation].join(" ")}>
 					{sections.map((d, i) => {
@@ -98,7 +97,6 @@ export default function CascinaCristina() {
 					)
 				})}
 			</div>
-
 			<Footer />
 		</span>
 	)
