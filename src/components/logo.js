@@ -6,7 +6,7 @@ export default function Logo(props) {
     <div style={{color:"var(--azure)"}}>
       <Link to="/" style={{textDecoration:'none', color:'inherit'}}>
         <span style={{fontWeight:600}}>
-          abi<span style={{color:"var(--red)"}}>lí</span>tiamo
+          Abi<span style={{color:"var(--red)"}}>lí</span>tiamo
         </span>{" "}
         autismo
         <span style={{display:props.showOnlus?'inline':'none'}}> ONLUS</span>

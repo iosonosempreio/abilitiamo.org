@@ -15,6 +15,11 @@
     "menues": ["main", "footer"]
   },
   {
+    "label": "Storia di Abilitiamo",
+    "url": "/storia-abilitiamo",
+    "menues": ["footer"]
+  },
+  {
     "label": "Notizie",
     "url": "/",
     "menues": []

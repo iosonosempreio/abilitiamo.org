@@ -42,16 +42,21 @@ export default function CascinaCristina() {
 			<div className={[styles.pageHeader, "text-center"].join(" ")}>
 				<span>
 					<h1>Cascina Cristina</h1>
-					<p className="paragraph-big">Un polo territoriale per la presa in carico della persona adulta con disturbi dello spettro autistico</p>
+					<p className="paragraph">Un polo territoriale per la presa in carico della persona adulta con disturbi dello spettro autistico</p>
 				</span>
 			</div>
 
 			<div className="container">
 				<div className="row">
 					<div className="col-12 col-md-7 offset-md-1 my-5">
-						<p className={["paragraph"].join(" ")}>
-							Il progetto Cascina Cristina nasce per rispondere al bisogno di strutture adatte ad ospitare giovani adulti con autismo sul territorio dell'insubria e
-							della brianza. Con il suo approccio sperimentale, potrebbe diventare un modello pilota e uno stimolo per altri enti per la realizzazione realtà simili.
+						<p className={["paragraph", "paragraphBig"].join(" ")}>
+							Il progetto Cascina Cristina nasce per rispondere al bisogno del territorio dell'insubria e della brianza di strutture adatte ad ospitare giovani adulti con autismo.
+						</p>
+						{/* <p className={["paragraph", "paragraphBig"].join(" ")}>
+							Con questo approccio sperimentale, vorremmo che creare un modello e dare uno stimolo per la realizzazione di altre realtà simili.
+						</p> */}
+						<p>
+							Vista l’assenza di strutture adatte ad ospitare giovani adulti con autismo nel territorio canturino e nelle aree circostanti, Cascina Cristina potrebbe diventare per l’area dell'Insubria e della Brianza un modello pilota e uno stimolo per altri enti per la realizzazione di strutture similari, rispondendo così al forte bisogno del territorio e delle famiglie che vi appartengono.
 						</p>
 					</div>
 

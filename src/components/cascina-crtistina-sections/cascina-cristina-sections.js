@@ -1,13 +1,13 @@
 import React from "react"
 import SpiritoProgetto from "./SpiritoProgetto"
-import MappaturaBisogno from "./MappaturaBisogno"
+// import MappaturaBisogno from "./MappaturaBisogno"
 import CambiamentoPerseguito from "./CambiamentoPerseguito"
 import ComunitàAbitativa from "./ComunitàAbitativa"
 import CentroDiurno from "./CentroDiurno"
 import SollievoServizi from "./SollievoServizi"
 import PresaInCarico from "./PresaInCarico"
 import SostegnoAllaFamiglia from "./SostegnoAllaFamiglia"
-// import StudioDellaSindromeAutistica from "./StudioDellaSindromeAutistica"
+import StudioDellaSindromeAutistica from "./StudioDellaSindromeAutistica"
 
 const sections = [
 	{
@@ -21,17 +21,17 @@ const sections = [
 		anchor: "#spirito",
 		content: <SpiritoProgetto />,
 	},
-	{
-		title: (
-			<>
-				Mappatura
-				<br />
-				del bisogno
-			</>
-		),
-		anchor: "#mappa",
-		content: <MappaturaBisogno />,
-	},
+	// {
+	// 	title: (
+	// 		<>
+	// 			Mappatura
+	// 			<br />
+	// 			del bisogno
+	// 		</>
+	// 	),
+	// 	anchor: "#mappa",
+	// 	content: <MappaturaBisogno />,
+	// },
 	{
 		title: (
 			<>
@@ -42,6 +42,16 @@ const sections = [
 		),
 		anchor: "#cambiamento",
 		content: <CambiamentoPerseguito />,
+	},
+	{
+		title: (
+			<>
+				Presa in carico
+				<br />a rete
+			</>
+		),
+		anchor: "#presa-in-carico",
+		content: <PresaInCarico/>,
 	},
 	{
 		title: (
@@ -78,16 +88,6 @@ const sections = [
 	{
 		title: (
 			<>
-				Presa in carico
-				<br />a rete
-			</>
-		),
-		anchor: "#presa-in-carico",
-		content: <PresaInCarico/>,
-	},
-	{
-		title: (
-			<>
 				Sostegno
 				<br />alla famiglia
 			</>
@@ -95,17 +95,16 @@ const sections = [
 		anchor: "#sostegno-alla-famiglia",
 		content: <SostegnoAllaFamiglia />
 	},
-
-	// {
-	// 	title: (
-	// 		<>
-	// 			Studio della
-	// 			<br />
-	// 			sindrome autistica
-	// 		</>
-	// 	),
-	// 	anchor: "#sindrome-autistica",
-	// 	content: <StudioDellaSindromeAutistica/>,
-	// },
+	{
+		title: (
+			<>
+				Studio della
+				<br />
+				sindrome autistica
+			</>
+		),
+		anchor: "#sindrome-autistica",
+		content: <StudioDellaSindromeAutistica/>,
+	},
 ]
 export default sections

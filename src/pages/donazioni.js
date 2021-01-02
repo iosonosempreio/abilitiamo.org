@@ -12,7 +12,7 @@ export default function Donazioni() {
 			<div className="a-row">
 				<div className="content">
 					<p className={classNames("paragraph", "paragraphBig")}>
-						Abilitiamo è un’associazione senza scopo di lucro. Sono previsti benefici fiscali per chi sceglie di donare!
+						Abilitiamo è un’organizzazione senza scopo di lucro. Sono previsti benefici fiscali per chi sceglie di donare!
 					</p>
 				</div>
 				<div className={[styles.sideBar].join(" ")}>
