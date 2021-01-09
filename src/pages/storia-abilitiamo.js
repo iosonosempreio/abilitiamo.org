@@ -34,7 +34,7 @@ export default function StoriaAbilitiamo() {
 						</p>
 					</div>
 					<div className={classNames("col-12 col-md-7 offset-md-1 facebook-embedded-video")}>
-						<ReactPlayer url="https://www.facebook.com/1400253103427642/videos/156599459205323" width={"100%"} height={"100%"} controls />
+						<ReactPlayer url="https://www.facebook.com/1400253103427642/videos/330050858295599/" width={"100%"} height={"100%"} controls />
 					</div>
 					<div className="col-12 col-md-7 offset-md-1 my-5">
 						<p>

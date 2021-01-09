@@ -6,8 +6,8 @@ import ArrowLink from "../components/arrowLink"
 import styles from "../styles/page.module.scss"
 const sidebar1 = [
 	{ label: "Storia di Abilítiamo", url: "/storia-abilitiamo" },
-	{ label: "Organizzazione", url: "/" },
-	{ label: "Bilanci", url: "/" },
+	{ label: "Organizzazione", url: "/organizzazione-abilitiamo" },
+	// { label: "Bilanci", url: "/" },
 	{ label: "Diventa socio", url: "/" },
 ]
 const sidebar2 = [{ label: 'Progetto "Cascina Cristina"', url: "/cascina-cristina" }]

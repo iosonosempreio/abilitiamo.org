@@ -20,6 +20,11 @@
     "menues": ["footer"]
   },
   {
+    "label": "Organizzazione di Abilitiamo",
+    "url": "/organizzazione-abilitiamo",
+    "menues": ["footer"]
+  },
+  {
     "label": "Notizie",
     "url": "/",
     "menues": []
