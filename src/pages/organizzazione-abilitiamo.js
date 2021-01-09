@@ -2,10 +2,16 @@ import React from "react"
 import Navigation from "../components/navigation"
 import Footer from "../components/footer"
 import styles from "../styles/page.module.scss"
-import ReactPlayer from "react-player"
-import classNames from "classNames"
+// import ReactPlayer from "react-player"
+// import classNames from "classNames"
+import ArrowLink from "../components/arrowLink"
 
 export default function StoriaAbilitiamo() {
+	const sidebar1 = [
+		{ label: "Storia di Abilítiamo", url: "/storia-abilitiamo" },
+		// { label: "Bilanci", url: "/" },
+		{ label: "Diventa socio", url: "/" },
+	]
 	return (
 		<>
 			<Navigation />
@@ -24,8 +30,8 @@ export default function StoriaAbilitiamo() {
 				</div>
 			</div>
 			<div className="container">
-				<div className="row">
-					<div className="col-12 col-md-7 offset-md-1 my-5">
+				<div className="row my-5">
+					<div className="col-12 col-md-7 offset-md-1">
 						<p className={["paragraph", "paragraphBig"].join(" ")}>
 							L’Associazione Abilitiamo è un ente del terzo settore senza scopo di lucro che opera in due distretti
 							territoriali.
@@ -33,9 +39,7 @@ export default function StoriaAbilitiamo() {
 							Possono aderire all’associazione tutte le persone che, a vario titolo, possono e desiderano contribuire al
 							miglioramento della qualità di vita dei ragazzi con autismo.
 						</p>
-					</div>
-					<div className="col-12 col-md-7 offset-md-1 mb-1">
-						<h3>Soci</h3>
+						<h3 className="mt-5">Soci</h3>
 						<p>
 							Undici soci, rappresentanti cinque famiglie con figli affetti dalla sindrome autistica, hanno costituito nel 2017
 							l’Associazione Abilitiamo Autismo onlus –abitare e abilitare– con sede legale a Carugo (Co) in via per Gattedo,
@@ -91,47 +95,54 @@ export default function StoriaAbilitiamo() {
 							negli adolescenti su mandato dell’Istituto Superiore di Sanità.
 						</p>
 						<p>
-							<strong>Dott. Daniele Merazzi</strong> – Medico chirurgo specializzato in Pediatria. Direttore del dipartimento Materno Infantile e
-							Direttore Unità Operativa Complessa Pediatria-Neonatologia-Terapia Intensiva Neonatale dell’Ospedale V alduce di
-							Como (CO). Gli studi condotti gli hanno permesso di presentare delle comunicazioni ai congressi annuali
-							dell’American Thoracic Society, e pubblicate nel supplemento annuale dell’American Journal Respiratory Critical
-							Care Medicine. (1999; 2000; 2001)
+							<strong>Dott. Daniele Merazzi</strong> – Medico chirurgo specializzato in Pediatria. Direttore del dipartimento
+							Materno Infantile e Direttore Unità Operativa Complessa Pediatria-Neonatologia-Terapia Intensiva Neonatale
+							dell’Ospedale V alduce di Como (CO). Gli studi condotti gli hanno permesso di presentare delle comunicazioni ai
+							congressi annuali dell’American Thoracic Society, e pubblicate nel supplemento annuale dell’American Journal
+							Respiratory Critical Care Medicine. (1999; 2000; 2001)
 						</p>
 						<p>
-							<strong>Dott. Maurizio Bonati</strong> – Medico chirurgo. Capo del Dipartimento di Salute Pubblica presso l’Istituto di Ricerche
-							Farmacologiche “Mario Negri” IRCCS di Milano (MI). Professore alla Scuola di Specializzazione in Neuropsichiatria
-							infantile dell’Università degli Studi di Milano. E’ autore o coautore di alcune centinaia di pubblicazioni
-							scientifiche. Collabora alla redazione di riviste scientifiche nazionali e internazionali ed è Direttore di
-							redazione di Ricerca & Pratica.
+							<strong>Dott. Maurizio Bonati</strong> – Medico chirurgo. Capo del Dipartimento di Salute Pubblica presso
+							l’Istituto di Ricerche Farmacologiche “Mario Negri” IRCCS di Milano (MI). Professore alla Scuola di
+							Specializzazione in Neuropsichiatria infantile dell’Università degli Studi di Milano. E’ autore o coautore di
+							alcune centinaia di pubblicazioni scientifiche. Collabora alla redazione di riviste scientifiche nazionali e
+							internazionali ed è Direttore di redazione di Ricerca & Pratica.
 						</p>
 						<p>
-							<strong>Dott.ssa Marilena Zacchini</strong> – Educatrice professionale, esperta nella gestione di adulti con autismo. Formatrice.
-							Responsabile, coordinatrice e ideatrice di diversi progetti, tra i quali “0-30 della Fondazione Sospiro” Istituto
-							Fondazione Ospedaliero di Sospiro onlus (CR)
+							<strong>Dott.ssa Marilena Zacchini</strong> – Educatrice professionale, esperta nella gestione di adulti con
+							autismo. Formatrice. Responsabile, coordinatrice e ideatrice di diversi progetti, tra i quali “0-30 della
+							Fondazione Sospiro” Istituto Fondazione Ospedaliero di Sospiro onlus (CR)
 						</p>
 						<p>
-							<strong>Dott. Giovanni Miselli</strong> – Psicologo. Dirigente Sanitario presso Istituto Fondazione Ospedaliero di Sospiro onlus
-							(CR). Docente per 15 Scuole di Specializzazione in Psicoterapia sul territorio Nazionale, Scuole di
-							Specializzazione Quadriennale in Psicoterapia Miur. Coordinatore Progetto “Il bambino in ospedale: progetto
+							<strong>Dott. Giovanni Miselli</strong> – Psicologo. Dirigente Sanitario presso Istituto Fondazione Ospedaliero
+							di Sospiro onlus (CR). Docente per 15 Scuole di Specializzazione in Psicoterapia sul territorio Nazionale, Scuole
+							di Specializzazione Quadriennale in Psicoterapia Miur. Coordinatore Progetto “Il bambino in ospedale: progetto
 							pilota di prevenzione e di ascolto”
 						</p>
 						<p>
-							<strong>Dott.ssa Dafne Rigoldi</strong> – Insegnante di sostegno, pedagogista ed educatrice della cooperativa Fabula onlus (MI).
-							Collaboratrice di Blue Diary, l’agenda visiva pensata per le persone autistiche, sviluppata in sinergia con
-							Smemoranda, Fabula Onlus e Fondazione Fracta Limina. Un progetto innovativo nato alcuni anni fa per facilitare,
-							attraverso un rinforzo visivo, i bisogni comunicativi degli autistici.
+							<strong>Dott.ssa Dafne Rigoldi</strong> – Insegnante di sostegno, pedagogista ed educatrice della cooperativa
+							Fabula onlus (MI). Collaboratrice di Blue Diary, l’agenda visiva pensata per le persone autistiche, sviluppata in
+							sinergia con Smemoranda, Fabula Onlus e Fondazione Fracta Limina. Un progetto innovativo nato alcuni anni fa per
+							facilitare, attraverso un rinforzo visivo, i bisogni comunicativi degli autistici.
 						</p>
 						<p>
-							<strong>Dott.ssa Angela Aresi</strong> – psicologa, Psicoterapeuta e analista del comportamento supervisionata. Interventi come
-							consulente ABA supervisionata. Inter- venti come tecnico ABA. Interventi educativi e riabilitativi bambini e
-							adulti affetti da disturbi dello spettro autistico. Diagnosi specifica DPS. Diagnosi di personalità. Diagnosi
-							DSA. Psicoterapia.
+							<strong>Dott.ssa Angela Aresi</strong> – psicologa, Psicoterapeuta e analista del comportamento supervisionata.
+							Interventi come consulente ABA supervisionata. Inter- venti come tecnico ABA. Interventi educativi e
+							riabilitativi bambini e adulti affetti da disturbi dello spettro autistico. Diagnosi specifica DPS. Diagnosi di
+							personalità. Diagnosi DSA. Psicoterapia.
 						</p>
 						<p>
-							<strong>Dott. Francesco Moscatelli</strong> – Giornalista. Lavora per “La Stampa” di Torino dal 2011 in qualità di redattore delle
-							Cronache. Autore di due volumi: Cricket Club (Add, 2013) e il Vino del Papa (Compagnia editoriale Aliberti,
-							2014).
+							<strong>Dott. Francesco Moscatelli</strong> – Giornalista. Lavora per “La Stampa” di Torino dal 2011 in qualità
+							di redattore delle Cronache. Autore di due volumi: Cricket Club (Add, 2013) e il Vino del Papa (Compagnia
+							editoriale Aliberti, 2014).
 						</p>
+					</div>
+					<div className="col-12 col-md-4">
+						<div className="position-sticky" style={{ top: 104 }}>
+							{sidebar1.map((d, i) => (
+								<ArrowLink key={i} data={d} />
+							))}
+						</div>
 					</div>
 				</div>
 			</div>
