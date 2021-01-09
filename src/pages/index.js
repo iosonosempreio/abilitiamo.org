@@ -41,7 +41,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="row py-5">
-						<div className={classNames("col-12 col-md-7 offset-0 offset-md-1 order-last order-md-first", styles.facebookHomeVideo)}>
+						<div className={classNames("col-12 col-md-7 offset-0 offset-md-1 order-last order-md-first facebook-embedded-video")}>
 							<ReactPlayer url="https://www.facebook.com/1400253103427642/videos/1496214477164837" width={"100%"} height={"100%"} controls />
 						</div>
 						<div className="col-12 col-md-3 d-flex flex-column justify-content-center order-first order-md-last">

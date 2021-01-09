@@ -116,6 +116,12 @@ a:hover {
 	}
 }
 
+.facebook-embedded-video {
+	iframe {
+		border-radius: 4px;
+	}
+}
+
 @media screen and (min-width: 576px) {
 	.layout-main {
 		width: 540px;

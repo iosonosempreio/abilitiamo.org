@@ -29,9 +29,9 @@ export default function Footer(props) {
           <a href={info.associazione.facebook} target="_blank" rel="noreferrer">
             <FaFacebookSquare style={{top: 2}} /> <span>Facebook</span>
           </a>
-          <Link to="/">
+          <span>
             <FaInstagram style={{top: 2}} /> <span>Instagram</span>
-          </Link>
+          </span>
           <a href={info.associazione.youtube} target="_blank" rel="noreferrer">
             <FaYoutube style={{top: 2}} /> <span>Youtube</span>
           </a>

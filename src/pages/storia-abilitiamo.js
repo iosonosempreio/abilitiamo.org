@@ -2,6 +2,8 @@ import React from "react"
 import Navigation from "../components/navigation"
 import Footer from "../components/footer"
 import styles from "../styles/page.module.scss"
+import ReactPlayer from "react-player"
+import classNames from "classNames"
 
 export default function StoriaAbilitiamo() {
 	return (
@@ -12,7 +14,7 @@ export default function StoriaAbilitiamo() {
 					<h1>Storia di Abilitiamo</h1>
 				</span>
 			</div> */}
-			<div className="container-fluid" style={{backgroundColor:"var(--beige)"}}>
+			<div className="container-fluid" style={{ backgroundColor: "var(--beige)" }}>
 				<div className={["container", styles.pageHeader].join(" ")}>
 					<div className="col-12 col-md-10 offset-md-1">
 						<span>
@@ -30,6 +32,11 @@ export default function StoriaAbilitiamo() {
 							<br />
 							Questo è stato possibile grazie all’aiuto e supporto di soci e amici del territorio.
 						</p>
+					</div>
+					<div className={classNames("col-12 col-md-7 offset-md-1 facebook-embedded-video")}>
+						<ReactPlayer url="https://www.facebook.com/1400253103427642/videos/156599459205323" width={"100%"} height={"100%"} controls />
+					</div>
+					<div className="col-12 col-md-7 offset-md-1 my-5">
 						<p>
 							L’associazione Abilitiamo Autismo onlus - “abitiamo e abilitiamo” si è costituita nel 2017, per volere di 5 famiglie con figli affetti dalla sindrome
 							autistica. Un punto di forza dell’associazione è rappresentato dalla presenza, tra i soci fondatori, dei fratelli della persona con autismo che potranno
@@ -52,6 +59,7 @@ export default function StoriaAbilitiamo() {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</>
 	)
 }
