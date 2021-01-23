@@ -47,7 +47,7 @@ export default function PresaInCarico() {
 
 export const query = graphql`
 	query {
-		image1: file(relativePath: { eq: "Residenza piantina.png" }) {
+		image1: file(relativePath: { eq: "pexels-pixabay-163064.jpg" }) {
 			childImageSharp {
 				fluid(maxWidth: 1000, maxHeight: 670) {
 					...GatsbyImageSharpFluid

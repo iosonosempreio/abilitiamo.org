@@ -43,7 +43,7 @@ export default function SostegnoAllaFamiglia() {
 
 export const query = graphql`
 	query {
-		image1: file(relativePath: { eq: "Residenza piantina.png" }) {
+		image1: file(relativePath: { eq: "tumblr_osclmshNyl1slhhf0o1_1280.jpg" }) {
 			childImageSharp {
 				fluid(maxWidth: 1000, maxHeight: 670) {
 					...GatsbyImageSharpFluid

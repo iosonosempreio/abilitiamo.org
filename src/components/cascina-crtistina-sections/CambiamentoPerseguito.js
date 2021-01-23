@@ -43,7 +43,7 @@ export default function CambiamentoPerseguito() {
 
 export const query = graphql`
 	query {
-		image1: file(relativePath: { eq: "Residenza piantina.png" }) {
+		image1: file(relativePath: { eq: "student-team-meeting-at-table.jpg" }) {
 			childImageSharp {
 				fluid(maxWidth: 1000, maxHeight: 670) {
 					...GatsbyImageSharpFluid

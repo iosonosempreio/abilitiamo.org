@@ -42,7 +42,7 @@ export default function StudioDellaSindromeAutistica() {
 
 export const query = graphql`
 	query {
-		image1: file(relativePath: { eq: "Residenza piantina.png" }) {
+		image1: file(relativePath: { eq: "jens-johnsson-36a3U4_UUHY-unsplash.jpg" }) {
 			childImageSharp {
 				fluid(maxWidth: 1000, maxHeight: 670) {
 					...GatsbyImageSharpFluid
