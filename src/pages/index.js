@@ -28,7 +28,7 @@ export default function Home() {
 								con autismo
 							</h1>
 							<p className="paragraphBig">
-								Abilitare è possibile <br className="d-none" />a qualsiasi età, <br className="d-none" />
+								Abilitare è possibile <br className="d-none" />a qualsiasi età, <br />
 								per noi l'età adulta è <br className="d-none" />
 								solo un punto di partenza.
 							</p>
