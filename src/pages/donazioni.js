@@ -85,7 +85,7 @@ export default function Donazioni() {
 					<h2 id="satispay">Dona con satispay</h2>
 					<p>Sblocca il tuo smartphone e dona con Satispay!</p>
 					<p>Satispay è un’applicazione per iPhone, Android e Windows Phone che permette di fare pagamenti veloci e gratuiti. Per donare clicca qui sotto.</p>
-					<ArrowLink data={{ label: "Dona con Satispay", url: "/" }} />
+					<ArrowLink data={{ label: "Dona con Satispay", url: "https://tag.satispay.com/dk_PVWRiqLtVQlRhPleKRsc", external:true }} />
 					<div className="section-separator" />
 					<h2 id="carta-di-credito">Dona con carta di credito</h2>
 					<p>Puoi donare tramite carta di credito attraverso Facebook e Paypal.</p>
