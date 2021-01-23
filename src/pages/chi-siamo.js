@@ -8,7 +8,7 @@ const sidebar1 = [
 	{ label: "Storia di Abilítiamo", url: "/storia-abilitiamo" },
 	{ label: "Organizzazione", url: "/organizzazione-abilitiamo" },
 	// { label: "Bilanci", url: "/" },
-	{ label: "Diventa socio", url: "/" },
+	{ label: "Diventa socio", url: "/diventa-socio" },
 ]
 const sidebar2 = [{ label: 'Progetto "Cascina Cristina"', url: "/cascina-cristina" }]
 export default function ChiSiamo() {

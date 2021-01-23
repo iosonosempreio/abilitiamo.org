@@ -25,6 +25,11 @@
     "menues": ["footer"]
   },
   {
+    "label": "Diventa socio",
+    "url": "/diventa-socio",
+    "menues": ["footer"]
+  },
+  {
     "label": "Notizie",
     "url": "/",
     "menues": []
