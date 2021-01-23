@@ -37,12 +37,24 @@ export default function Home() {
 							<ArrowLink data={{ label: "Donazioni", url: "/donazioni" }} />
 						</div>
 						<div className="col-12 col-md-6">
-							<Img className={styles.imgCover} fluid={data.illustrazione.childImageSharp.fluid} imgStyle={{ objectFit: "contain" }} />
+							<Img
+								className={styles.imgCover}
+								fluid={data.illustrazione.childImageSharp.fluid}
+								imgStyle={{ objectFit: "contain" }}
+							/>
 						</div>
 					</div>
 					<div className="row py-5">
-						<div className={classNames("col-12 col-md-7 offset-0 offset-md-1 order-last order-md-first facebook-embedded-video")}>
-							<ReactPlayer url="https://www.facebook.com/1400253103427642/videos/1496214477164837" width={"100%"} height={"100%"} controls />
+						<div className={classNames("col-12 col-md-7 offset-0 offset-md-1 order-last order-md-first")}>
+							<div className={classNames("video-wrapper")}>
+								<ReactPlayer
+								className="react-player"
+									url="https://www.facebook.com/1400253103427642/videos/1496214477164837"
+									width="100%"
+									height="100%"
+									controls
+								/>
+							</div>
 						</div>
 						<div className="col-12 col-md-3 d-flex flex-column justify-content-center order-first order-md-last">
 							<p>Il nostro obiettivo è creare un polo di servizi per la persona adulta con autismo.</p>

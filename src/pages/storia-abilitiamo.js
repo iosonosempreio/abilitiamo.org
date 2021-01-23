@@ -33,11 +33,14 @@ export default function StoriaAbilitiamo() {
 							<br />
 							Questo è stato possibile grazie all’aiuto e supporto di soci e amici del territorio.
 						</p>
-						<div className={classNames("facebook-embedded-video my-3")}>
+						<div className={classNames("video-wrapper my-3")}>
 							<ReactPlayer
-								url="https://www.facebook.com/1400253103427642/videos/330050858295599/"
-								width={"100%"}
-								height={"100%"}
+								className="react-player"
+								url="https://www.youtube.com/watch?v=i4-V9g-VqYI"
+								width="100%"
+								height="100%"
+								playing={true}
+								mute={true}
 								controls
 							/>
 						</div>
