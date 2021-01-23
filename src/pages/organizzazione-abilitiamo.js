@@ -176,7 +176,7 @@ export default function StoriaAbilitiamo() {
 				<MembroComitato
 					image={data.barile}
 					name="Dott. Silvia Barile"
-					role="Operatrice specializzata"
+					role="Referente di struttura"
 					bio="Operatrice specializzata, con lunga e approfondita esperienza negli interventi educativi abilitativi delle persone
 					adulte con disturbi dello spettro autistico. Attualmente è referente di struttura in una Community Farm per
 					giovani adulti con autismo."
