@@ -40,7 +40,7 @@ export default function StoriaAbilitiamo() {
 								width="100%"
 								height="100%"
 								playing={true}
-								mute={true}
+								volume="0.03"
 								controls
 							/>
 						</div>
