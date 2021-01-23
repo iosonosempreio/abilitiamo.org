@@ -9,14 +9,6 @@ import stylesCascinaCristina from "../styles/cascinaCristina.module.scss"
 import sections from "../components/cascina-crtistina-sections/cascina-cristina-sections"
 
 export default function CascinaCristina() {
-	useEffect(() => {
-		document.documentElement.style.setProperty("scroll-behavior", "smooth")
-		// returned function will be called on component unmount
-		return () => {
-			document.documentElement.style.setProperty("scroll-behavior", "auto")
-		}
-	}, [])
-
 	const sectionNav = useRef()
 	const observerOptions = {
 		onChange: event => {
