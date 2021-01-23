@@ -1,5 +1,6 @@
 import React from "react"
 import Navigation from "../components/navigation"
+import StickyMessage from "../components/stickyMessage"
 import Footer from "../components/footer"
 import styles from "../styles/page.module.scss"
 import ReactPlayer from "react-player"
@@ -15,6 +16,7 @@ export default function StoriaAbilitiamo() {
 	return (
 		<>
 			<Navigation />
+			<StickyMessage />
 			<div className="container-fluid" style={{ backgroundColor: "var(--beige)" }}>
 				<div className={["container", styles.pageHeader].join(" ")}>
 					<div className="col-12 col-md-10 offset-md-1">
