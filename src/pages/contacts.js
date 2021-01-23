@@ -56,7 +56,7 @@ export default function Contact() {
             </a>
           </h1>
         </div>
-        <div className={[styles.pageBlock, styles.contacts, "round-borders"].join(" ")}>
+        {/* <div className={[styles.pageBlock, styles.contacts, "round-borders"].join(" ")}>
           <span className={styles.info}>
             <h4>Comunità per persone adulte autistiche</h4>
             <h2>{info.comunita.nome}</h2>
@@ -74,10 +74,10 @@ export default function Contact() {
             <h4>Contattare la comunità o il centro diurno</h4>
             <h3>{info.comunita.mail}</h3>
           </span>
-        </div>
-        <div className={[styles.pageBlock, styles.contacts, "round-borders"].join(" ")}>
+        </div> */}
+        {/* <div className={[styles.pageBlock, styles.contacts, "round-borders"].join(" ")}>
           <h4>Iscriviti alla nostra newsletter</h4> [ QUi ci sarà il campo per registrarsi alla NEWSLETTER ]
-        </div>
+        </div> */}
       </Layout>
     </span>
   )
