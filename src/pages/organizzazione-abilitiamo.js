@@ -81,6 +81,13 @@ export default function StoriaAbilitiamo() {
 							avranno nel comitato.
 						</p>
 					</div>
+					<div className="col-12 col-md-4">
+						<div className="position-sticky" style={{ top: 104 }}>
+							{sidebar1.map((d, i) => (
+								<ArrowLink key={i} data={d} />
+							))}
+						</div>
+					</div>
 				</div>
 				<MembroComitato
 					image={data.keller}
@@ -174,15 +181,6 @@ export default function StoriaAbilitiamo() {
 					adulte con disturbi dello spettro autistico. Attualmente è referente di struttura in una Community Farm per
 					giovani adulti con autismo."
 				/>
-				<div className="row my-5">
-					<div className="col-12 col-md-4">
-						<div className="position-sticky" style={{ top: 104 }}>
-							{sidebar1.map((d, i) => (
-								<ArrowLink key={i} data={d} />
-							))}
-						</div>
-					</div>
-				</div>
 			</div>
 			<Footer />
 		</>
