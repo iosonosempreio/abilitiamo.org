@@ -2,11 +2,12 @@ import React from "react"
 import Navigation from "../components/navigation"
 import Footer from "../components/footer"
 import styles from "../styles/page.module.scss"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 // import ReactPlayer from "react-player"
 // import classNames from "classNames"
 import ArrowLink from "../components/arrowLink"
+import MembroComitato from "../components/membroComitato"
 
 export default function StoriaAbilitiamo() {
 	const data = useStaticQuery(query)
@@ -79,192 +80,101 @@ export default function StoriaAbilitiamo() {
 							del settore e della comunicazione. Di seguito i loro nomi, alcuni cenni del loro Curriculum Vitae e il ruolo che
 							avranno nel comitato.
 						</p>
-						<p>
-							<div className="row d-flex align-items-center my-5">
-								<div className="col-6 col-md-3">
-									<Img
-										className={styles.imgCover}
-										fluid={data.keller.childImageSharp.fluid}
-										imgStyle={{ objectFit: "contain" }}
-									/>
-								</div>
-								<div className="col-6 col-md-9">
-									<strong>Dott. Roberto Keller</strong> – Presidente CS
-									<br />
-									Medico chirurgo specializzato in Psichiatria e Neuropsichiatria infantile. Dirigente Medico di Psichiatria.
-									Responsabile ambulatorio disturbi pervasivi dello sviluppo in età adulta ASL TO 2. Componente del Panel per la
-									stesura delle Linee Guida per la diagnosi e il trattamento dei disturbi dello spettro autistico negli adulti su
-									mandato dell’Istituto Superiore di Sanità.
-								</div>
-							</div>
-						</p>
-						<p>
-							<div className="row d-flex align-items-center my-5">
-								<div className="col-3">
-									<Img
-										className={styles.imgCover}
-										fluid={data.fraticelli.childImageSharp.fluid}
-										imgStyle={{ objectFit: "contain" }}
-									/>
-								</div>
-								<div className="col-9">
-									<strong>Dott. Carlo Fraticelli</strong> – Riferimento ATS Insubria
-									<br />
-									Medico chirurgo specializzato in Psichiatria, Psicologia, Tossicologia. Direttore del Dipartimento Gestionale
-									Salute Mentale e Dipendenze dell’ASST Lariana e Direttore dell’Unità Operativa Aziendale, Azienda Socio
-									Sanitaria Territoriale (ASST) Lariana.
-								</div>
-							</div>
-						</p>
-						<p>
-							<div className="row d-flex align-items-center my-5">
-								<div className="col-3">
-									<Img
-										className={styles.imgCover}
-										fluid={data.molteni.childImageSharp.fluid}
-										imgStyle={{ objectFit: "contain" }}
-									/>
-								</div>
-								<div className="col-9">
-									<strong>Dott. Massimo Molteni</strong> – Neuropsichiatra infantile
-									<br />
-									Medico chirurgo specializzato in Neuropsichiatra infantile. Direttore Sanitario Centrale - Responsabile Area
-									psicopatologia dello sviluppo, psicologia del contesto socio-ambientale e dei contesti educativi, La Nostra
-									famiglia - IRCCS Medea di Bosisio Parini (LC). Componente del Panel per la stesura delle Linee Guida per la
-									diagnosi e il trattamento dei disturbi dello spettro autistico nei bambini e negli adolescenti su mandato
-									dell’Istituto Superiore di Sanità.
-								</div>
-							</div>
-						</p>
-						<p>
-							<div className="row d-flex align-items-center my-5">
-								<div className="col-3">
-									<Img
-										className={styles.imgCover}
-										fluid={data.merazzi.childImageSharp.fluid}
-										imgStyle={{ objectFit: "contain" }}
-									/>
-								</div>
-								<div className="col-9">
-									<strong>Dott. Daniele Merazzi</strong> – Pediatra
-									<br />
-									Medico chirurgo specializzato in Pediatria. Direttore del dipartimento Materno Infantile e Direttore Unità
-									Operativa Complessa Pediatria-Neonatologia-Terapia Intensiva Neonatale dell’Ospedale V alduce di Como (CO). Gli
-									studi condotti gli hanno permesso di presentare delle comunicazioni ai congressi annuali dell’American Thoracic
-									Society, e pubblicate nel supplemento annuale dell’American Journal Respiratory Critical Care Medicine. (1999;
-									2000; 2001)
-								</div>
-							</div>
-						</p>
-						<p>
-							<div className="row d-flex align-items-center my-5">
-								<div className="col-3">
-									<Img
-										className={styles.imgCover}
-										fluid={data.bonati.childImageSharp.fluid}
-										imgStyle={{ objectFit: "contain" }}
-									/>
-								</div>
-								<div className="col-9">
-									<strong>Dott. Maurizio Bonati</strong> – Comunicazione scientifica Medico chirurgo. Capo del Dipartimento di
-									Salute Pubblica presso l’Istituto di Ricerche Farmacologiche “Mario Negri” IRCCS di Milano (MI). Professore
-									alla Scuola di Specializzazione in Neuropsichiatria infantile dell’Università degli Studi di Milano. E’ autore
-									o coautore di alcune centinaia di pubblicazioni scientifiche. Collabora alla redazione di riviste scientifiche
-									nazionali e internazionali ed è Direttore di redazione di Ricerca & Pratica.
-								</div>
-							</div>
-						</p>
-						<p>
-							<div className="row d-flex align-items-center my-5">
-								<div className="col-3">
-									<Img
-										className={styles.imgCover}
-										fluid={data.zacchini.childImageSharp.fluid}
-										imgStyle={{ objectFit: "contain" }}
-									/>
-								</div>
-								<div className="col-9">
-									<strong>Dott.ssa Marilena Zacchini</strong> – Coordinatrice formazione personale
-									<br />
-									Educatrice professionale, esperta nella gestione di adulti con autismo. Formatrice. Responsabile, coordinatrice
-									e ideatrice di diversi progetti, tra i quali “0-30 della Fondazione Sospiro” Istituto Fondazione Ospedaliero di
-									Sospiro onlus (CR)
-								</div>
-							</div>
-						</p>
-						<p>
-							<div className="row d-flex align-items-center my-5">
-								<div className="col-3">
-									<Img
-										className={styles.imgCover}
-										fluid={data.miselli.childImageSharp.fluid}
-										imgStyle={{ objectFit: "contain" }}
-									/>
-								</div>
-								<div className="col-9">
-									<strong>Dott. Giovanni Miselli</strong> – Gestione personale
-									<br />
-									Psicologo. Dirigente Sanitario presso Istituto Fondazione Ospedaliero di Sospiro onlus (CR). Docente per 15
-									Scuole di Specializzazione in Psicoterapia sul territorio Nazionale, Scuole di Specializzazione Quadriennale in
-									Psicoterapia Miur. Coordinatore Progetto “Il bambino in ospedale: progetto pilota di prevenzione e di ascolto”
-								</div>
-							</div>
-						</p>
-						<p>
-							<div className="row d-flex align-items-center my-5">
-								<div className="col-3">
-									<Img
-										className={styles.imgCover}
-										fluid={data.rigoldi.childImageSharp.fluid}
-										imgStyle={{ objectFit: "contain" }}
-									/>
-								</div>
-								<div className="col-9">
-									<strong>Dott.ssa Dafne Rigoldi</strong> – Servizi alla persona
-									<br />
-									Insegnante di sostegno, pedagogista ed educatrice della cooperativa Fabula onlus (MI). Collaboratrice di Blue
-									Diary, l’agenda visiva pensata per le persone autistiche, sviluppata in sinergia con Smemoranda, Fabula Onlus e
-									Fondazione Fracta Limina. Un progetto innovativo nato alcuni anni fa per facilitare, attraverso un rinforzo
-									visivo, i bisogni comunicativi degli autistici.
-								</div>
-							</div>
-						</p>
-						<p>
-							<div className="row d-flex align-items-center my-5">
-								<div className="col-3">
-									<Img
-										className={styles.imgCover}
-										fluid={data.aresi.childImageSharp.fluid}
-										imgStyle={{ objectFit: "contain" }}
-									/>
-								</div>
-								<div className="col-9">
-									<strong>Dott.ssa Angela Aresi</strong> – Servizi alla persona
-									<br />
-									Psicologa, Psicoterapeuta e analista del comportamento supervisionata. Interventi come consulente ABA
-									supervisionata. Inter- venti come tecnico ABA. Interventi educativi e riabilitativi bambini e adulti affetti da
-									disturbi dello spettro autistico. Diagnosi specifica DPS. Diagnosi di personalità. Diagnosi DSA. Psicoterapia.
-								</div>
-							</div>
-						</p>
-						<p>
-							<div className="row d-flex align-items-center my-5">
-								<div className="col-3">
-									<Img
-										className={styles.imgCover}
-										fluid={data.moscatelli.childImageSharp.fluid}
-										imgStyle={{ objectFit: "contain" }}
-									/>
-								</div>
-								<div className="col-9">
-									<strong>Dott. Francesco Moscatelli</strong> – Comunicazione divulgativa
-									<br />
-									Giornalista. Lavora per “La Stampa” di Torino dal 2011 in qualità di redattore delle Cronache. Autore di due
-									volumi: Cricket Club (Add, 2013) e il Vino del Papa (Compagnia editoriale Aliberti, 2014).
-								</div>
-							</div>
-						</p>
 					</div>
+				</div>
+				<MembroComitato
+					image={data.keller}
+					name="Dott. Roberto Keller"
+					role="Presidente CS"
+					bio="Medico chirurgo specializzato in Psichiatria e Neuropsichiatria infantile. Dirigente Medico di Psichiatria. Responsabile ambulatorio disturbi pervasivi dello sviluppo in età adulta ASL TO 2. Componente del Panel per la stesura delle Linee Guida per la diagnosi e il trattamento dei disturbi dello spettro autistico negli adulti su mandato dell’Istituto Superiore di Sanità."
+				/>
+				<MembroComitato
+					image={data.fraticelli}
+					name="Dott. Carlo Fraticelli"
+					role="Riferimento ATS Insubria"
+					bio="Medico chirurgo specializzato in Psichiatria, Psicologia, Tossicologia. Direttore del Dipartimento Gestionale
+					Salute Mentale e Dipendenze dell’ASST Lariana e Direttore dell’Unità Operativa Aziendale, Azienda Socio
+					Sanitaria Territoriale (ASST) Lariana."
+				/>
+				<MembroComitato
+					image={data.molteni}
+					name="Dott. Massimo Molteni"
+					role="Neuropsichiatra infantile"
+					bio="Medico chirurgo specializzato in Neuropsichiatra infantile. Direttore Sanitario Centrale - Responsabile Area
+					psicopatologia dello sviluppo, psicologia del contesto socio-ambientale e dei contesti educativi, La Nostra
+					famiglia - IRCCS Medea di Bosisio Parini (LC). Componente del Panel per la stesura delle Linee Guida per la
+					diagnosi e il trattamento dei disturbi dello spettro autistico nei bambini e negli adolescenti su mandato
+					dell’Istituto Superiore di Sanità."
+				/>
+				<MembroComitato
+					image={data.merazzi}
+					name="Dott. Daniele Merazzi"
+					role="Riferimento ATS Insubria"
+					bio="Medico chirurgo specializzato in Pediatria. Direttore del dipartimento Materno Infantile e Direttore Unità
+					Operativa Complessa Pediatria-Neonatologia-Terapia Intensiva Neonatale dell’Ospedale V alduce di Como (CO). Gli
+					studi condotti gli hanno permesso di presentare delle comunicazioni ai congressi annuali dell’American Thoracic
+					Society, e pubblicate nel supplemento annuale dell’American Journal Respiratory Critical Care Medicine. (1999;
+					2000; 2001)."
+				/>
+				<MembroComitato
+					image={data.bonati}
+					name="Dott. Maurizio Bonati"
+					role="Comunicazione scientifica"
+					bio="Medico chirurgo. Capo del Dipartimento di
+					Salute Pubblica presso l’Istituto di Ricerche Farmacologiche “Mario Negri” IRCCS di Milano (MI). Professore
+					alla Scuola di Specializzazione in Neuropsichiatria infantile dell’Università degli Studi di Milano. E’ autore
+					o coautore di alcune centinaia di pubblicazioni scientifiche. Collabora alla redazione di riviste scientifiche
+					nazionali e internazionali ed è Direttore di redazione di Ricerca & Pratica."
+				/>
+				<MembroComitato
+					image={data.zacchini}
+					name="Dott.ssa Marilena Zacchini"
+					role="Coordinatrice formazione personale"
+					bio="Educatrice professionale, esperta nella gestione di adulti con autismo. Formatrice. Responsabile, coordinatrice
+					e ideatrice di diversi progetti, tra i quali “0-30 della Fondazione Sospiro” Istituto Fondazione Ospedaliero di
+					Sospiro onlus (CR)"
+				/>
+				<MembroComitato
+					image={data.miselli}
+					name="Dott. Giovanni Miselli"
+					role="Gestione personale"
+					bio="Psicologo. Dirigente Sanitario presso Istituto Fondazione Ospedaliero di Sospiro onlus (CR). Docente per 15
+					Scuole di Specializzazione in Psicoterapia sul territorio Nazionale, Scuole di Specializzazione Quadriennale in
+					Psicoterapia Miur. Coordinatore Progetto “Il bambino in ospedale: progetto pilota di prevenzione e di ascolto”."
+				/>
+				<MembroComitato
+					image={data.rigoldi}
+					name="Dott.ssa Dafne Rigoldi"
+					role="Servizi alla persona"
+					bio="Insegnante di sostegno, pedagogista ed educatrice della cooperativa Fabula onlus (MI). Collaboratrice di Blue
+					Diary, l’agenda visiva pensata per le persone autistiche, sviluppata in sinergia con Smemoranda, Fabula Onlus e
+					Fondazione Fracta Limina. Un progetto innovativo nato alcuni anni fa per facilitare, attraverso un rinforzo
+					visivo, i bisogni comunicativi degli autistici."
+				/>
+				<MembroComitato
+					image={data.aresi}
+					name="Dott.ssa Angela Aresi"
+					role="Servizi alla persona"
+					bio="Psicologa, Psicoterapeuta e analista del comportamento supervisionata. Interventi come consulente ABA
+					supervisionata. Inter- venti come tecnico ABA. Interventi educativi e riabilitativi bambini e adulti affetti da
+					disturbi dello spettro autistico. Diagnosi specifica DPS. Diagnosi di personalità. Diagnosi DSA. Psicoterapia."
+				/>
+				<MembroComitato
+					image={data.moscatelli}
+					name="Dott. Francesco Moscatelli"
+					role="Comunicazione divulgativa"
+					bio="Giornalista. Lavora per “La Stampa” di Torino dal 2011 in qualità di redattore delle Cronache. Autore di due
+					volumi: Cricket Club (Add, 2013) e il Vino del Papa (Compagnia editoriale Aliberti, 2014)."
+				/>
+				<MembroComitato
+					image={data.barile}
+					name="Dott. Silvia Barile"
+					role="Operatrice specializzata"
+					bio="Operatrice specializzata, con lunga e approfondita esperienza negli interventi educativi abilitativi delle persone
+					adulte con disturbi dello spettro autistico. Attualmente è referente di struttura in una Community Farm per
+					giovani adulti con autismo."
+				/>
+				<div className="row my-5">
 					<div className="col-12 col-md-4">
 						<div className="position-sticky" style={{ top: 104 }}>
 							{sidebar1.map((d, i) => (
@@ -282,6 +192,13 @@ export default function StoriaAbilitiamo() {
 export const query = graphql`
 	query {
 		aresi: file(relativePath: { eq: "comitato/aresi.png" }) {
+			childImageSharp {
+				fluid {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+		barile: file(relativePath: { eq: "comitato/barile.png" }) {
 			childImageSharp {
 				fluid {
 					...GatsbyImageSharpFluid
