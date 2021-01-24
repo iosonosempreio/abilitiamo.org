@@ -28,7 +28,7 @@ export default function CentroDiurno() {
 					{mostraAltro ? "Nascondi" : "Mostra altro"}
 				</button>
 				<span className={[stylesCascinaCristina.further, mostraAltro ? "force-display-inline" : ""].join(" ")}>
-					Il centro diurno è un servizio sociale, semiresidenziale e territoriale rivolto a giovani adulti affetti da autismo che vivono ancora in famiglia. Il
+					Il centro diurno è un servizio sociale, semiresidenziale e territoriale rivolto a giovani adulti con autismo che vivono ancora in famiglia. Il
 					progetto prevede, dopo una attenta valutazione individuale delle proprie competenze, la messa a punto di un piano di intervento personalizzato che consenta
 					ai fruitori, come per chi vive nella comunità residenziale, di ottimizzare e/o sviluppare tutte quelle abilità necessarie a migliorare tutte le autonomie
 					spendibili nel proprio contesto di vita oltre che la loro autostima ed autodeterminazione. Il centro potrà accogliere fino a 15 persone, che si

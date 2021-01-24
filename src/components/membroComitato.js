@@ -9,7 +9,7 @@ export default function MembroComitato(props) {
 			</div>
 			<div className="col-10 offset-1 mt-3 mb-5 col-md-8 offset-md-0 my-md-0 col-lg-7 col-xl-6">
 				<h3>{props.name}</h3>
-                <h4>{props.role}</h4>
+                {/* <h4>{props.role}</h4> */}
 				{props.bio}
 			</div>
 		</div>
