@@ -24,3 +24,5 @@ jobs:
       uses: jzweifel/gatsby-cli-github-action@master
       with:
         gatsby-arg: build
+    - name: List output files
+      run: find build/ -print
