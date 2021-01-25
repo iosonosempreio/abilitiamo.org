@@ -5,7 +5,7 @@ import Navigation from "../components/navigation"
 import Footer from "../components/footer"
 import styles from "../styles/page.module.scss"
 import stylesCascinaCristina from "../styles/cascinaCristina.module.scss"
-import classNames from "classNames"
+import classNames from "classnames"
 
 import sections from "../components/cascina-crtistina-sections/cascina-cristina-sections"
 

@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import classNames from "classNames"
+import classNames from "classnames"
 import Layout from "../components/layout"
 import ArrowLink from "../components/arrowLink"
 import styles from "../styles/page.module.scss"

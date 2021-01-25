@@ -4,7 +4,7 @@ import StickyMessage from "../components/stickyMessage"
 import Footer from "../components/footer"
 import styles from "../styles/page.module.scss"
 import ReactPlayer from "react-player"
-import classNames from "classNames"
+import classNames from "classnames"
 import ArrowLink from "../components/arrowLink"
 
 export default function StoriaAbilitiamo() {

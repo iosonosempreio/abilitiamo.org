@@ -8,7 +8,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import ReactPlayer from "react-player"
 import CarouselHome from "../components/carouselHome"
 import styles from "../styles/home.module.scss"
-import classNames from "classNames"
+import classNames from "classnames"
 
 export default function Home() {
 	const data = useStaticQuery(query)

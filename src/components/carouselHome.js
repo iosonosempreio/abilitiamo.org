@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import classNames from "classNames"
+import classNames from "classnames"
 import Img from "gatsby-image"
 
 export default function CarouselHome(props) {
