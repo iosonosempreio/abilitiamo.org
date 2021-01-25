@@ -93,7 +93,7 @@ export default function StoriaAbilitiamo() {
 					image={data.keller}
 					name="Dott. Roberto Keller"
 					role="Presidente CS"
-					bio="Medico chirurgo specializzato in Psichiatria e Neuropsichiatria infantile. Dirigente Medico di Psichiatria. Responsabile ambulatorio disturbi pervasivi dello sviluppo in età adulta ASL TO 2. Componente del Panel per la stesura delle Linee Guida per la diagnosi e il trattamento dei disturbi dello spettro autistico negli adulti su mandato dell’Istituto Superiore di Sanità."
+					bio="Presidente del comitato scientifico. Medico chirurgo specializzato in Psichiatria e Neuropsichiatria infantile. Dirigente Medico di Psichiatria. Responsabile ambulatorio disturbi pervasivi dello sviluppo in età adulta ASL TO 2. Componente del Panel per la stesura delle Linee Guida per la diagnosi e il trattamento dei disturbi dello spettro autistico negli adulti su mandato dell’Istituto Superiore di Sanità."
 				/>
 				<MembroComitato
 					image={data.fraticelli}

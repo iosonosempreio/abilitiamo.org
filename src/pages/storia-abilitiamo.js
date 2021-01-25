@@ -48,7 +48,7 @@ export default function StoriaAbilitiamo() {
 						</div>
 						<p>
 							L’associazione Abilitiamo Autismo onlus - “abitiamo e abilitiamo” si è costituita nel 2017, per volere di 5
-							famiglie con figli affetti dalla sindrome autistica. Un punto di forza dell’associazione è rappresentato dalla
+							famiglie con figli autistici. Un punto di forza dell’associazione è rappresentato dalla
 							presenza, tra i soci fondatori, dei fratelli della persona con autismo che potranno dare forza, sostegno e
 							continuità alla stessa. Nel tempo, la compagine associativa si è arricchita di soci e amici che hanno contribuito
 							alla realizzazione dei progetti svolti finora.

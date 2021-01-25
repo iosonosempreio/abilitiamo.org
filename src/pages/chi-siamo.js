@@ -63,7 +63,7 @@ export default function ChiSiamo() {
 						Grazie al supporto del territorio, dei suoi soci e dei suoi collaboratori, Abilitiamo è risultata vincitrice del bando per i Progetti Emblematici Maggiori
 						della Provincia di Como (anno 2019).
 						<br />
-						Con questo contributo, Abilitiamo ha dato inizio alla realizzazione di un polo multifunzionale per la presa in carico di giovani adulti affetti da
+						Con questo contributo, Abilitiamo ha dato inizio alla realizzazione di un polo multifunzionale per la presa in carico di giovani adulti con
 						disturbi dello spettro autistico: Cascina Cristina.
 					</p>
 				</div>
