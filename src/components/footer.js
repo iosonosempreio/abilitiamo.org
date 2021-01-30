@@ -8,6 +8,7 @@ import styles from "../styles/footer.module.scss"
 import logoCariplo from "./assets/cariplo.svg"
 import logoLombardia from "./assets/lombardia.svg"
 import logoFpcc from "./assets/fpcc.png"
+import logoCsv from "./assets/comunità-s-vincenzo.png"
 
 export default function Footer(props) {
   return (
@@ -53,6 +54,7 @@ export default function Footer(props) {
             <span style={{fontWeight: 600}}>Con il contributo di</span>
             <img style={{margin:'1rem 0',width:160}} src={logoCariplo} alt="logo Fondazione Cariplo" />
             <img style={{margin:'1rem 0',width:160}} src={logoLombardia} alt="logo Regione Lombardia" />
+            <img style={{margin:'2rem 0',width:210,mixBlendMode:'multiply'}} src={logoCsv} alt="logo Comunità Pastorale San Vincenzo Cantù" />
             <img style={{margin:'2rem 0',width:210}} src={logoFpcc} alt="logo Fondazione Provinciale Comasca" />
         </div>
         <span className={["text-center", styles["copyright"]].join(" ")}>
