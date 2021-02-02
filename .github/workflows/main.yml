@@ -2,6 +2,8 @@ name: Build and Deploy
 on:
   push:
     branches: master
+    # tags:
+    #   - go-public
 jobs:
   build-and-deploy:
     name: Build and deploy Gatsby site
@@ -21,6 +23,9 @@ jobs:
       - name: Install Gatsby CLI
         run: yarn global add gatsby-cli@2.12.34
       
+      - name: Clean
+        run: yarn clean
+
       - name: Build
         run: yarn build
       
@@ -30,12 +35,14 @@ jobs:
       - name: List output files
         run: find public/ -print
       
-      # - name: Setup SSH
-      #   run: |
-      #     mkdir -p ~/.ssh/
-      #     echo "${{ secrets.ssh_private_key }}" > ~/.ssh/deploy_key
-      #     sudo chmod 600 ~/.ssh/deploy_key
-      #     ssh-keyscan -H "${{ secrets.host }}" > ~/.ssh/known_hosts
-      
-      # - name: SFTP upload
-      #   run: sftp -i ~/.ssh/deploy_key ${{ secrets.deploy_user }}@${{ secrets.host }} <<< $'cd ${{ secrets.destination_path }} \n put -r public/*'
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
+          ftp-server: ${{ secrets.FTP_SERVER }}
+          # FTP account username
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          # FTP account password
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          # The local folder to copy, defaults to root project folder
+          local-dir: public
