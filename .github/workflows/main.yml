@@ -47,4 +47,4 @@ jobs:
           # The local folder to copy, defaults to root project folder
           local-dir: public
           # Folder to upload to (on the server), must end with trailing slash /
-          server-dir: /www.abilitiamo.org
+          server-dir: /www.abilitiamo.org/
