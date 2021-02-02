@@ -99,7 +99,7 @@ export default function StoriaAbilitiamo() {
 					image={data.fraticelli}
 					name="Dott. Carlo Fraticelli"
 					role="Riferimento ATS Insubria"
-					bio="Medico chirurgo specializzato in Psichiatria, Psicologia, Tossicologia. Direttore del Dipartimento Gestionale
+					bio="Medico chirurgo specializzato in Psichiatria e Psicoterapeuta. Direttore del Dipartimento Gestionale
 					Salute Mentale e Dipendenze dell’ASST Lariana e Direttore dell’Unità Operativa Aziendale, Azienda Socio
 					Sanitaria Territoriale (ASST) Lariana."
 				/>
