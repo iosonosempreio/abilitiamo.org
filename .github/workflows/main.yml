@@ -13,19 +13,22 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '13.x'
+          node-version: '12.x'
       
       - name: Install Project Dependencies
-        run: npm ci
+        run: yarn install
       
       - name: Install Gatsby CLI
-        run: npm install -g gatsby-cli@2.12.34
+        run: yarn global add gatsby-cli@2.12.34
       
       - name: Build
-        run: gatsby build
+        run: yarn build
       
       - name: Verify build
         run: ls -la public
+
+      - name: List output files
+        run: find public/ -print
       
       # - name: Setup SSH
       #   run: |
