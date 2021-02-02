@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v2.3.2
       
       - name: Install Node.js
         uses: actions/setup-node@v1
@@ -36,7 +36,7 @@ jobs:
         run: find public/ -print
       
       - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
           ftp-server: ${{ secrets.FTP_SERVER }}
