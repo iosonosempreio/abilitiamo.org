@@ -37,11 +37,9 @@ export default function StoriaAbilitiamo() {
 				<div className="row my-5">
 					<div className="col-12 col-md-7 offset-md-1">
 						<p className={["paragraph", "paragraphBig"].join(" ")}>
-							L’Associazione Abilitiamo è un ente del terzo settore senza scopo di lucro che opera in due distretti
-							territoriali.
-							<br />
-							Possono aderire all’associazione tutte le persone che, a vario titolo, possono e desiderano contribuire al
-							miglioramento della qualità di vita dei ragazzi con autismo.
+							L’Associazione Abilitiamo è un ente del terzo settore senza scopo di lucro.
+							Possono aderire all’associazione tutte le persone che desiderano contribuire al
+							miglioramento della qualità di vita delle persone con autismo.
 						</p>
 						<h3 className="mt-5">Soci</h3>
 						<p>
@@ -118,7 +116,7 @@ export default function StoriaAbilitiamo() {
 					name="Dott. Daniele Merazzi"
 					role="Riferimento ATS Insubria"
 					bio="Medico chirurgo specializzato in Pediatria. Direttore del dipartimento Materno Infantile e Direttore Unità
-					Operativa Complessa Pediatria-Neonatologia-Terapia Intensiva Neonatale dell’Ospedale V alduce di Como (CO). Gli
+					Operativa Complessa Pediatria-Neonatologia-Terapia Intensiva Neonatale dell’Ospedale Valduce di Como (CO). Gli
 					studi condotti gli hanno permesso di presentare delle comunicazioni ai congressi annuali dell’American Thoracic
 					Society, e pubblicate nel supplemento annuale dell’American Journal Respiratory Critical Care Medicine. (1999;
 					2000; 2001)."
