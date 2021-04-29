@@ -1,6 +1,6 @@
 name: Publish website
-on:
-  on: workflow_dispatch
+
+on: workflow_dispatch
   # push:
   #   branches: master
     # tags:
