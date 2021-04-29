@@ -3,7 +3,7 @@ import Navigation from "../components/navigation"
 import Footer from "../components/footer"
 import styles from "../styles/page.module.scss"
 import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import ArrowLink from "../components/arrowLink"
 import { BsFileEarmarkText } from "react-icons/bs"
 
@@ -34,20 +34,16 @@ export default function DiventaSocio() {
 							È possibile iscriversi ufficialmente al libro soci dell’associazione compilando il modulo di tesseramento e
 							versando la quota associativa annuale.
 						</p>
-						<Img
-							className={styles.imgCover}
-							fluid={data.tessera.childImageSharp.fluid}
-							imgStyle={{ objectFit: "contain" }}
-						/>
-						<br/>
+						<Img className={styles.imgCover} fluid={data.tessera.childImageSharp.fluid} imgStyle={{ objectFit: "contain" }} />
+						<br />
 						<p>
-							Il consiglio direttivo ha stabilito che per l’anno corrente questa quota ammonta a{" "}
-							<strong>€30 (trenta/00)</strong> da versare sul c/c di cui sopra o da consegnare in contanti. L’informativa sulla
-							privacy è disponibile a questa pagina.
+							Scarica e stampa il modulo, compilalo in ogni sua parte e consegnalo alla prima occasione. Nel frattempo inviaci
+							una scansione per mail (info [@] abilitiamo.org) così da predisporre la tua iscrizione.
 						</p>
 						<p>
-							Scarica e stampa il modulo, compilalo in ogni sua parte e consegnalo alla prima occasione buona, nel frattempo
-							inviaci una scansione per mail (info [@] abilitiamo.org) così da predisporre la tua iscrizione.
+							In seguito all'approvazione del consiglio direttivo, potrai versare la quota associativa di{" "}
+							<strong>€30 (trenta/00)</strong> sul c/c IT52P0843051100000000114383 oppure farcela avere in contanti.{" "}
+							L’informativa sulla privacy è disponibile a <Link to="/privacy">questa pagina</Link>.
 						</p>
 						<p>
 							<a href={modulo} download="abilitiamo-tesseramento">

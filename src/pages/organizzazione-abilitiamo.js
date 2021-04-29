@@ -14,7 +14,7 @@ export default function StoriaAbilitiamo() {
 	const sidebar1 = [
 		{ label: "Storia di Abilítiamo", url: "/storia-abilitiamo" },
 		// { label: "Bilanci", url: "/" },
-		{ label: "Diventa socio", url: "/" },
+		{ label: "Diventa socio", url: "/diventa-socio" },
 	]
 	return (
 		<>
@@ -43,7 +43,7 @@ export default function StoriaAbilitiamo() {
 						</p>
 						<h3 className="mt-5">Soci</h3>
 						<p>
-							Undici soci, rappresentanti cinque famiglie con figli affetti dalla sindrome autistica, hanno costituito nel 2017
+							Undici soci, rappresentanti cinque famiglie con figli con autismo, hanno costituito nel 2017
 							l’Associazione Abilitiamo Autismo onlus –abitare e abilitare– con sede legale a Carugo (Co) in via per Gattedo,
 							19/7 e con sede operativa presso lo studio Emme di Cantù (Co) in via Susa, 15.
 						</p>
