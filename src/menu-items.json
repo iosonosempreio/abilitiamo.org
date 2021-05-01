@@ -25,6 +25,11 @@
     "menues": ["footer"]
   },
   {
+    "label": "Sostenitori",
+    "url": "/sostenitori",
+    "menues": ["main", "footer"]
+  },
+  {
     "label": "Diventa socio",
     "url": "/diventa-socio",
     "menues": ["footer"]
