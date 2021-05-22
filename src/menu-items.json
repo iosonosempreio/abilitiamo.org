@@ -61,7 +61,7 @@
   },
   {
     "label": "Privacy",
-    "url": "/",
+    "url": "/privacy",
     "menues": ["footer"]
   }
 ]
