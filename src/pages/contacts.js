@@ -21,29 +21,31 @@ export default function Contact() {
             </h4>
             <h3>{info.associazione.indirizzo}</h3>
           </span>
-          <span className={styles.info}>
+          <span className={styles.info + " mt-5"}>
             <h4>Contattare l'associazione</h4>
             <h3>{info.associazione.mail}</h3>
+            <h3>{info.associazione.mailRisorseUmane}</h3>
+            <h3>{info.associazione.mailAmministrazione}</h3>
           </span>
-          <span className={styles.info}>
+          <span className={styles.info + " mt-5"}>
             <h4>PEC</h4>
             <h3>{info.associazione.pec}</h3>
           </span>
-          <span className={styles.info}>
+          <span className={styles.info + " mt-5"}>
             <h4>
-              Codice fiscale
+              Codice fiscale{" "}
               <span style={{ color: "var(--azure)" }}>(5x1000)</span>
             </h4>
             <h3>{info.associazione.codiceFiscale}</h3>
           </span>
-          <span className={styles.info}>
+          <span className={styles.info + " mt-5"}>
             <h4>
               IBAN
               <span style={{ color: "var(--azure)" }}>(donazioni liberali)</span>
             </h4>
             <h3>{info.associazione.iban}</h3>
           </span>
-          <h4>Canali social</h4>
+          <h4 className={"mt-5"}>Canali social</h4>
           <h1 className={styles.socials}>
             <a href={info.associazione.facebook} target="_blank" rel="noopener noreferrer">
               <FaFacebookSquare />
