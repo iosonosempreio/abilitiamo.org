@@ -19,16 +19,16 @@ jobs:
           node-version: '12.x'
       
       - name: Install Project Dependencies
-        run: yarn install
+        run: npm install
       
       - name: Install Gatsby CLI
-        run: yarn global add gatsby-cli@2.12.34
+        run: npm -g install gatsby-cli@2.12.34
       
       - name: Clean
-        run: yarn clean
+        run: npm run clean
 
       - name: Build
-        run: yarn build
+        run: npm run build
       
       - name: Verify build
         run: ls -la public
