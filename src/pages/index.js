@@ -1,5 +1,6 @@
 import React from "react"
-import Navigation from "../components/navigation"
+import { Helmet } from "react-helmet"
+import NavigationBs from "../components/navigationBs"
 import Footer from "../components/footer"
 import StickyMessage from "../components/stickyMessage"
 import ArrowLink from "../components/arrowLink"
@@ -14,7 +15,11 @@ export default function Home() {
 	const data = useStaticQuery(query)
 	return (
 		<>
-			<Navigation />
+			<Helmet>
+				<title>Abilitiamo Autismo</title>
+				<meta name="description" content="Miglioriamo la qualità di vita delle persone con autismo. Abilitare è possibile a qualsiasi età, per noi l'età adulta è solo un punto di partenza." />
+			</Helmet>
+			<NavigationBs />
 			<StickyMessage />
 			<div className="container-fluid" style={{ backgroundColor: "var(--beige)" }}>
 				<div className="container">
@@ -32,9 +37,9 @@ export default function Home() {
 								per noi l'età adulta è <br className="d-none" />
 								solo un punto di partenza.
 							</p>
-							<ArrowLink data={{ label: "Chi siamo", url: "/chi-siamo" }} />
-							<ArrowLink data={{ label: "Cascina Cristina", url: "/cascina-cristina" }} />
-							<ArrowLink data={{ label: "Donazioni", url: "/donazioni" }} />
+							<ArrowLink data={{ label: "Chi siamo", url: "/chi-siamo" }} type="internal" />
+							<ArrowLink data={{ label: "Cascina Cristina", url: "/cascina-cristina" }} type="internal" />
+							<ArrowLink data={{ label: "Fai una donazione", url: "/dona-ora" }} type="internal" />
 						</div>
 						<div className="col-12 col-md-6">
 							<Img
@@ -48,7 +53,7 @@ export default function Home() {
 						<div className={classNames("col-12 col-md-7 offset-0 offset-md-1 order-last order-md-first")}>
 							<div className={classNames("video-wrapper")}>
 								<ReactPlayer
-								className="react-player"
+									className="react-player"
 									url="https://www.facebook.com/1400253103427642/videos/1496214477164837"
 									width="100%"
 									height="100%"

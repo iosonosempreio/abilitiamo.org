@@ -1,5 +1,5 @@
 import React from "react"
-import Navigation from "../components/navigation"
+import NavigationBs from "../components/navigationBs"
 import Footer from "../components/footer"
 import styles from "../styles/page.module.scss"
 import Img from "gatsby-image"
@@ -9,7 +9,7 @@ export default function Sostenitori() {
 	const data = useStaticQuery(query)
 	return (
 		<>
-			<Navigation />
+			<NavigationBs />
 			<div className="container-fluid" style={{ backgroundColor: "var(--beige)" }}>
 				<div className={["container", styles.pageHeader].join(" ")}>
 					<div className="col-12 col-md-10 offset-md-1">
@@ -35,7 +35,6 @@ export default function Sostenitori() {
 							Di seguito i nostri sostenitori principali, che stanno sostenendo il progetto attraverso la messa a disposizione
 							di spazi, di coperture finanziarie e competenze professionali.
 						</p>
-            <h4>Sostenitori principali</h4>
 					</div>
         </div>
 				<div className="row mb-5">

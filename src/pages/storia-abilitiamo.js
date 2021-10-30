@@ -1,5 +1,5 @@
 import React from "react"
-import Navigation from "../components/navigation"
+import NavigationBs from "../components/navigationBs"
 import StickyMessage from "../components/stickyMessage"
 import Footer from "../components/footer"
 import styles from "../styles/page.module.scss"
@@ -11,11 +11,11 @@ export default function StoriaAbilitiamo() {
 	const sidebar1 = [
 		{ label: "Organizzazione di Abilítiamo", url: "/organizzazione-abilitiamo" },
 		// { label: "Bilanci", url: "/" },
-		{ label: "Diventa socio", url: "/" },
+		{ label: "Diventa socio", url: "/diventa-socio" },
 	]
 	return (
 		<>
-			<Navigation />
+			<NavigationBs />
 			<StickyMessage />
 			<div className="container-fluid" style={{ backgroundColor: "var(--beige)" }}>
 				<div className={["container", styles.pageHeader].join(" ")}>
@@ -73,7 +73,7 @@ export default function StoriaAbilitiamo() {
 					<div className="col-12 col-md-4">
 						<div className="position-sticky" style={{ top: 104 }}>
 							{sidebar1.map((d, i) => (
-								<ArrowLink key={i} data={d} />
+								<ArrowLink key={i} data={d} type="internal" />
 							))}
 						</div>
 					</div>

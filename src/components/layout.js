@@ -1,5 +1,5 @@
 import React from "react"
-import Navigation from "./navigation"
+import NavigationBs from "./navigationBs"
 import Footer from "./footer"
 import StickyMessage from "./stickyMessage"
 import PageHeader from "../components/pageHeader"
@@ -7,7 +7,7 @@ import PageHeader from "../components/pageHeader"
 export default function Layout(props) {
   return (
     <>
-      <Navigation navBackground={props.navBackground} />
+      <NavigationBs navBackground={props.navBackground} />
       { !props.hideStickyMessage && <StickyMessage /> }
       <PageHeader color={props.color} bgColor={props.bgColor}>
         {props.title}

@@ -1,7 +1,7 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef } from "react"
 import "intersection-observer" // optional polyfill
 import Observer from "@researchgate/react-intersection-observer"
-import Navigation from "../components/navigation"
+import NavigationBs from "../components/navigationBs"
 import Footer from "../components/footer"
 import styles from "../styles/page.module.scss"
 import stylesCascinaCristina from "../styles/cascinaCristina.module.scss"
@@ -30,7 +30,7 @@ export default function CascinaCristina() {
 	}
 	return (
 		<span className={styles.cascinaCristina}>
-			<Navigation />
+			<NavigationBs />
 			<div className={[styles.pageHeader, "text-center"].join(" ")}>
 				<span>
 					<h1>Cascina Cristina</h1>

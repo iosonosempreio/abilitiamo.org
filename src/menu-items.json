@@ -51,7 +51,7 @@
   },
   {
     "label": "Dona ora",
-    "url": "/donazioni",
+    "url": "/dona-ora",
     "menues": ["main", "footer"]
   },
   {

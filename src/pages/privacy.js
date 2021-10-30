@@ -1,15 +1,12 @@
 import React from "react"
-import Navigation from "../components/navigation"
+import NavigationBs from "../components/navigationBs"
 import Footer from "../components/footer"
 import styles from "../styles/page.module.scss"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
 
 export default function Sostenitori() {
-	const data = useStaticQuery(query)
 	return (
 		<>
-			<Navigation />
+			<NavigationBs />
 			<div className="container-fluid" style={{ backgroundColor: "var(--beige)" }}>
 				<div className={["container", styles.pageHeader].join(" ")}>
 					<div className="col-12 col-md-10 offset-md-1">
@@ -173,57 +170,3 @@ export default function Sostenitori() {
 		</>
 	)
 }
-
-export const query = graphql`
-	query {
-		cariplo: file(relativePath: { eq: "logos/cariplo.png" }) {
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid
-				}
-			}
-		}
-		regione: file(relativePath: { eq: "logos/regione.png" }) {
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid
-				}
-			}
-		}
-		sanVincenzo: file(relativePath: { eq: "logos/san-vincenzo.png" }) {
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid
-				}
-			}
-		}
-		craCantu: file(relativePath: { eq: "logos/cra-cantu.png" }) {
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid
-				}
-			}
-		}
-		expertam: file(relativePath: { eq: "logos/expertam.png" }) {
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid
-				}
-			}
-		}
-		fpcc: file(relativePath: { eq: "logos/fpcc.png" }) {
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid
-				}
-			}
-		}
-		emme: file(relativePath: { eq: "logos/emme.png" }) {
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid
-				}
-			}
-		}
-	}
-`

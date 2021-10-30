@@ -1,5 +1,5 @@
 import React from "react"
-import Navigation from "../components/navigation"
+import NavigationBs from "../components/navigationBs"
 import Footer from "../components/footer"
 import styles from "../styles/page.module.scss"
 // import Img from "gatsby-image"
@@ -18,7 +18,7 @@ export default function StoriaAbilitiamo() {
 	]
 	return (
 		<>
-			<Navigation />
+			<NavigationBs />
 			{/* <div className={[styles.pageHeader, "text-center"].join(" ")}>
 				<span>
 					<h1>Storia di Abilitiamo</h1>
@@ -82,7 +82,7 @@ export default function StoriaAbilitiamo() {
 					<div className="col-12 col-md-4">
 						<div className="position-sticky" style={{ top: 104 }}>
 							{sidebar1.map((d, i) => (
-								<ArrowLink key={i} data={d} />
+								<ArrowLink key={i} data={d} type="internal" />
 							))}
 						</div>
 					</div>

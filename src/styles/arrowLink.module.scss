@@ -1,0 +1,27 @@
+.sidebarLink {
+	font-weight: 500;
+	display: grid;
+	grid-template-columns: 2rem auto;
+	align-items: center;
+	color: var(--azure);
+	text-decoration: none;
+	justify-content: start;
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: auto;
+    cursor: not-allowed;
+    &:hover {
+      color: var(--azure);
+    }
+  }
+  &:hover {
+		color: var(--red);
+		text-decoration: none;
+	}
+}
+
+.arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--red);
+}
