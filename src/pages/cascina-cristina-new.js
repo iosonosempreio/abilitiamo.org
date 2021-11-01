@@ -22,7 +22,7 @@ export default function CascinaCristina() {
   return (
     <>
       <Helmet>
-        <body data-bs-spy="scroll" data-bs-target="#sections-scrollspy" />
+        <body data-bs-spy="scroll" data-bs-target="#sections-scrollspy" data-bs-offset="200" />
       </Helmet>
       <Navigation />
       <Container
@@ -92,7 +92,7 @@ export default function CascinaCristina() {
         <nav
           id="sections-scrollspy"
           class="navbar navbar-light bg-light px-3 position-sticky"
-          style={{ top: 60, zIndex: 2000 }}
+          style={{ top: 60, zIndex: 2000, opacity:0.5 }}
         >
           <ul
             className={classNames(
@@ -102,7 +102,10 @@ export default function CascinaCristina() {
             )}
           >
             {sections.map((d, i) => (
-              <li key={i} className={classNames("nav-item",stylescc.sectionNavItem)}>
+              <li
+                key={i}
+                className={classNames("nav-item", stylescc.sectionNavItem)}
+              >
                 <a class="nav-link" href={d.anchor}>
                   <div className={stylescc.sectionStatus}></div>
                   <p>{("00" + (i + 1)).slice(-2)}</p>
@@ -113,21 +116,13 @@ export default function CascinaCristina() {
           </ul>
         </nav>
 
-        <div
-        // data-bs-spy="scroll"
-        // data-bs-target="#sections-scrollspy"
-        // data-bs-offset="0"
-        // className={classNames(stylescc.scrollspyExample)}
-        // tabIndex="0"
-        >
-          {sections.map((d, i) => (
-            <section id={d.anchor.slice(1)} key={i} className={"vh-100"}>
-              <Col xs={12}>
-                <h1>{d.title}</h1>
-              </Col>
-            </section>
-          ))}
-        </div>
+        {sections.map((d, i) => (
+          <section id={d.anchor.slice(1)} key={i} style={{ height: 300 }}>
+            <Col xs={12}>
+              <h1>{d.title}</h1>
+            </Col>
+          </section>
+        ))}
       </Container>
 
       <Footer />
