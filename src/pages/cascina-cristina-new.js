@@ -1,100 +1,136 @@
-import React, { useRef } from "react"
-import "intersection-observer" // optional polyfill
-import Observer from "@researchgate/react-intersection-observer"
-import Navigation from "../components/navigation"
-import Footer from "../components/footer"
-import styles from "../styles/page.module.scss"
-import stylesCascinaCristina from "../styles/cascinaCristina.module.scss"
-import classNames from "classnames"
+import React, { useRef } from "react";
+import { Helmet } from "react-helmet";
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  Image,
+  Form,
+  InputGroup,
+  ListGroup,
+} from "react-bootstrap";
+import Navigation from "../components/navigation";
+import Footer from "../components/footer";
+import styles from "../styles/page.module.scss";
+import stylescc from "../styles/cascinaCristinaNew.module.scss";
+import classNames from "classnames";
 
-import sections from "../components/cascina-crtistina-sections/cascina-cristina-sections"
+import sections from "../components/cascina-crtistina-sections/cascina-cristina-sections";
 
 export default function CascinaCristina() {
-	const sectionNav = useRef()
-	const observerOptions = {
-		onChange: event => {
-			if (event.isIntersecting) {
-				sectionNav.current
-					.querySelectorAll("." + stylesCascinaCristina.sectionNavItem)
-					.forEach(a => a.classList.remove(stylesCascinaCristina.active))
-				sectionNav.current.querySelector(".name-" + event.target.id).classList.add(stylesCascinaCristina.active)
-			}
-		},
-		rootMargin: "0% 0% -67%",
-	}
-	const scrollToEl = d => {
-		const el = document.querySelector(d.anchor)
-		const bbox = el.getBoundingClientRect()
-		window.scrollBy({
-			top: bbox.y - 162,
-			left: 0,
-			behavior: "smooth",
-		})
-	}
-	return (
-		<span className={styles.cascinaCristina}>
-			<Navigation />
-			<div
-				className={classNames("container-fluid", styles.pageHeader, "text-center")}
-				style={{ backgroundColor: "var(--beige)" }}
-			>
-				<div className={["container"].join(" ")}>
-					<div className="col-12 col-md-10 offset-md-1">
-						<span>
-							<h1>Cascina Cristina</h1>
-							<p>Un polo territoriale per la presa in carico della persona adulta con disturbi dello spettro autistico</p>
-						</span>
-					</div>
-				</div>
-			</div>
-			<div className="container">
-				<div className="row my-5">
-					<div className="col-12 col-md-7 offset-md-1">
-						<p className={["paragraph", "paragraphBig"].join(" ")}>
-							Il progetto Cascina Cristina nasce per rispondere al bisogno del territorio dell'insubria e della brianza di
-							strutture adatte ad ospitare giovani adulti con autismo.
-						</p>
-						<p>
-							Vista l’assenza di strutture adatte ad ospitare giovani adulti con autismo nel territorio canturino e nelle aree
-							circostanti, Cascina Cristina potrebbe diventare per l’area dell'Insubria e della Brianza un modello pilota e uno
-							stimolo per altri enti per la realizzazione di strutture similari, rispondendo così al forte bisogno del
-							territorio e delle famiglie che vi appartengono.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div className="container-fluid">
-				<div id="scrolling-container" className="container" style={{ backgroundColor: "white" }}>
-					<div ref={sectionNav} className={[stylesCascinaCristina.sectionsNavigation].join(" ")}>
-						{sections.map((d, i) => {
-							return (
-								<span
-									key={i}
-									className={[stylesCascinaCristina.sectionNavItem, "pointer", "name-" + d.anchor.slice(1)].join(" ")}
-									onClick={() => scrollToEl(d)}
-									onKeyDown={() => scrollToEl(d)}
-									role="button"
-									tabIndex={0}
-								>
-									<div className={stylesCascinaCristina.sectionStatus}></div>
-									<p>{("00" + (i + 1)).slice(-2)}</p>
-									<p>{d.title}</p>
-								</span>
-							)
-						})}
-					</div>
-					{sections.map((d, i) => {
-						return (
-							<Observer key={i} {...observerOptions}>
-								<div id={d.anchor.slice(1)} >
-									{d.content || <h1 style={{ gridColumn: "1 / -1" }}>{d.title}</h1>}
-								</div>
-							</Observer>
-						)
-					})}
-				</div>
-			</div>
-			<Footer />
-		</span>
-	)
+  return (
+    <>
+      <Helmet>
+        <body data-bs-spy="scroll" data-bs-target="#sections-scrollspy" />
+      </Helmet>
+      <Navigation />
+      <Container
+        fluid
+        style={{ backgroundColor: "var(--beige)" }}
+        className={classNames(stylescc.pageHeader)}
+      >
+        <Container className={classNames(styles.pageHeader)}>
+          <Col xs={12} md={{ span: 6 }} className="mx-auto text-center">
+            <span>
+              <h1>Cascina Cristina</h1>
+              <p>
+                Un polo territoriale e multifunzionale per la presa in carico
+                della persona adulta con disturbi dello spettro autistico
+              </p>
+            </span>
+          </Col>
+        </Container>
+      </Container>
+      <Container>
+        <Col xs={12} md={{ span: 7, offset: 1 }}>
+          <section className={classNames("mt-3", "mt-md-5")}>
+            <p className={classNames("paragraphBig")}>
+              Il progetto Cascina Cristina nasce per rispondere al bisogno del
+              territorio dell'insubria e della brianza di strutture adatte ad
+              ospitare giovani adulti con autismo.
+            </p>
+            <p>
+              Vista l’assenza di strutture adatte ad ospitare giovani adulti con
+              autismo nel territorio canturino e nelle aree circostanti, Cascina
+              Cristina potrebbe diventare per l’area dell'Insubria e della
+              Brianza un modello pilota e uno stimolo per altri enti per la
+              realizzazione di strutture similari, rispondendo così al forte
+              bisogno del territorio e delle famiglie che vi appartengono.
+            </p>
+          </section>
+        </Col>
+      </Container>
+      {/* <Container>
+        <Col xs={12}>
+          <section>
+            <div className={stylescc.sectionsNavigation}>
+              {sections.map((d, i) => {
+                return (
+                  <span
+                    key={i}
+                    className={classNames(
+                      stylescc.sectionNavItem,
+                      "pointer",
+                      "name-" + d.anchor.slice(1)
+                    )}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    <div className={stylescc.sectionStatus}></div>
+                    <p>{("00" + (i + 1)).slice(-2)}</p>
+                    <p>{d.title}</p>
+                  </span>
+                );
+              })}
+            </div>
+          </section>
+        </Col>
+      </Container> */}
+
+      <Container>
+        <nav
+          id="sections-scrollspy"
+          class="navbar navbar-light bg-light px-3 position-sticky"
+          style={{ top: 60, zIndex: 2000 }}
+        >
+          <ul
+            className={classNames(
+              "nav",
+              "nav-pills",
+              stylescc.sectionsNavigation
+            )}
+          >
+            {sections.map((d, i) => (
+              <li key={i} className={classNames("nav-item",stylescc.sectionNavItem)}>
+                <a class="nav-link" href={d.anchor}>
+                  <div className={stylescc.sectionStatus}></div>
+                  <p>{("00" + (i + 1)).slice(-2)}</p>
+                  <p>{d.title}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div
+        // data-bs-spy="scroll"
+        // data-bs-target="#sections-scrollspy"
+        // data-bs-offset="0"
+        // className={classNames(stylescc.scrollspyExample)}
+        // tabIndex="0"
+        >
+          {sections.map((d, i) => (
+            <section id={d.anchor.slice(1)} key={i} className={"vh-100"}>
+              <Col xs={12}>
+                <h1>{d.title}</h1>
+              </Col>
+            </section>
+          ))}
+        </div>
+      </Container>
+
+      <Footer />
+    </>
+  );
 }

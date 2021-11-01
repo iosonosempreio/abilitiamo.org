@@ -18,7 +18,7 @@ const sections = [
 				del progetto
 			</>
 		),
-		anchor: "#spirito",
+		anchor: "#spirito-del-progetto",
 		content: <SpiritoProgetto />,
 	},
 	// {
