@@ -26,16 +26,10 @@ export default function Home() {
 					<div className="row">
 						<div className="col-10 col-md-4 offset-1 offset-md-1 d-flex flex-column justify-content-center">
 							<h1>
-								Miglioriamo
-								<br />
-								la qualità di vita delle persone
-								<br />
-								con autismo
+								Miglioriamo la qualità di vita delle persone adulte con autismo
 							</h1>
 							<p className="paragraphBig">
-								Abilitare è possibile <br className="d-none" />a qualsiasi età, <br />
-								per noi l'età adulta è <br className="d-none" />
-								solo un punto di partenza.
+								Abilitare è possibile a qualsiasi età, per noi l'età adulta è solo un punto di partenza.
 							</p>
 							<ArrowLink data={{ label: "Chi siamo", url: "/chi-siamo" }} type="internal" />
 							<ArrowLink data={{ label: "Cascina Cristina", url: "/cascina-cristina" }} type="internal" />
