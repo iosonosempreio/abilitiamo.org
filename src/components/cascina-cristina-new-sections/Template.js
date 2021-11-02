@@ -24,6 +24,54 @@ export default function Template({ title, subtitle, imageKey, description }) {
           }
         }
       }
+
+      image3: file(relativePath: { eq: "pexels-pixabay-163064.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 670) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      image4: file(relativePath: { eq: "expertam.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 670) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      image5: file(relativePath: { eq: "expertam.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 670) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      image6: file(relativePath: { eq: "expertam.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 670) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      image7: file(relativePath: { eq: "expertam.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 670) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      image8: file(relativePath: { eq: "expertam.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 670) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `;
   const images = useStaticQuery(query);
@@ -52,7 +100,7 @@ export default function Template({ title, subtitle, imageKey, description }) {
         <Col
           xs={12}
           md={{ span: 8, offset: 4 }}
-          className={classNames("mt-3", "mt-md-5")}
+          className={classNames("mt-3", "mt-md-5", "mb-3", "mb-md-5")}
         >
           <p className={stylescc.description}>{description}</p>
         </Col>

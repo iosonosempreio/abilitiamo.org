@@ -78,7 +78,42 @@ const sections = [
       </>
     ),
     anchor: "#presa-in-carico",
-    content: <PresaInCarico />,
+    content: (
+      <Template
+        title="Presa in carico a rete"
+        subtitle="La presa in carico della persona con autismo sarà effettuata in base a quanto previsto dalla legge 328/2000, e successive modifiche, e sarà arricchita
+		dall’utilizzo di strumenti più moderni oggi a nostra disposizione. Il progetto globale di presa in carico è lo strumento che definisce i bisogni della
+		persona in rapporto al contesto in cui vive."
+        imageKey="image3"
+        description={
+          <>
+            Partendo da quanto previsto dalla legge 328/2000, la presa in
+            carico, degli utenti dei servizi di Cascina Cristina, sarà formulata
+            come il vero e proprio progetto globale di prese in carico, e sarà
+            effettuata mediante i più moderni mezzi oggi a disposizione. Pur
+            seguendo le fasi classiche di presa in carico che prevedono: la
+            costituzione dell’équipe, rappresentata da tutta la rete che ruota
+            intorno alla persona, la stesura del piano individuale (PI), che si
+            concretizzerà poi nel Progetto di Vita, la verifica periodica degli
+            interventi predisposti nel PI, verranno messe in atto procedure, più
+            moderne quali il progetto matrici ecologiche, multistep network
+            diagnostic model, ecc. Inoltre, la presa in carico così definita
+            sarà affiancata da una presa in carico clinico/ospedaliera, con
+            relativa stesura del Piano Assistenziale Individuale (PAI), per
+            eventuali interventi sanitari.
+            <br />
+            Il tutto per consentire al giovane fruitore di cascina Cristina di
+            sfruttare al meglio le sue potenzialità per diventare adulto a tutti
+            gli effetti, esprimendosi in tutti i possibili ambiti della vita.
+            Più in dettaglio, sulla base del suo Progetto di Vita, la persona
+            con autismo dovrà svolgere attività lavorativa, ricreativa,
+            sportiva, dovrà potersi, una volta acquisita la capacità,
+            relazionarsi e socializzare con gli altri, dovrà avere e sapersi
+            gestire il tempo libero.
+          </>
+        }
+      />
+    ),
   },
   {
     title: (
