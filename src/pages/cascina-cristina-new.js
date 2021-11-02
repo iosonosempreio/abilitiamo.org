@@ -1,22 +1,13 @@
 import React, { useRef } from "react";
 import { Helmet } from "react-helmet";
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  Image,
-  Form,
-  InputGroup,
-  ListGroup,
-} from "react-bootstrap";
+import { Container, Col } from "react-bootstrap";
 import Navigation from "../components/navigation";
 import Footer from "../components/footer";
 import styles from "../styles/page.module.scss";
 import stylescc from "../styles/cascinaCristinaNew.module.scss";
 import classNames from "classnames";
 
-import sections from "../components/cascina-crtistina-sections/cascina-cristina-sections";
+import sections from "../components/cascina-cristina-new-sections/cascina-cristina-sections";
 
 export default function CascinaCristina() {
   return (
@@ -25,7 +16,7 @@ export default function CascinaCristina() {
         <body
           data-bs-spy="scroll"
           data-bs-target="#sections-scrollspy"
-          data-bs-offset="156"
+          data-bs-offset="166"
         />
       </Helmet>
       <Navigation />
@@ -68,7 +59,7 @@ export default function CascinaCristina() {
       <Container>
         <nav
           id="sections-scrollspy"
-          class="navbar position-sticky p-0"
+          className={classNames("navbar","position-sticky", "p-0","mt-3", "mt-md-5")}
           style={{ top: 60, zIndex: 2000 }}
         >
           <ul className={classNames("nav", "w-100", stylescc.navigation)}>
@@ -87,10 +78,8 @@ export default function CascinaCristina() {
         </nav>
 
         {sections.map((d, i) => (
-          <section id={d.anchor.slice(1)} key={i} style={{ height: 300 }}>
-            <Col xs={12}>
-              <h1>{d.title}</h1>
-            </Col>
+          <section id={d.anchor.slice(1)} key={i} className={stylescc.section}>
+            {d.content}
           </section>
         ))}
       </Container>

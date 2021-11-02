@@ -10,6 +10,7 @@
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: nowrap;
+  margin-bottom: 20px;
   /* hide on small screens */
   display: none;
 
@@ -21,11 +22,12 @@
     display: block;
     box-shadow: 0px 5px 5px white;
     position: absolute;
-    bottom: -10px;
+    bottom: 10px;
   }
 
   li {
     flex-grow: 1;
+    flex-basis: 0;
     height: 80px;
 
     a {
@@ -77,8 +79,17 @@
   }
 }
 
+.section {
+  .description {
+  }
+}
+
 @media screen and (min-width: 768px) {
   .navigation {
     display: flex;
+  }
+  .description {
+    column-count: 2;
+    column-gap: 1rem;
   }
 }
