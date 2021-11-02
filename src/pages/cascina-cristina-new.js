@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Helmet } from "react-helmet";
 import { Container, Col } from "react-bootstrap";
-import Navigation from "../components/navigation";
+import NavigationBs from "../components/navigationBs";
 import Footer from "../components/footer";
 import styles from "../styles/page.module.scss";
 import stylescc from "../styles/cascinaCristinaNew.module.scss";
@@ -17,9 +17,10 @@ export default function CascinaCristina() {
           data-bs-spy="scroll"
           data-bs-target="#sections-scrollspy"
           data-bs-offset="166"
+          data-bs-offset="250"
         />
       </Helmet>
-      <Navigation />
+      <NavigationBs />
       <Container
         fluid
         style={{ backgroundColor: "var(--beige)" }}
@@ -59,13 +60,22 @@ export default function CascinaCristina() {
       <Container>
         <nav
           id="sections-scrollspy"
-          className={classNames("navbar","position-sticky", "p-0","mt-3", "mt-md-5")}
+          className={classNames(
+            "navbar",
+            "position-sticky",
+            "p-0",
+            "mt-3",
+            "mt-md-5"
+          )}
           style={{ top: 60, zIndex: 2000 }}
         >
           <ul className={classNames("nav", "w-100", stylescc.navigation)}>
             {sections.map((d, i) => (
               <li key={i} className={classNames("nav-item")}>
-                <a class="nav-link" href={d.anchor}>
+                <a
+                  className={classNames("nav-link", { active: i === 0 })}
+                  href={d.anchor}
+                >
                   <span className={stylescc.status}></span>
                   <span className={stylescc.index}>
                     {("00" + (i + 1)).slice(-2)}
