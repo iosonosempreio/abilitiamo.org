@@ -22,7 +22,11 @@ export default function CascinaCristina() {
   return (
     <>
       <Helmet>
-        <body data-bs-spy="scroll" data-bs-target="#sections-scrollspy" data-bs-offset="200" />
+        <body
+          data-bs-spy="scroll"
+          data-bs-target="#sections-scrollspy"
+          data-bs-offset="156"
+        />
       </Helmet>
       <Navigation />
       <Container
@@ -61,55 +65,21 @@ export default function CascinaCristina() {
           </section>
         </Col>
       </Container>
-      {/* <Container>
-        <Col xs={12}>
-          <section>
-            <div className={stylescc.sectionsNavigation}>
-              {sections.map((d, i) => {
-                return (
-                  <span
-                    key={i}
-                    className={classNames(
-                      stylescc.sectionNavItem,
-                      "pointer",
-                      "name-" + d.anchor.slice(1)
-                    )}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    <div className={stylescc.sectionStatus}></div>
-                    <p>{("00" + (i + 1)).slice(-2)}</p>
-                    <p>{d.title}</p>
-                  </span>
-                );
-              })}
-            </div>
-          </section>
-        </Col>
-      </Container> */}
-
       <Container>
         <nav
           id="sections-scrollspy"
-          class="navbar navbar-light bg-light px-3 position-sticky"
-          style={{ top: 60, zIndex: 2000, opacity:0.5 }}
+          class="navbar position-sticky p-0"
+          style={{ top: 60, zIndex: 2000 }}
         >
-          <ul
-            className={classNames(
-              "nav",
-              "nav-pills",
-              stylescc.sectionsNavigation
-            )}
-          >
+          <ul className={classNames("nav", "w-100", stylescc.navigation)}>
             {sections.map((d, i) => (
-              <li
-                key={i}
-                className={classNames("nav-item", stylescc.sectionNavItem)}
-              >
+              <li key={i} className={classNames("nav-item")}>
                 <a class="nav-link" href={d.anchor}>
-                  <div className={stylescc.sectionStatus}></div>
-                  <p>{("00" + (i + 1)).slice(-2)}</p>
-                  <p>{d.title}</p>
+                  <span className={stylescc.status}></span>
+                  <span className={stylescc.index}>
+                    {("00" + (i + 1)).slice(-2)}
+                  </span>
+                  <span className={stylescc.title}>{d.title}</span>
                 </a>
               </li>
             ))}
