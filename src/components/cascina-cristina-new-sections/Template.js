@@ -33,7 +33,7 @@ export default function Template({ title, subtitle, imageKey, description }) {
         }
       }
 
-      image4: file(relativePath: { eq: "expertam.jpg" }) {
+      image4: file(relativePath: { eq: "render residenziale.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 670) {
             ...GatsbyImageSharpFluid
@@ -41,7 +41,7 @@ export default function Template({ title, subtitle, imageKey, description }) {
         }
       }
 
-      image5: file(relativePath: { eq: "expertam.jpg" }) {
+      image5: file(relativePath: { eq: "render diurno.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 670) {
             ...GatsbyImageSharpFluid
@@ -49,7 +49,7 @@ export default function Template({ title, subtitle, imageKey, description }) {
         }
       }
 
-      image6: file(relativePath: { eq: "expertam.jpg" }) {
+      image6: file(relativePath: { eq: "nick-fewings-XqOBKnxDSfE-unsplash.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 670) {
             ...GatsbyImageSharpFluid
@@ -57,7 +57,7 @@ export default function Template({ title, subtitle, imageKey, description }) {
         }
       }
 
-      image7: file(relativePath: { eq: "expertam.jpg" }) {
+      image7: file(relativePath: { eq: "tumblr_osclmshNyl1slhhf0o1_1280.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 670) {
             ...GatsbyImageSharpFluid
@@ -65,7 +65,7 @@ export default function Template({ title, subtitle, imageKey, description }) {
         }
       }
 
-      image8: file(relativePath: { eq: "expertam.jpg" }) {
+      image8: file(relativePath: { eq: "jens-johnsson-36a3U4_UUHY-unsplash.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 670) {
             ...GatsbyImageSharpFluid
@@ -79,7 +79,7 @@ export default function Template({ title, subtitle, imageKey, description }) {
     <>
       <Row className={classNames("mt-3", "mt-md-5")}>
         <Col
-          xs={4}
+          xs={{span:3, offset:1}}
           className={classNames(
             "d-flex",
             "flex-column",
@@ -89,7 +89,7 @@ export default function Template({ title, subtitle, imageKey, description }) {
           <h1>{title}</h1>
           <p className="paragraphBig">{subtitle}</p>
         </Col>
-        <Col xs={8}>
+        <Col xs={7}>
           <Img
             className={classNames("rounded")}
             fluid={images[imageKey].childImageSharp.fluid}
@@ -99,7 +99,7 @@ export default function Template({ title, subtitle, imageKey, description }) {
       <Row className={classNames("mb-3", "mb-md-5")}>
         <Col
           xs={12}
-          md={{ span: 8, offset: 4 }}
+          md={{ span: 6, offset: 4 }}
           className={classNames("mt-3", "mt-md-5", "mb-3", "mb-md-5")}
         >
           <p className={stylescc.description}>{description}</p>
