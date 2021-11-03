@@ -6,7 +6,6 @@ import stylescc from "../../styles/cascinaCristinaNew.module.scss";
 import classNames from "classnames";
 
 export default function Template({ title, subtitle, imageKey, description }) {
-
   const query = graphql`
     query {
       image1: file(relativePath: { eq: "casette 8 bit.png" }) {
@@ -49,7 +48,9 @@ export default function Template({ title, subtitle, imageKey, description }) {
         }
       }
 
-      image6: file(relativePath: { eq: "nick-fewings-XqOBKnxDSfE-unsplash.jpg" }) {
+      image6: file(
+        relativePath: { eq: "nick-fewings-XqOBKnxDSfE-unsplash.jpg" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 670) {
             ...GatsbyImageSharpFluid
@@ -57,7 +58,9 @@ export default function Template({ title, subtitle, imageKey, description }) {
         }
       }
 
-      image7: file(relativePath: { eq: "tumblr_osclmshNyl1slhhf0o1_1280.jpg" }) {
+      image7: file(
+        relativePath: { eq: "tumblr_osclmshNyl1slhhf0o1_1280.jpg" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 670) {
             ...GatsbyImageSharpFluid
@@ -65,7 +68,9 @@ export default function Template({ title, subtitle, imageKey, description }) {
         }
       }
 
-      image8: file(relativePath: { eq: "jens-johnsson-36a3U4_UUHY-unsplash.jpg" }) {
+      image8: file(
+        relativePath: { eq: "jens-johnsson-36a3U4_UUHY-unsplash.jpg" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 670) {
             ...GatsbyImageSharpFluid
@@ -79,7 +84,9 @@ export default function Template({ title, subtitle, imageKey, description }) {
     <>
       <Row className={classNames("mt-3", "mt-md-5")}>
         <Col
-          xs={{span:3, offset:1}}
+          xs={{ span: 12, offset: 0 }}
+          sm={{ span: 10, offset: 1 }}
+          lg={{ span: 5, offset: 0 }}
           className={classNames(
             "d-flex",
             "flex-column",
@@ -87,20 +94,22 @@ export default function Template({ title, subtitle, imageKey, description }) {
           )}
         >
           <h1>{title}</h1>
-          <p className="paragraphBig">{subtitle}</p>
+          <p className="paragraphBig mb-4">{subtitle}</p>
         </Col>
-        <Col xs={7}>
+        <Col xs={12} lg={{ span: 7, offset: 0 }}>
           <Img
             className={classNames("rounded")}
             fluid={images[imageKey].childImageSharp.fluid}
           />
         </Col>
       </Row>
-      <Row className={classNames("mb-3", "mb-md-5")}>
+      <Row className={classNames("mb-5", "mb-md-5")}>
         <Col
           xs={12}
-          md={{ span: 6, offset: 4 }}
-          className={classNames("mt-3", "mt-md-5", "mb-3", "mb-md-5")}
+          sm={{ span: 10, offset: 1 }}
+          lg={{ span: 7, offset: 5 }}
+          xl={{ span: 10, offset: 1 }}
+          className={classNames("mt-4", "mt-lg-4", "mt-xl-5", "mb-3", "mb-md-5", "mb-lg-3")}
         >
           <p className={stylescc.description}>{description}</p>
         </Col>

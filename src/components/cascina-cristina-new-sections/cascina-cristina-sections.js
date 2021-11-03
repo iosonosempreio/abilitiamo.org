@@ -18,7 +18,7 @@ const sections = [
           <>
             Il progetto Cascina Cristina nasce dal diritto delle persone
             autistiche ad avere una casa. Lo spirito che lo anima è però molto
-            più ampio.
+            più ampio
           </>
         }
         imageKey="image1"
@@ -62,7 +62,7 @@ const sections = [
             Nel ripensare il progetto di vita della persona con autismo,
             Abilitiamo, seguendo gli studi della letteratura scientifica più
             recenti, intende perseguire un vero e proprio cambiamento, a 360
-            gradi, nelle modalità di intervento abilitativo.
+            gradi, nelle modalità di intervento abilitativo
           </>
         }
         imageKey="image2"
@@ -97,8 +97,7 @@ const sections = [
   {
     title: (
       <>
-        Presa in carico
-        <br />a rete
+        Presa in carico a rete
       </>
     ),
     anchor: "#presa-in-carico",
@@ -111,7 +110,7 @@ const sections = [
             le attuali legislazioni e gli strumenti più moderni oggi a nostra
             disposizione. Il progetto globale di presa in carico è lo strumento
             che definisce i bisogni della persona in rapporto al contesto in cui
-            vive.
+            vive
           </>
         }
         imageKey="image3"
@@ -160,7 +159,7 @@ const sections = [
         subtitle={
           <>
             La comunità abitativa accoglierà stabilmente dodici persone adulte
-            con autismo.
+            con autismo
           </>
         }
         imageKey="image4"
@@ -198,7 +197,13 @@ const sections = [
     content: (
       <Template
         title="Servizio centro diurno"
-        subtitle="Il centro diurno ospiterà 15 persone con autismo che affiancheranno, durante la loro permanenza al centro, i 12 ospiti presenti nella comunità residenziale."
+        subtitle={
+          <>
+            Il centro diurno ospiterà 15 persone con autismo che affiancheranno,
+            durante la loro permanenza al centro, i 12 ospiti presenti nella
+            comunità residenziale
+          </>
+        }
         imageKey="image5"
         description={
           <>
@@ -268,7 +273,7 @@ const sections = [
           <>
             A Cascina Cristina, al fine di aiutare le famiglie a non andare in
             burn-out, sarà messo a loro disposizione uno sportello psicologico
-            di sostegno individuale e un gruppo di auto mutuo aiuto dinamico.
+            di sostegno individuale e un gruppo di auto mutuo aiuto dinamico
           </>
         }
         imageKey="image7"
@@ -297,9 +302,7 @@ const sections = [
   {
     title: (
       <>
-        Comprenderere la
-        <br />
-        sindrome autistica
+        Comprenderere l'autismo
       </>
     ),
     anchor: "#sindrome-autistica",
