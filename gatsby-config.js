@@ -6,6 +6,9 @@
 
 module.exports = {
   /* Your site config here */
+  flags: {
+    DEV_SSR: false,
+  },
   pathPrefix: `/abilitiamo-website`,
   plugins: [
     `gatsby-plugin-sharp`,

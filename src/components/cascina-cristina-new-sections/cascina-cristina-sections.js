@@ -17,8 +17,8 @@ const sections = [
         subtitle={
           <>
             Il progetto Cascina Cristina nasce dal diritto delle persone
-            autistiche ad avere una casa. Lo spirito che lo anima è però
-            molto più ampio.
+            autistiche ad avere una casa. Lo spirito che lo anima è però molto
+            più ampio.
           </>
         }
         imageKey="image1"
@@ -59,9 +59,10 @@ const sections = [
         title="Il cambiamento perseguito"
         subtitle={
           <>
-            Il progetto Cascina Cristina nasce dal diritto delle persone
-            autistiche ad avere una casa, ma lo spirito che lo anima è però
-            molto più ampio.
+            Nel ripensare il progetto di vita della persona con autismo,
+            Abilitiamo, seguendo gli studi della letteratura scientifica più
+            recenti, intende perseguire un vero e proprio cambiamento, a 360
+            gradi, nelle modalità di intervento abilitativo.
           </>
         }
         imageKey="image2"
@@ -106,9 +107,8 @@ const sections = [
         title="Presa in carico a rete"
         subtitle={
           <>
-            La presa in carico della persona con autismo sarà effettuata in base
-            a quanto previsto dalla legge 328/2000, e successive modifiche, e
-            sarà arricchita dall’utilizzo di strumenti più moderni oggi a nostra
+            La presa in carico della persona con autismo terrà in considerazione
+            le attuali legislazioni e gli strumenti più moderni oggi a nostra
             disposizione. Il progetto globale di presa in carico è lo strumento
             che definisce i bisogni della persona in rapporto al contesto in cui
             vive.
@@ -117,20 +117,20 @@ const sections = [
         imageKey="image3"
         description={
           <>
-            Partendo da quanto previsto dalla legge 328/2000, la presa in
-            carico, degli utenti dei servizi di Cascina Cristina, sarà formulata
-            come il vero e proprio progetto globale di prese in carico, e sarà
-            effettuata mediante i più moderni mezzi oggi a disposizione. Pur
-            seguendo le fasi classiche di presa in carico che prevedono: la
-            costituzione dell’équipe, rappresentata da tutta la rete che ruota
-            intorno alla persona, la stesura del piano individuale (PI), che si
-            concretizzerà poi nel Progetto di Vita, la verifica periodica degli
-            interventi predisposti nel PI, verranno messe in atto procedure, più
-            moderne quali il progetto matrici ecologiche, multistep network
-            diagnostic model, ecc. Inoltre, la presa in carico così definita
-            sarà affiancata da una presa in carico clinico/ospedaliera, con
-            relativa stesura del Piano Assistenziale Individuale (PAI), per
-            eventuali interventi sanitari.
+            Partendo da quanto previsto dalla legge 328/2000 e successive
+            modifiche, la presa in carico, degli utenti dei servizi di Cascina
+            Cristina, sarà formulata come il vero e proprio progetto globale di
+            prese in carico, e sarà effettuata mediante i più moderni mezzi oggi
+            a disposizione. Pur seguendo le fasi classiche di presa in carico
+            che prevedono: la costituzione dell’équipe, rappresentata da tutta
+            la rete che ruota intorno alla persona, la stesura del piano
+            individuale (PI), che si concretizzerà poi nel Progetto di Vita, la
+            verifica periodica degli interventi predisposti nel PI, verranno
+            messe in atto procedure, più moderne quali il progetto matrici
+            ecologiche, multistep network diagnostic model, ecc. Inoltre, la
+            presa in carico così definita sarà affiancata da una presa in carico
+            clinico/ospedaliera, con relativa stesura del Piano Assistenziale
+            Individuale (PAI), per eventuali interventi sanitari.
             <br />
             Il tutto per consentire al giovane fruitore di cascina Cristina di
             sfruttare al meglio le sue potenzialità per diventare adulto a tutti
@@ -313,7 +313,7 @@ const sections = [
             autistica per il territorio canturino e dintorni.
           </>
         }
-        imageKey="image7"
+        imageKey="image8"
         description={
           <>
             Il progetto “Cascina Cristina” prevede, oltre agli specifici

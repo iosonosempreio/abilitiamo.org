@@ -1,11 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import classNames from "classnames"
 import NavigationBs from "../components/navigationBs"
 import ArrowLink from "../components/arrowLink"
 import Footer from "../components/footer"
 import styles from "../styles/page.module.scss"
-import { Container, Row, Col, Card, Image, Form, InputGroup } from "react-bootstrap"
+import { Container, Row, Col, Card, Image } from "react-bootstrap"
 import PaypalDonation from "../components/paypalDonation.js"
 import info from "../components/assets/info.json"
 

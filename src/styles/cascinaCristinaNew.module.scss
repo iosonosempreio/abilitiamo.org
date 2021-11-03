@@ -40,6 +40,7 @@
         display: flex;
         justify-content: flex-end;
         width: 100%;
+        // background-color: var(--azure);
         height: 2px;
         &:before {
           content: " ";
@@ -61,7 +62,7 @@
         .status {
           justify-content: flex-start;
           &:before {
-            width: 100%;
+            width: calc(100% - 0.5rem);
           }
         }
       }
