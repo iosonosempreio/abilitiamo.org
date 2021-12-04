@@ -302,7 +302,7 @@ const sections = [
   {
     title: (
       <>
-        Comprenderere l'autismo
+        Comprendere l'autismo
       </>
     ),
     anchor: "#sindrome-autistica",
