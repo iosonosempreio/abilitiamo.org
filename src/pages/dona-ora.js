@@ -129,7 +129,7 @@ export default function DonaOra() {
                 ristrutturazione di Cascina Cristina:
               </p>
               <ul>
-                <li>una mattone del futuro (10 x 10 cm) = 10 €</li>
+                <li>un mattone del futuro (10 x 10 cm) = 10 €</li>
                 <li>tre mattoni del futuro = 30 €</li>
                 <li>cinque mattoni del futuro = 50 €</li>
                 <li>dieci mattoni del futuro = 100 €</li>
