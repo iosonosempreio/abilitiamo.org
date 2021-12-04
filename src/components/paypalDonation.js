@@ -16,7 +16,7 @@ export default function PaypalDonation() {
 
 	const presets = [
 		{ amount: "10,00", defaultChecked: false },
-		{ amount: "20,00", defaultChecked: true },
+		{ amount: "30,00", defaultChecked: true },
 		{ amount: "50,00", defaultChecked: false },
 		{ amount: "100,00", defaultChecked: false },
 		{ amount: "altro importo", defaultChecked: false },
