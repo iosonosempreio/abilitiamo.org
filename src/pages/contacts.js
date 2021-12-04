@@ -26,6 +26,7 @@ export default function Contact() {
             <h3>{info.associazione.mail}</h3>
             <h3>{info.associazione.mailRisorseUmane}</h3>
             <h3>{info.associazione.mailAmministrazione}</h3>
+            <h3>{info.associazione.mailSostenibilita}</h3>
           </span>
           <span className={styles.info + " mt-5"}>
             <h4>PEC</h4>
