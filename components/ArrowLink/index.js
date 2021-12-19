@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { BsArrowRightShort } from "react-icons/bs";

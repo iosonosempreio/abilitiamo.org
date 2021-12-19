@@ -1,0 +1,67 @@
+[
+  {
+    "label": "Home",
+    "url": "/",
+    "menues": ["main", "footer"]
+  },
+  {
+    "label": "Chi siamo",
+    "url": "/chi-siamo",
+    "menues": ["main", "footer"]
+  },
+  {
+    "label": "Cascina Cristina",
+    "url": "/cascina-cristina",
+    "menues": ["main", "footer"]
+  },
+  {
+    "label": "Storia di Abilitiamo",
+    "url": "/storia-abilitiamo",
+    "menues": ["footer"]
+  },
+  {
+    "label": "Organizzazione di Abilitiamo",
+    "url": "/organizzazione-abilitiamo",
+    "menues": ["footer"]
+  },
+  {
+    "label": "Sostenitori",
+    "url": "/sostenitori",
+    "menues": ["main", "footer"]
+  },
+  {
+    "label": "Diventa socio",
+    "url": "/diventa-socio",
+    "menues": ["footer"]
+  },
+  {
+    "label": "Notizie",
+    "url": "/",
+    "menues": []
+  },
+  {
+    "label": "Galleria",
+    "url": "/",
+    "menues": []
+  },
+  {
+    "label": "Contatti",
+    "url": "/contacts",
+    "menues": ["main", "footer"]
+  },
+  {
+    "label": "Dona ora",
+    "url": "/dona-ora",
+    "menues": ["main", "footer"]
+  },
+  {
+    "label": "Benefici fiscali",
+    "url": "/benefici-fiscali",
+    "menues": ["footer"]
+  },
+  {
+    "label": "Privacy",
+    "url": "/privacy",
+    "menues": ["footer"]
+  }
+]
