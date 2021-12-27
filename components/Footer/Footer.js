@@ -22,7 +22,6 @@ import logoCsv from "../../images/logo-comunità-s-vincenzo.png";
 import logoCraCantu from "../../images/logo-cra-cantu.jpg";
 
 export default function Footer() {
-	console.log(logoCariplo);
 	return (
 		<footer>
 			<Container>

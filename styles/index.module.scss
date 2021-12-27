@@ -1,4 +1,7 @@
-.illustrazioneAbilitiamo {
-  height: calc((100vh - 60px) - 2rem);
-  position: relative;
+.presentation {
+	height: calc(100vh - var(--navigationHeight));
+	.illustrazioneAbilitiamo {
+		height: calc((100vh - 60px) - 3rem);
+		position: relative;
+	}
 }

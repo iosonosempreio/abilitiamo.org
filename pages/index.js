@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Container, Col, Row } from "react-bootstrap";
+import Navigation from "../components/Navigation";
 import ArrowLink from "../components/ArrowLink";
 import illustrazioneAbilitiamo from "../images/illustrazione-abilitiamo.png";
 import classNames from "classnames";
@@ -15,8 +16,8 @@ export default function Home() {
 				<title>Abilitiamo.org</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			{/* <Container fluid>Nav</Container> */}
-			<Container>
+			<Navigation />
+			<Container className={classNames(styles.presentation, "d-flex")}>
 				<Row>
 					<Col
 						xs={{ span: 10 }}
