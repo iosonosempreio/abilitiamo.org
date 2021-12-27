@@ -3,6 +3,8 @@ import PageTemplate from "../components/PageTemplate";
 import ArrowLink from "../components/ArrowLink";
 import PaypalDonation from "../components/PaypalDonation";
 import BankTransferDonation from "../components/BankTransferDonation";
+import FacebookDonation from "../components/FacebookDonation";
+import SatispayDonation from "../components/SatispayDonation";
 import classNames from "classnames";
 import ReactPlayer from "react-player";
 
@@ -11,7 +13,7 @@ export default function DonaOra() {
 		<>
 			<PageTemplate title="Dona ora">
 				<Container>
-					<Row>
+					<Row className={classNames("mb-3", "mb-md-5")}>
 						<Col md={{ span: 7, offset: 1 }}>
 							<section className={classNames("mt-3", "mt-md-5")}>
 								<h2>Mettiamo in cascina il futuro</h2>
@@ -125,20 +127,17 @@ export default function DonaOra() {
 								className={classNames("mt-3", "mt-md-5")}
 							>
 								<h2>Altri pagamenti elettronici</h2>
-								{/* <FacebookDonation /> */}
+								<FacebookDonation />
 							</section>
 							<section id="satispay-donation">
-								{/* <SatispayDonation /> */}
+								<SatispayDonation />
 							</section>
-
 							<section
 								id="5x1000"
 								className={classNames("mb-3", "mb-md-5", "mt-3", "mt-md-5")}
 							>
 								<h2>Altri modi per donare</h2>
-								<p className={classNames("paragraph", "paragraphBig")}>
-									5x1000
-								</p>
+								<h3>5x1000</h3>
 								<p>
 									Il 5X1000 è una quota delle tasse che hai pagato e che puoi
 									destinare a realtà non-profit. Ogni contribuente può decidere
@@ -156,9 +155,7 @@ export default function DonaOra() {
 								id="donazione-materiale"
 								className={classNames("mb-3", "mb-md-5")}
 							>
-								<p className={classNames("paragraph", "paragraphBig")}>
-									Donazione liberale materiale
-								</p>
+								<h3>Donazione liberale materiale</h3>
 								<p>
 									La realizzazione di Cascina Cristina è molto onerosa. Siamo
 									alla ricerca di arredamento, attrezzature, di una cucina, di
@@ -170,11 +167,9 @@ export default function DonaOra() {
 							</section>
 							<section
 								id="lasciti-testamentari"
-								className={classNames("mb-3", "mb-md-5")}
+								className={classNames("Xmb-3", "Xmb-md-5")}
 							>
-								<p className={classNames("paragraph", "paragraphBig")}>
-									Lasciti testamentari e patrimoniali
-								</p>
+								<h3>Lasciti testamentari e patrimoniali</h3>
 								<p>
 									Il miglioramento della vita delle persone con autismo va oltre
 									il progetto Cascina Cristina. Servono altri luoghi dove

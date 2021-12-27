@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Card } from "react-bootstrap";
-import donateFacebook from "../images/donate-facebook.gif";
-import info from "../../utils/info.json";
+import donateFacebook from "../../images/donate-facebook.gif";
 import ArrowLink from "../ArrowLink";
+import info from "../../utils/info.json";
 
 export default function FacebookDonation() {
   return (
@@ -11,9 +11,10 @@ export default function FacebookDonation() {
         <h3 className="fw-bold mt-0">Facebook</h3>
         <a href={info.associazione.facebook} target="_blank" rel="noreferrer">
           <Image
-            className="mb-3 w-100"
+            className="mb-3"
             src={donateFacebook}
             alt="Donazione via Facebook"
+            layout="responsive"
           />
         </a>
         <p>

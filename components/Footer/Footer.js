@@ -23,7 +23,7 @@ import logoCraCantu from "../../images/logo-cra-cantu.jpg";
 
 export default function Footer() {
 	return (
-		<footer>
+		<footer className={classNames(styles.footer, "pt-5")}>
 			<Container>
 				<Row>
 					<Col className={classNames("d-flex", "flex-column")}>

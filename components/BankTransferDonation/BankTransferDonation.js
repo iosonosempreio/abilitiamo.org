@@ -16,7 +16,8 @@ export default function BankTransferDonation() {
         <Image
           className="mb-3"
           src={donateBank}
-          alt="Foto di un assegno ad Abilitiamo"
+          alt="Foto di un assegno intestato ad Abilitiamo"
+          layout="responsive"
         />
 
         <p>Ecco come intestare il bonifico:</p>

@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Col, Container, Row } from "react-bootstrap";
 import classNames from "classnames";
 import Navigation from "../Navigation";
+import Footer from "../Footer";
 import styles from "./PageTemplate.module.scss";
 
 export default function PageTemplate({ children, title }) {
@@ -31,6 +32,7 @@ export default function PageTemplate({ children, title }) {
 				</Container>
 			</div>
 			{children}
+			<Footer />
 		</>
 	);
 }
