@@ -1,0 +1,9 @@
+.carousel {
+	:global .carousel-inner {
+		height: 100%;
+		position: absolute;
+	}
+	.carouselItem {
+		height: 100%;
+	}
+}
