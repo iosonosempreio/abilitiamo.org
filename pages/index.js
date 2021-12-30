@@ -30,14 +30,14 @@ export default function Home() {
 									"justify-content-center"
 								)}
 							>
-								<h1>
+								<h1 className="mb-3">
 									Miglioriamo la qualità di vita delle persone adulte con
 									autismo
 								</h1>
-								<h2>
+								<h4 className="mb-3">
 									Abilitare è possibile a qualsiasi età, per noi l'età adulta è
 									solo un punto di partenza.
-								</h2>
+								</h4>
 								<ArrowLink data={{ label: "Chi siamo", url: "/chi-siamo" }} />
 								<ArrowLink
 									data={{ label: "Cascina Cristina", url: "/cascina-cristina" }}
