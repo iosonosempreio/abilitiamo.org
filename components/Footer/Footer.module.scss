@@ -1,8 +1,31 @@
 .footer {
 	background-color: var(--beige);
+	.link {
+		text-decoration: none;
+		margin: 4px 0;
+		color: var(--blue);
+		left: 0;
+		position: relative;
+		transition: left 0.25s;
+		font-weight: 500;
+		&:hover {
+			color: var(--red);
+			left: 0.5rem;
+		}
+		&.active {
+			color: var(--red);
+			left: 0.25rem;
+		}
+	}
+	.info {
+		margin: 4px 0;
+	}
+	.copyright {
+		padding: 2rem 0;
+	}
 }
 .logo {
 	mix-blend-mode: multiply;
 	filter: grayscale(100%);
-  margin: 1rem 0;
+	margin: 1rem 0;
 }

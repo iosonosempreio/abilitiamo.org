@@ -1,5 +1,6 @@
 import { Container, Col, Row } from "react-bootstrap";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import classNames from "classnames";
 import {
 	FaFacebookSquare,
@@ -22,6 +23,7 @@ import logoCsv from "../../images/logo-comunità-s-vincenzo.png";
 import logoCraCantu from "../../images/logo-cra-cantu.jpg";
 
 export default function Footer() {
+	const router = useRouter();
 	return (
 		<footer className={classNames(styles.footer, "pt-5")}>
 			<Container>
@@ -33,13 +35,23 @@ export default function Footer() {
 							.map((item) => {
 								return (
 									<Link key={item.label} href={item.url}>
-										{item.label}
+										<a
+											className={classNames(styles.link, {
+												[`${styles.active}`]: router.pathname == item.url,
+											})}
+										>
+											{item.label}
+										</a>
 									</Link>
 								);
 							})}
 					</Col>
-					<Col className={classNames("d-flex", "flex-column")}>
+					<Col
+						className={classNames("d-flex", "flex-column")}
+						style={{ marginTop: 24 }}
+					>
 						<a
+							className={styles.link}
 							href={info.associazione.facebook}
 							target="_blank"
 							rel="noreferrer"
@@ -47,6 +59,7 @@ export default function Footer() {
 							<FaFacebookSquare style={{ top: 2 }} /> <span>Facebook</span>
 						</a>
 						<a
+							className={styles.link}
 							href={info.associazione.instagram}
 							target="_blank"
 							rel="noreferrer"
@@ -54,24 +67,25 @@ export default function Footer() {
 							<FaInstagram style={{ top: 2 }} /> <span>Instagram</span>
 						</a>
 						<a
+							className={styles.link}
 							href={info.associazione.youtube}
 							target="_blank"
 							rel="noreferrer"
 						>
 							<FaYoutube style={{ top: 2 }} /> <span>Youtube</span>
 						</a>
-						<br />
-						<span>
+						<span className={styles.info}>&nbsp;</span>
+						<span className={styles.info}>
 							<FaRegEnvelope style={{ top: 2 }} /> {info.associazione.mail}
 						</span>
-						<span>
+						<span className={styles.info}>
 							<FaEnvelope style={{ top: 2 }} /> {info.associazione.pec}
 						</span>
-						<span>
+						<span className={styles.info}>
 							<span style={{ fontSize: "0.75rem", fontWeight: 700 }}>C.F.</span>{" "}
 							{info.associazione.codiceFiscale}
 						</span>
-						<span>
+						<span className={styles.info}>
 							<FaPiggyBank style={{ top: 2 }} /> {info.associazione.iban}
 						</span>
 					</Col>
@@ -82,7 +96,6 @@ export default function Footer() {
 								alt="Logo Fondazione Cariplo"
 								src={logoCariplo}
 								layout="responsive"
-								
 							/>
 						</span>
 						<span className={styles.logo} style={{ width: 160 }}>
@@ -90,7 +103,6 @@ export default function Footer() {
 								alt="Logo Regione Lombardia"
 								src={logoLombardia}
 								layout="responsive"
-								
 							/>
 						</span>
 						<span className={styles.logo} style={{ width: 210 }}>
@@ -98,7 +110,6 @@ export default function Footer() {
 								alt="Logo Comunità pastorale S Vincenzo"
 								src={logoCsv}
 								layout="responsive"
-								
 							/>
 						</span>
 
@@ -107,7 +118,6 @@ export default function Footer() {
 								alt="Logo Cassa rurale ed artigiana di Cantù"
 								src={logoCraCantu}
 								layout="responsive"
-								
 							/>
 						</span>
 						<span className={styles.logo} style={{ width: 210 }}>
@@ -115,7 +125,6 @@ export default function Footer() {
 								alt="logo Fondazione Provinciale Comasca"
 								src={logoFpcc}
 								layout="responsive"
-								
 							/>
 						</span>
 
@@ -139,9 +148,9 @@ export default function Footer() {
 						/> */}
 					</Col>
 				</Row>
-				<Row>
+				<Row className={styles.copyright}>
 					<Col className="text-center">
-						<span>@ 2021 Associazione Abilitiamo Autismo ONLUS</span>
+						<span>© 2021 Associazione Abilitiamo Autismo ONLUS</span>
 					</Col>
 				</Row>
 			</Container>
