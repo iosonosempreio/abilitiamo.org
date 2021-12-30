@@ -24,10 +24,8 @@ export default function FacebookDonation() {
         <ArrowLink
           data={{
             label: "Dona con Facebook",
-            url: info.associazione.facebook,
-            external: true,
+            url: info.associazione.facebook
           }}
-          type="external"
         />
       </Card.Body>
     </Card>

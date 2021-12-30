@@ -14,7 +14,7 @@ export default function SatispayDonation() {
 						className="mb-3 w-100"
 						src={donateSatispay}
 						alt="Donazione via Satispay"
-            layout="responsive"
+						layout="responsive"
 					/>
 				</a>
 				<p>
@@ -22,6 +22,9 @@ export default function SatispayDonation() {
 					iPhone, Android e Windows Phone che permette di fare pagamenti veloci
 					e gratuiti.
 				</p>
+				<ArrowLink
+					data={{ label: "Dona con Satispay", url: info.associazione.satispay }}
+				/>
 				<ArrowLink
 					data={{
 						label: "Dona con Satispay",

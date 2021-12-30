@@ -11,14 +11,9 @@ export default function ArrowLink({ data, disabled, type, offset }) {
 					<InternalLink data={data} disabled={disabled} />
 				)}
 			</>
-			{/* <>
-				{type === "external" && (
-					<ExternalLink data={data} disabled={disabled} />
-				)}
-			</> */}
       <>
 				{type === "anchor" && (
-					<Anchor data={data} disabled={disabled} />
+					<Anchor data={data} disabled={disabled} offset={offset} />
 				)}
 			</>
 		</>
@@ -42,31 +37,14 @@ function InternalLink({ data, disabled }) {
 	);
 }
 
-// function ExternalLink({ data, disabled }) {
-// 	return (
-// 		<a
-// 			href={!disabled ? data.url : null}
-// 			className={classNames([styles.sidebarLink], {
-// 				[styles.disabled]: disabled,
-// 			})}
-// 			target="_blank"
-// 			rel="noreferrer"
-// 		>
-// 			<BsArrowRightShort className={classNames(styles.arrow)} /> {data.label}
-// 		</a>
-// 	);
-// }
-
-function Anchor({ data, disabled }) {
+function Anchor({ data, offset, disabled }) {
 	return (
 		<AnchorLink
 			offset={offset}
 			href={!disabled ? data.url : null}
-			className={classNames([styles.sidebarLink], {
+			className={classNames([styles.arrowLink], {
 				[styles.disabled]: disabled,
 			})}
-			target="_blank"
-			rel="noreferrer"
 		>
 			<BsArrowRightShort className={classNames(styles.arrow)} /> {data.label}
 		</AnchorLink>

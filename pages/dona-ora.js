@@ -193,7 +193,7 @@ export default function DonaOra() {
 									Modalità per donare
 								</p>
 								{modalità.map((d, i) => (
-									<ArrowLink key={i} data={d} />
+									<ArrowLink key={i} data={d} type="anchor" />
 								))}
 								<p className="mb-1 mt-3" style={{ color: "#999" }}>
 									Agevolazioni
