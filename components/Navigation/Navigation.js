@@ -15,7 +15,11 @@ export default function Navigation() {
 				sticky="top"
 				expand="lg"
 			>
-				<Logo showOnlus={true} logoStyle={{ marginLeft: 8 }} />
+				<Link href="/">
+					<a className={styles.logo}>
+						<Logo showOnlus={true} logoStyle={{ marginLeft: 8 }} />
+					</a>
+				</Link>
 				<Navbar.Toggle aria-controls="abilitiamo-main-navbar" />
 				<Navbar.Collapse id="abilitiamo-main-navbar">
 					<Nav className={classNames("ms-auto", "align-items-center")}>
@@ -23,10 +27,7 @@ export default function Navigation() {
 							.filter((i) => i.menues.indexOf("main") > -1)
 							.map((item) => {
 								return (
-									<Link
-										key={item.label}
-										href={item.url}
-									>
+									<Link key={item.label} href={item.url}>
 										<a
 											className={classNames(
 												"nav-link",

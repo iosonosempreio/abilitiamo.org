@@ -96,7 +96,7 @@ export default function Home() {
 						</Col>
 						<Col md={{ span: 3 }} className="d-flex align-items-center">
 							<h5>
-								La stiamo realizzando presso <i>Cascina Cristina</i>, un
+								Stiamo realizzando questa struttura in <i>Cascina Cristina</i>, un
 								cascinale nei pressi del centro abitato di Cantù (CO).
 							</h5>
 						</Col>
