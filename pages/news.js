@@ -23,9 +23,9 @@ export default function News({ allPostsData }) {
 			<Container>
 				<Row className="pt-3">
 					{allPostsData
-						.concat(allPostsData)
-						.concat(allPostsData)
-						.concat(allPostsData)
+						// .concat(allPostsData)
+						// .concat(allPostsData)
+						// .concat(allPostsData)
 						.map(({ id, date, title, coverImage }) => (
 							<Col
 								xs={{ span: 10, offset: 1 }}
