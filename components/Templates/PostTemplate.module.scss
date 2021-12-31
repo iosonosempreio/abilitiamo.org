@@ -28,3 +28,17 @@
 		max-width: 100%;
 	}
 }
+
+.prev,
+.next {
+	text-decoration: none;
+	span {
+		padding: 0rem;
+		transition: padding 0.25s;
+	}
+	&:hover {
+		span {
+			padding: 0rem 1rem;
+		}
+	}
+}

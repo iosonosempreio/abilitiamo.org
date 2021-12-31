@@ -7,7 +7,10 @@ import classNames from "classnames";
 import Navigation from "../Navigation";
 import Footer from "../Footer";
 import styles from "./PostTemplate.module.scss";
-import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import {
+	FaLongArrowAltLeft as PrevIcon,
+	FaLongArrowAltRight as NextIcon,
+} from "react-icons/fa";
 
 export default function PostTemplate({ postData, children }) {
 	return (
@@ -27,37 +30,17 @@ export default function PostTemplate({ postData, children }) {
 				>
 					<Row>
 						<Col
-							md={1}
-							className="d-flex justify-content-center align-items-center"
+							sm={{ span: 12 }}
+							md={{ span: 10, offset: 1 }}
+							className={classNames("text-center")}
 						>
-							{postData.prevPost && (
-								<Link href={`/news/${postData.prevPost}`}>
-									<a>
-										<FaArrowCircleLeft />
-									</a>
-								</Link>
-							)}
-						</Col>
-						<Col md={{ span: 10 }} className={classNames("text-center")}>
 							<h1>{postData.title}</h1>
 							<h6>
 								<Date dateString={postData.date} />
 							</h6>
 						</Col>
-						<Col
-							md={1}
-							className="d-flex justify-content-center align-items-center"
-						>
-							{postData.nextPost && (
-								<Link href={`/news/${postData.nextPost}`}>
-									<a>
-										<FaArrowCircleRight />
-									</a>
-								</Link>
-							)}
-						</Col>
 						{postData.coverImage && (
-							<Col sm={12}>
+							<Col sm={{ span: 12, order: 3 }}>
 								<div className={styles.coverImageContainer}>
 									<Image
 										src={postData.coverImage}
@@ -74,8 +57,39 @@ export default function PostTemplate({ postData, children }) {
 			</div>
 			<Container>
 				<Row>
-					<Col md={{ span: 8, offset: 2 }} className={classNames("py-5", styles.body)}>
+					<Col
+						md={{ span: 8, offset: 2 }}
+						className={classNames("pt-5", "pb-4", styles.body)}
+					>
 						{children}
+					</Col>
+				</Row>
+				<Row>
+					<Col
+						xs={{ span: 12 }}
+						sm={{ span: 6 }}
+						className="d-flex justify-content-start justify-content-sm-center align-items-center pb-5"
+					>
+						{postData.prevPost && (
+							<Link href={`/news/${postData.prevPost}`}>
+								<a className={styles.prev}>
+									<PrevIcon /> Articolo precedente<span></span>
+								</a>
+							</Link>
+						)}
+					</Col>
+					<Col
+						sm={{ span: 6 }}
+						xs={{ span: 12 }}
+						className="d-flex justify-content-end justify-content-sm-center align-items-center pb-5"
+					>
+						{postData.nextPost && (
+							<Link href={`/news/${postData.nextPost}`}>
+								<a className={styles.next}>
+									<span></span>Articolo successivo <NextIcon size="1rem" />
+								</a>
+							</Link>
+						)}
 					</Col>
 				</Row>
 			</Container>
