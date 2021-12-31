@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import { Container, Col, Row } from "react-bootstrap";
 import Navigation from "../components/Navigation";
@@ -68,7 +69,10 @@ export default function Home() {
 				</Container>
 				<Container className="mt-5">
 					<Row className="mb-5">
-						<Col md={{ span: 3, offset: 1 }} className="d-flex align-items-center">
+						<Col
+							md={{ span: 3, offset: 1 }}
+							className="d-flex align-items-center"
+						>
 							<h5>
 								Vogliamo creare una struttura capace di erogare servizi
 								socio-sanitari per persone adulte con autismo.

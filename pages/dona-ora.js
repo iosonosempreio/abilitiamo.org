@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import PageTemplate from "../components/PageTemplate";
+import { PageTemplate } from "../components/Templates";
 import ArrowLink from "../components/ArrowLink";
 import PaypalDonation from "../components/PaypalDonation";
 import BankTransferDonation from "../components/BankTransferDonation";

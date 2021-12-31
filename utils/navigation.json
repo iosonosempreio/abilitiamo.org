@@ -10,6 +10,11 @@
     "menues": ["main", "footer"]
   },
   {
+    "label": "News",
+    "url": "/news",
+    "menues": ["main", "footer"]
+  },
+  {
     "label": "Cascina Cristina",
     "url": "/cascina-cristina",
     "menues": ["main", "footer"]
@@ -33,11 +38,6 @@
     "label": "Diventa socio",
     "url": "/diventa-socio",
     "menues": ["footer"]
-  },
-  {
-    "label": "News",
-    "url": "/",
-    "menues": []
   },
   {
     "label": "Galleria",
