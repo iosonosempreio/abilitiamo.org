@@ -43,9 +43,7 @@ export default function Home() {
 								<ArrowLink
 									data={{ label: "Cascina Cristina", url: "/cascina-cristina" }}
 								/>
-								<ArrowLink
-									data={{ label: "External", url: "https://densitydesign.org" }}
-								/>
+								<ArrowLink data={{ label: "Dona ora", url: "/dona-ora" }} />
 							</Col>
 							<Col
 								className={classNames(
@@ -96,8 +94,8 @@ export default function Home() {
 						</Col>
 						<Col md={{ span: 3 }} className="d-flex align-items-center">
 							<h5>
-								Stiamo realizzando questa struttura in <i>Cascina Cristina</i>, un
-								cascinale nei pressi del centro abitato di Cantù (CO).
+								Stiamo realizzando questa struttura in <i>Cascina Cristina</i>,
+								un cascinale nei pressi del centro abitato di Cantù (CO).
 							</h5>
 						</Col>
 					</Row>
