@@ -46,7 +46,7 @@
   },
   {
     "label": "Contatti",
-    "url": "/contacts",
+    "url": "/contatti",
     "menues": ["main", "footer"]
   },
   {
