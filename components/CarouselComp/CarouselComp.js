@@ -5,7 +5,6 @@ import classNames from "classnames";
 
 
 export default function CarouselComp({ images, height, className }) {
-	console.log(className)
 	return (
 		<>
 			<Carousel className={classNames(styles.carousel, className)} style={{paddingBottom: height}}>

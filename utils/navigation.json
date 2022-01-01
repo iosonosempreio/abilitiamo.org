@@ -20,11 +20,6 @@
     "menues": ["main", "footer"]
   },
   {
-    "label": "Storia di Abilitiamo",
-    "url": "/storia-abilitiamo",
-    "menues": ["footer"]
-  },
-  {
     "label": "Organizzazione di Abilitiamo",
     "url": "/organizzazione",
     "menues": ["footer"]

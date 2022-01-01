@@ -1,0 +1,12 @@
+.linkLogoSostenitori {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	&:hover {
+		background-color: whitesmoke;
+	}
+}

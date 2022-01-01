@@ -100,7 +100,7 @@ export default function ChiSiamo() {
 								className="react-player"
 								url="https://www.youtube.com/watch?v=i4-V9g-VqYI"
 								width="100%"
-								volume="0.03"
+								volume={0.03}
 								controls
 							/>
 					</Col>
