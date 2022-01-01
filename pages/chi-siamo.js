@@ -2,11 +2,11 @@ import { Col, Container, Row } from "react-bootstrap";
 import ArrowLink from "../components/ArrowLink";
 import { PageTemplate } from "../components/Templates";
 import classNames from "classnames";
-import Link from "next/link";
 import GalleryChiSiamo from "../components/GalleryChiSiamo";
 import Image from "next/image";
 import cascina1 from "../images/cascina-interno.png";
 import cascina2 from "../images/render residenziale.jpeg";
+import ReactPlayer from "react-player";
 
 export default function ChiSiamo() {
 	return (
@@ -31,25 +31,78 @@ export default function ChiSiamo() {
 						</p>
 						<GalleryChiSiamo className="mb-3" />
 						<p>
+							L’Associazione Abilitiamo si è costituita con la finalità di dare
+							una casa a giovani adulti con autismo. Nei suoi tre anni di
+							attività è riuscita a raggiugere alcune tappe molto significative.
+							Questo è stato possibile grazie all’aiuto e supporto di soci e
+							amici del territorio.
+						</p>
+						<p>
+							L’associazione Abilitiamo Autismo onlus - “abitiamo e abilitiamo”
+							si è costituita nel 2017, per volere di 5 famiglie con figli
+							autistici. Un punto di forza dell’associazione è rappresentato
+							dalla presenza, tra i soci fondatori, dei fratelli della persona
+							con autismo che potranno dare forza, sostegno e continuità alla
+							stessa. Nel tempo, la compagine associativa si è arricchita di
+							soci e amici che hanno contribuito alla realizzazione dei progetti
+							svolti finora.
+						</p>
+						<p>
+							L’associazione si è costituita con un’unica finalità: realizzare,
+							sul territorio canturino, un contesto abitativo innovativo per
+							giovani adulti con autismo che diventi la loro “casa” e nella
+							quale possano vivere, in base alle proprie potenzialità/abilità,
+							la migliore qualità di vita possibile. Il primo passo
+							dell’associazione è stato quello di individuare il luogo dove
+							potesse essere realizzata una abitazione che possedesse i
+							requisiti necessari per la finalità propostasi. A fine 2017, il
+							Consiglio Pastorale della Parrocchia S. Carlo di Fecchio, una
+							frazione di Cantù, decise di dare in dono ad un ente del terzo
+							settore, Cascina Cristina, Abilitiamo risulto la destinataria
+							dello stabile.
+						</p>
+						<div className="w-50 p-3 d-inline-block">
+							<Image src={cascina1} />
+							<p className="text-center">
+								<small>Stato di Cascina Cristina prima del recupero.</small>
+							</p>
+						</div>
+						<div className="w-50 p-3 d-inline-block">
+							<Image src={cascina2} />
+							<p className="text-center">
+								<small>
+									Rendering che visualizza lo stabile a recupero avvenuto.
+								</small>
+							</p>
+						</div>
+						<p>
 							Grazie al supporto del territorio, dei suoi soci e dei suoi
-							collaboratori, Abilítiamo è risultata vincitrice del bando
+							collaboratori, Abilítiamo è risultata vincitrice del bando{" "}
 							<i>
 								Progetti Emblematici Maggiori della Provincia di Como (anno
 								2019)
-							</i>
-							. Con questo contributo, Abilítiamo ha dato inizio alla
-							realizzazione di un polo multifunzionale per la presa in carico di
-							giovani adulti con disturbi dello spettro autistico:{" "}
-							<Link href="/cascina-cristina">Cascina Cristina</Link>.
+							</i>.
 						</p>
-						<Image src={cascina1} />
-						<p className="text-center">
-							Stato di Cascina Cristina prima del recupero.
+						<p>
+							Da allora, il lavoro dell’associazione si è concentrato
+							prevalentemente sulla campagna di raccolta fondi per la
+							ristrutturazione di Cascina Cristina e l’avvio delle attività che
+							si svolgeranno al suo interno. Parallelamente, l’associazione, nei
+							suoi tre anni di attività, ha realizzato diversi eventi destinati
+							ad approfondire la conoscenza dei disturbi dello spettro autistico
+							della comunità canturina. Di seguito un breve video che riepiloga
+							le tappe più significative della associazione.
 						</p>
-						<Image src={cascina2} />
-						<p className="text-center">
-							Rendering che visualizza lo stabile a recupero avvenuto.
-						</p>
+						<div className={classNames("video-wrapper my-3")}>
+							
+						</div>
+						<ReactPlayer
+								className="react-player"
+								url="https://www.youtube.com/watch?v=i4-V9g-VqYI"
+								width="100%"
+								volume="0.03"
+								controls
+							/>
 					</Col>
 					<Col>
 						<div className={classNames("position-sticky")} style={{ top: 65 }}>
