@@ -54,7 +54,7 @@ export default function ChiSiamo() {
             <Image src={cascina2} />
 					</Col>
 					<Col>
-						<div className={classNames("position-sticky")} style={{ top: 104 }}>
+						<div className={classNames("position-sticky")} style={{ top: 65 }}>
 							{sideLinks.map((d, i) => (
 								<ArrowLink key={i} data={d} />
 							))}

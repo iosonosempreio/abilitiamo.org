@@ -6,12 +6,8 @@ import styles from "./ArrowLink.module.scss";
 export default function ArrowLink({ data, disabled, type, offset }) {
 	return (
 		<>
+			<>{type === "link" && <InternalLink data={data} disabled={disabled} />}</>
 			<>
-				{type === "link" && (
-					<InternalLink data={data} disabled={disabled} />
-				)}
-			</>
-      <>
 				{type === "anchor" && (
 					<Anchor data={data} disabled={disabled} offset={offset} />
 				)}
@@ -25,7 +21,7 @@ function InternalLink({ data, disabled }) {
 		<>
 			<Link href={data.url}>
 				<a
-					className={classNames(styles.arrowLink, {
+					className={classNames("no-hover", styles.arrowLink, {
 						[styles.disabled]: disabled,
 					})}
 				>
@@ -42,9 +38,13 @@ function Anchor({ data, offset, disabled }) {
 		<AnchorLink
 			offset={offset}
 			href={!disabled ? data.url : null}
-			className={classNames([styles.arrowLink], {
-				[styles.disabled]: disabled,
-			})}
+			className={classNames(
+				[styles.arrowLink],
+				{
+					[styles.disabled]: disabled,
+				},
+				"no-hover"
+			)}
 		>
 			<BsArrowRightShort className={classNames(styles.arrow)} /> {data.label}
 		</AnchorLink>

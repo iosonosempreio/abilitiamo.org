@@ -187,7 +187,7 @@ export default function DonaOra() {
 						<Col md={{ span: 4 }}>
 							<div
 								className={classNames("position-sticky")}
-								style={{ top: 104 }}
+								style={{ top: 65 }}
 							>
 								<p className="mb-1 mt-3" style={{ color: "#999" }}>
 									Modalità per donare
