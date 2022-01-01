@@ -2,7 +2,7 @@
 title: 'Cena di beneficenza al Teatro Sociale'
 author: 'Socio di Abilítiamo'
 date: '2021-10-01'
-coverImage: '/news/cena-teatro-sociale.jpg'
+image: '/news/cena-teatro-sociale.jpg'
 ---
 
 

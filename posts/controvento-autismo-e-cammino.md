@@ -2,7 +2,7 @@
 title: 'Controvento. Autismo e cammino'
 author: 'Socio di Abilítiamo'
 date: '2021-12-30'
-coverImage: '/news/controvento-flyer.jpg'
+image: '/news/controvento-flyer.jpg'
 ---
 
 Associazione Abilítiamo Autismo ONLUS presenta il suo primo progetto cinematografico.

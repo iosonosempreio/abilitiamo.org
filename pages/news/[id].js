@@ -1,4 +1,3 @@
-import { Container, Row, Col } from "react-bootstrap";
 import { PostTemplate } from "../../components/Templates";
 import { getAllPostIds, getPostData, getSortedPostsIds } from "../../lib/posts";
 

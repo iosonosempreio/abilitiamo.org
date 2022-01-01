@@ -2,7 +2,7 @@
 title: 'Accompagnati da educatori, volontari, familiari e amici, i ragazzi e le ragazze di Abilitiamo hanno percorso un cammino itinerante e hanno fatto un’esperienza di vita per loro inedita.'
 author: 'Socio di Abilítiamo'
 date: '2021-07-01'
-coverImage: '/news/greenway-controluce.jpg'
+image: '/news/greenway-controluce.jpg'
 ---
 
 ### Potenziare le abilità della persona con autismo attraverso l’esperienza del cammino.

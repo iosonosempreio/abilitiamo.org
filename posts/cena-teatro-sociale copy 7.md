@@ -2,7 +2,7 @@
 title: 'partecipatissima cena di beneficenza organizzata'
 author: 'Socio di Abilítiamo'
 date: '2019-10-01'
-coverImage: '/news/cena-teatro-sociale.jpg'
+image: '/news/cena-teatro-sociale.jpg'
 ---
 
 

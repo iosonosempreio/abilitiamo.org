@@ -2,7 +2,7 @@
 title: 'Potenziare le abilità della persona con autismo attraverso l’esperienza del cammino'
 author: 'Socio di Abilítiamo'
 date: '2021-07-01'
-coverImage: '/news/greenway-controluce.jpg'
+image: '/news/greenway-controluce.jpg'
 ---
 
 ### Potenziare le abilità della persona con autismo attraverso l’esperienza del cammino.

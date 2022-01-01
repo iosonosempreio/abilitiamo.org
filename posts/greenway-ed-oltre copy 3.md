@@ -2,7 +2,7 @@
 title: 'L’iniziativa è stata coraggiosa, innovativa e quasi unica nel suo genere'
 author: 'Socio di Abilítiamo'
 date: '2022-07-01'
-coverImage: '/news/greenway-controluce.jpg'
+image: '/news/greenway-controluce.jpg'
 ---
 
 ### Potenziare le abilità della persona con autismo attraverso l’esperienza del cammino.
