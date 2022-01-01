@@ -39,11 +39,11 @@ export default function PostTemplate({ postData, children }) {
 								<Date dateString={postData.date} />
 							</h6>
 						</Col>
-						{postData.coverImage && (
+						{postData.image && (
 							<Col sm={{ span: 12, order: 3 }}>
 								<div className={styles.coverImageContainer}>
 									<Image
-										src={postData.coverImage}
+										src={postData.image}
 										layout="fill"
 										objectFit="contain"
 										priority={true}
@@ -72,7 +72,7 @@ export default function PostTemplate({ postData, children }) {
 					>
 						{postData.prevPost && (
 							<Link href={`/news/${postData.prevPost}`}>
-								<a className={styles.prev}>
+								<a className={classNames(styles.prev, "no-hover")}>
 									<PrevIcon /> Articolo precedente<span></span>
 								</a>
 							</Link>
@@ -85,7 +85,7 @@ export default function PostTemplate({ postData, children }) {
 					>
 						{postData.nextPost && (
 							<Link href={`/news/${postData.nextPost}`}>
-								<a className={styles.next}>
+								<a className={classNames(styles.next, "no-hover")}>
 									<span></span>Articolo successivo <NextIcon size="1rem" />
 								</a>
 							</Link>
