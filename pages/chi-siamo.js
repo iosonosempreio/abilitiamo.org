@@ -5,8 +5,8 @@ import classNames from "classnames";
 import Link from "next/link";
 import GalleryChiSiamo from "../components/GalleryChiSiamo";
 import Image from "next/image";
-import cascina1 from "../images/cascina-interno.png"
-import cascina2 from "../images/render residenziale.jpeg"
+import cascina1 from "../images/cascina-interno.png";
+import cascina2 from "../images/render residenziale.jpeg";
 
 export default function ChiSiamo() {
 	return (
@@ -15,8 +15,7 @@ export default function ChiSiamo() {
 				<Row className="my-5">
 					<Col md={{ span: 7, offset: 1 }}>
 						<h5>
-							Un nome, due significati, un unico obiettivo.
-							<br />
+							Un nome, due significati, un unico obiettivo.{" "}
 							<span style={{ color: "var(--red)" }}>Abitare abilitando</span> è
 							lo scopo per il quale la nostra associazione è nata: creare una
 							casa per i nostri ragazzi autistici dove potranno esprimere al
@@ -30,7 +29,7 @@ export default function ChiSiamo() {
 							<br />
 							Un luogo che i nostri ragazzi possano chiamare casa.
 						</p>
-            <GalleryChiSiamo className="mb-3" />
+						<GalleryChiSiamo className="mb-3" />
 						<p>
 							Grazie al supporto del territorio, dei suoi soci e dei suoi
 							collaboratori, Abilítiamo è risultata vincitrice del bando
@@ -43,15 +42,14 @@ export default function ChiSiamo() {
 							giovani adulti con disturbi dello spettro autistico:{" "}
 							<Link href="/cascina-cristina">Cascina Cristina</Link>.
 						</p>
-						{/* <iframe
-							frameBorder="0"
-							className="juxtapose"
-							width="100%"
-							height="315"
-							src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=0264b0a6-6b1b-11ec-abb7-b9a7ff2ee17c"
-						/> */}
-            <Image src={cascina1} />
-            <Image src={cascina2} />
+						<Image src={cascina1} />
+						<p className="text-center">
+							Stato di Cascina Cristina prima del recupero.
+						</p>
+						<Image src={cascina2} />
+						<p className="text-center">
+							Rendering che visualizza lo stabile a recupero avvenuto.
+						</p>
 					</Col>
 					<Col>
 						<div className={classNames("position-sticky")} style={{ top: 65 }}>
@@ -68,7 +66,7 @@ export default function ChiSiamo() {
 
 const sideLinks = [
 	{ label: "Organizzazione", url: "/organizzazione" },
-	{ label: "Comitato scientifico", url: "/comitato scientifico" },
+	{ label: "Comitato scientifico", url: "/comitato-scientifico" },
 	{ label: "Diventa socio", url: "/diventa-socio" },
 ];
 

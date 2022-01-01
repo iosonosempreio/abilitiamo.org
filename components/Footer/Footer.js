@@ -36,9 +36,13 @@ export default function Footer() {
 								return (
 									<Link key={item.label} href={item.url}>
 										<a
-											className={classNames(styles.link, {
-												[`${styles.active}`]: router.pathname == item.url,
-											})}
+											className={classNames(
+												styles.link,
+												{
+													[`${styles.active}`]: router.pathname == item.url,
+												},
+												"no-hover"
+											)}
 										>
 											{item.label}
 										</a>
@@ -51,7 +55,7 @@ export default function Footer() {
 						style={{ marginTop: 24 }}
 					>
 						<a
-							className={styles.link}
+							className={classNames(styles.link, "no-hover")}
 							href={info.associazione.facebook}
 							target="_blank"
 							rel="noreferrer"
@@ -59,7 +63,7 @@ export default function Footer() {
 							<FaFacebookSquare style={{ top: 2 }} /> <span>Facebook</span>
 						</a>
 						<a
-							className={styles.link}
+							className={classNames(styles.link, "no-hover")}
 							href={info.associazione.instagram}
 							target="_blank"
 							rel="noreferrer"
@@ -67,7 +71,7 @@ export default function Footer() {
 							<FaInstagram style={{ top: 2 }} /> <span>Instagram</span>
 						</a>
 						<a
-							className={styles.link}
+							className={classNames(styles.link, "no-hover")}
 							href={info.associazione.youtube}
 							target="_blank"
 							rel="noreferrer"
