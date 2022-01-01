@@ -47,7 +47,7 @@ export default function PostTemplate({ postData, children }) {
 										layout="fill"
 										objectFit="contain"
 										priority={true}
-										className={styles.coverImage}
+										className={classNames(styles.coverImage, "rounded-full")}
 									/>
 								</div>
 							</Col>

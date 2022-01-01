@@ -13,3 +13,18 @@
 .beige-bg {
 	background-color: var(--beige);
 }
+
+a {
+	text-decoration: none;
+	color: var(--red);
+	&:hover {
+		color: var(--red);
+		border-bottom: 1px solid var(--red);
+	}
+}
+
+a.no-hover {
+	&:hover {
+		border: none;
+	}
+}

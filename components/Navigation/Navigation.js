@@ -16,7 +16,7 @@ export default function Navigation() {
 				expand="lg"
 			>
 				<Link href="/">
-					<a className={styles.logo}>
+					<a className={classNames(styles.logo, "no-hover")}>
 						<Logo showOnlus={true} logoStyle={{ marginLeft: 8 }} />
 					</a>
 				</Link>
@@ -31,6 +31,7 @@ export default function Navigation() {
 										<a
 											className={classNames(
 												"nav-link",
+												"no-hover",
 												styles.item,
 												{ [`${styles.active}`]: router.pathname == item.url },
 												{

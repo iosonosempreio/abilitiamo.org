@@ -19,3 +19,5 @@ Sono entrati in relazione con i propri pari, con gli accompagnatori e con le per
 Il viaggio si è snodato su un percorso di circa 40 Km, suddiviso in 4 tappe e immerso nei luoghi più belli e suggestivi del Lario a contatto con la sua natura e bellezza. Tante le sfide lungo la strada: dalla maggiore indipendenza, alla socialità, alla crescita. Visti i risultati, questa esperienza farà parlare di sè e non potrà che essere riproposta!
 
 Scarica il [presskit](/news/presskit-greenway.pdf) dell'evento.
+
+###### Foto: Mattia Marzorati

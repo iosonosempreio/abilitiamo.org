@@ -28,7 +28,7 @@ export default function News({ allPostsData }) {
 						// .concat(allPostsData)
 						.map(({ id, date, title, coverImage }) => (
 							<Col
-								xs={{ span: 10, offset: 1 }}
+								// xs={{ span: 10, offset: 1 }}
 								sm={{ span: 6, offset: 0 }}
 								md={{ span: 4, offset: 0 }}
 								key={id}
@@ -43,16 +43,19 @@ export default function News({ allPostsData }) {
 											<div className={styles.thumbnail}>
 												<Image
 													className="card-img-top"
-													src={coverImage || "/news/guado.jpg"}
+													src={coverImage}
 													layout="fill"
 													objectFit="cover"
 												/>
 											</div>
-											<Card.Body>
-												<Card.Title>{title}</Card.Title>
-												<Card.Text>
-													<Date dateString={date} />
+											<Card.Body className={styles.body}>
+												<Card.Text className={styles.text}>
+													<span className={styles.date}><Date dateString={date} /></span>
 												</Card.Text>
+												<Card.Title className={styles.title} as={"h6"}>
+													{title}
+												</Card.Title>
+
 												{/* <Button variant="primary">Go somewhere</Button> */}
 											</Card.Body>
 										</Card>
