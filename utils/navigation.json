@@ -1,62 +1,62 @@
 [
-  {
-    "label": "Home",
-    "url": "/",
-    "menues": ["main", "footer"]
-  },
-  {
-    "label": "Chi siamo",
-    "url": "/chi-siamo",
-    "menues": ["main", "footer"]
-  },
-  {
-    "label": "News",
-    "url": "/news",
-    "menues": ["main", "footer"]
-  },
-  {
-    "label": "Cascina Cristina",
-    "url": "/cascina-cristina",
-    "menues": ["main", "footer"]
-  },
-  {
-    "label": "Organizzazione di Abilitiamo",
-    "url": "/organizzazione",
-    "menues": ["footer"]
-  },
-  {
-    "label": "Sostenitori",
-    "url": "/sostenitori",
-    "menues": ["main", "footer"]
-  },
-  {
-    "label": "Diventa socio",
-    "url": "/diventa-socio",
-    "menues": ["footer"]
-  },
-  {
-    "label": "Galleria",
-    "url": "/",
-    "menues": []
-  },
-  {
-    "label": "Contatti",
-    "url": "/contatti",
-    "menues": ["main", "footer"]
-  },
-  {
-    "label": "Dona ora",
-    "url": "/dona-ora",
-    "menues": ["main", "footer"]
-  },
-  {
-    "label": "Benefici fiscali",
-    "url": "/benefici-fiscali",
-    "menues": ["footer"]
-  },
-  {
-    "label": "Privacy",
-    "url": "/privacy",
-    "menues": ["footer"]
-  }
+	{
+		"label": "Home",
+		"url": "/",
+		"menues": ["main", "footer"]
+	},
+	{
+		"label": "Chi siamo",
+		"url": "/chi-siamo",
+		"menues": ["main", "footer"]
+	},
+	{
+		"label": "Cascina Cristina",
+		"url": "/cascina-cristina",
+		"menues": ["main", "footer"]
+	},
+	{
+		"label": "News",
+		"url": "/news",
+		"menues": ["main", "footer"]
+	},
+	{
+		"label": "Organizzazione di Abilitiamo",
+		"url": "/organizzazione",
+		"menues": ["footer"]
+	},
+	{
+		"label": "Sostenitori",
+		"url": "/sostenitori",
+		"menues": ["main", "footer"]
+	},
+	{
+		"label": "Diventa socio",
+		"url": "/diventa-socio",
+		"menues": ["footer"]
+	},
+	{
+		"label": "Galleria",
+		"url": "/",
+		"menues": []
+	},
+	{
+		"label": "Contatti",
+		"url": "/contatti",
+		"menues": ["main", "footer"]
+	},
+	{
+		"label": "Dona ora",
+		"url": "/dona-ora",
+		"menues": ["main", "footer"]
+	},
+	{
+		"label": "Benefici fiscali",
+		"url": "/benefici-fiscali",
+		"menues": ["footer"]
+	},
+	{
+		"label": "Privacy",
+		"url": "/privacy",
+		"menues": ["footer"]
+	}
 ]

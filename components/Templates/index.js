@@ -1,3 +1,4 @@
 import PageTemplate from "./PageTemplate";
 import PostTemplate from "./PostTemplate";
-export { PageTemplate, PostTemplate };
+import SectionCascinaCristina from "./SectionCascinaCristina";
+export { PageTemplate, PostTemplate, SectionCascinaCristina };
