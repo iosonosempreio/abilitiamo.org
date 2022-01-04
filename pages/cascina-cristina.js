@@ -5,24 +5,31 @@ import ArrowLink from "../components/ArrowLink";
 import classNames from "classnames";
 import styles from "../styles/cascina-cristina.module.scss";
 import { useLayoutEffect } from "react";
+// import { ScrollSpy } from "bootstrap/dist/js/bootstrap.bundle.js";
 
 export default function CascinaCristina() {
 	useLayoutEffect(() => {
-		import('bootstrap/dist/js/bootstrap.bundle.js')
 		const bodyEl = document.querySelector("body");
 		const prevPositionCSS = bodyEl.style.position;
 		bodyEl.style.position = "relative";
 		bodyEl.setAttribute("data-bs-spy", "scroll");
-		bodyEl.setAttribute("data-bs-target", "#sections-scrollspy");
+		// bodyEl.setAttribute("data-bs-target", "#sections-scrollspy");
 		bodyEl.setAttribute("data-bs-offset", "250");
-		bodyEl.classList.add("cascina-crtistina");
+
+		let _ScrollSpy, _scrollSpyContentEl;
+		import("bootstrap/dist/js/bootstrap.bundle.js").then((bootstrap) => {
+			const { ScrollSpy } = bootstrap;
+			_ScrollSpy = ScrollSpy
+			_scrollSpyContentEl = document.querySelector('[data-bs-spy="scroll"]')
+			ScrollSpy.getOrCreateInstance(_scrollSpyContentEl).refresh();
+		});
 
 		return () => {
 			bodyEl.style.position = prevPositionCSS;
 			bodyEl.removeAttribute("data-bs-spy");
 			bodyEl.removeAttribute("data-bs-target");
 			bodyEl.removeAttribute("data-bs-offset");
-			bodyEl.classList.remove("cascina-crtistina");
+			_ScrollSpy.getOrCreateInstance(_scrollSpyContentEl).dispose();
 		};
 	}, []);
 	return (
@@ -41,23 +48,29 @@ export default function CascinaCristina() {
 								autismo.
 							</p>
 							<p>
-								Vista l’assenza di strutture adatte ad ospitare giovani adulti con
-								autismo nel territorio canturino e nelle aree circostanti, Cascina
-								Cristina diventerà un modello pilota e uno stimolo per altri enti
-								per la realizzazione di strutture similari, rispondendo così al
-								forte bisogno del territorio e delle famiglie che vi appartengono.
+								Vista l’assenza di strutture adatte ad ospitare giovani adulti
+								con autismo nel territorio canturino e nelle aree circostanti,
+								Cascina Cristina diventerà un modello pilota e uno stimolo per
+								altri enti per la realizzazione di strutture similari,
+								rispondendo così al forte bisogno del territorio e delle
+								famiglie che vi appartengono.
 							</p>
 							<p className="mb-4">
 								La struttura è attualmente in fase di realizzazione e grazie al
 								lavoro di architetti, imprese e altri professionisti sarà presto
-								inaugurata. Guarda le foto del cantiere che testinoniano lo stato
-								dei lavori ad ottobre 2021.
+								inaugurata. Guarda le foto del cantiere che testinoniano lo
+								stato dei lavori ad ottobre 2021.
 							</p>
 							<GalleryRestoration />
 						</Col>
 						<Col className={classNames("my-3 my-md-5")}>
-							<div className={classNames("position-sticky")} style={{ top: 65 }}>
-								<ArrowLink data={{ label: "Sostenitori", url: "/sostenitori" }} />
+							<div
+								className={classNames("position-sticky")}
+								style={{ top: 65 }}
+							>
+								<ArrowLink
+									data={{ label: "Sostenitori", url: "/sostenitori" }}
+								/>
 								<ArrowLink data={{ label: "Dona ora", url: "/dona-ora" }} />
 							</div>
 						</Col>
@@ -86,17 +99,17 @@ export default function CascinaCristina() {
 										<span className={styles.index}>
 											{("00" + (i + 1)).slice(-2)}
 										</span>
-										<span className={styles.title}>{d.titleNav}</span>
+										<span className={styles.title}>{d.titleJSX}</span>
 									</a>
 								</li>
 							))}
 						</ul>
 					</nav>
-	
+
 					{sections.map((d, i) => (
 						<section id={d.anchor.slice(1)} key={i} className={styles.section}>
 							<SectionCascinaCristina
-								title={d.titleJSX}
+								title={d.titleString}
 								subtitle={d.subtitle}
 								image={d.image}
 								description={d.description}
@@ -112,7 +125,7 @@ export default function CascinaCristina() {
 const sections = [
 	{
 		anchor: "#spirito-del-progetto",
-		titleNav: "Lo spirito del progetto",
+		titleString: "Lo spirito del progetto",
 		titleJSX: (
 			<>
 				Lo spirito
@@ -135,21 +148,21 @@ const sections = [
 				famiglie che si verranno a trovare in una situazione analoga a quella da
 				loro vissuta. Da qui la sfida di creare un polo multifunzionale per
 				l&#39;autismo. Un centro in grado di accogliere in forma residenziale
-				adulti autistici a basso funzionamento, di offrire la possibilità di
-				abilitazione a giovani autistici per i quali è sufficiente una gestione
-				diurna, di dare sollievo temporaneo a quelle famiglie che attraversano
-				un periodo complicato con il loro figlio autistico. Il polo Cascina
-				Cristina si occuperà anche di formazione degli operatori del settore e
-				cercherà di agevolare il percorso di diagnosi della potenziale persona
-				autistica. Una volta accreditata, la struttura, lavorando in rete con le
-				istituzioni sanitarie, organizzerà una presa in carico coordinata della
-				persona autistica.
+				adulti autistici a medio e basso funzionamento, di offrire la
+				possibilità di abilitazione a giovani autistici per i quali è
+				sufficiente una gestione diurna, di dare sollievo temporaneo a quelle
+				famiglie che attraversano un periodo complicato con il loro figlio
+				autistico. Il polo Cascina Cristina si occuperà anche di formazione
+				degli operatori del settore e cercherà di agevolare il percorso di
+				diagnosi della potenziale persona autistica. Una volta accreditata, la
+				struttura, lavorando in rete con le istituzioni sanitarie, organizzerà
+				una presa in carico coordinata della persona autistica.
 			</>
 		),
 	},
 	{
 		anchor: "#cambiamento",
-		titleNav: "Il cambiamento perseguito",
+		titleString: "Il cambiamento perseguito",
 		titleJSX: (
 			<>
 				Cambiamento
@@ -193,8 +206,14 @@ const sections = [
 	},
 	{
 		anchor: "#presa-in-carico",
-		titleNav: "Presa in carico a rete",
-		titleJSX: <>Presa in carico a rete</>,
+		titleString: "Presa in carico a rete",
+		titleJSX: (
+			<>
+				Presa
+				<br />
+				in carico
+			</>
+		),
 		subtitle: (
 			<>
 				La presa in carico della persona con autismo terrà in considerazione le
@@ -233,7 +252,7 @@ const sections = [
 	},
 	{
 		anchor: "#comunita",
-		titleNav: "La comunità abitativa",
+		titleString: "La comunità abitativa",
 		titleJSX: (
 			<>
 				Comunità
@@ -269,7 +288,7 @@ const sections = [
 	},
 	{
 		anchor: "#diurno",
-		titleNav: "Servizio centro diurno",
+		titleString: "Servizio centro diurno",
 		titleJSX: (
 			<>
 				Centro
@@ -303,7 +322,7 @@ const sections = [
 	},
 	{
 		anchor: "#servizi",
-		titleNav: "Sollievo e altri servizi",
+		titleString: "Sollievo e altri servizi",
 		titleJSX: (
 			<>
 				Sollievo
@@ -332,7 +351,7 @@ const sections = [
 	},
 	{
 		anchor: "#sostegno-alla-famiglia",
-		titleNav: "Sostegno alle famiglie",
+		titleString: "Sostegno alle famiglie",
 		titleJSX: (
 			<>
 				Sostegno
@@ -370,7 +389,7 @@ const sections = [
 	},
 	{
 		anchor: "#sindrome-autistica",
-		titleNav: "Comprendere la sindrome autistica",
+		titleString: "Comprendere la sindrome autistica",
 		titleJSX: <>Comprendere l'autismo</>,
 		subtitle: (
 			<>
