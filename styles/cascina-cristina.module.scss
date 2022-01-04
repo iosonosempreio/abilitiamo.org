@@ -7,7 +7,7 @@
 
 .sectionsScrollspy {
 	top: 53px;
-	z-index: 2000;
+	z-index: 1000;
 	/* hide on small screens */
 	display: none;
 }
@@ -79,22 +79,29 @@
 				margin: 0.1rem 0 0.3rem;
 			}
 			.title {
-				font-size: 0.875rem;
-				font-weight: 600;
+				font-size: 0.75rem;
+				font-weight: 500;
 			}
 		}
-	}
-}
-
-.section {
-	.description {
-		// column-count: 1;
 	}
 }
 
 @media screen and (min-width: 768px) {
 	.sectionsScrollspy {
 		display: flex;
+	}
+}
+
+@media (min-width: 992px) {
+	.navigation {
+		li {
+			a {
+				.title {
+					font-size: 0.875rem;
+					font-weight: 600;
+				}
+			}
+		}
 	}
 }
 

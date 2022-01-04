@@ -32,9 +32,8 @@ export default function SectionCascinaCristina({
 				<Col
 					// xs={12}
 					sm={{ span: 10, offset: 1 }}
-					// lg={{ span: 7, offset: 5 }}
+					lg={{ span: 7, offset: 5 }}
 					// xl={{ span: 10, offset: 1 }}
-					md={{span:7, offset: 5}}
 					className={classNames(
 						"mt-4",
 						"mt-lg-4",

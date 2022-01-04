@@ -71,7 +71,7 @@ export default function ChiSiamo() {
 							<Image src={cascina2} />
 							<p className="text-center">
 								<small>
-									Rendering che visualizza lo stabile a recupero avvenuto.
+									Rendering che visualizza lo stabile recuperato.
 								</small>
 							</p>
 						</div>
@@ -81,7 +81,8 @@ export default function ChiSiamo() {
 							<i>
 								Progetti Emblematici Maggiori della Provincia di Como (anno
 								2019)
-							</i>.
+							</i>
+							.
 						</p>
 						<p>
 							Da allora, il lavoro dell’associazione si è concentrato
@@ -94,15 +95,15 @@ export default function ChiSiamo() {
 							le tappe più significative della associazione.
 						</p>
 						<div className={classNames("video-wrapper my-3")}>
-							
-						</div>
-						<ReactPlayer
+							<ReactPlayer
 								className="react-player"
 								url="https://www.youtube.com/watch?v=i4-V9g-VqYI"
 								width="100%"
+								height="100%"
 								volume={0.03}
 								controls
 							/>
+						</div>
 					</Col>
 					<Col>
 						<div className={classNames("position-sticky")} style={{ top: 65 }}>

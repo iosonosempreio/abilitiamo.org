@@ -19,8 +19,8 @@ export default function CascinaCristina() {
 		let _ScrollSpy, _scrollSpyContentEl;
 		import("bootstrap/dist/js/bootstrap.bundle.js").then((bootstrap) => {
 			const { ScrollSpy } = bootstrap;
-			_ScrollSpy = ScrollSpy
-			_scrollSpyContentEl = document.querySelector('[data-bs-spy="scroll"]')
+			_ScrollSpy = ScrollSpy;
+			_scrollSpyContentEl = document.querySelector('[data-bs-spy="scroll"]');
 			ScrollSpy.getOrCreateInstance(_scrollSpyContentEl).refresh();
 		});
 
@@ -390,7 +390,13 @@ const sections = [
 	{
 		anchor: "#sindrome-autistica",
 		titleString: "Comprendere la sindrome autistica",
-		titleJSX: <>Comprendere l'autismo</>,
+		titleJSX: (
+			<>
+				Comprendere
+				<br />
+				l'autismo
+			</>
+		),
 		subtitle: (
 			<>
 				Nell’ottica di un sistema integrato e innovativo Cascina Cristina

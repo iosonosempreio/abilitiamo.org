@@ -28,7 +28,8 @@ export default function Home() {
 								className={classNames(
 									"d-flex",
 									"flex-column",
-									"justify-content-center"
+									"justify-content-center",
+									"my-3"
 								)}
 							>
 								<h1 className="mb-3">
@@ -49,7 +50,8 @@ export default function Home() {
 								className={classNames(
 									"d-flex",
 									"flex-column",
-									"justify-content-center"
+									"justify-content-center",
+									"my-3"
 								)}
 							>
 								<div className={classNames(styles.illustrazioneAbilitiamo)}>
@@ -65,18 +67,19 @@ export default function Home() {
 						</Row>
 					</Container>
 				</Container>
-				<Container className="mt-5">
-					<Row className="mb-5">
+				<Container>
+					<Row className="mt-4 mb-4">
 						<Col
-							md={{ span: 3, offset: 1 }}
-							className="d-flex align-items-center"
+							md={{ span: 8, offset: 1 }}
+							lg={{ span: 3, offset: 1 }}
+							className="d-flex align-items-center mb-3"
 						>
-							<h5>
+							<h4>
 								Vogliamo creare una struttura capace di erogare servizi
 								socio-sanitari per persone adulte con autismo.
-							</h5>
+							</h4>
 						</Col>
-						<Col md={{ span: 8 }}>
+						<Col md={{ span: 8, offset: 2 }} lg={{ span: 7 }}>
 							<div className={classNames("video-wrapper")}>
 								<ReactPlayer
 									className="react-player"
@@ -88,15 +91,24 @@ export default function Home() {
 							</div>
 						</Col>
 					</Row>
-					<Row className="mb-5">
-						<Col md={{ span: 8 }}>
+					<Row className="mb-4">
+						<Col
+							xs={{ order: 2 }}
+							md={{ span: 8, offset: 2, order: 2 }}
+							lg={{ span: 7, offset: 1, order: 1 }}
+						>
 							<GalleryRestoration />
 						</Col>
-						<Col md={{ span: 3 }} className="d-flex align-items-center">
-							<h5>
+						<Col
+							xs={{ order: 1 }}
+							md={{ span: 8, order: 1, offset: 1 }}
+							lg={{ span: 3, order: 2 }}
+							className="d-flex align-items-center mb-4"
+						>
+							<h4>
 								Stiamo realizzando questa struttura in <i>Cascina Cristina</i>,
-								un cascinale nei pressi del centro abitato di Cantù (CO).
-							</h5>
+								nei pressi del centro abitato di Cantù (CO).
+							</h4>
 						</Col>
 					</Row>
 				</Container>
