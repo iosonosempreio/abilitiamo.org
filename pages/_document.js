@@ -18,11 +18,7 @@ class MyDocument extends Document {
 						rel="stylesheet"
 					/>
 				</Head>
-				<body
-					data-bs-spy="scroll"
-					data-bs-target="#sections-scrollspy"
-					data-bs-offset="250"
-				>
+				<body>
 					<Main />
 					<NextScript />
 				</body>

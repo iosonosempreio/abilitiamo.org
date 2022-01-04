@@ -4,87 +4,108 @@ import GalleryRestoration from "../components/GalleryRestoration";
 import ArrowLink from "../components/ArrowLink";
 import classNames from "classnames";
 import styles from "../styles/cascina-cristina.module.scss";
+import { useLayoutEffect } from "react";
 
 export default function CascinaCristina() {
-	return (
-		<PageTemplate title="Cascina Cristina">
-			<Container>
-				<Row className="my-5">
-					<Col md={{ span: 7, offset: 1 }}>
-						<h5>
-							Un polo territoriale e multifunzionale per la presa in carico
-							della persona adulta con disturbi dello spettro autistico
-						</h5>
-						<p>
-							Il progetto Cascina Cristina è la risposta di Abilitiamo al
-							bisogno di strutture adatte ad ospitare giovani adulti con
-							autismo.
-						</p>
-						<p>
-							Vista l’assenza di strutture adatte ad ospitare giovani adulti con
-							autismo nel territorio canturino e nelle aree circostanti, Cascina
-							Cristina diventerà un modello pilota e uno stimolo per altri enti
-							per la realizzazione di strutture similari, rispondendo così al
-							forte bisogno del territorio e delle famiglie che vi appartengono.
-						</p>
-						<p className="mb-4">
-							La struttura è attualmente in fase di realizzazione e grazie al
-							lavoro di architetti, imprese e altri professionisti sarà presto
-							inaugurata. Guarda le foto del cantiere che testinoniano lo stato
-							dei lavori ad ottobre 2021.
-						</p>
-						<GalleryRestoration />
-					</Col>
-					<Col className={classNames("my-3 my-md-5")}>
-						<div className={classNames("position-sticky")} style={{ top: 65 }}>
-							<ArrowLink data={{ label: "Sostenitori", url: "/sostenitori" }} />
-							<ArrowLink data={{ label: "Dona ora", url: "/dona-ora" }} />
-						</div>
-					</Col>
-				</Row>
-			</Container>
-			<hr className="mt-4 mb-0" style={{ color: "var(--azure)" }} />
-			<Container>
-				<nav
-					id="sections-scrollspy"
-					className={classNames(
-						"navbar",
-						"position-sticky",
-						"py-0",
-						"my-0",
-						styles.sectionsScrollspy
-					)}
-				>
-					<ul className={classNames("nav", "w-100", styles.navigation)}>
-						{sections.map((d, i) => (
-							<li key={i} className={classNames("nav-item")}>
-								<a
-									className={classNames("nav-link", "px-0", "no-hover")}
-									href={d.anchor}
-								>
-									<span className={styles.status}></span>
-									<span className={styles.index}>
-										{("00" + (i + 1)).slice(-2)}
-									</span>
-									<span className={styles.title}>{d.titleNav}</span>
-								</a>
-							</li>
-						))}
-					</ul>
-				</nav>
+	useLayoutEffect(() => {
+		import('bootstrap/dist/js/bootstrap.bundle.js')
+		const bodyEl = document.querySelector("body");
+		const prevPositionCSS = bodyEl.style.position;
+		bodyEl.style.position = "relative";
+		bodyEl.setAttribute("data-bs-spy", "scroll");
+		bodyEl.setAttribute("data-bs-target", "#sections-scrollspy");
+		bodyEl.setAttribute("data-bs-offset", "250");
+		bodyEl.classList.add("cascina-crtistina");
 
-				{sections.map((d, i) => (
-					<section id={d.anchor.slice(1)} key={i} className={styles.section}>
-						<SectionCascinaCristina
-							title={d.titleJSX}
-							subtitle={d.subtitle}
-							image={d.image}
-							description={d.description}
-						/>
-					</section>
-				))}
-			</Container>
-		</PageTemplate>
+		return () => {
+			bodyEl.style.position = prevPositionCSS;
+			bodyEl.removeAttribute("data-bs-spy");
+			bodyEl.removeAttribute("data-bs-target");
+			bodyEl.removeAttribute("data-bs-offset");
+			bodyEl.classList.remove("cascina-crtistina");
+		};
+	}, []);
+	return (
+		<>
+			<PageTemplate title="Cascina Cristina">
+				<Container>
+					<Row className="my-5">
+						<Col md={{ span: 7, offset: 1 }}>
+							<h5>
+								Un polo territoriale e multifunzionale per la presa in carico
+								della persona adulta con disturbi dello spettro autistico
+							</h5>
+							<p>
+								Il progetto Cascina Cristina è la risposta di Abilitiamo al
+								bisogno di strutture adatte ad ospitare giovani adulti con
+								autismo.
+							</p>
+							<p>
+								Vista l’assenza di strutture adatte ad ospitare giovani adulti con
+								autismo nel territorio canturino e nelle aree circostanti, Cascina
+								Cristina diventerà un modello pilota e uno stimolo per altri enti
+								per la realizzazione di strutture similari, rispondendo così al
+								forte bisogno del territorio e delle famiglie che vi appartengono.
+							</p>
+							<p className="mb-4">
+								La struttura è attualmente in fase di realizzazione e grazie al
+								lavoro di architetti, imprese e altri professionisti sarà presto
+								inaugurata. Guarda le foto del cantiere che testinoniano lo stato
+								dei lavori ad ottobre 2021.
+							</p>
+							<GalleryRestoration />
+						</Col>
+						<Col className={classNames("my-3 my-md-5")}>
+							<div className={classNames("position-sticky")} style={{ top: 65 }}>
+								<ArrowLink data={{ label: "Sostenitori", url: "/sostenitori" }} />
+								<ArrowLink data={{ label: "Dona ora", url: "/dona-ora" }} />
+							</div>
+						</Col>
+					</Row>
+				</Container>
+				<hr className="mt-4 mb-0" style={{ color: "var(--azure)" }} />
+				<Container>
+					<nav
+						id="sections-scrollspy"
+						className={classNames(
+							"navbar",
+							"position-sticky",
+							"py-0",
+							"my-0",
+							styles.sectionsScrollspy
+						)}
+					>
+						<ul className={classNames("nav", "w-100", styles.navigation)}>
+							{sections.map((d, i) => (
+								<li key={i} className={classNames("nav-item")}>
+									<a
+										className={classNames("nav-link", "px-0", "no-hover")}
+										href={d.anchor}
+									>
+										<span className={styles.status}></span>
+										<span className={styles.index}>
+											{("00" + (i + 1)).slice(-2)}
+										</span>
+										<span className={styles.title}>{d.titleNav}</span>
+									</a>
+								</li>
+							))}
+						</ul>
+					</nav>
+	
+					{sections.map((d, i) => (
+						<section id={d.anchor.slice(1)} key={i} className={styles.section}>
+							<SectionCascinaCristina
+								title={d.titleJSX}
+								subtitle={d.subtitle}
+								image={d.image}
+								description={d.description}
+							/>
+						</section>
+					))}
+				</Container>
+			</PageTemplate>
+		</>
 	);
 }
 
@@ -350,35 +371,30 @@ const sections = [
 	{
 		anchor: "#sindrome-autistica",
 		titleNav: "Comprendere la sindrome autistica",
-		titleJSX: (
-			<>
-        Comprendere l'autismo
-      </>
-		),
+		titleJSX: <>Comprendere l'autismo</>,
 		subtitle: (
 			<>
-            Nell’ottica di un sistema integrato e innovativo Cascina Cristina
-            diventerà, nel tempo, un centro per lo studio della sindrome
-            autistica per il territorio canturino e dintorni.
-          </>
+				Nell’ottica di un sistema integrato e innovativo Cascina Cristina
+				diventerà, nel tempo, un centro per lo studio della sindrome autistica
+				per il territorio canturino e dintorni.
+			</>
 		),
 		image: require("../images/cascina-cristina/08 jens-johnsson-36a3U4_UUHY-unsplash.jpg"),
 		description: (
 			<>
-            Il progetto “Cascina Cristina” prevede, oltre agli specifici
-            interventi socio assistenziale, psicoeducativi e abilitativi sui
-            fruitori, sia della comunità residenziale che del centro diurno,
-            anche progetti che non impattano direttamente sugli ospiti, ma bensì
-            sull’intera comunità che a diverso titolo ruota intorno alla
-            sindrome autistica. Infatti, al fine di fare formazione e/o
-            informazione, si terranno corsi, convegni, workshop, conferenze,
-            articoli su riviste divulgative e pseudoscientifiche. Si consentirà
-            così a psicologi, operatori, pedagogisti, arte-terapisti, fisiatri,
-            volontari, familiari e altre possibili figure professionali di
-            approfondire le conoscenze in materia di autismo e sulle più moderne
-            terapie e interventi che possono essere messe in atto nel proprio
-            ambito lavorativo.
-          </>
+				Il progetto “Cascina Cristina” prevede, oltre agli specifici interventi
+				socio assistenziale, psicoeducativi e abilitativi sui fruitori, sia
+				della comunità residenziale che del centro diurno, anche progetti che
+				non impattano direttamente sugli ospiti, ma bensì sull’intera comunità
+				che a diverso titolo ruota intorno alla sindrome autistica. Infatti, al
+				fine di fare formazione e/o informazione, si terranno corsi, convegni,
+				workshop, conferenze, articoli su riviste divulgative e
+				pseudoscientifiche. Si consentirà così a psicologi, operatori,
+				pedagogisti, arte-terapisti, fisiatri, volontari, familiari e altre
+				possibili figure professionali di approfondire le conoscenze in materia
+				di autismo e sulle più moderne terapie e interventi che possono essere
+				messe in atto nel proprio ambito lavorativo.
+			</>
 		),
 	},
 ];
