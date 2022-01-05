@@ -5,8 +5,6 @@ import Script from "next/script";
 import { useRouter } from "next/router";
 import * as gtag from "../lib/gtag";
 
-console.log(gtag.GA_TRACKING_ID)
-
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
 	const router = useRouter();

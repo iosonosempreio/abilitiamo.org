@@ -25,7 +25,7 @@ export default function SectionCascinaCristina({
 					<h4 className="paragraphBig mb-4">{subtitle}</h4>
 				</Col>
 				<Col xs={12} lg={{ span: 7, offset: 0 }}>
-					<Image src={image} className={classNames("rounded")} />
+					<Image src={image} className={classNames("rounded")} placeholder="blur" />
 				</Col>
 			</Row>
 			<Row className={classNames("mb-5", "mb-md-5")}>

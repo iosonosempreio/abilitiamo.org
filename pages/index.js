@@ -68,7 +68,7 @@ export default function Home() {
 					</Container>
 				</Container>
 				<Container>
-					<Row className="mt-4 mb-4">
+					<Row className="mt-4 mb-4 mb-lg-5">
 						<Col
 							md={{ span: 8, offset: 1 }}
 							lg={{ span: 3, offset: 1 }}
@@ -79,7 +79,7 @@ export default function Home() {
 								socio-sanitari per persone adulte con autismo.
 							</h4>
 						</Col>
-						<Col md={{ span: 8, offset: 2 }} lg={{ span: 7 }}>
+						<Col md={{ span: 10, offset: 1 }} lg={{ span: 7, offset: 0 }}>
 							<div className={classNames("video-wrapper")}>
 								<ReactPlayer
 									className="react-player"
@@ -94,7 +94,7 @@ export default function Home() {
 					<Row className="mb-4">
 						<Col
 							xs={{ order: 2 }}
-							md={{ span: 8, offset: 2, order: 2 }}
+							md={{ span: 10, offset: 1, order: 2 }}
 							lg={{ span: 7, offset: 1, order: 1 }}
 						>
 							<GalleryRestoration />
@@ -102,7 +102,7 @@ export default function Home() {
 						<Col
 							xs={{ order: 1 }}
 							md={{ span: 8, order: 1, offset: 1 }}
-							lg={{ span: 3, order: 2 }}
+							lg={{ span: 3, order: 2, offset: 0 }}
 							className="d-flex align-items-center mb-4"
 						>
 							<h4>
