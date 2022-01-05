@@ -34,7 +34,7 @@ export default function Footer() {
 							.filter((i) => i.menues.indexOf("footer") > -1)
 							.map((item) => {
 								return (
-									<Link key={item.label} href={item.url}>
+									<Link key={item.label} href={item.url} scroll={true}>
 										<a
 											className={classNames(
 												styles.link,
