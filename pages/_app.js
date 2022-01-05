@@ -62,7 +62,6 @@ export default function MyApp({ Component, pageProps }) {
 				onDecline={() => {
 					setAnalytics(false);
 				}}
-				debug={true}
 			>
 				Monitoriamo le visite del nostro sito con Google Analytics.{" "}
 			</CookieConsent>
