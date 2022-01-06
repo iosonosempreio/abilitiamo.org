@@ -22,11 +22,31 @@ export default function MyApp({ Component, pageProps }) {
 				router.events.off("routeChangeComplete", handleRouteChange);
 			};
 		}
-		
 	}, [router.events]);
 
 	return (
 		<>
+			<Component {...pageProps} />
+			<CookieConsent
+				buttonText="Va bene"
+				buttonStyle={{
+					background: "#ff7232",
+					color: "#faf8f6",
+					borderRadius: "4px",
+				}}
+				declineButtonText="Disattiva"
+				declineButtonStyle={{ background: "transparent", color: "#304b70" }}
+				style={{ background: "#7abed9", text: "#304b70" }}
+				onAccept={() => {
+					setAnalytics(true);
+				}}
+				enableDeclineButton
+				onDecline={() => {
+					setAnalytics(false);
+				}}
+			>
+				Monitoriamo le visite del nostro sito con Google Analytics.{" "}
+			</CookieConsent>
 			{/* Global Site Tag (gtag.js) - Google Analytics */}
 			{analytics && (
 				<>
@@ -50,24 +70,13 @@ export default function MyApp({ Component, pageProps }) {
 					/>
 				</>
 			)}
-
-			<Component {...pageProps} />
-			<CookieConsent
-				buttonText="Va bene"
-				buttonStyle={{ background: "#ff7232", color: "#faf8f6", borderRadius: "4px" }}
-				declineButtonText="Disattiva"
-				declineButtonStyle={{ background: "transparent", color: "#304b70" }}
-				style={{ background: "#7abed9", text: "#304b70" }}
-				onAccept={() => {
-					setAnalytics(true);
-				}}
-				enableDeclineButton
-				onDecline={() => {
-					setAnalytics(false);
-				}}
-			>
-				Monitoriamo le visite del nostro sito con Google Analytics.{" "}
-			</CookieConsent>
+			{!analytics && (
+				<div
+					dangerouslySetInnerHTML={{
+						__html: `<!-- Google Analytics disattivato -->`,
+					}}
+				/>
+			)}
 		</>
 	);
 }
