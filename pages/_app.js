@@ -44,6 +44,7 @@ export default function MyApp({ Component, pageProps }) {
 				onDecline={() => {
 					setAnalytics(false);
 				}}
+				expires={42}
 			>
 				Monitoriamo le visite del nostro sito con Google Analytics.{" "}
 			</CookieConsent>
