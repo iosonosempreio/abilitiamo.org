@@ -1,0 +1,11 @@
+.videoWrapper {
+	position: relative;
+	padding-top: 56.03%; /* Player ratio: 100 / (1280 / 720) */
+	.reactPlayer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 4px;
+		overflow: hidden;
+	}
+}

@@ -10,6 +10,7 @@ import ReactPlayer from "react-player";
 import styles from "../styles/home.module.scss";
 import Footer from "../components/Footer";
 import GalleryRestoration from "../components/GalleryRestoration/GalleryRestoration";
+import VideoEmbed from "../components/VideoEmbed/VideoEmbed";
 
 export default function Home() {
 	return (
@@ -80,15 +81,7 @@ export default function Home() {
 							</h4>
 						</Col>
 						<Col md={{ span: 10, offset: 1 }} lg={{ span: 7, offset: 0 }}>
-							<div className={classNames("video-wrapper")}>
-								<ReactPlayer
-									className="react-player"
-									url="https://www.facebook.com/1400253103427642/videos/1496214477164837"
-									width="100%"
-									height="100%"
-									controls
-								/>
-							</div>
+							<VideoEmbed url="https://www.facebook.com/1400253103427642/videos/1496214477164837" />
 						</Col>
 					</Row>
 					<Row className="mb-4">

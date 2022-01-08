@@ -7,6 +7,7 @@ import Image from "next/image";
 import cascina1 from "../images/cascina-interno.png";
 import cascina2 from "../images/render residenziale.jpeg";
 import ReactPlayer from "react-player";
+import VideoEmbed from "../components/VideoEmbed/VideoEmbed";
 
 export default function ChiSiamo() {
 	return (
@@ -84,7 +85,7 @@ export default function ChiSiamo() {
 							</i>
 							.
 						</p>
-						<p>
+						<p className="mb-3">
 							Da allora, il lavoro dell’associazione si è concentrato
 							prevalentemente sulla campagna di raccolta fondi per la
 							ristrutturazione di Cascina Cristina e l’avvio delle attività che
@@ -94,16 +95,7 @@ export default function ChiSiamo() {
 							della comunità canturina. Di seguito un breve video che riepiloga
 							le tappe più significative della associazione.
 						</p>
-						<div className={classNames("video-wrapper my-3")}>
-							<ReactPlayer
-								className="react-player"
-								url="https://www.youtube.com/watch?v=i4-V9g-VqYI"
-								width="100%"
-								height="100%"
-								volume={0.03}
-								controls
-							/>
-						</div>
+						<VideoEmbed url="https://www.youtube.com/watch?v=i4-V9g-VqYI" volume={0.1} />
 					</Col>
 					<Col>
 						<div className={classNames("position-sticky")} style={{ top: 65 }}>
