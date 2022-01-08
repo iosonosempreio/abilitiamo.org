@@ -29,7 +29,7 @@ export default function Contatti() {
 						<h5 className="mt-5">
 							IBAN{" "}
 							<span style={{ color: "var(--azure)" }}>
-								(donazioni liberali)
+								(donazioni)
 							</span>
 						</h5>
 						<p>{info.associazione.iban}</p>
