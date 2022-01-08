@@ -1,12 +1,10 @@
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
 import { Container, Col, Row } from "react-bootstrap";
 import Navigation from "../components/Navigation";
 import ArrowLink from "../components/ArrowLink";
 import illustrazioneAbilitiamo from "../images/illustrazione-abilitiamo.png";
 import classNames from "classnames";
-import ReactPlayer from "react-player";
 import styles from "../styles/home.module.scss";
 import Footer from "../components/Footer";
 import GalleryRestoration from "../components/GalleryRestoration/GalleryRestoration";

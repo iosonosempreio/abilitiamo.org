@@ -6,7 +6,8 @@ import BankTransferDonation from "../components/BankTransferDonation";
 import FacebookDonation from "../components/FacebookDonation";
 import SatispayDonation from "../components/SatispayDonation";
 import classNames from "classnames";
-import ReactPlayer from "react-player";
+import VideoEmbed from "../components/VideoEmbed/VideoEmbed";
+import frameVideo from "../images/frame-video-cascina-cristina.png";
 
 export default function DonaOra() {
 	return (
@@ -23,15 +24,7 @@ export default function DonaOra() {
 									Daremo vita a un importante progetto di accoglienza, sviluppo
 									e condivisione per tenere unita la nostra comunità.
 								</p>
-								<div className={classNames("video-wrapper")}>
-									<ReactPlayer
-										className="react-player"
-										url="https://www.facebook.com/1400253103427642/videos/1496214477164837"
-										width="100%"
-										height="100%"
-										controls
-									/>
-								</div>
+								<VideoEmbed preview={frameVideo} url="https://www.facebook.com/1400253103427642/videos/1496214477164837" />
 								<p className={classNames("mt-3")}>
 									Ogni martedì Marco si sveglia di primo mattino, prende il bus
 									per andare a Cantù, porta a Gabriele frutta e verdura da lui
