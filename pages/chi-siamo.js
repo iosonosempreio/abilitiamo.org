@@ -6,8 +6,8 @@ import GalleryChiSiamo from "../components/GalleryChiSiamo";
 import Image from "next/image";
 import cascina1 from "../images/cascina-interno.png";
 import cascina2 from "../images/render residenziale.jpeg";
-import ReactPlayer from "react-player";
 import VideoEmbed from "../components/VideoEmbed/VideoEmbed";
+import frameVideo from "../images/frame-storia-abi-2019.png";
 
 export default function ChiSiamo() {
 	return (
@@ -71,9 +71,7 @@ export default function ChiSiamo() {
 						<div className="w-50 p-3 d-inline-block">
 							<Image src={cascina2} />
 							<p className="text-center">
-								<small>
-									Rendering che visualizza lo stabile recuperato.
-								</small>
+								<small>Rendering che visualizza lo stabile recuperato.</small>
 							</p>
 						</div>
 						<p>
@@ -95,7 +93,11 @@ export default function ChiSiamo() {
 							della comunità canturina. Di seguito un breve video che riepiloga
 							le tappe più significative della associazione.
 						</p>
-						<VideoEmbed url="https://www.youtube.com/watch?v=i4-V9g-VqYI" volume={0.1} />
+						<VideoEmbed
+							preview={frameVideo}
+							url="https://www.youtube.com/watch?v=i4-V9g-VqYI"
+							volume={0.1}
+						/>
 					</Col>
 					<Col>
 						<div className={classNames("position-sticky")} style={{ top: 65 }}>

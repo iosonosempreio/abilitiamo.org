@@ -1,11 +1,57 @@
+@use "sass:color";
+@import "../../styles/variables.scss";
+
 .videoWrapper {
 	position: relative;
 	padding-top: 56.03%; /* Player ratio: 100 / (1280 / 720) */
+	border-radius: 4px;
+	overflow: hidden;
 	.reactPlayer {
 		position: absolute;
 		top: 0;
 		left: 0;
 		border-radius: 4px;
 		overflow: hidden;
+	}
+	.cookiesForbidden {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-size: cover;
+		z-index: 0;
+		* {
+			position: relative;
+		}
+		.videoCookiesConsent {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+		}
+		.videoPreview {
+			width: 100%;
+			height: 100%;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background-size: cover;
+			opacity: 0.25;
+			filter: blur(4px);
+		}
+		.acceptBtn {
+			border-radius: 4px;
+			background-color: var(--red);
+			padding: 5px 10px;
+			border: none;
+			color: var(--beige);
+			font-weight: 500;
+			&:hover {
+				background-color: color.adjust($red, $lightness: -7%);
+			}
+		}
 	}
 }

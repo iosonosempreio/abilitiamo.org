@@ -11,6 +11,7 @@ import styles from "../styles/home.module.scss";
 import Footer from "../components/Footer";
 import GalleryRestoration from "../components/GalleryRestoration/GalleryRestoration";
 import VideoEmbed from "../components/VideoEmbed/VideoEmbed";
+import frameVideo from "../images/frame-video-cascina-cristina.png";
 
 export default function Home() {
 	return (
@@ -81,7 +82,7 @@ export default function Home() {
 							</h4>
 						</Col>
 						<Col md={{ span: 10, offset: 1 }} lg={{ span: 7, offset: 0 }}>
-							<VideoEmbed url="https://www.facebook.com/1400253103427642/videos/1496214477164837" />
+							<VideoEmbed preview={frameVideo} url="https://www.facebook.com/1400253103427642/videos/1496214477164837" />
 						</Col>
 					</Row>
 					<Row className="mb-4">

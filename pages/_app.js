@@ -3,14 +3,22 @@ import "../styles/main.scss";
 import { useEffect, useState } from "react";
 import Script from "next/script";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
-import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
+import CookieConsent, { getCookieConsentValue, resetCookieConsentValue } from "react-cookie-consent";
 import * as gtag from "../lib/gtag";
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
-	const [analytics, setAnalytics] = useState(false);
-
+	const [analytics, setAnalytics] = useState();
+	useEffect(() => {
+		const initialConsentValue = getCookieConsentValue() + "";
+		if (initialConsentValue === "true") {
+			setAnalytics(true);
+		} else {
+			setAnalytics(false);
+		}
+	}, []);
 	const router = useRouter();
 	useEffect(() => {
 		if (analytics) {
@@ -26,7 +34,7 @@ export default function MyApp({ Component, pageProps }) {
 
 	return (
 		<>
-			<Component {...pageProps} />
+			<Component {...pageProps}/>
 			<CookieConsent
 				buttonText="Va bene"
 				buttonStyle={{
@@ -46,7 +54,11 @@ export default function MyApp({ Component, pageProps }) {
 				}}
 				expires={42}
 			>
-				Monitoriamo le visite del nostro sito con Google Analytics.{" "}
+				Usiamo cookies di terze parti per{" "}
+				<Link href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=it">
+					monitorare le visite
+				</Link>{" "}
+				del sito e per riprodurre filmati tramite servizi esterni.{" "}
 			</CookieConsent>
 			{/* Global Site Tag (gtag.js) - Google Analytics */}
 			{analytics && (
