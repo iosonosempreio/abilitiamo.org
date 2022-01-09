@@ -35,20 +35,11 @@ export default function VideoEmbed({ url, volume, preview }) {
 							style={{ backgroundImage: `url(${preview.src})` }}
 						/>
 					)}
-					<h4>Visione del filmato bloccata</h4>
+					<h4>Accetta i cookies per vedere il filmato</h4>
 					<p>
 						La riproduzione del filmato è stata impedita poichè fa uso di cookie
-						di terze parti. Acconsenti all'uso dei cookies per vedere il
-						filmato.
+						di terze parti.
 					</p>
-					{/* <Button
-					variant="secondary"
-					onClick={() => {
-						resetCookieConsentValue();
-					}}
-				>
-					Acconsenti
-				</Button> */}
 					<CookieConsent
 						visible="show"
 						containerClasses={styles.videoCookiesConsent}
