@@ -8,6 +8,7 @@ import SatispayDonation from "../components/SatispayDonation";
 import classNames from "classnames";
 import VideoEmbed from "../components/VideoEmbed/VideoEmbed";
 import frameVideo from "../images/frame-video-cascina-cristina.png";
+import CoopSpesaDonation from "../components/CoopSpesaDonation";
 
 export default function DonaOra() {
 	return (
@@ -109,6 +110,9 @@ export default function DonaOra() {
 									ristrutturazione di Cascina Cristina.
 								</p>
 							</section>
+							<section id="coop-spesa-solidale">
+								<CoopSpesaDonation />
+							</section>
 							<section id="paypal-donation">
 								<PaypalDonation />
 							</section>
@@ -204,6 +208,10 @@ export default function DonaOra() {
 }
 
 const modalità = [
+	{
+		label: "Spesa solidale Coop",
+		url: "#coop-spesa-solidale",
+	},
 	{
 		label: "Paypal e carta di credito",
 		url: "#paypal-donation",
