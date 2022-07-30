@@ -3,9 +3,10 @@ import { Col, Container, Row } from "react-bootstrap";
 import { PageTemplate } from "../components/Templates";
 import ArrowLink from "../components/ArrowLink";
 import info from "../utils/info.json";
-
+import Link from "next/link";
 import tesseramento from "../images/mockup-tessera.jpg";
 import Image from "next/image";
+import moduloPdf from "../public/modulo-iscrizione-socio-abilitiamo-2022.pdf";
 
 export default function DiventaSocio() {
 	return (
@@ -30,8 +31,11 @@ export default function DiventaSocio() {
 							versare la quota associativa di €30 (trenta/00) sul c/c{" "}
 							{info.associazione.iban} oppure farcela avere in contanti.
 						</p>
-						<p>L’informativa sulla privacy è disponibile a questa pagina.</p>
-						<p>Modulo tesseramento</p>
+						<p>
+							L’informativa sulla privacy è disponibile a{" "}
+							<Link href="/privacy">questa pagina</Link>.
+						</p>
+						<ArrowLink data={{label:"Scarica modulo tesseramento", url:moduloPdf, download:true}} />
 					</Col>
 					<Col>
 						<div className={classNames("position-sticky")} style={{ top: 65 }}>
