@@ -9,6 +9,7 @@ import classNames from "classnames";
 import VideoEmbed from "../components/VideoEmbed/VideoEmbed";
 import frameVideo from "../images/frame-video-cascina-cristina.png";
 import CoopSpesaDonation from "../components/CoopSpesaDonation";
+import info from "../utils/info.json";
 
 export default function DonaOra() {
 	return (
@@ -25,7 +26,10 @@ export default function DonaOra() {
 									Daremo vita a un importante progetto di accoglienza, sviluppo
 									e condivisione per tenere unita la nostra comunità.
 								</p>
-								<VideoEmbed preview={frameVideo} url="https://www.facebook.com/1400253103427642/videos/1496214477164837" />
+								<VideoEmbed
+									preview={frameVideo}
+									url="https://www.facebook.com/1400253103427642/videos/1496214477164837"
+								/>
 								<p className={classNames("mt-3")}>
 									Ogni martedì Marco si sveglia di primo mattino, prende il bus
 									per andare a Cantù, porta a Gabriele frutta e verdura da lui
@@ -57,9 +61,9 @@ export default function DonaOra() {
 									</b>
 								</p>
 								<p>
-									Cascina Cristina è un progetto di Associazione Abilitiamo
-									Autismo ONLUS, nata nel 2017 da familiari di persone con
-									autismo. La Cascina diventerà{" "}
+									Cascina Cristina è un progetto di{" "}
+									{info.associazione.ragioneSociale}, nata nel 2017 da familiari
+									di persone con autismo. La Cascina diventerà{" "}
 									<b>
 										un polo multifunzionale per la presa in carico di giovani e
 										adulti con disturbi dello spettro autistico
@@ -109,9 +113,6 @@ export default function DonaOra() {
 									autismo in provincia di Como, fai subito una donazione per la
 									ristrutturazione di Cascina Cristina.
 								</p>
-							</section>
-							<section id="coop-spesa-solidale">
-								<CoopSpesaDonation />
 							</section>
 							<section id="paypal-donation">
 								<PaypalDonation />
@@ -177,7 +178,7 @@ export default function DonaOra() {
 								</p>
 								<p>
 									È anche possibile devolvere ad Abilítiamo il patrimonio di
-									altre associazioni ONLUS in fase di scioglimento.
+									altre associazioni in fase di scioglimento.
 								</p>
 							</section>
 						</Col>
@@ -208,10 +209,6 @@ export default function DonaOra() {
 }
 
 const modalità = [
-	{
-		label: "Spesa solidale Coop",
-		url: "#coop-spesa-solidale",
-	},
 	{
 		label: "Paypal e carta di credito",
 		url: "#paypal-donation",

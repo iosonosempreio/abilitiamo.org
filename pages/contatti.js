@@ -11,9 +11,9 @@ export default function Contatti() {
 				<Row className="my-5">
 					<Col md={{ span: 7, offset: 1 }}>
 						<p className="mb-0">Ragione sociale</p>
-						<h3 className="mb-3">Associazione Abilítiamo Autismo ONLUS</h3>
+						<h3 className="mb-3">{info.associazione.ragioneSociale}</h3>
 						<h5 className="mt-5">Indirizzo</h5>
-						<p>Via per Gattedo 19/7, Carugo 22060 CO</p>
+						<p>{info.associazione.indirizzo}</p>
 						<h5 className="mt-5">Posta elettronica</h5>
 						<p>{info.associazione.mail}</p>
 						<p>{info.associazione.mailRisorseUmane}</p>

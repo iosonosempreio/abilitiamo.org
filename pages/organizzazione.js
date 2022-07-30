@@ -2,6 +2,7 @@ import classNames from "classnames";
 import { Col, Container, Row } from "react-bootstrap";
 import { PageTemplate } from "../components/Templates";
 import ArrowLink from "../components/ArrowLink";
+import info from "../utils/info.json";
 
 export default function Organizzazione() {
 	return (
@@ -18,10 +19,10 @@ export default function Organizzazione() {
 						<h4>Soci</h4>
 						<p>
 							Undici soci, rappresentanti cinque famiglie con figli con autismo,
-							hanno costituito nel 2017 l’Associazione Abilitiamo Autismo onlus
-							–abitare e abilitare– con sede legale a Carugo (Co) in via per
-							Gattedo, 19/7 e con sede operativa presso lo studio Emme di Cantù
-							(Co) in via Susa, 15.
+							hanno costituito nel 2017 {info.associazione.ragioneSociale} —
+							<i>abitare e abilitare</i>— con sede legale a Carugo (Co) in via
+							per Gattedo, 19/7 e con sede operativa presso lo studio Emme di
+							Cantù (Co) in via Susa, 15.
 						</p>
 						<p>
 							L’associazione Abilitiamo Autismo è un’organizzazione senza scopo

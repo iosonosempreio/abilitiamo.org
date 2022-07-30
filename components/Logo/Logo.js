@@ -10,7 +10,7 @@ export default function Logo(props) {
             Abi<span style={{color:"var(--red)"}}>lí</span>tiamo
           </span>{" "}
           autismo
-          <span style={{display:props.showOnlus?'inline':'none'}}> ONLUS</span>
+          <span style={{display:props.showOnlus?'inline':'none'}}> ODV</span>
         </>
       </Link>
     </div>

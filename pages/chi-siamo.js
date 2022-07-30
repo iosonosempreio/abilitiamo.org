@@ -8,6 +8,7 @@ import cascina1 from "../images/cascina-interno.png";
 import cascina2 from "../images/render residenziale.jpeg";
 import VideoEmbed from "../components/VideoEmbed/VideoEmbed";
 import frameVideo from "../images/frame-storia-abi-2019.png";
+import info from "../utils/info.json"
 
 export default function ChiSiamo() {
 	return (
@@ -39,7 +40,7 @@ export default function ChiSiamo() {
 							amici del territorio.
 						</p>
 						<p>
-							L’associazione Abilitiamo Autismo onlus - “abitiamo e abilitiamo”
+							{info.associazione.ragioneSociale} — <i>abitiamo e abilitiamo</i> —
 							si è costituita nel 2017, per volere di 5 famiglie con figli
 							autistici. Un punto di forza dell’associazione è rappresentato
 							dalla presenza, tra i soci fondatori, dei fratelli della persona

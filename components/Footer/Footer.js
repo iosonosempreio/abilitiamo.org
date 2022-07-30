@@ -154,7 +154,7 @@ export default function Footer() {
 				</Row>
 				<Row className={styles.copyright}>
 					<Col className="text-center">
-						<span>© 2021 Associazione Abilitiamo Autismo ONLUS</span>
+						<span>© 2021 {info.associazione.ragioneSociale}</span>
 					</Col>
 				</Row>
 			</Container>
