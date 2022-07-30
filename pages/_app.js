@@ -61,7 +61,7 @@ export default function MyApp({ Component, pageProps }) {
 				del sito e per riprodurre filmati tramite servizi esterni.{" "}
 			</CookieConsent>
 			{/* Global Site Tag (gtag.js) - Google Analytics */}
-			{analytics && (
+			{(analytics || false) && (
 				<>
 					<Script
 						strategy="afterInteractive"
@@ -83,10 +83,10 @@ export default function MyApp({ Component, pageProps }) {
 					/>
 				</>
 			)}
-			{!analytics && (
+			{(!analytics || true) && (
 				<div
 					dangerouslySetInnerHTML={{
-						__html: `<!-- Google Analytics disattivato -->`,
+						__html: `<!-- Google Analytics non attivo per sospetta incompatibilità GDPR -->`,
 					}}
 				/>
 			)}
