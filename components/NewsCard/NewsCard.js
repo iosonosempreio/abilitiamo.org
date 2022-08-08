@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Card, Col } from "react-bootstrap";
 import classNames from "classnames";
@@ -14,13 +13,12 @@ export default function NewsCard({ data }) {
 			<a>
 				<Card className={classNames(styles.post, "mb-3")}>
 					<div className={styles.thumbnail}>
-						<Image
+						<img
 							// className="card-img-top"
 							src={image}
 							width={imageInfo.width}
 							height={imageInfo.height}
-							layout="responsive"
-							// objectFit="cover"
+							className={classNames("img-fluid")}
 						/>
 					</div>
 					<Card.Body className={styles.body}>

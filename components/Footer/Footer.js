@@ -15,7 +15,6 @@ import navigation from "../../utils/navigation.json";
 import info from "../../utils/info.json";
 import styles from "./Footer.module.scss";
 
-import Image from "next/image";
 import logoCariplo from "../../images/logo-cariplo.svg";
 import logoLombardia from "../../images/logo-lombardia.svg";
 import logoFpcc from "../../images/logo-fpcc.png";
@@ -96,39 +95,39 @@ export default function Footer() {
 					<Col className={classNames("d-flex", "flex-column")}>
 						<span style={{ fontWeight: 600 }}>Con il contributo di</span>
 						<span className={styles.logo} style={{ width: 160 }}>
-							<Image
+							<img
 								alt="Logo Fondazione Cariplo"
-								src={logoCariplo}
-								layout="responsive"
+								src={logoCariplo.src}
+								className="img-fluid"
 							/>
 						</span>
 						<span className={styles.logo} style={{ width: 160 }}>
-							<Image
+							<img
 								alt="Logo Regione Lombardia"
-								src={logoLombardia}
-								layout="responsive"
+								src={logoLombardia.src}
+								className="img-fluid"
 							/>
 						</span>
 						<span className={styles.logo} style={{ width: 210 }}>
-							<Image
+							<img
 								alt="Logo Comunità pastorale S Vincenzo"
-								src={logoCsv}
-								layout="responsive"
+								src={logoCsv.src}
+								className="img-fluid"
 							/>
 						</span>
 
 						<span className={styles.logo} style={{ width: 210 }}>
-							<Image
+							<img
 								alt="Logo Cassa rurale ed artigiana di Cantù"
-								src={logoCraCantu}
-								layout="responsive"
+								src={logoCraCantu.src}
+								className="img-fluid"
 							/>
 						</span>
 						<span className={styles.logo} style={{ width: 210 }}>
-							<Image
+							<img
 								alt="logo Fondazione Provinciale Comasca"
-								src={logoFpcc}
-								layout="responsive"
+								src={logoFpcc.src}
+								className="img-fluid"
 							/>
 						</span>
 

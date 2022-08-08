@@ -5,7 +5,6 @@ import ArrowLink from "../components/ArrowLink";
 import info from "../utils/info.json";
 import Link from "next/link";
 import tesseramento from "../images/mockup-tessera.jpg";
-import Image from "next/image";
 import moduloPdf from "../public/modulo-iscrizione-socio-abilitiamo-2022.pdf";
 
 export default function DiventaSocio() {
@@ -19,7 +18,7 @@ export default function DiventaSocio() {
 							dell’associazione compilando il modulo di tesseramento e versando
 							la quota associativa annuale.
 						</h5>
-						<Image src={tesseramento} className="rounded-3" />
+						<img src={tesseramento.src} className="img-fluid rounded-3 mb-3" />
 						<p>
 							Scarica e stampa il modulo, compilalo in ogni sua parte e
 							consegnalo alla prima occasione. Nel frattempo inviaci una

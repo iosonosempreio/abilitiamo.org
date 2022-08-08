@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Image from "next/image";
 import { Card, Col, Modal, Row } from "react-bootstrap";
 import CoopSpesaLocandina from "../../images/coop-spesa-locandina.png";
+import classNames from "classnames";
 
 export default function CoopSpesaDonation() {
 	const [show, setShow] = useState(false);
@@ -14,7 +14,7 @@ export default function CoopSpesaDonation() {
 				<Card.Body>
 					<h3 className="fw-bold mt-0">Spesa solidale da Coop</h3>
 					<div
-						className="mb-3 rounded"
+						className={classNames("mb-3","rounded-3", "d-flex", "justify-content-center")}
 						style={{
 							borderRadius: "5px",
 							overflow: "hidden",
@@ -24,11 +24,10 @@ export default function CoopSpesaDonation() {
 							cursor: "pointer",
 						}}
 					>
-						<Image
-							src={CoopSpesaLocandina}
+						<img
+							src={CoopSpesaLocandina.src}
 							alt="Locandina iniziativa spesa solidale presso Coop"
-							layout="fill"
-							objectFit="contain"
+							className={classNames("mw-100", "h-100", "mb-3")}
 							onClick={handleShow}
 						/>
 					</div>
@@ -61,10 +60,10 @@ export default function CoopSpesaDonation() {
 					<Modal.Title>Spesa solidale da Coop</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
-					<Image
-						src={CoopSpesaLocandina}
+					<img
+						src={CoopSpesaLocandina.src}
 						alt="Locandina iniziativa spesa solidale presso Coop"
-						layout="responsive"
+						className="img-fluid"
 						onClick={handleShow}
 					/>
 				</Modal.Body>

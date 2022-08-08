@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Container, Col, Row } from "react-bootstrap";
 import Navigation from "../components/Navigation";
 import ArrowLink from "../components/ArrowLink";
@@ -25,70 +24,41 @@ export default function Home() {
 						<Row>
 							<Col
 								md={{ span: 4, offset: 1 }}
-								className={classNames(
-									"d-flex",
-									"flex-column",
-									"justify-content-center",
-									"my-3"
-								)}
+								className={classNames("d-flex", "flex-column", "justify-content-center", "my-3")}
 							>
-								<h1 className="mb-3">
-									Miglioriamo la qualità di vita delle persone adulte con
-									autismo
-								</h1>
+								<h1 className="mb-3">Miglioriamo la qualità di vita delle persone adulte con autismo</h1>
 								<h4 className="mb-3">
-									Abilitare è possibile a qualsiasi età, per noi l'età adulta è
-									solo un punto di partenza.
+									Abilitare è possibile a qualsiasi età, per noi l'età adulta è solo un punto di partenza.
 								</h4>
 								<ArrowLink data={{ label: "Chi siamo", url: "/chi-siamo" }} />
-								<ArrowLink
-									data={{ label: "Cascina Cristina", url: "/cascina-cristina" }}
-								/>
+								<ArrowLink data={{ label: "Cascina Cristina", url: "/cascina-cristina" }} />
 								<ArrowLink data={{ label: "Dona ora", url: "/dona-ora" }} />
 							</Col>
-							<Col
-								className={classNames(
-									"d-flex",
-									"flex-column",
-									"justify-content-center",
-									"my-3"
-								)}
-							>
-								<div className={classNames(styles.illustrazioneAbilitiamo)}>
-									<Image
-										alt="Illustrazione Abilitiamo"
-										src={illustrazioneAbilitiamo}
-										layout="fill"
-										objectFit="contain"
-										placeholder="blur"
-									/>
-								</div>
+							<Col className={classNames("d-flex", "flex-column", "justify-content-center", "my-3")}>
+								<div
+									className={classNames(styles.illustrazioneAbilitiamo)}
+									style={{ backgroundImage: `url(${illustrazioneAbilitiamo.src})` }}
+								/>
 							</Col>
 						</Row>
 					</Container>
 				</Container>
 				<Container>
 					<Row className="mt-4 mb-4 mb-lg-5">
-						<Col
-							md={{ span: 8, offset: 1 }}
-							lg={{ span: 3, offset: 1 }}
-							className="d-flex align-items-center mb-3"
-						>
-							<h4>
-								Vogliamo creare una struttura capace di erogare servizi
-								socio-sanitari per persone adulte con autismo.
-							</h4>
+						<Col md={{ span: 8, offset: 1 }} lg={{ span: 3, offset: 1 }} className="d-flex align-items-center mb-3">
+							<p className="fs-5">
+								Vogliamo creare una struttura capace di erogare servizi socio-sanitari per persone adulte con autismo
+							</p>
 						</Col>
 						<Col md={{ span: 10, offset: 1 }} lg={{ span: 7, offset: 0 }}>
-							<VideoEmbed preview={frameVideo} url="https://www.facebook.com/1400253103427642/videos/1496214477164837" />
+							<VideoEmbed
+								preview={frameVideo}
+								url="https://www.facebook.com/1400253103427642/videos/1496214477164837"
+							/>
 						</Col>
 					</Row>
 					<Row className="mb-4">
-						<Col
-							xs={{ order: 2 }}
-							md={{ span: 10, offset: 1, order: 2 }}
-							lg={{ span: 7, offset: 1, order: 1 }}
-						>
+						<Col xs={{ order: 2 }} md={{ span: 10, offset: 1, order: 2 }} lg={{ span: 7, offset: 1, order: 1 }}>
 							<GalleryRestoration />
 						</Col>
 						<Col
@@ -97,10 +67,9 @@ export default function Home() {
 							lg={{ span: 3, order: 2, offset: 0 }}
 							className="d-flex align-items-center mb-4"
 						>
-							<h4>
-								Stiamo realizzando questa struttura in <i>Cascina Cristina</i>,
-								nei pressi del centro abitato di Cantù (CO).
-							</h4>
+							<p className="fs-5">
+								Stiamo realizzando questa struttura in <i>Cascina Cristina</i>, Cantù (CO)
+							</p>
 						</Col>
 					</Row>
 				</Container>

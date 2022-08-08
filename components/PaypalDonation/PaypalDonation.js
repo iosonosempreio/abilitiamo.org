@@ -116,9 +116,9 @@ export default function PaypalDonation() {
 							dimenticarti che sono previsti{" "}
 							<Link href="/benefici-fiscali">benefici fiscali</Link> per chi
 							sceglie di donare.
-							<h4>
+							<h5 className="mt-3">
 								Abitare è abilitare, metti in cascina il futuro insieme a noi!
-							</h4>
+							</h5>
 						</Form.Label>
 						<Form.Check
 							type="checkbox"

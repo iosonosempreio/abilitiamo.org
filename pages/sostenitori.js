@@ -1,6 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { PageTemplate } from "../components/Templates";
-import Image from "next/image";
 import styles from "../styles/sostenitori.module.scss";
 import classNames from "classnames";
 
@@ -45,7 +44,7 @@ export default function Sostenitori() {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<Image src={images["regione"]} />
+							<img src={images["regione"].src} className="img-fluid" />
 						</a>
 					</div>
 					<div className="col-4 col-md-4 col-lg-3">
@@ -56,7 +55,7 @@ export default function Sostenitori() {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<Image src={images["cariplo"]} />
+							<img src={images["cariplo"].src} className="img-fluid" />
 						</a>
 					</div>
 					<div className="col-4 col-md-4 col-lg-3">
@@ -67,7 +66,7 @@ export default function Sostenitori() {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<Image src={images["comunità-s-vincenzo"]} />
+							<img src={images["comunità-s-vincenzo"].src} className="img-fluid px-3" />
 						</a>
 					</div>
 				</div>
@@ -80,7 +79,7 @@ export default function Sostenitori() {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<Image src={images["cra-cantu"]} />
+							<img src={images["cra-cantu"].src} className="img-fluid" />
 						</a>
 					</div>
 					<div className="col-4 col-md-4 col-lg-3">
@@ -91,7 +90,7 @@ export default function Sostenitori() {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<Image src={images["emme"]} />
+							<img src={images["emme"].src} className="img-fluid" />
 						</a>
 					</div>
 					<div className="col-4 col-md-4 col-lg-3">
@@ -102,7 +101,7 @@ export default function Sostenitori() {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<Image src={images["expertam"]} />
+							<img src={images["expertam"].src} className="img-fluid" />
 						</a>
 					</div>
 				</div>

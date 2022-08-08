@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import { Col, Container, Row } from "react-bootstrap";
 import Date from "../Date";
 import classNames from "classnames";
@@ -41,13 +40,10 @@ export default function PostTemplate({ postData, children }) {
 						</Col>
 						{postData.image && (
 							<Col sm={{ span: 12, order: 3 }}>
-								<div className={styles.coverImageContainer}>
-									<Image
+								<div className={classNames(styles.coverImageContainer, "d-flex", "justify-content-center")}>
+									<img
 										src={postData.image}
-										layout="fill"
-										objectFit="contain"
-										priority={true}
-										className={classNames(styles.coverImage, "rounded-full")}
+										className={classNames(styles.coverImageXXX, "h-100", "mw-100", "rounded-3")}
 									/>
 								</div>
 							</Col>

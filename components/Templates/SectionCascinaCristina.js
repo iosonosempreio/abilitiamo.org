@@ -1,7 +1,6 @@
 import styles from "./SectionCascinaCristina.module.scss";
 import { Row, Col } from "react-bootstrap";
 import classNames from "classnames";
-import Image from "next/image";
 export default function SectionCascinaCristina({
 	title,
 	subtitle,
@@ -25,7 +24,7 @@ export default function SectionCascinaCristina({
 					<h4 className="paragraphBig mb-4">{subtitle}</h4>
 				</Col>
 				<Col xs={12} lg={{ span: 7, offset: 0 }}>
-					<Image src={image} className={classNames("rounded")} placeholder="blur" />
+					<img src={image.default.src}  className={classNames("rounded", "img-fluid")} />
 				</Col>
 			</Row>
 			<Row className={classNames("mb-5", "mb-md-5")}>

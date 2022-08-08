@@ -1,7 +1,7 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/main.scss";
 import { useEffect, useState } from "react";
-import Script from "next/script";
+// import Script from "next/script";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -34,7 +34,7 @@ export default function MyApp({ Component, pageProps }) {
 
 	return (
 		<>
-			<Component {...pageProps}/>
+			<Component {...pageProps} />
 			<CookieConsent
 				buttonText="Va bene"
 				buttonStyle={{
@@ -61,7 +61,7 @@ export default function MyApp({ Component, pageProps }) {
 				del sito e per riprodurre filmati tramite servizi esterni.{" "}
 			</CookieConsent>
 			{/* Global Site Tag (gtag.js) - Google Analytics */}
-			{(analytics || false) && (
+			{/* {(analytics) && (
 				<>
 					<Script
 						strategy="afterInteractive"
@@ -83,13 +83,13 @@ export default function MyApp({ Component, pageProps }) {
 					/>
 				</>
 			)}
-			{(!analytics || true) && (
+			{(!analytics) && (
 				<div
 					dangerouslySetInnerHTML={{
 						__html: `<!-- Google Analytics non attivo per sospetta incompatibilità GDPR -->`,
 					}}
 				/>
-			)}
+			)} */}
 		</>
 	);
 }

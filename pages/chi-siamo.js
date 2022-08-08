@@ -3,7 +3,6 @@ import ArrowLink from "../components/ArrowLink";
 import { PageTemplate } from "../components/Templates";
 import classNames from "classnames";
 import GalleryChiSiamo from "../components/GalleryChiSiamo";
-import Image from "next/image";
 import cascina1 from "../images/cascina-interno.png";
 import cascina2 from "../images/render residenziale.jpeg";
 import VideoEmbed from "../components/VideoEmbed/VideoEmbed";
@@ -64,13 +63,13 @@ export default function ChiSiamo() {
 							dello stabile.
 						</p>
 						<div className="w-50 p-3 d-inline-block">
-							<Image src={cascina1} />
+							<img className="img-fluid" src={cascina1.src} />
 							<p className="text-center">
 								<small>Stato di Cascina Cristina prima del recupero.</small>
 							</p>
 						</div>
 						<div className="w-50 p-3 d-inline-block">
-							<Image src={cascina2} />
+							<img className="img-fluid" src={cascina2.src} />
 							<p className="text-center">
 								<small>Rendering che visualizza lo stabile recuperato.</small>
 							</p>

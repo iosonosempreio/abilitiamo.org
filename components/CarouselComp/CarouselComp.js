@@ -1,6 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
 import styles from "./CarouselComp.module.scss";
-import Image from "next/image";
 import classNames from "classnames";
 
 
@@ -10,13 +9,7 @@ export default function CarouselComp({ images, height, className }) {
 			<Carousel className={classNames(styles.carousel, className)} style={{paddingBottom: height}}>
 				{images.map((image, i) => (
 					<Carousel.Item key={i} className={styles.carouselItem}>
-						<Image 
-							alt="Immagine galleria"
-							src={image}
-							layout="fill"
-							objectFit="cover"
-							placeholder="blur"
-						/>
+						<div className={styles.carouselImage} style={{backgroundImage: `url(${JSON.stringify(image.src)})`}} />
 						{image.caption && (
 							<Carousel.Caption>
 								<p>{image.caption}</p>
