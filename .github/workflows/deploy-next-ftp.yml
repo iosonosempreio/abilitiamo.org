@@ -1,5 +1,5 @@
 on: workflow_dispatch
-name: 🚀 Deploy website on push
+name: 🚀 Deploy Next website on FTP
 jobs:
   web-deploy:
     name: 🎉 Deploy
