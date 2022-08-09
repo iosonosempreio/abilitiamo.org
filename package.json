@@ -4,7 +4,7 @@
     "dev": "open http://localhost:3000/ & next dev",
     "build": "next build",
     "start": "next start",
-    "build-export": "next build && next export"
+    "build-export": "next build && next export && touch out/.nojekyll"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",
