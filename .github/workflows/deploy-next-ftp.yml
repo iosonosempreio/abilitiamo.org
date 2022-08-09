@@ -8,7 +8,7 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
 
-    - name: Use Node.js 16
+    - name: 🪢 Use Node.js 16
       uses: actions/setup-node@v2
       with:
         node-version: '16'
@@ -18,7 +18,7 @@ jobs:
         npm install
         npm run build-export
         
-    - name: List output files
+    - name: 📖 List output files
       run: find out/ -print
     
     - name: 📂 Sync files
