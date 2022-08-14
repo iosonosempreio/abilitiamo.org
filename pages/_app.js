@@ -1,9 +1,8 @@
-// import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/main.scss";
 import { useEffect, useState } from "react";
-// import Script from "next/script";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import info from "../utils/info.json"
 
 import CookieConsent, { getCookieConsentValue, resetCookieConsentValue } from "react-cookie-consent";
 import * as gtag from "../lib/gtag";
@@ -52,7 +51,7 @@ export default function MyApp({ Component, pageProps }) {
 				onDecline={() => {
 					setAnalytics(false);
 				}}
-				expires={42}
+				expires={info.associazione.durataCookies.value}
 			>
 				Usiamo cookies di terze parti per{" "}
 				<Link href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=it">

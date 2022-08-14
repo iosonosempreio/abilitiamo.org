@@ -58,5 +58,10 @@
 		"label": "Privacy",
 		"url": "/privacy",
 		"menues": ["footer"]
+	},
+	{
+		"label": "Cookies",
+		"url": "/cookie-policy",
+		"menues": ["footer"]
 	}
 ]

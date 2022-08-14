@@ -1,14 +1,12 @@
-import classNames from "classnames";
-import { Col, Container, Row } from "react-bootstrap";
 import { PageTemplate } from "../components/Templates";
-import ArrowLink from "../components/ArrowLink";
-import info from "../utils/info.json";
+
+import { CookiePolicy20220812 } from "../components/CookiePolicy"
 
 export default function CookiePolicy() {
 	return (
 		<>
-			<PageTemplate title="Informativa sui Cookie">
-				
+			<PageTemplate title="Informativa estesa sui cookie">
+				<CookiePolicy20220812 />
 			</PageTemplate>
 		</>
 	);

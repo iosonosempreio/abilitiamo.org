@@ -6,7 +6,6 @@ import Link from "next/link";
 import styles from "./Privacy.module.scss";
 
 export default function Privacy20220812() {
-	let count = 1;
 	return (
 		<Container>
 			<Row className={classNames("my-5", styles.privacy)}>
@@ -211,7 +210,7 @@ export default function Privacy20220812() {
 							</tr>
 						</tbody>
 					</Table>
-					<h4>3. A chi verranno comunicati i dati personali? destinatari dei dati</h4>
+					<h4>3. A chi verranno comunicati i dati personali?</h4>
 					<p>
 						I dati personali saranno comunicati, in base anche alle finalità previste in aree specifiche, a soggetti che tratteranno i dati in qualità di
 						Titolari autonomi del trattamento, o Responsabili del trattamento (art. 28 GDPR) e trattati da persone fisiche (art. 29 GDPR) che agiscono sotto
@@ -277,6 +276,5 @@ export default function Privacy20220812() {
 
 const sideLinks = [
 	{ label: "Chi siamo", url: "/chi-siamo" },
-	{ label: "Organizzazione", url: "/organizzazione" },
-	{ label: "Diventa socio", url: "/diventa-socio" },
+	{ label: "Informativa Cookies", url: "/cookie-policy" }
 ];

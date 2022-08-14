@@ -95,7 +95,7 @@ export default function ChiSiamo() {
 						</p>
 						<VideoEmbed
 							preview={frameVideo}
-							url="https://www.youtube.com/watch?v=i4-V9g-VqYI"
+							url="https://www.youtube-nocookie.com/watch?v=i4-V9g-VqYI"
 							volume={0.1}
 						/>
 					</Col>
