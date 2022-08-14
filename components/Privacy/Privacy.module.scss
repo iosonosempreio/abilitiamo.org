@@ -1,0 +1,8 @@
+.privacy {
+	table {
+		font-size: 0.8rem;
+		& *:not(:first-child) {
+			border-width: 1px;
+		}
+	}
+}

@@ -1,12 +1,13 @@
 {
 	"associazione": {
 		"ragioneSociale": "Associazione Abilítiamo Autismo ODV",
-		"indirizzo": "Via per Gattedo 19/7, Carugo 22060 CO",
+		"indirizzo": "Via per Gattedo 19/7, 22060 Carugo (CO)",
 		"mail": "info@abilitiamo.org",
 		"pec": "certificata@pec.abilitiamo.org",
 		"mailRisorseUmane": "risorseumane@abilitiamo.org",
 		"mailAmministrazione": "amministrazione@abilitiamo.org",
 		"mailSostenibilita": "sostenibilita@abilitiamo.org",
+		"mailPrivacy": "privacy@abilitiamo.org",
 		"codiceFiscale": "90041140139",
 		"iban": "IT52P0843051100000000114383",
 		"filiale": "Cassa Rurale ed Artigiana di Cantù – Filiale di Carugo (CO) Banca di Credito Coopertativo Soc. Coop.",
@@ -15,7 +16,11 @@
 		"youtube": "https://www.youtube.com/channel/UCzlesA7SjzJXyVJxeLhL-Iw",
 		"paypal": "/",
 		"satispay": "https://tag.satispay.com/dk_PVWRiqLtVQlRhPleKRsc",
-		"instagram": "https://www.instagram.com/abilitiamo_autismo/"
+		"instagram": "https://www.instagram.com/abilitiamo_autismo/",
+		"durataCookies": {
+			"label": "7 giorni",
+			"value": 7
+		}
 	},
 	"comunita": {
 		"nome": "Cascina Cristina",
