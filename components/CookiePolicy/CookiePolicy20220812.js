@@ -1,12 +1,38 @@
-import { Container, Row, Col, Table } from "react-bootstrap";
+import { useState, useEffect } from "react";
+import { Container, Row, Col, Table, Button } from "react-bootstrap";
 import classNames from "classnames";
 import ArrowLink from "../ArrowLink";
 import info from "../../utils/info.json";
 import styles from "./CookiePolicy.module.scss";
 
-export default function CookiePolicy20220812() {
+export default function CookiePolicy20220812({ getCookieConsentValue, resetCookieConsentValue }) {
+	const [showReset, setShowReset] = useState();
+	useEffect(() => {
+		const activeCookies = getCookieConsentValue() + "";
+		if (activeCookies === "true") {
+			setShowReset(true);
+		} else {
+			setShowReset(false);
+		}
+	}, [showReset]);
 	return (
 		<Container>
+			{showReset && (
+				<Row className={classNames("mt-5", styles.cookiePolicy)}>
+					<Col className={classNames(styles.resetCookies, "py-3")} md={{ span: 7, offset: 1 }}>
+						<p className={classNames("mb-2")}>Hai attivato l'utilizzo di cookie, clicca sul pulsante di seguito per disattivarli.</p>
+						<Button
+							className={styles.resetBtn}
+							onClick={() => {
+								setShowReset(false);
+								resetCookieConsentValue();
+							}}
+						>
+							Disattiva cookies
+						</Button>
+					</Col>
+				</Row>
+			)}
 			<Row className={classNames("my-5", styles.cookiePolicy)}>
 				<Col md={{ span: 7, offset: 1 }}>
 					<h4>Cosa sono i cookie</h4>

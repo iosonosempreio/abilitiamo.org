@@ -1,4 +1,21 @@
+@use "sass:color";
+@import "../../styles/variables.scss";
+
 .cookiePolicy {
+	.resetCookies {
+		background-color: var(--beige);
+		.resetBtn {
+			border-radius: 4px;
+			background-color: var(--red);
+			padding: 5px 10px;
+			border: none;
+			color: var(--beige);
+			font-weight: 500;
+			&:hover {
+				background-color: color.adjust($red, $lightness: -7%);
+			}
+		}
+	}
 	table {
 		font-size: 0.8rem;
 		tbody {

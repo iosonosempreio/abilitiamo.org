@@ -3,8 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import info from "../utils/info.json"
-
-import CookieConsent, { getCookieConsentValue, resetCookieConsentValue } from "react-cookie-consent";
+import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 import * as gtag from "../lib/gtag";
 
 // This default export is required in a new `pages/_app.js` file.
@@ -35,13 +34,13 @@ export default function MyApp({ Component, pageProps }) {
 		<>
 			<Component {...pageProps} />
 			<CookieConsent
-				buttonText="Va bene"
+				buttonText="Attiva"
 				buttonStyle={{
 					background: "#ff7232",
 					color: "#faf8f6",
 					borderRadius: "4px",
 				}}
-				declineButtonText="Disattiva"
+				declineButtonText="Mantieni disattivi"
 				declineButtonStyle={{ background: "transparent", color: "#304b70" }}
 				style={{ background: "#7abed9", text: "#304b70" }}
 				onAccept={() => {
@@ -53,11 +52,12 @@ export default function MyApp({ Component, pageProps }) {
 				}}
 				expires={info.associazione.durataCookies.value}
 			>
-				Usiamo cookies di terze parti per{" "}
+				{/* Usiamo cookies tecnici e di terze parti per{" "}
 				<Link href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=it">
 					monitorare le visite
 				</Link>{" "}
-				del sito e per riprodurre filmati tramite servizi esterni.{" "}
+				del sito e per riprodurre filmati tramite servizi esterni.{" "} */}
+				Questo sito utilizza cookies di terze parti per consentire la riproduzione di filmati tramite servizi esterni. <Link href="/cookie-policy">Maggiori informazioni</Link>
 			</CookieConsent>
 			{/* Global Site Tag (gtag.js) - Google Analytics */}
 			{/* {(analytics) && (

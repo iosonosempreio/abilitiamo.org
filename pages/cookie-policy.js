@@ -1,12 +1,12 @@
 import { PageTemplate } from "../components/Templates";
-
-import { CookiePolicy20220812 } from "../components/CookiePolicy"
+import { getCookieConsentValue, resetCookieConsentValue } from "react-cookie-consent";
+import { CookiePolicy20220812 } from "../components/CookiePolicy";
 
 export default function CookiePolicy() {
 	return (
 		<>
 			<PageTemplate title="Informativa estesa sui cookie">
-				<CookiePolicy20220812 />
+				<CookiePolicy20220812 getCookieConsentValue={getCookieConsentValue} resetCookieConsentValue={resetCookieConsentValue} />
 			</PageTemplate>
 		</>
 	);
