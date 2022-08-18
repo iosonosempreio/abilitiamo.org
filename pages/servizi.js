@@ -7,7 +7,7 @@ import cartaServiziCDD20220815 from "../public/documenti-cdd/carta-servizi-CDD-2
 import cartaDiritti from "../public/documenti-cdd/Carta dei diritti.pdf";
 import informativaPrivacy from "../public/documenti-cdd/Informativa Privacy Cascina Cristina Abilitiamo Autismo.pdf";
 import moduloURP from "../public/documenti-cdd/Modulo Segnalazione URP.pdf";
-import questionarioSoddisfazione from "../public/documenti-cdd/questionario soddisfazione CDD su carta intestata.pdf";
+import questionarioSoddisfazione from "../public/documenti-cdd/QUESTIONARIO GRADIMENTO CDD.pdf";
 import menuEstivo2022 from "../public/documenti-cdd/Cascina Cristina_Menu Estate 2022_pranzo.pdf";
 import menuAlternativeFisse from "../public/documenti-cdd/Cascina Cristina_Alternative Fisse.pdf";
 
