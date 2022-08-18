@@ -3,13 +3,21 @@ import classNames from "classnames";
 import { PageTemplate } from "../components/Templates";
 import ArrowLink from "../components/ArrowLink";
 
-import cartaServiziCDD20220815 from "../public/documenti-cdd/carta-servizi-CDD-20220815.pdf";
+import cartaServiziCDD from "../public/documenti-cdd/carta-servizi-CDD-20220815.pdf";
 import cartaDiritti from "../public/documenti-cdd/Carta dei diritti.pdf";
 import informativaPrivacy from "../public/documenti-cdd/Informativa Privacy Cascina Cristina Abilitiamo Autismo.pdf";
 import moduloURP from "../public/documenti-cdd/Modulo Segnalazione URP.pdf";
 import questionarioSoddisfazione from "../public/documenti-cdd/QUESTIONARIO GRADIMENTO CDD.pdf";
 import menuEstivo2022 from "../public/documenti-cdd/Cascina Cristina_Menu Estate 2022_pranzo.pdf";
 import menuAlternativeFisse from "../public/documenti-cdd/Cascina Cristina_Alternative Fisse.pdf";
+
+import cartaServiziRSD from "../public/documenti-rsd/carta-servizi-RSD.pdf";
+import cartaDirittiRSD from "../public/documenti-rsd/carta dei diritti.pdf";
+// import informativaPrivacy from "../public/documenti-cdd/Informativa Privacy Cascina Cristina Abilitiamo Autismo.pdf";
+import moduloURPRSD from "../public/documenti-rsd/Modulo Segnalazione URP.pdf";
+import questionarioSoddisfazioneRSD from "../public/documenti-rsd/questionario soddisfazione RSD su carta intestata.pdf";
+import menuEstivo2022pranzoRSD from "../public/documenti-rsd/Cascina Cristina_Menu Estate 2022_pranzo.pdf";
+import menuEstivo2022cenaRSD from "../public/documenti-rsd/Cascina Cristina_Menu Estate 2022_cena.pdf";
 
 export default function Servizi() {
 	return (
@@ -21,7 +29,7 @@ export default function Servizi() {
 						<h3>Centro Diurno per persone adulte con autismo</h3>
 						<p>Il CDD di Cascina Cristina può accogliere fino a 15 persone.</p>
 						<p>Di seguito è possibile scaricare in formato PDF i seguenti documenti:</p>
-						<ArrowLink data={{ label: "Carta dei servizi", url: cartaServiziCDD20220815, download: true }} />
+						<ArrowLink data={{ label: "Carta dei servizi", url: cartaServiziCDD, download: true }} />
 						<ArrowLink data={{ label: "Carta dei diritti", url: cartaDiritti, download: true }} />
 						<ArrowLink data={{ label: "Informativa privacy", url: informativaPrivacy, download: true }} />
 						<ArrowLink data={{ label: "Modulo segnalazione URP", url: moduloURP, download: true }} />
@@ -33,13 +41,14 @@ export default function Servizi() {
 						<h3>Centro Residenziale per persone adulte con autismo</h3>
 						<p>La RSD di Cascina Cristina può accogliere fino a 14 persone.</p>
 						<p>Di seguito è possibile scaricare in formato PDF i seguenti documenti:</p>
-						<ArrowLink disabled={true} data={{ label: "Carta dei servizi", url: cartaServiziCDD20220815, download: true }} />
-						<ArrowLink disabled={true} data={{ label: "Carta dei diritti", url: cartaDiritti, download: true }} />
-						<ArrowLink disabled={true} data={{ label: "Informativa privacy", url: informativaPrivacy, download: true }} />
-						<ArrowLink disabled={true} data={{ label: "Modulo segnalazione URP", url: moduloURP, download: true }} />
-						<ArrowLink disabled={true} data={{ label: "Questionario di soddisfazione", url: questionarioSoddisfazione, download: true }} />
-						<ArrowLink disabled={true} data={{ label: "Menù estivo 2022", url: menuEstivo2022, download: true }} />
-						<ArrowLink disabled={true} data={{ label: "Menù - Alternative fisse", url: menuAlternativeFisse, download: true }} />
+						<ArrowLink data={{ label: "Carta dei servizi", url: cartaServiziRSD, download: true }} />
+						<ArrowLink data={{ label: "Carta dei diritti", url: cartaDirittiRSD, download: true }} />
+						<ArrowLink data={{ label: "Informativa privacy", url: informativaPrivacy, download: true }} />
+						<ArrowLink disabled={true} data={{ label: "Modulo richiesta inserimento", url: "", download: true }} />
+						<ArrowLink data={{ label: "Modulo segnalazione URP", url: moduloURPRSD, download: true }} />
+						<ArrowLink data={{ label: "Questionario di soddisfazione", url: questionarioSoddisfazioneRSD, download: true }} />
+						<ArrowLink data={{ label: "Menù estivo pranzo 2022", url: menuEstivo2022pranzoRSD, download: true }} />
+						<ArrowLink data={{ label: "Menù estivo cena 2022", url: menuEstivo2022cenaRSD, download: true }} />
 					</Col>
 					<Col>
 						<div className={classNames("position-sticky")} style={{ top: 65 }}>
