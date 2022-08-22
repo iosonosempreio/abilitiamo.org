@@ -13,6 +13,7 @@ export default function Servizi() {
 						<CDD />
 						<hr />
 						<RSD />
+						<hr />
 					</Col>
 					<Col>
 						<div className={classNames("position-sticky")} style={{ top: 65 }}>
