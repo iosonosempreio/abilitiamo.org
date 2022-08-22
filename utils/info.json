@@ -24,7 +24,9 @@
 	},
 	"comunita": {
 		"nome": "Cascina Cristina",
-		"indirizzo": "Via per Alzate 76, 22063 Cantù CO",
-		"mail": "cascinacristina@abilitiamo.org"
+		"indirizzo": "Via per Alzate 76, 22063 Cantù CO – Località Fecchio",
+		"cellulare": "+39 370 3147 039",
+		"mailCoordinatore": "coordinatore@abilitiamo.org",
+		"mailOrganismoDiVigilanza": "odv@abilitiamo.org"
 	}
 }

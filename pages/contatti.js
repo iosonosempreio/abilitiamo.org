@@ -10,29 +10,45 @@ export default function Contatti() {
 			<Container>
 				<Row className="my-5">
 					<Col md={{ span: 7, offset: 1 }}>
-						<p className="mb-0">Ragione sociale</p>
-						<h3 className="mb-3">{info.associazione.ragioneSociale}</h3>
-						<h5 className="mt-5">Indirizzo</h5>
-						<p>{info.associazione.indirizzo}</p>
-						<h5 className="mt-5">Posta elettronica</h5>
-						<p>{info.associazione.mail}</p>
-						<p>{info.associazione.mailRisorseUmane}</p>
-						<p>{info.associazione.mailAmministrazione}</p>
-						<p>{info.associazione.mailSostenibilita}</p>
-						<h5 className="mt-5">Posta elettronica certicicata (PEC)</h5>
-						<p>{info.associazione.pec}</p>
-						<h5 className="mt-5">
-							Codice fiscale{" "}
-							<span style={{ color: "var(--azure)" }}>(5x1000)</span>
+						<h2 className="">{info.associazione.ragioneSociale}</h2>
+						<h5 className="mt-4">Sede Legale</h5>
+						<p className="mb-1">{info.associazione.indirizzo}</p>
+						<h5 className="mt-4">Indirizzi di posta elettronica</h5>
+						<p className="mb-1">
+							Informazioni generiche e primo contatto: <span className="fst-italic">{info.associazione.mail}</span>
+						</p>
+						<p className="mb-1">
+							Collaborazioni e invio CV: <span className="fst-italic">{info.associazione.mailRisorseUmane}</span>
+						</p>
+						<p className="mb-1">
+							Pagamenti e rendicontazione progetti: <span className="fst-italic">{info.associazione.mailAmministrazione}</span>
+						</p>
+						<p className="mb-1">
+							Responsabile privacy: <span className="fst-italic">{info.associazione.mailPrivacy}</span>
+						</p>
+						{/* <p>Per raccolta fondi: {info.associazione.mailSostenibilita}</p> */}
+						<h5 className="mt-4">Posta elettronica certificata (PEC)</h5>
+						<p className="fst-italic">{info.associazione.pec}</p>
+						<h5 className="mt-4">
+							Codice fiscale <span style={{ color: "var(--azure)" }}>(5x1000)</span>
 						</h5>
 						<p>{info.associazione.codiceFiscale}</p>
-						<h5 className="mt-5">
-							IBAN{" "}
-							<span style={{ color: "var(--azure)" }}>
-								(donazioni)
-							</span>
+						<h5 className="mt-4">
+							IBAN <span style={{ color: "var(--azure)" }}>(donazioni)</span>
 						</h5>
 						<p>{info.associazione.iban}</p>
+						<h2 className="mt-4">
+							Cascina Cristina
+						</h2>
+						<h5 className="mt-4">Indirizzo <span style={{ color: "var(--azure)" }}>(CDD e RSD)</span></h5>
+						<p>{info.comunita.indirizzo}</p>
+						<h5 className="mt-4">Indirizzi di posta elettronica</h5>
+						<p className="mb-1">
+							Coordinatore servizi educativi: <span className="fst-italic">{info.comunita.mailCoordinatore}</span>
+						</p>
+						<p className="mb-1">
+							Organismo di Vigilanza: <span className="fst-italic">{info.comunita.mailOrganismoDiVigilanza}</span>
+						</p>
 					</Col>
 					<Col>
 						<div className={classNames("position-sticky")} style={{ top: 65 }}>
