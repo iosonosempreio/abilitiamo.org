@@ -46,6 +46,7 @@ export default function VideoEmbed({ url, volume, preview }) {
 						disableStyles={true}
 						buttonClasses={styles.acceptBtn}
 						buttonText="Acconsenti"
+						sameSite="strict"
 						onAccept={() => {
 							setAnalytics(true);
 							console.log("accepted");

@@ -51,6 +51,7 @@ export default function MyApp({ Component, pageProps }) {
 					setAnalytics(false);
 				}}
 				expires={info.associazione.durataCookies.value}
+				sameSite="strict"
 			>
 				{/* Usiamo cookies tecnici e di terze parti per{" "}
 				<Link href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=it">
