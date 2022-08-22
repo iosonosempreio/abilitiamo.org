@@ -1,11 +1,14 @@
 .arrowLink {
 	font-weight: 500;
-	display: grid;
-	grid-template-columns: 2rem auto;
-	align-items: center;
+	display: flex;
 	color: var(--azure);
 	text-decoration: none;
-	justify-content: start;
+	margin-bottom: 0.35rem;
+	align-items: center;
+	justify-content: flex-start;
+	align-content: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
 	&.disabled {
 		opacity: 0.5;
 		pointer-events: none;
@@ -23,5 +26,6 @@
 .arrow {
 	width: 1.5rem;
 	height: 1.5rem;
+	margin-right: 0.5rem;
 	color: var(--red);
 }
