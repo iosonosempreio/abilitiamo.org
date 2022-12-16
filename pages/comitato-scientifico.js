@@ -81,7 +81,7 @@ const membriComitato = [
 		image: "molteni",
 		name: "Dott. Massimo Molteni",
 		role: "Neuropsichiatra infantile",
-		bio: "Medico chirurgo specializzato in Neuropsichiatra infantile. Direttore Sanitario Centrale - Responsabile Areapsicopatologia dello sviluppo, psicologia del contesto socio-ambientale e dei contesti educativi, La Nostrafamiglia - IRCCS Medea di Bosisio Parini (LC). Componente del Panel per la stesura delle Linee Guida per ladiagnosi e il trattamento dei disturbi dello spettro autistico nei bambini e negli adolescenti su mandatodell’Istituto Superiore di Sanità.",
+		bio: "Medico chirurgo specializzato in Neuropsichiatra infantile. Direttore Sanitario Centrale - Responsabile Areapsicopatologia dello sviluppo, psicologia del contesto socio-ambientale e dei contesti educativi, La Nostrafamiglia - IRCCS Medea di Bosisio Parini (LC). Componente del Panel per la stesura delle Linee Guida per la diagnosi e il trattamento dei disturbi dello spettro autistico nei bambini e negli adolescenti su mandatodell’Istituto Superiore di Sanità.",
 	},
 	{
 		image: "merazzi",
