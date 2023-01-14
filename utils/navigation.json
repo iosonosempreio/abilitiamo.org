@@ -10,6 +10,11 @@
 		"menues": ["main", "footer"]
 	},
 	{
+		"label": "Organizzazione",
+		"url": "/organizzazione",
+		"menues": ["footer"]
+	},
+	{
 		"label": "Servizi",
 		"url": "/servizi",
 		"menues": ["main", "footer"]
