@@ -11,7 +11,7 @@ export default function Contatti() {
 				<Row className="my-5">
 					<Col md={{ span: 7, offset: 1 }}>
 						<h2 className="">{info.associazione.ragioneSociale}</h2>
-						<h5 className="mt-4">Sede Legale</h5>
+						<h5 className="mt-4">Sede Legale e Operativa</h5>
 						<p className="mb-1">{info.associazione.indirizzo}</p>
 						<h5 className="mt-4">Indirizzi di posta elettronica</h5>
 						<p className="mb-1">
