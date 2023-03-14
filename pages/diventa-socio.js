@@ -26,9 +26,8 @@ export default function DiventaSocio() {
 							la tua iscrizione.
 						</p>
 						<p>
-							In seguito all'approvazione del consiglio direttivo, potrai
-							versare la quota associativa di €30 (trenta/00) sul c/c{" "}
-							{info.associazione.iban} oppure farcela avere in contanti.
+							<strong>In seguito all'approvazione del consiglio direttivo</strong>, potrai
+							versare la quota associativa di €30 (trenta/00) sul c/c {info.associazione.iban}.
 						</p>
 						<p>
 							L’informativa sulla privacy è disponibile a{" "}

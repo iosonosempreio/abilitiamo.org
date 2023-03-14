@@ -6,9 +6,9 @@ import illustrazioneAbilitiamo from "../images/illustrazione-abilitiamo.png";
 import classNames from "classnames";
 import styles from "../styles/home.module.scss";
 import Footer from "../components/Footer";
-import GalleryRestoration from "../components/GalleryRestoration/GalleryRestoration";
 import VideoEmbed from "../components/VideoEmbed/VideoEmbed";
 import frameVideo from "../images/frame-video-cascina-cristina.png";
+import GalleryCascinaFinished from "../components/GalleryCascinaFinished/GalleryCascinaFinished";
 
 export default function Home() {
 	return (
@@ -44,7 +44,7 @@ export default function Home() {
 					</Container>
 				</Container>
 				<Container>
-					<Row className="mt-4 mb-4 mb-lg-5">
+					{/* <Row className="mt-4 mb-4 mb-lg-5">
 						<Col md={{ span: 8, offset: 1 }} lg={{ span: 3, offset: 1 }} className="d-flex align-items-center mb-3">
 							<p className="fs-5">
 								Vogliamo creare una struttura capace di erogare servizi socio-sanitari per persone adulte con autismo
@@ -56,10 +56,10 @@ export default function Home() {
 								url="https://www.facebook.com/1400253103427642/videos/1496214477164837"
 							/>
 						</Col>
-					</Row>
-					<Row className="mb-4">
+					</Row> */}
+					<Row className="mt-4 mb-4">
 						<Col xs={{ order: 2 }} md={{ span: 10, offset: 1, order: 2 }} lg={{ span: 7, offset: 1, order: 1 }}>
-							<GalleryRestoration />
+							<GalleryCascinaFinished />
 						</Col>
 						<Col
 							xs={{ order: 1 }}
@@ -68,7 +68,8 @@ export default function Home() {
 							className="d-flex align-items-center mb-4"
 						>
 							<p className="fs-5">
-								Stiamo realizzando questa struttura in <i>Cascina Cristina</i>, Cantù (CO)
+								Abbiamo realizzato un centro per la presa in carico di persone adulte con
+								autismo: <i>Cascina Cristina</i>
 							</p>
 						</Col>
 					</Row>

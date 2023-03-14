@@ -15,7 +15,6 @@ export default function Organizzazione() {
 							all’associazione tutte le persone che desiderano contribuire al miglioramento della qualità di vita delle
 							persone con autismo.
 						</h5>
-						<h4>Soci</h4>
 						<p>
 							Undici soci, rappresentanti cinque famiglie con figli con autismo, hanno costituito nel 2017{" "}
 							{info.associazione.ragioneSociale} —<i>abitare e abilitare</i>— con sede legale a Carugo (Co) in via per
@@ -28,10 +27,10 @@ export default function Organizzazione() {
 							nelle aree circostanti comprese nel distretto territoriale di ATS Insubria.
 						</p>
 						<p>
-							Attualmente, la compagine associativa consta, oltre agli 11 soci fondatori, di 22 soci ordinari, 5 onorari
-							e diversi amici. Inoltre, a vario titolo, è supportata/sostenuta da diversi enti pubblici e privati. Fanno
-							parte del consiglio direttivo tutti i soci fondatori, di seguito elencati.
+							Attualmente, la compagine associativa consta di 11 soci fondatori e 40 altri soci. Inoltre, a vario
+							titolo, è supportata/sostenuta da diversi enti pubblici e privati.
 						</p>
+						<p>Fanno parte del consiglio direttivo:</p>
 						<ul>
 							<li>Annalisa Martinelli (Presidente)</li>
 							<li>Enrico Elli (tesoriere)</li>
@@ -44,7 +43,11 @@ export default function Organizzazione() {
 							<li>Francesca Elli (consigliere)</li>
 						</ul>
 						<p>
-							Organo di Controllo: <a href="http://www.studiotrombetta.it/" target="_blank" rel="noreferrer">Dott.ssa Elena Trombetta</a>.
+							Organo di Controllo:{" "}
+							<a href="http://www.studiotrombetta.it/" target="_blank" rel="noreferrer">
+								Dott.ssa Elena Trombetta
+							</a>
+							.
 						</p>
 					</Col>
 					<Col>
