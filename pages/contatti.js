@@ -36,7 +36,8 @@ export default function Contatti() {
 						<h5 className="mt-4">
 							IBAN <span style={{ color: "var(--azure)" }}>(donazioni)</span>
 						</h5>
-						<p>{info.associazione.iban}</p>
+						<p className="mb-1">{info.associazione.iban}</p>
+						<p>Se richiesto il codice BIC / SWIFT è {info.associazione.swift}</p>
 						<h2 className="mt-4">
 							Cascina Cristina
 						</h2>
