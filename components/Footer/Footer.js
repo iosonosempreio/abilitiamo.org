@@ -19,7 +19,7 @@ import logoCariplo from "../../images/logo-cariplo.svg";
 import logoLombardia from "../../images/logo-lombardia.svg";
 import logoFpcc from "../../images/logo-fpcc.png";
 import logoCsv from "../../images/logo-comunità-s-vincenzo.png";
-import logoCraCantu from "../../images/logo-cra-cantu.jpg";
+import logoCraCantu from "../../images/loghi/cra-cantuFULL.png";
 
 export default function Footer() {
 	const router = useRouter();
