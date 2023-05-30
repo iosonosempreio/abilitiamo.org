@@ -2,7 +2,7 @@ import classNames from "classnames";
 import ArrowLink from "../ArrowLink";
 import styles from "./Servizi.module.scss";
 
-import cartaServiziRSD from "../../public/documenti-rsd/Carta dei Servizi-RSD-2023-04-12 1.3 - RSD - Rev. 12_04_2023.docx.pdf";
+import cartaServiziRSD from "../../public/documenti-rsd/Carta dei Servizi 1.3 - RSD - Rev. 12_04_2023.docx.pdf";
 import cartaDirittiRSD from "../../public/documenti-rsd/carta dei diritti.pdf";
 import informativaPrivacy from "../../public/documenti-cdd/Informativa Privacy Cascina Cristina Abilitiamo Autismo.pdf";
 import moduloURPRSD from "../../public/documenti-rsd/Modulo Segnalazione URP.pdf";
