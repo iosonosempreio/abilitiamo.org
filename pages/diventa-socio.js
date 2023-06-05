@@ -53,4 +53,5 @@ const sideLinks = [
 	{ label: "Organizzazione", url: "/organizzazione" },
 	{ label: "Comitato scientifico", url: "/comitato-scientifico" },
 	{ label: "Informativa privacy", url: "/privacy" },
+	{ label: "Diventa volontario", url: "/diventa-volontario" },
 ];

@@ -116,6 +116,7 @@ const sideLinks = [
 	{ label: "Organizzazione", url: "/organizzazione" },
 	{ label: "Comitato scientifico", url: "/comitato-scientifico" },
 	{ label: "Diventa socio", url: "/diventa-socio" },
+	{ label: "Diventa volontario", url: "/diventa-volontario" },
 ];
 
 {
