@@ -45,6 +45,11 @@
 		"menues": ["footer"]
 	},
 	{
+		"label": "Diventa volontario",
+		"url": "/diventa-volontario",
+		"menues": ["footer"]
+	},
+	{
 		"label": "Galleria",
 		"url": "/",
 		"menues": []
