@@ -15,8 +15,8 @@ export default function Organizzazione() {
 						<Card className="my-5">
 							<Card.Body>
 								<h5>Anno 2022</h5>
-								<ArrowLink data={{ label: "Bilancio 2022", url: bilancio2022 }} />
-								<ArrowLink data={{ label: "Bilancio sociale 2022", url: bilancioSociale2022 }} />
+								<ArrowLink data={{ label: "Bilancio di esercizio", url: bilancio2022 }} />
+								<ArrowLink data={{ label: "Bilancio sociale", url: bilancioSociale2022 }} />
 							</Card.Body>
 						</Card>
 					</Col>
