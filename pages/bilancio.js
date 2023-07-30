@@ -12,7 +12,7 @@ export default function Organizzazione() {
 				<Row className="my-5">
 					<Col md={{ span: 7, offset: 1 }}>
 						<h5>In questa pagina mettiamo a disposizione il bilancio e il bilancio sociale.</h5>
-						<Card className="my-5">
+						<Card className="mt-4">
 							<Card.Body>
 								<h5>Anno 2022</h5>
 								<ArrowLink data={{ label: "Bilancio di esercizio", url: bilancio2022 }} />
