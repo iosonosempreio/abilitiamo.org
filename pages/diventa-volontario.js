@@ -24,8 +24,13 @@ export default function DiventaVolontario() {
 							coperto da un'assicurazione.
 						</p>
 						<p>
-							Scrivi a <a href={`mailto:${info.associazione.mailRisorseUmane}`}>{info.associazione.mailRisorseUmane}</a>
+							Pubblicheremo in questa pagina aggiornamenti riguardo corsi di formazione e altre questioni.
 						</p>
+						<p>
+							Per qualsiasi dubbio o informazione puoi scrivere a <a href={`mailto:${info.associazione.mailRisorseUmane}`}>{info.associazione.mailRisorseUmane}</a>
+						</p>
+						<h5 className={classNames("mt-5")}>F.A.Q.</h5>
+						<p>In allestimento</p>
 					</Col>
 					<Col>
 						<div className={classNames("position-sticky")} style={{ top: 65 }}>
