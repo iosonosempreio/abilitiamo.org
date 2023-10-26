@@ -15,19 +15,19 @@ export default function DiventaVolontario() {
 							<br />I volontari e le volontarie sono il cuore pulsante della nostra organizzazione.
 						</h5>
 						<p>
-							Per diventare volontario/a è sufficiente presentarsi attraverso una apposita scheda, che include
-							spiegazioni sulle tue capacità e la motivazione per la quale desideri entrare parte della nostra
+							Per diventare volontario/a è sufficiente inviare una mail di presentazione a{" "}
+							<a href={`mailto:${info.associazione.mailRisorseUmane}`}>{info.associazione.mailRisorseUmane}</a>.
+							Si richiede di descrivere le proprie capacità e la motivazione per la quale si desidera entrare a far parte della nostra
 							associazione.
 						</p>
 						<p>
 							Ad ogni volontario/a verrà data la adeguata formazione, specifica per il ruolo che dovrà ricoprire, e sarà
 							coperto da un'assicurazione.
 						</p>
+						<p>Pubblicheremo in questa pagina aggiornamenti riguardo corsi di formazione e altre questioni.</p>
 						<p>
-							Pubblicheremo in questa pagina aggiornamenti riguardo corsi di formazione e altre questioni.
-						</p>
-						<p>
-							Per qualsiasi dubbio o informazione puoi scrivere a <a href={`mailto:${info.associazione.mailRisorseUmane}`}>{info.associazione.mailRisorseUmane}</a>
+							Per qualsiasi dubbio o informazione puoi scrivere a{" "}
+							<a href={`mailto:${info.associazione.mailRisorseUmane}`}>{info.associazione.mailRisorseUmane}</a>
 						</p>
 						<h5 className={classNames("mt-5")}>F.A.Q.</h5>
 						<p>In allestimento</p>
