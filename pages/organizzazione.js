@@ -17,8 +17,8 @@ export default function Organizzazione() {
 						</h5>
 						<p>
 							Undici soci, rappresentanti cinque famiglie con figli con autismo, hanno costituito nel 2017{" "}
-							{info.associazione.ragioneSociale} —<i>abitare e abilitare</i>— con sede legale a Carugo (Co) in via per
-							Gattedo, 19/7 e con sede operativa presso lo studio Emme di Cantù (Co) in via Susa, 15.
+							{info.associazione.ragioneSociale} —<i>abitare e abilitare</i>— con sede operativa in{" "}
+							{info.associazione.indirizzo} e con sede legale presso {info.associazione.indirizzoLegale}.
 						</p>
 						<p>
 							L’associazione Abilitiamo Autismo è un’organizzazione senza scopo di lucro che persegue solo finalità
@@ -34,11 +34,13 @@ export default function Organizzazione() {
 						<ul>
 							<li>Annalisa Martinelli (Presidente)</li>
 							<li>Enrico Elli (tesoriere)</li>
-							<li>Antonio Romeo (segretario)</li>
+							<li>Angela Corengia (segretario)</li>
 							<li>Carmen Gigliotti (consigliere)</li>
 							<li>Giorgio Meroni (consigliere)</li>
-							<li>Sergio Tomaselli (consigliere)</li>
+							<li>Maurizio Moscatelli (consigliere)</li>
 							<li>Edda Nervo (consigliere)</li>
+							<li>Antonio Romeo (consigliere)</li>
+							<li>Sergio Tomaselli (consigliere)</li>
 							<li>Tommaso Elli (consigliere)</li>
 							<li>Francesca Elli (consigliere)</li>
 						</ul>
