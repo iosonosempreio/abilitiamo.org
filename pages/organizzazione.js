@@ -17,8 +17,7 @@ export default function Organizzazione() {
 						</h5>
 						<p>
 							Undici soci, rappresentanti cinque famiglie con figli con autismo, hanno costituito nel 2017{" "}
-							{info.associazione.ragioneSociale} —<i>abitare e abilitare</i>— con sede operativa in{" "}
-							{info.associazione.indirizzo} e con sede legale presso {info.associazione.indirizzoLegale}.
+							{info.associazione.ragioneSociale} —<i>abitare e abilitare</i>— con sede in {info.associazione.indirizzo}.
 						</p>
 						<p>
 							L’associazione Abilitiamo Autismo è un’organizzazione senza scopo di lucro che persegue solo finalità
