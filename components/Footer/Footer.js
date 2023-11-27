@@ -20,6 +20,7 @@ import logoLombardia from "../../images/logo-lombardia.svg";
 import logoFpcc from "../../images/logo-fpcc.png";
 import logoCsv from "../../images/logo-comunità-s-vincenzo.png";
 import logoCraCantu from "../../images/loghi/cra-cantuFULL.png";
+import logoIntesa from "../../images/loghi/logo-intesasanpaolo@2x.png";
 
 export default function Footer() {
 	const router = useRouter();
@@ -127,6 +128,13 @@ export default function Footer() {
 							<img
 								alt="logo Fondazione Provinciale Comasca"
 								src={logoFpcc.src}
+								className="img-fluid"
+							/>
+						</span>
+						<span className={styles.logo} style={{ width: 210 }}>
+							<img
+								alt="logo Intesa San Paolo"
+								src={logoIntesa.src}
 								className="img-fluid"
 							/>
 						</span>
