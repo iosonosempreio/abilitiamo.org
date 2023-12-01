@@ -139,25 +139,6 @@ export default function Footer() {
 								className="img-fluid"
 							/>
 						</span>
-
-						{/* 
-						
-						
-						<img
-							style={{
-								margin: "1rem 0",
-								width: 210,
-								mixBlendMode: "multiply",
-								filter: "grayscale(100%)",
-							}}
-							src={logoCraCantu}
-							alt="logo Cassa rurale ed artigiana di Cantù"
-						/>
-						<img
-							style={{ margin: "1rem 0", width: 210 }}
-							src={logoFpcc}
-							alt="logo Fondazione Provinciale Comasca"
-						/> */}
 					</Col>
 				</Row>
 				<Row className={styles.copyright}>
