@@ -131,6 +131,7 @@ export default function Footer() {
 								className="img-fluid"
 							/>
 						</span>
+						<span className="mt-4" style={{ fontWeight: 600 }}>Si ringrazia</span>
 						<span className={styles.logo} style={{ width: 210 }}>
 							<img
 								alt="logo Intesa San Paolo"
