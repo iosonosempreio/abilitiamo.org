@@ -27,7 +27,7 @@
 	{
 		"label": "News",
 		"url": "/news",
-		"menues": ["main", "footer"]
+		"menues": []
 	},
 	{
 		"label": "Organizzazione di Abilitiamo",
