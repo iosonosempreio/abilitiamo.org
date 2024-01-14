@@ -53,9 +53,9 @@ export default function Contatti() {
 						<p className="mb-1">
 							Coordinatore servizi educativi: <span className="fst-italic">{info.comunita.mailCoordinatore}</span>
 						</p>
-						<p className="mb-1">
+						{/* <p className="mb-1">
 							Organismo di Vigilanza: <span className="fst-italic">{info.comunita.mailOrganismoDiVigilanza}</span>
-						</p>
+						</p> */}
 					</Col>
 					<Col>
 						<div className={classNames("position-sticky")} style={{ top: 65 }}>
