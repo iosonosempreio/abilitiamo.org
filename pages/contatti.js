@@ -21,14 +21,20 @@ export default function Contatti() {
 							Collaborazioni e invio CV: <span className="fst-italic">{info.associazione.mailRisorseUmane}</span>
 						</p>
 						<p className="mb-1">
-							Pagamenti e rendicontazione progetti: <span className="fst-italic">{info.associazione.mailAmministrazione}</span>
+							Pagamenti e rendicontazione progetti:{" "}
+							<span className="fst-italic">{info.associazione.mailAmministrazione}</span>
 						</p>
 						<p className="mb-1">
 							Responsabile privacy: <span className="fst-italic">{info.associazione.mailPrivacy}</span>
 						</p>
 						{/* <p>Per raccolta fondi: {info.associazione.mailSostenibilita}</p> */}
 						<h5 className="mt-4">Posta elettronica certificata (PEC)</h5>
-						<p className="fst-italic">{info.associazione.pec}</p>
+						<p className="mb-1">
+							Invio fatture: <span className="fst-italic">{info.associazione.pecFatturazione}</span>
+						</p>
+						<p className="mb-1">
+							Altre comunicazioni: <span className="fst-italic">{info.associazione.pec}</span>
+						</p>
 						<h5 className="mt-4">
 							Codice fiscale <span style={{ color: "var(--azure)" }}>(5x1000)</span>
 						</h5>
@@ -38,10 +44,10 @@ export default function Contatti() {
 						</h5>
 						<p className="mb-1">{info.associazione.iban}</p>
 						<p>Se richiesto il codice BIC / SWIFT è {info.associazione.swift}</p>
-						<h2 className="mt-4">
-							Cascina Cristina
-						</h2>
-						<h5 className="mt-4">Indirizzo <span style={{ color: "var(--azure)" }}>(CDD e RSD)</span></h5>
+						<h2 className="mt-4">Cascina Cristina</h2>
+						<h5 className="mt-4">
+							Indirizzo <span style={{ color: "var(--azure)" }}>(CDD e RSD)</span>
+						</h5>
 						<p>{info.comunita.indirizzo}</p>
 						<h5 className="mt-4">Indirizzi di posta elettronica</h5>
 						<p className="mb-1">
