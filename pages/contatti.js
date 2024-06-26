@@ -15,7 +15,7 @@ export default function Contatti() {
 						<p className="mb-1">{info.associazione.indirizzo}</p>
 						<h5 className="mt-4">Indirizzi di posta elettronica</h5>
 						<p className="mb-1">
-							Informazioni generiche e primo contatto: <span className="fst-italic">{info.associazione.mail}</span>
+							Informazioni generiche e domande di inserimento: <span className="fst-italic">{info.associazione.mail}</span>
 						</p>
 						<p className="mb-1">
 							Collaborazioni e invio CV: <span className="fst-italic">{info.associazione.mailRisorseUmane}</span>
