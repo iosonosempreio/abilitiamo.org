@@ -50,10 +50,10 @@ export default function Contatti() {
 						</h5>
 						<p>{info.comunita.indirizzo}</p>
 						<h5 className="mt-4">Indirizzi di posta elettronica</h5>
-						<p className="mb-1">
+						{/* <p className="mb-1">
 							Coordinatore servizi educativi: <span className="fst-italic">{info.comunita.mailCoordinatore}</span>
 						</p>
-						{/* <p className="mb-1">
+						<p className="mb-1">
 							Organismo di Vigilanza: <span className="fst-italic">{info.comunita.mailOrganismoDiVigilanza}</span>
 						</p> */}
 					</Col>
