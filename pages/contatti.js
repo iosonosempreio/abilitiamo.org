@@ -15,7 +15,12 @@ export default function Contatti() {
 						<p className="mb-1">{info.associazione.indirizzo}</p>
 						<h5 className="mt-4">Indirizzi di posta elettronica</h5>
 						<p className="mb-1">
-							Informazioni generiche e domande di inserimento: <span className="fst-italic">{info.associazione.mail}</span>
+							Informazioni per domande di inserimento:{" "}
+							<span className="fst-italic">{info.associazione.mail}</span>
+						</p>
+						<p className="mb-1">
+							Informazioni generiche:{" "}
+							<span className="fst-italic">{info.associazione.mail}</span>
 						</p>
 						<p className="mb-1">
 							Collaborazioni e invio CV: <span className="fst-italic">{info.associazione.mailRisorseUmane}</span>
@@ -49,11 +54,11 @@ export default function Contatti() {
 							Indirizzo <span style={{ color: "var(--azure)" }}>(CDD e RSD)</span>
 						</h5>
 						<p>{info.comunita.indirizzo}</p>
-						<h5 className="mt-4">Indirizzi di posta elettronica</h5>
+						{/* <h5 className="mt-4">Indirizzi di posta elettronica</h5> */}
 						{/* <p className="mb-1">
 							Coordinatore servizi educativi: <span className="fst-italic">{info.comunita.mailCoordinatore}</span>
-						</p>
-						<p className="mb-1">
+						</p> */}
+						{/* <p className="mb-1">
 							Organismo di Vigilanza: <span className="fst-italic">{info.comunita.mailOrganismoDiVigilanza}</span>
 						</p> */}
 					</Col>
