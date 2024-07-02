@@ -4,7 +4,10 @@ import { PageTemplate } from "../components/Templates";
 import ArrowLink from "../components/ArrowLink";
 import bilancio2022 from "../public/bilancio/Bilancio 2022.pdf";
 import bilancioSociale2022 from "../public/bilancio/Bilancio Sociale 2022.pdf";
-import dichiarazioneContributi2023 from "../public/trasparenza-dichiarazione-contributi.pdf";
+import dichiarazioneContributi2023 from "../public/bilancio/2023/trasparenza-dichiarazione-contributi.pdf";
+import bilancio2023 from "../public/bilancio/2023/bilancio_con_relazione_missione_2023.pdf"
+import bilancioSociale2023 from "../public/bilancio/2023/bilancio_sociale_2023.pdf"
+import relazioneOrganoControllo2023 from "../public/bilancio/2023/relazione_organo_controllo_2023.pdf"
 
 export default function Trasparenza() {
 	return (
@@ -15,8 +18,9 @@ export default function Trasparenza() {
 						<Card className="mb-4">
 							<Card.Body>
 								<h5>Anno 2023</h5>
-								<ArrowLink data={{ label: "Bilancio di esercizio 2023", url: "" }} disabled />
-								<ArrowLink data={{ label: "Bilancio sociale 2023", url: "" }} disabled />
+								<ArrowLink data={{ label: "Bilancio di esercizio 2023", url: bilancio2023 }} />
+								<ArrowLink data={{ label: "Bilancio sociale 2023", url: bilancioSociale2023 }} />
+								<ArrowLink data={{ label: "Relazione Organo di Controllo 2023", url: relazioneOrganoControllo2023 }} />
 								<ArrowLink
 									data={{
 										label: "Contributi percepiti da enti pubblici",
