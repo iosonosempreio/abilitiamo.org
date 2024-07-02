@@ -10,6 +10,11 @@
 		"menues": ["main", "footer"]
 	},
 	{
+		"label": "Trasparenza",
+		"url": "/trasparenza",
+		"menues": ["footer"]
+	},
+	{
 		"label": "Organizzazione",
 		"url": "/organizzazione",
 		"menues": ["footer"]

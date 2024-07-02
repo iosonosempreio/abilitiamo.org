@@ -90,7 +90,7 @@ export default function ChiSiamo() {
 
 const sideLinks = [
 	{ label: "Organizzazione", url: "/organizzazione" },
-	{ label: "Bilancio", url: "/bilancio" },
+	{ label: "Trasparenza", url: "/trasparenza" },
 	{ label: "Comitato scientifico", url: "/comitato-scientifico" },
 	{ label: "Diventa socio", url: "/diventa-socio" },
 	{ label: "Diventa volontario", url: "/diventa-volontario" },
