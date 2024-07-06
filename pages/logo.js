@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Badge } from "react-bootstrap";
 import classNames from "classnames";
 import { PageTemplate } from "../components/Templates";
 import ArrowLink from "../components/ArrowLink";
@@ -27,6 +27,19 @@ export default function Servizi({ logos, versions, folder }) {
 								))}
 							</Col>
 						))}
+						<h1>Colori</h1>
+						<h5>
+							<Badge style={{ backgroundColor: "var(--azure) !important" }}>Azzurro: #7abed9</Badge>
+						</h5>
+						<h5>
+							<Badge style={{ backgroundColor: "var(--red) !important" }}>Arancione: #ff7232</Badge>
+						</h5>
+						<h5>
+							<Badge style={{ backgroundColor: "var(--blue) !important" }}>Blu: #304b70</Badge>
+						</h5>
+						<h5>
+							<Badge style={{ backgroundColor: "var(--beige) !important", color: "var(--gray)" }}>Beige: #faf8f6</Badge>
+						</h5>
 					</Col>
 					<Col>
 						<div className={classNames("position-sticky")} style={{ top: 65 }}>
