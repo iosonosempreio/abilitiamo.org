@@ -5,9 +5,10 @@ import ArrowLink from "../components/ArrowLink";
 import bilancio2022 from "../public/bilancio/Bilancio 2022.pdf";
 import bilancioSociale2022 from "../public/bilancio/Bilancio Sociale 2022.pdf";
 import dichiarazioneContributi2023 from "../public/bilancio/2023/trasparenza-dichiarazione-contributi.pdf";
-import bilancio2023 from "../public/bilancio/2023/bilancio_con_relazione_missione_2023.pdf"
-import bilancioSociale2023 from "../public/bilancio/2023/bilancio_sociale_2023.pdf"
-import relazioneOrganoControllo2023 from "../public/bilancio/2023/relazione_organo_controllo_2023.pdf"
+import bilancio2023 from "../public/bilancio/2023/bilancio_con_relazione_missione_2023.pdf";
+import bilancioSociale2023 from "../public/bilancio/2023/bilancio_sociale_2023.pdf";
+import relazioneOrganoControllo2023 from "../public/bilancio/2023/relazione_organo_controllo_2023.pdf";
+import verbaleAssemblea2024 from "../public/Assemblea22062024signed.pdf";
 
 export default function Trasparenza() {
 	return (
@@ -25,6 +26,13 @@ export default function Trasparenza() {
 									data={{
 										label: "Contributi percepiti da enti pubblici",
 										url: dichiarazioneContributi2023,
+										download: true,
+									}}
+								/>
+								<ArrowLink
+									data={{
+										label: "Verbale di assemblea ordinaria",
+										url: verbaleAssemblea2024,
 										download: true,
 									}}
 								/>
