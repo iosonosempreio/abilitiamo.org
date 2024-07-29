@@ -1,5 +1,5 @@
 ---
-title: "Cascina Cristina: accreditamento e contrattualizazzione"
+title: "Cascina Cristina: accreditamento e contrattualizazione"
 author: "Socio di Abilítiamo"
 date: "2022-10-17"
 image: "/news/cascina-accreditamento-contrattualizzazione.jpg"
