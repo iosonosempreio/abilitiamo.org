@@ -56,7 +56,7 @@ export default function Servizi({ logos, versions, folder }) {
 
 Servizi.defaultProps = {
 	folder: "versioni-logo",
-	logos: ["completo", "no-cielo", "quadrato", "circolare", "solo tipografia", "solo-casa", "timbro", "timbro-bn"],
+	logos: ["completo", "completo-ODV", "completo-orizzontale-ODV", "no-cielo", "quadrato", "circolare", "solo tipografia", "solo-casa", "timbro", "timbro-bn"],
 	versions: [".png", "@2x.png", ".svg", ".pdf"],
 };
 
