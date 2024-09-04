@@ -2,7 +2,7 @@ import classNames from "classnames";
 import ArrowLink from "../ArrowLink";
 import styles from "./Servizi.module.scss";
 
-import cartaServiziCDD from "../../public/documenti-cdd/Carta dei Servizi-CDD-2023-04-12 1.2 - CDD - Rev. 12_04_2023.docx.pdf";
+import cartaServiziCDD from "../../public/documenti-cdd/Carta dei servizi CDD Rev. 11_07_24.pdf";
 import cartaDiritti from "../../public/documenti-cdd/Carta dei diritti.pdf";
 import informativaPrivacy from "../../public/documenti-cdd/Informativa Privacy Cascina Cristina Abilitiamo Autismo.pdf";
 import moduloURP from "../../public/documenti-cdd/Modulo Segnalazione URP.pdf";
