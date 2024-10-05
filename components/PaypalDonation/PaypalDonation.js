@@ -63,6 +63,7 @@ export default function PaypalDonation() {
 		<Card className="mb-3">
 			<Card.Body>
 				<h3 className="fw-bold mt-0">Tramite Paypal o carta di credito</h3>
+				<h5>Visa, Mastercard, Revolut, American Express, CartaSi (ora Nexi), ecc.</h5>
 				{/* <span
           className="position-absolute top-0 start-1 translate-middle badge rounded-pill"
           style={{ backgroundColor: "var(--red)" }}
@@ -70,8 +71,8 @@ export default function PaypalDonation() {
           Novità
         </span> */}
 				<p>
-					Paypal è un sistema per pagamenti elettronici. Per utilizzarlo non è
-					necessario avere un account, basta una carta di credito o prepagata.
+					Paypal è un sistema per pagamenti elettronici. Per utilizzarlo <b>non è
+					necessario avere un account</b>, basta una carta di credito o prepagata. Puoi utilizzare i principali metodi di pagamento, come: Visa, Mastercard, Revolut, American Express, CartaSi (ora Nexi)
 				</p>
 				<p>Scegli quanto donare:</p>
 				<Form>
