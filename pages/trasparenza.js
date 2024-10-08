@@ -9,6 +9,7 @@ import bilancio2023 from "../public/bilancio/2023/bilancio_con_relazione_mission
 import bilancioSociale2023 from "../public/bilancio/2023/bilancio_sociale_2023.pdf";
 import relazioneOrganoControllo2023 from "../public/bilancio/2023/relazione_organo_controllo_2023.pdf";
 import verbaleAssemblea2024 from "../public/Assemblea22062024signed.pdf";
+import codiceEtico from "../public/codice-etico.pdf";
 
 export default function Trasparenza() {
 	return (
@@ -43,6 +44,12 @@ export default function Trasparenza() {
 								<h5>Anno 2022</h5>
 								<ArrowLink data={{ label: "Bilancio di esercizio 2022", url: bilancio2022 }} />
 								<ArrowLink data={{ label: "Bilancio sociale 2022", url: bilancioSociale2022 }} />
+							</Card.Body>
+						</Card>
+						<Card className="mb-4">
+							<Card.Body>
+								<h5>Altro</h5>
+								<ArrowLink data={{ label: "Codice etico", url: codiceEtico }} />
 							</Card.Body>
 						</Card>
 					</Col>
