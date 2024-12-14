@@ -50,6 +50,13 @@ export default function Organizzazione() {
 							</a>
 							.
 						</p>
+						<p>
+							Revisore dei Conti:{" "}
+							<a href="https://www.commercialistanavacristina.it/" target="_blank" rel="noreferrer">
+								Dott.ssa Cristina Nava
+							</a>
+							.
+						</p>
 					</Col>
 					<Col>
 						<div className={classNames("position-sticky")} style={{ top: 65 }}>
