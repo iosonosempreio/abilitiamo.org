@@ -19,6 +19,16 @@ export default function Calendario() {
 							// frameborder="0"
 							// scrolling="no"
 						/>
+						<h5 className="mt-3">Condividi un ricordo</h5>
+						<p>
+							Per favore condividi fotografie, video e informazioni di eventi e iniziative che riguardano Abilitiamo.
+							Questo materiale sarà condiviso con la nostra audience 📢
+						</p>
+						<p>
+							<a href="https://docs.google.com/forms/d/e/1FAIpQLSeleG7Jx-pfd8tmdHU6l3UCYBnbzq9tbey1zFtI9WY9T96xFg/viewform?pli=1">
+								Usa questo link
+							</a>
+						</p>
 					</Col>
 					<Col>
 						<div className={classNames("position-sticky")} style={{ top: 65 }}>
