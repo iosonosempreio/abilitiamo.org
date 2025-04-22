@@ -30,6 +30,11 @@
 		"menues": ["main", "footer"]
 	},
 	{
+		"label": "Ortoterapia",
+		"url": "/ortoterapia",
+		"menues": ["main", "footer"]
+	},
+	{
 		"label": "News",
 		"url": "/news",
 		"menues": []
