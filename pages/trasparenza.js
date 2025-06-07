@@ -11,12 +11,39 @@ import relazioneOrganoControllo2023 from "../public/bilancio/2023/relazione_orga
 import verbaleAssemblea2024 from "../public/Assemblea22062024signed.pdf";
 import codiceEtico from "../public/codice-etico.pdf";
 
+import bilancioSociale2024 from "../public/bilancio/2024/bilancio_sociale_2024.pdf";
+import bilancio2024 from "../public/bilancio/2024/ABI Bilancio 2024.pdf";
+import relazioneOrganoControllo2024 from "../public/bilancio/2024/ABI Bilancio 2024.pdf";
+import relazioneRevisoreConti2024 from "../public/bilancio/2024/RELAZIONE REVISORE 2024 ABILITIAMO AUTISMO ODV.pdf";
+
 export default function Trasparenza() {
 	return (
 		<PageTemplate title="Trasparenza">
 			<Container>
 				<Row className="my-5">
 					<Col md={{ span: 7, offset: 1 }}>
+						<Card className="mb-4">
+							<Card.Body>
+								<h5>Anno 2024</h5>
+								<ArrowLink data={{ label: "Bilancio di esercizio 2024", url: bilancio2024 }} />
+								<ArrowLink data={{ label: "Bilancio sociale 2024", url: bilancioSociale2024 }} />
+								<ArrowLink data={{ label: "Relazione Organo di Controllo 2024", url: relazioneOrganoControllo2024 }} />
+								<ArrowLink
+									data={{
+										label: "Relazione Revisore dei Conti 2024",
+										url: relazioneRevisoreConti2024,
+										download: true,
+									}}
+								/>
+								{/* <ArrowLink
+									data={{
+										label: "Verbale di assemblea ordinaria",
+										url: verbaleAssemblea2024,
+										download: true,
+									}}
+								/> */}
+							</Card.Body>
+						</Card>
 						<Card className="mb-4">
 							<Card.Body>
 								<h5>Anno 2023</h5>
