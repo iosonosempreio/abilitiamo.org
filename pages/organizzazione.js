@@ -40,16 +40,11 @@ export default function Organizzazione() {
 							<li>Edda Nervo (consigliere)</li>
 							<li>Antonio Romeo (consigliere)</li>
 							<li>Sergio Tomaselli (consigliere)</li>
+							<li>Rossella Caronni (consigliere)</li>
 							<li>Tommaso Elli (consigliere)</li>
-							<li>Francesca Elli (consigliere)</li>
 						</ul>
-						<p>
-							Organo di Controllo:{" "}
-							<a href="http://www.studiotrombetta.it/" target="_blank" rel="noreferrer">
-								Dott.ssa Elena Trombetta
-							</a>
-							.
-						</p>
+						<p>Organo di Controllo: Dott. Novati Stefano.</p>
+
 						<p>
 							Revisore dei Conti:{" "}
 							<a href="https://www.commercialistanavacristina.it/" target="_blank" rel="noreferrer">
@@ -57,6 +52,17 @@ export default function Organizzazione() {
 							</a>
 							.
 						</p>
+						{/* <p>* * *</p>
+						<p>Collaboratori precedentemente in carica:</p>
+						<ul>
+							<li>
+								<a href="http://www.studiotrombetta.it/" target="_blank" rel="noreferrer">
+									Dott.ssa Elena Trombetta
+								</a>
+							</li>
+							<li>Francesca Elli</li>
+							<p></p>
+						</ul> */}
 					</Col>
 					<Col>
 						<div className={classNames("position-sticky")} style={{ top: 65 }}>
