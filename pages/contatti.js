@@ -32,6 +32,9 @@ export default function Contatti() {
 						<p className="mb-1">
 							Responsabile privacy: <span className="fst-italic">{info.associazione.mailPrivacy}</span>
 						</p>
+						<p className="mb-1">
+							Organismo di Vigilanza (whistleblowing): <span className="fst-italic">{info.associazione.mailOrganismoDiVigilanza}</span>
+						</p>
 						{/* <p>Per raccolta fondi: {info.associazione.mailSostenibilita}</p> */}
 						<h5 className="mt-4">Posta elettronica certificata (PEC)</h5>
 						<p className="mb-1">

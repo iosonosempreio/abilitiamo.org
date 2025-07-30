@@ -10,6 +10,7 @@ import bilancioSociale2023 from "../public/bilancio/2023/bilancio_sociale_2023.p
 import relazioneOrganoControllo2023 from "../public/bilancio/2023/relazione_organo_controllo_2023.pdf";
 import verbaleAssemblea2023 from "../public/Assemblea22062024signed.pdf";
 import codiceEtico from "../public/codice-etico.pdf";
+import modelloOrganizzazioneGestioneControllo from "../public/Modello di organizzazione gestione e controllo - Parte generale.pdf";
 
 import bilancioSociale2024 from "../public/bilancio/2024/bilancio_sociale_2024.pdf";
 import bilancio2024 from "../public/bilancio/2024/ABI Bilancio 2024.pdf";
@@ -78,6 +79,7 @@ export default function Trasparenza() {
 							<Card.Body>
 								<h5>Altro</h5>
 								<ArrowLink data={{ label: "Codice etico", url: codiceEtico }} />
+								<ArrowLink data={{ label: "Modello di organizzazione, gestione e controllo", url: modelloOrganizzazioneGestioneControllo }} />
 							</Card.Body>
 						</Card>
 					</Col>

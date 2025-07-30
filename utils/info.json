@@ -10,6 +10,7 @@
 		"mailAmministrazione": "amministrazione@abilitiamo.org",
 		"mailSostenibilita": "sostenibilita@abilitiamo.org",
 		"mailPrivacy": "privacy@abilitiamo.org",
+		"mailOrganismoDiVigilanza": "odv@abilitiamo.org",
 		"codiceFiscale": "90041140139",
 		"swift": "ICRAITRRCNT",
 		"iban": "IT52P0843051100000000114383",
@@ -30,7 +31,6 @@
 		"indirizzo": "Via per Alzate 76, 22063 Cantù CO – Località Fecchio",
 		"cellulare": "+39 370 3147 039",
 		"fisso": "+39 031 6126374",
-		"mailCoordinatore": "coordinatore@abilitiamo.org",
-		"mailOrganismoDiVigilanza": "odv@abilitiamo.org"
+		"mailCoordinatore": "coordinatore@abilitiamo.org"
 	}
 }
