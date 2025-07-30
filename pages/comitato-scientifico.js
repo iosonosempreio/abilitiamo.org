@@ -14,9 +14,7 @@ export default function ComitatoScientifico() {
 		});
 	}
 
-	importAll(
-		require.context("../images/comitato/", true, /\.(png|gif|ico|jpg|jpeg)$/)
-	);
+	importAll(require.context("../images/comitato/", true, /\.(png|gif|ico|jpg|jpeg)$/));
 
 	return (
 		<PageTemplate title="Comitato scientifico">
@@ -24,24 +22,15 @@ export default function ComitatoScientifico() {
 				<Row className="my-5">
 					<Col md={{ span: 7, offset: 1 }}>
 						<p>
-							Per svolgere al meglio il suo lavoro nel rispetto dei propri
-							obiettivi e secondo le più moderne tecniche fondate sul concetto
-							dell’evidence based, l'associazione ha costituito un comitato
-							scientifico rappresentato da esperti del settore e della
-							comunicazione.
+							Per svolgere al meglio il suo lavoro nel rispetto dei propri obiettivi e secondo le più moderne tecniche
+							fondate sul concetto dell’evidence based, l'associazione ha costituito un comitato scientifico
+							rappresentato da esperti del settore e della comunicazione.
 						</p>
 						<p className="mb-5">
-							Di seguito i loro nomi, alcuni cenni del loro Curriculum Vitae e
-							il ruolo che avranno nel comitato.
+							Di seguito i loro nomi, alcuni cenni del loro Curriculum Vitae e il ruolo che avranno nel comitato.
 						</p>
 						{membriComitato.map(({ image, name, role, bio }) => (
-							<MembroComitato
-								key={image}
-								image={images[image]}
-								name={name}
-								role={role}
-								bio={bio}
-							/>
+							<MembroComitato key={image} image={images[image]} name={name} role={role} bio={bio} />
 						))}
 					</Col>
 					<Col>
@@ -113,12 +102,12 @@ const membriComitato = [
 		role: "Servizi alla persona",
 		bio: "Insegnante di sostegno, pedagogista ed educatrice della cooperativa Fabula onlus (MI). Collaboratrice di BlueDiary, l’agenda visiva pensata per le persone autistiche, sviluppata in sinergia con Smemoranda, Fabula Onlus eFondazione Fracta Limina. Un progetto innovativo nato alcuni anni fa per facilitare, attraverso un rinforzovisivo, i bisogni comunicativi degli autistici.",
 	},
-	{
-		image: "aresi",
-		name: "Dott.ssa Angela Aresi",
-		role: "Servizi alla persona",
-		bio: "Psicologa, Psicoterapeuta e analista del comportamento supervisionata. Interventi come consulente ABAsupervisionata. Inter- venti come tecnico ABA. Interventi educativi e riabilitativi bambini e adulti affetti dadisturbi dello spettro autistico. Diagnosi specifica DPS. Diagnosi di personalità. Diagnosi DSA. Psicoterapia.",
-	},
+	// {
+	// 	image: "aresi",
+	// 	name: "Dott.ssa Angela Aresi",
+	// 	role: "Servizi alla persona",
+	// 	bio: "Psicologa, Psicoterapeuta e analista del comportamento supervisionata. Interventi come consulente ABAsupervisionata. Inter- venti come tecnico ABA. Interventi educativi e riabilitativi bambini e adulti affetti dadisturbi dello spettro autistico. Diagnosi specifica DPS. Diagnosi di personalità. Diagnosi DSA. Psicoterapia.",
+	// },
 	{
 		image: "moscatelli",
 		name: "Dott. Francesco Moscatelli",
@@ -126,9 +115,21 @@ const membriComitato = [
 		bio: "Giornalista. Lavora per “La Stampa” di Torino dal 2011 in qualità di redattore delle Cronache. Autore di duevolumi: Cricket Club (Add, 2013) e il Vino del Papa (Compagnia editoriale Aliberti, 2014).",
 	},
 	{
-		image: "barile",
-		name: "Dott. Silvia Barile",
-		role: "Referente di struttura",
-		bio: "Professionista con lunga e approfondita esperienza negli interventi educativi abilitativi delle personeadulte con disturbi dello spettro autistico. Attualmente è referente di struttura in una Community Farm pergiovani adulti con autismo.",
+		image: "cavagnola",
+		name: "Dott. Roberto Cavagnola",
+		role: "",
+		bio: "Pedagogista, Psicologo, Psicoterapeuta, e Analista del comportamento. Dirigente presso Fondazione Sospiro Onlus. Componente del Panel per la stesura delle Linee Guida per la diagnosi e il trattamento del disturbo dello spettro autistico in bambini/adolescenti e adulti, su mandato dall’Istituto Superiore di Sanità.",
 	},
+	{
+		image: "fumagalli",
+		name: "Prof.ssa Natalia Fumagalli",
+		role: "",
+		bio: "Agronoma, docente presso il Dipartimento di Scienze Agrarie e Ambientali -Produzione, Territorio, Agroenergia- dell'Università degli Studi di Milano. Esperta nel campo della pianificazione e della progettazione del territorio rurale e del paesaggio, con particolare riguardo alla progettazione e valutazione di Healing Garden e alla pianificazione e valutazione di protocolli di orticoltura terapeutica.",
+	},
+	// {
+	// 	image: "barile",
+	// 	name: "Dott. Silvia Barile",
+	// 	role: "Referente di struttura",
+	// 	bio: "Professionista con lunga e approfondita esperienza negli interventi educativi abilitativi delle personeadulte con disturbi dello spettro autistico. Attualmente è referente di struttura in una Community Farm pergiovani adulti con autismo.",
+	// },
 ];
