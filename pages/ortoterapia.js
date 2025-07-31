@@ -305,7 +305,7 @@ const sections = [
 			<>
 				I nostri
 				<br />
-				rogetti
+				progetti
 			</>
 		),
 		subtitle: <>COMEACASA: COltiviaMo antichE varietà di mAis e orticole alla CAScina cristina di cAntù</>,
