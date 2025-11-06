@@ -1,0 +1,8 @@
+.newsletterContainer {
+	:global .form-container {
+		margin: 0 !important;
+	}
+	:global .text-center {
+		text-align: left !important; // Override style of EmailOctopus form
+	}
+}

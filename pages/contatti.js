@@ -2,9 +2,11 @@ import classNames from "classnames";
 import { Col, Container, Row } from "react-bootstrap";
 import { PageTemplate } from "../components/Templates";
 import ArrowLink from "../components/ArrowLink";
+import NewsletterForm from "../components/NewsletterForm/NewsletterForm";
 import info from "../utils/info.json";
 
 export default function Contatti() {
+
 	return (
 		<PageTemplate title="Teniamoci in contatto">
 			<Container>
@@ -15,12 +17,10 @@ export default function Contatti() {
 						<p className="mb-1">{info.associazione.indirizzo}</p>
 						<h5 className="mt-4">Indirizzi di posta elettronica</h5>
 						<p className="mb-1">
-							Informazioni per domande di inserimento:{" "}
-							<span className="fst-italic">{info.associazione.mail}</span>
+							Informazioni per domande di inserimento: <span className="fst-italic">{info.associazione.mail}</span>
 						</p>
 						<p className="mb-1">
-							Informazioni generiche:{" "}
-							<span className="fst-italic">{info.associazione.mail}</span>
+							Informazioni generiche: <span className="fst-italic">{info.associazione.mail}</span>
 						</p>
 						<p className="mb-1">
 							Collaborazioni e invio CV: <span className="fst-italic">{info.associazione.mailRisorseUmane}</span>
@@ -33,7 +33,8 @@ export default function Contatti() {
 							Responsabile privacy: <span className="fst-italic">{info.associazione.mailPrivacy}</span>
 						</p>
 						<p className="mb-1">
-							Organismo di Vigilanza (whistleblowing): <span className="fst-italic">{info.associazione.mailOrganismoDiVigilanza}</span>
+							Organismo di Vigilanza (whistleblowing):{" "}
+							<span className="fst-italic">{info.associazione.mailOrganismoDiVigilanza}</span>
 						</p>
 						{/* <p>Per raccolta fondi: {info.associazione.mailSostenibilita}</p> */}
 						<h5 className="mt-4">Posta elettronica certificata (PEC)</h5>
@@ -64,6 +65,8 @@ export default function Contatti() {
 						{/* <p className="mb-1">
 							Organismo di Vigilanza: <span className="fst-italic">{info.comunita.mailOrganismoDiVigilanza}</span>
 						</p> */}
+						<h2 className="mt-4">Newsletter</h2>
+						<NewsletterForm />
 					</Col>
 					<Col>
 						<div className={classNames("position-sticky")} style={{ top: 65 }}>

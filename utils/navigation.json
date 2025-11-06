@@ -70,6 +70,11 @@
 		"menues": ["main", "footer"]
 	},
 	{
+		"label": "Newsletter",
+		"url": "/newsletter",
+		"menues": ["footer"]
+	},
+	{
 		"label": "Dona ora",
 		"url": "/dona-ora",
 		"menues": ["main", "footer"]
