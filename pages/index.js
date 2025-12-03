@@ -34,6 +34,7 @@ export default function Home() {
 								<ArrowLink data={{ label: "Cascina Cristina", url: "/cascina-cristina" }} />
 								<ArrowLink data={{ label: "Diventa volontario/a", url: "/diventa-volontario" }} />
 								<ArrowLink data={{ label: "Dona ora", url: "/dona-ora" }} />
+								<ArrowLink data={{ label: "Trasparenza", url: "/trasparenza" }} />
 							</Col>
 							<Col className={classNames("d-flex", "flex-column", "justify-content-center", "my-3")}>
 								<div
