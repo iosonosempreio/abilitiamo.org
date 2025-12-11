@@ -21,6 +21,9 @@ import calendarioOttobre from "../public/orticoltura/materiali/Ottobre.pdf";
 import calendarioNovembre from "../public/orticoltura/materiali/Novembre.pdf";
 import calendarioDicembre from "../public/orticoltura/materiali/Dicembre.pdf";
 
+// relazione
+import relazioneProgetto from "../public/orticoltura/COMEACASA - Relazione sui risultati.pdf";
+
 export default function Ortoterapia() {
 	useLayoutEffect(() => {
 		const bodyEl = document.querySelector("body");
@@ -62,6 +65,7 @@ export default function Ortoterapia() {
 								progetto che intreccia natura, riabilitazione e tradizione agricola, per valorizzare le persone e il
 								territorio.
 							</p>
+							<ArrowLink data={{ label: "Relazione completa sul progetto", url: relazioneProgetto, download: true }} />
 							{/* <p className="mb-4">Galleria fotografica...</p> */}
 							{/* <GalleryCascinaFinished /> */}
 						</Col>
