@@ -49,6 +49,10 @@ export default function Contatti() {
 						</h5>
 						<p>{info.associazione.codiceFiscale}</p>
 						<h5 className="mt-4">
+							Numero Partita IVA
+						</h5>
+						<p>{info.associazione.partitaIva}</p>
+						<h5 className="mt-4">
 							IBAN <span style={{ color: "var(--azure)" }}>(donazioni)</span>
 						</h5>
 						<p className="mb-1">{info.associazione.iban}</p>

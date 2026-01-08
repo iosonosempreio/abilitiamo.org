@@ -90,6 +90,10 @@ export default function Footer() {
 							{info.associazione.codiceFiscale}
 						</span>
 						<span className={styles.info}>
+							<span style={{ fontSize: "0.75rem", fontWeight: 700 }}>P.IVA</span>{" "}
+							{info.associazione.partitaIva}
+						</span>
+						<span className={styles.info}>
 							<FaPiggyBank style={{ top: 2 }} /> {info.associazione.iban}
 						</span>
 					</Col>
